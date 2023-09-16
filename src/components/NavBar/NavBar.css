@@ -1,0 +1,134 @@
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+    padding: 10px 5px;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+#navbar a,
+.btn,
+.nav-link
+.drop-down {
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    
+}
+
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav {
+    display: flex;
+}
+
+.dropdown {
+    background-color: #fff;
+    
+}
+
+.dropdown-item {
+    color: #1b1b1b !important;
+}
+
+
+.hide {
+    transition: 0.4s;
+    list-style: none;
+    position: absolute;
+    top: 134%;
+    right: 0;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    max-width: 250px;
+
+}
+
+.drop {height: 0 !important; opacity: 0 !important;}
+.rotate {transform: rotate(90deg);}
+
+.nav-link {
+    position:  relative;
+}
+
+.btn-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+.action-btns {
+    grid-gap: 15px;
+}
+
+.toggler {
+    display: none;
+    padding: 8px 16px;
+    transition: 0.4s;
+}
+
+
+
+@media (max-width: 1150px) {
+    .main-nav {
+        position: fixed;
+        display: block;
+        color: #1b1b1b;
+        background-color: #fff;
+        max-width: 400px;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+        transform: translateX(-100%);
+        transition: 0.4s;
+        padding: 20px 0px;
+    }
+
+    .main-nav a {
+        margin-bottom: 5px;
+    }
+
+
+    .main-nav a,
+    .main-nav svg {
+        color: #1b1b1b !important;
+ 
+    }
+
+    .hide {
+        width: 100%;
+    }
+    .show {
+        transform: translateX(0);
+    }
+
+    .toggler {
+        display: inline-block;
+    }
+
+}
+
+@media (max-width: 413px) {
+   .nav-container {
+    justify-content: center;
+   }
+}
