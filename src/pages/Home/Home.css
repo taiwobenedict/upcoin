@@ -18,7 +18,7 @@
 .hero {
     background:url("../../images/home/hero_bg.png") center center/cover no-repeat;
     width: 100%;
-    min-height: 100vh;
+    min-height: fit-content;
     color: #fff;
     padding-top: 120px;
     padding-bottom: 20px;
