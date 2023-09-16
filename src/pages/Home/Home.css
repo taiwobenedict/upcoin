@@ -118,3 +118,9 @@
     height: 288px;
     background-color: #102252;
 }
+
+@media (max-width: 768px) {
+    .hero {
+        background-position-x: 30%;
+    }
+}
