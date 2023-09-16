@@ -52,7 +52,7 @@ function NavBar(  ) {
                     </div>
 
                     {/* Main Navigation */}
-                    <div className={`main-nav align-items-center ${toggle && "show"}`}>
+                    <div className={`main-nav align-items-center ${toggle && "show"} mx-auto`}>
                         <Link to="#home" className="nav-link">SUP</Link>
                         <Link to="#home" className="nav-link">Invest</Link>
                         <div className="nav-link">
@@ -95,7 +95,7 @@ function NavBar(  ) {
                     </div>
 
                     {/* Action Buttons */}
-                    <div className='action-btns d-flex flex-nowrap'>
+                    <div className='action-btns d-flex flex-nowrap ml-md-auto'>
                         <button className="btn btn-inline-light">Connect <FaCaretRight /></button>
                         <button className="btn btn-inline-light">English <FaCaretRight /></button>
                     </div>
