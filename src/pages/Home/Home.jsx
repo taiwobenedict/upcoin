@@ -14,19 +14,56 @@ import pix3 from "../../images/home/pix3.png"
 import pix4 from "../../images/home/pix4.png"
 import subcoin from "../../images/home/subcoin.png"
 import supelle from "../../images/home/supelle.png"
+import animation_coin from "../../images/home/animation_coin.mp4"
+
+import Marquee from "react-fast-marquee";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import {Autoplay} from 'swiper/modules'
+
+// Import Swiper styles
+import 'swiper/css';
 
 import "./Home.css"
 
 function Home() {
+
     return (
         <>
-        {/* Home */}
+            {/* Home */}
 
             <div id='home'>
                 <NavBar />
                 {/* Hero Section */}
-                <div className="hero ">
-                    <div className="py-4 container-lg">
+                <div className="hero">
+
+                    {/* Hero Backgrounds */}
+                    <Swiper
+                        modules={[Autoplay]}
+                        spaceBetween={0}
+                        slidesPerView={"auto"}
+                        autoplay = {{delay: 100000}}
+                        speed={1000}
+                        loop = {"true"}
+                        className='w-100 h-100 position-absolute'
+                    >
+                        <SwiperSlide  className='w-100 h-100 d-none d-md-block'>
+                            <div className="hero-bg hero-bg2 w-100 h-100">
+                                <video autoPlay muted loop className='h-100 w-100 animation-coin'>
+                                    <source src={animation_coin} type="video/mp4" />
+                                </video>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className='w-100 h-100'> 
+                            <div className="hero-bg hero-bg1">
+                                <div className="display"></div>
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+                   
+                    
+                    <div className="pb-4 container-lg hero-container">
                         <div className="row  d-flex align-items-center">
                             <div className="col-md-6 mt-4">
                                 <div className="hero-content">
@@ -46,7 +83,7 @@ function Home() {
                                 </div>
 
 
-                                <div className="action-btns mt-4">
+                                <div className="action-btns mt-4 justify-content-start">
                                     <button className="btn btn-block-light mt-2 mr-4">WHITEPAPER</button>
                                     <button className="btn btn-inline-light mt-2">CERDIK AUDIT</button>
                                 </div>
@@ -58,7 +95,38 @@ function Home() {
                             </div>
                         </div>
                     </div>
+
                 </div>
+            </div>
+
+            {/* Marquee */}
+            <div className="marquee text-center">
+                <Marquee autoFill>
+                    <div className="d-flex mr-5 align-items-center p-2">
+                        <h5 className='mr-2'>Coin</h5>
+                        <small>price</small>
+                    </div>
+                    <div className="d-flex mr-5 align-items-center p-2">
+                        <h5 className='mr-2'>Coin</h5>
+                        <small>price</small>
+                    </div>
+                    <div className="d-flex mr-5 align-items-center p-2">
+                        <h5 className='mr-2'>Coin</h5>
+                        <small>price</small>
+                    </div>
+                    <div className="d-flex mr-5 align-items-center p-2">
+                        <h5 className='mr-2'>Coin</h5>
+                        <small>price</small>
+                    </div>
+                    <div className="d-flex mr-5 align-items-center p-2">
+                        <h5 className='mr-2'>Coin</h5>
+                        <small>price</small>
+                    </div>
+                    <div className="d-flex mr-5 align-items-center p-2">
+                        <h5 className='mr-2'>Coin</h5>
+                        <small>price</small>
+                    </div>
+                </Marquee>
             </div>
 
             {/* Welcome Section */}
@@ -105,10 +173,10 @@ function Home() {
                             <div className="col-sm-6 mt-5">
                                 <div className="gallery">
                                     <img src={pix1} alt="" />
-                                        <div className="px-3">
-                                            <h6 className="pri-color">Connect Wallet</h6>
-                                            <p>Securely connect your crypto wallet to manage and trade your digital assets easily.</p>
-                                        </div>
+                                    <div className="px-3">
+                                        <h6 className="pri-color">Connect Wallet</h6>
+                                        <p>Securely connect your crypto wallet to manage and trade your digital assets easily.</p>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-sm-6 mt-5">
@@ -195,7 +263,7 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
 
