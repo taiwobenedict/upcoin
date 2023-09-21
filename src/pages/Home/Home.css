@@ -1,12 +1,10 @@
 /* Home */
 
-#home,
-.hero-bg2 {
+#home {
     position: relative;
 }
 
-#home::before,
-.hero-bg2::before {
+#home::before {
     content: "";
     position: absolute;
     left: 0;

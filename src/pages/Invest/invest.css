@@ -1,0 +1,162 @@
+.invest-hero {
+    background: url("../../images/invest/invest_hero.jpeg") center center/cover no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+
+.solution::before,
+.investment::before,
+.invest-hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+}
+
+
+.invest-hero-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.invest-hero-content {
+    max-width: 800px;
+    color: #fff;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 5rem;
+    line-height: 1.1;
+}
+
+.hero-caption {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.invest-hero .btn {
+    padding-inline: 20px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.normal-image {
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+    
+}
+
+.normal-items h6 {
+    margin: 0px;
+}
+
+.solution {
+    background: url("../../images/invest/solution-bg.jpeg") center center/cover no-repeat fixed;
+    position: relative;
+    padding: 5rem 0 !important;
+}
+
+.solution-context {
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+.solution::before {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.custom-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.card-image
+ {
+    width: 120px;
+    height: 120px;
+    margin-inline: auto;
+}
+
+.card-image img,
+.invest-image img {
+    width: 100%;
+}
+
+.slider {
+    margin-top: 100px;
+}
+
+.slider .swiper {
+    z-index: 0;
+    padding-bottom: 20px;
+    max-width: 850px;
+}
+
+.investment {
+    background: url("../../images/invest/investment.jpeg") center center/cover no-repeat;
+    color: #fff;
+    padding: 30px 0;
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.investment::before {
+    opacity: 0.3;
+
+}
+.investment-heading {
+    z-index: 1;
+    position: relative;
+}
+
+
+.invest-image {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.factor-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: #102252;
+}
+
+.factor-item .icon {
+    margin-right: 15px;
+    min-width: 15px;
+    margin-top: 5px;
+    height: 15px;
+}
+.fac-bg {
+    background: url('../../images/invest/chart.jpg') center center/contain no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.revbg {
+    background: url("../../images/invest/revolution.jpeg") center center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+.section {
+    margin: 100px auto;
+    padding-block: 30px;
+}

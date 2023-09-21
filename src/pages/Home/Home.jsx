@@ -1,7 +1,3 @@
-import React from 'react'
-import NavBar from '../../components/NavBar/NavBar'
-import Footer from '../../components/Footer/Footer'
-
 import cnnLogo from '../../images/home/cnnLogo.png'
 import Bloomberg from "../../images/home/Bloomberg.png"
 import CryptoNews from "../../images/home/CryptoNews.png"
@@ -32,9 +28,7 @@ function Home() {
     return (
         <>
             {/* Home */}
-
             <div id='home'>
-                <NavBar />
                 {/* Hero Section */}
                 <div className="hero">
 
@@ -162,7 +156,7 @@ function Home() {
 
             {/* Access Opportunity Section */}
             <div className="access">
-                <div className="py-4 container">
+                <div className="py-4 container-fluid">
                     <div className="col-sm-7 mx-auto text-center">
                         <h3 className="pri-color">Access the opportunity through an alternate route!</h3>
                         <p className="mt-3">Lorem ipsum dolor sit amet consectetur. Lorem tellus scelerisque morbi vivamus lobortis. Morbi cursus pellentesque ultrices senectus nulla vivamus ullamcorper aenean velit.</p>
@@ -287,8 +281,6 @@ function Home() {
                     </div>
                 </div>
             </div>
-
-            <Footer />
         </>
     )
 }
