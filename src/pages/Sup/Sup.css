@@ -20,7 +20,7 @@
 .hero-context {
     z-index: 1;
     max-width: 800px;
-    padding-top: 135px !important;
+    padding-top: 200px !important;
 }
 
 #sup .hero-context h1 {
@@ -50,5 +50,9 @@
 @media (max-width: 756px) {
     #sup .hero-title {
         font-size: 2.5rem;
+    }
+
+    #sup .hero-caption {
+        font-size: 1.2rem;
     }
 }

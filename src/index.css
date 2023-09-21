@@ -84,8 +84,12 @@ a:hover {
     font-size: 1.5rem;
     font-weight: 500;
 }
-
-
 .hero-title {
     font: 400;
+}
+
+@media (max-width:576px) {
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
 }

@@ -22,6 +22,7 @@
 
 
 .invest-hero-container {
+    padding-top: 200px !important;
     display: flex;
     align-items: center;
     height: 100%;

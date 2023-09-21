@@ -13,7 +13,7 @@ function Sup() {
             <div className="sup-hero">
                 <div className="container d-flex justify-content align-items-center h-100">
                     <div className="hero-context text-light">
-                        <h1>Wealth of Opportunities and Your Key to a Successful Future Endless </h1>
+                        <h1 className='hero-title'>Wealth of Opportunities and Your Key to a Successful Future Endless </h1>
                         <div className="hero-caption ">Exclusively on Supelle, discover a wealth of business opportunities with valuable crypto assets and utility tokens (SUP).</div>
                         <div className="action-btns mt-4 justify-content-start">
                             <button className="btn btn-block-light mt-2 mr-4">CONNECT</button>

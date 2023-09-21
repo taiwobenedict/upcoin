@@ -17,6 +17,9 @@
 
 .hero-container {
     padding-top: 135px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero {
