@@ -15,6 +15,7 @@ import shuffle from "../../images/invest/shuffle.png"
 import globe from "../../images/invest/globe.png"
 import marketplace from "../../images/invest/marketplace.png"
 import diligence from "../../images/invest/diligence.png"
+import chart from "../../images/invest/chart.jpg"
 
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -284,8 +285,8 @@ function Invest() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
-                            <div className="fac-bg"></div>
-                            {/* <img src={chart} alt="chart" className='w-100' /> */}
+                            {/* <div className="fac-bg"></div> */}
+                            <img src={chart} alt="chart" className='w-100' />
                         </div>
                         <div className="col-md-6">
                             <h3 className='mb-5 pri-color'>These factors influence freelancers' and clients' dynamics, opportunities, and challenges. Here are some key factors:
@@ -327,19 +328,16 @@ function Invest() {
                 </div>
             </div>
 
-            <div className="revolution section">
+            <div className="revolution section mb-0">
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-6 d-flex justify-content-center align-items-center">
-                            <div className="rev-contex">
+                        <div className="col-sm-8 text-center mx-auto d-flex justify-content-center align-items-center">
+                            <div className="rev-context">
                                 <h1>We embraced the financial revolution by creating our very own utility token and marketplace</h1>
                                 <p>We are currently inviting early stage supporters to become part of a growing community early on and join us on this exciting journey. If you are interested in exploring this opportunity further, we would be delighted to provide you with more details.
                                 </p>
-                                <button className="btn btn-block-pri">Explore sup token here</button>
+                                <button className="btn btn-block-light mx-auto d-inline-block">Explore sup token here</button>
                             </div>
-                        </div>
-                        <div className="col-sm-6">
-                            <div className="revbg"></div>
                         </div>
                     </div>
                 </div>

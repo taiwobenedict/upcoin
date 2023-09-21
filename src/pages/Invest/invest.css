@@ -7,7 +7,8 @@
 
 .solution::before,
 .investment::before,
-.invest-hero::before {
+.invest-hero::before,
+.revolution::before {
     content: "";
     position: absolute;
     left: 0;
@@ -15,7 +16,7 @@
     width: 100%;
     height: 100%;
     background-color: #000;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 
@@ -146,17 +147,22 @@
     height: 100%;
 }
 
-.revbg {
+.revolution {
     background: url("../../images/invest/revolution.jpeg") center center/cover no-repeat;
     width: 100%;
     height: 100%;
+    color: #fff;
+    position: relative;
 }
-
-
-
-
 
 .section {
     margin: 100px auto;
     padding-block: 30px;
+}
+
+
+@media (max-width: 576px) {
+    #invest .hero-title {
+        font-size: 2.5rem;
+    }
 }

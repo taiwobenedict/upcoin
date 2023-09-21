@@ -1,0 +1,52 @@
+.sup-hero {
+    background: url("../../images/sup/sup-hero.jpeg") center center/cover no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+.revolution::after,
+.sup-hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
+}
+
+.hero-context {
+    z-index: 1;
+    max-width: 800px;
+}
+
+#sup .hero-context h1 {
+    font-weight: 400;
+    font-size: 3.5rem;
+}
+
+.hero-caption {
+    font-weight: 400;
+}
+
+.revolution {
+    background: url('../../images/sup/revolution-bg.jpg') center center/cover no-repeat;
+    position: relative;
+}
+
+.revolution::after {
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+.revolution .row {
+    z-index: 1;
+    position: relative;
+}
+
+
+@media (max-width: 756px) {
+    #sup .hero-title {
+        font-size: 2.5rem;
+    }
+}
