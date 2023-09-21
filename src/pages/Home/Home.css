@@ -16,14 +16,14 @@
 }
 
 .hero-container {
-    padding-top: 120px !important;
+    padding-top: 135px !important;
 }
 
 .hero {
     width: 100%;
     min-height: 100vh;
-    color: #fff;
     padding-bottom: 20px;
+    color: #fff;
 }
 
 .swiper {
@@ -153,6 +153,7 @@
 @media (max-width: 768px) {
     .hero {
         min-height: fit-content;
+
     }
 
     .hero-bg1 {
