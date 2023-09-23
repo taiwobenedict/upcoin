@@ -13,7 +13,7 @@ import AOS from 'aos/dist/aos'
 import "aos/dist/aos.css"
 
 AOS.init({
-  duration: 500,
+  duration: 1000,
   offset: 300,
   // delay: 200,
 })
