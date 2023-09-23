@@ -1,56 +1,10 @@
-.invest-hero {
+#invest .hero {
     background: url("../../images/invest/invest_hero.jpeg") center center/cover no-repeat;
-    min-height: 100vh;
-    padding-bottom: 20px;
-    position: relative;
 }
 
-
-.solution::before,
-.investment::before,
-.invest-hero::before,
-.revolution::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    opacity: 0.5;
+#invest .hero-heading {
+    font-size: 4rem;
 }
-
-
-.invest-hero-container {
-    padding-top: 200px !important;
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-
-.invest-hero-content {
-    max-width: 800px;
-    color: #fff;
-    z-index: 1;
-}
-
-.hero-title {
-    font-size: 5rem;
-    line-height: 1.1;
-}
-
-.hero-caption {
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.invest-hero .btn {
-    padding-inline: 20px;
-    margin-top: 20px;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
 .normal-image {
     height: 40px;
     width: 40px;
@@ -58,23 +12,21 @@
     
 }
 
-.normal-items h6 {
-    margin: 0px;
-}
 
-.solution {
-    background: url("../../images/invest/solution-bg.jpeg") center center/cover no-repeat fixed;
+#solution {
+    background: url("../../images/invest/solution-bg.jpeg") center center/cover no-repeat;
     position: relative;
     padding: 5rem 0 !important;
 }
 
-.solution-context {
-    margin-bottom: 5rem;
-    position: relative;
+
+#solution .overlay {
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 0;
 }
 
-.solution::before {
-    background-color: rgba(255, 255, 255, 0.8);
+.solution-context {
+    position: relative;
 }
 
 .custom-card {
@@ -143,13 +95,8 @@
     margin-top: 5px;
     height: 15px;
 }
-.fac-bg {
-    background: url('../../images/invest/chart.jpg') center center/contain no-repeat;
-    width: 100%;
-    height: 100%;
-}
 
-.revolution {
+#create-token {
     background: url("../../images/invest/revolution.jpeg") center center/cover no-repeat;
     width: 100%;
     height: 100%;
@@ -157,10 +104,6 @@
     position: relative;
 }
 
-.section {
-    margin: 100px auto;
-    padding-block: 30px;
-}
 
 
 @media (max-width: 576px) {

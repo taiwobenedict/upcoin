@@ -1,0 +1,126 @@
+#roadmap .hero {
+    background: url("../../images/roadmap/roadmap-hero.jpg") center center/cover no-repeat;
+}
+
+.roadmap-hero {
+    color: #fff;
+}
+
+#roadmap .title {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.presale-btn {
+    font-size: 1.3rem !important;
+    font-weight: 500 !important;
+    padding-inline: 20px !important;
+}
+
+#maps {
+    background: url("../../images/roadmap/map-bg.jpeg") center center/cover no-repeat fixed;
+    height: 100%;
+}
+
+#maps .overlay {
+    background-color: rgba(255,255,255,0.8) ;
+}
+
+.map-container {
+    z-index: 1;
+    position: relative;
+    min-height: 500px;
+}
+
+.map {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 520px;
+}
+
+.map-line {
+    height: 5px;
+    width: 100%;
+    background-color: #102252;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.map-item {
+    border: solid 1px #102252;
+    height: 200px;
+    position: relative;
+    background: #fff;
+}
+
+.map-item::before {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    border-style: solid;
+    height: 60px;
+    width: 5px;
+    
+}
+
+.map-item-top::before {
+    top: 115%;
+    left: 20%;
+}
+
+.map-item-bottom::before {
+    top: -15%;
+    right: 20%;
+}
+
+#presale {
+    background: url("../../images/roadmap/coin-bg.jpg") center center/cover no-repeat;
+    text-align: center;
+    min-height: 100vh !important;
+}
+
+.presale-container {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+   
+}
+
+.presale-image {
+    max-width: 200px;
+    height: 200px;
+    background-color: #102252;
+    border-radius: 50%;
+    padding: 10px;
+    margin-inline: auto;
+    margin-bottom: 5rem;
+}
+
+.total-pric {
+    margin-bottom: 6rem;
+}
+
+.tech {
+    margin-top: 130px;
+    align-items: flex-end;
+    height: 600px;
+    overflow: hidden;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.tech .icon {
+    min-width: 15px;
+    height: 15px;
+}

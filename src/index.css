@@ -4,68 +4,20 @@ body {
     background-color: #fff;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
+    
 }
+
 
 .container {
     max-width: 1440px;
     width: 95%;
     margin: auto;
+    overflow: hidden !important;
 }
 
-/* Resets */
-.btn:focus {
-    box-shadow: none !important;
-}
-
-
-/* Utilities */
-.transition {
-    transition: 0.4s;
-}
-
-.pri-color {
-    color: #102252;
-}
-
-.btn {
-    transition: 0.4s !important;
-}
-
-.btn-block-pri {
-    border: solid 1px #102252 !important;
-    background-color: #102252 !important;
-    color: #fff !important;
-}
-
-.btn-inline-pri,
-.btn-block-pri:hover  {
-    border: solid 1px #102252 !important;
-    color: #102252 !important;
-    background-color: transparent !important;
-}
-
-.btn-inline-pri:hover {
-    background-color: #102252 !important;
-    color: #fff !important;
-}
-
-
-.btn-block-light,
-.btn-inline-light:hover {
-    border: solid 1px #fff !important;
-    background-color: #fff !important;
-    color: #1b1b1b !important;
-}
-.btn-inline-light {
-    border: solid 1px #fff !important;
-    background-color: transparent;
-    color: #fff !important;
-}
-
-
-.btn-block-light:hover {
-    background-color: transparent !important;
-    color: #fff !important;
+/* ====== Resets ====== */
+a {
+    text-align: #fff;
 }
 
 
@@ -75,21 +27,86 @@ a:hover {
     transition: 0.4s;
 }
 
-.heading{
-    font: "";
+.dropdown-item:focus {
+    background-color: none !important;
+}
+
+.btn:focus {
+    box-shadow: none !important;
+}
+
+
+ul{
+    list-style: none;
+}
+
+/* ===================== */
+
+
+/* ======= Utilities ======= */
+.transition {
+    transition: 0.4s;
+}
+
+.pri-color {
+    color: #102252;
+}
+
+.pri-bg {
+    background-color: #102252;
+    color: #fff;
+}
+
+.light-bg {
+    background-color: #fff;
+}
+
+.transparent {
+    background-color: transparent !important;
+}
+
+.heading {
+    font-family: Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.sub-heading {
+    font-family: Helvetica, sans-serif;
+    font-weight: 200;
+    line-height: 1.5;
     
+}
+
+.hero-heading {
+    font-size: 90pt;
+    font-size: 3.7rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
 }
 
 .hero-caption {
     font-size: 1.5rem;
-    font-weight: 500;
-}
-.hero-title {
-    font: 400;
+} 
+
+.title {
+    font-size: 45px;
 }
 
+.sub-title {
+    font-size: 24px;
+}
+
+
+/* ==================== */
+
+
 @media (max-width:576px) {
-    .hero-title {
+    .hero-heading {
         font-size: 2.5rem !important;
     }
+    .pt {
+        padding-top: 135px;
+    }
 }
+
+

@@ -1,0 +1,36 @@
+#about .hero {
+    background: url("../../images/about/about-hero.jpeg") center center/cover no-repeat;
+}
+
+#about .hero .overlay {
+    background-color: rgba(0,0,0,0.5);
+}
+
+#info {
+    background: url("../../images/roadmap/coin-bg.jpg") center center/cover no-repeat;
+}
+
+#info .lead {
+    font-weight: 400;
+}
+
+.info-image { 
+    max-width: 300px;
+    margin-inline: auto;
+}
+
+#story {
+    background: url("../../images/about/story.jpeg") center center/cover no-repeat fixed; 
+    position: relative;
+}
+#story .overlay {
+    background-color: rgba(0,0,0,0.6);
+}
+#story .text-light {
+    position: relative;
+    z-index: 1;
+}
+
+.mb {
+    margin-top: 5rem ;
+}

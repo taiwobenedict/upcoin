@@ -1,5 +1,4 @@
 import React from 'react'
-import './invest.css'
 
 import sustainable from "../../images/invest/sustainable.png"
 import esteemed from "../../images/invest/esteemed.png"
@@ -17,7 +16,7 @@ import marketplace from "../../images/invest/marketplace.png"
 import diligence from "../../images/invest/diligence.png"
 import chart from "../../images/invest/chart.jpg"
 
-
+import { Hero, Button, Section } from '../../Utilities'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
@@ -28,182 +27,173 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { FaChevronCircleRight } from 'react-icons/fa'
 
+import './invest.css'
 
 function Invest() {
     return (
         <div id='invest'>
             {/* Hero Section */}
-            <div className="invest-hero">
-                <div className="pb-4 container-lg invest-hero-container">
-                    <div className="invest-hero-content">
-                        <h1 className="hero-title">Pioneering The Future with Us</h1>
-                        <p className='hero-caption'>Be the first to be a part of Supelle's comprehensive opportunity by becoming an early stage supporter. </p>
-                        <button className="btn btn-inline-light">Let's Talk</button>
-                    </div>
+            <Hero container={750}>
+                <div className="text-light">
+                    <h1 className="heading hero-heading">Pioneering The Future with Us</h1>
+                    <p className='sub-heading hero-caption'>Be the first to be a part of Supelle's comprehensive opportunity by becoming an early stage supporter. </p>
+                    <Button type={"inline"} color={"light"} >Let's Talk</Button>
                 </div>
+            </Hero>
 
-            </div>
 
             {/* Normal  */}
-            <div className="normal section border border-bottom">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <h2 className='pri-color mb-3'>Unlock the new normal</h2>
-                            <p className='mt-2'>We are offering you an exciting opportunity that we believe may be of interest to you. We are currently seeking early stage supporters for Supelle, and we want to share some key details with you.</p>
-                            <p className="mt-2">Supelle/Supcoin has tremendous potential for growth and is positioned to disrupt the freelancing marketplace. Our team is comprised of highly talented individuals with a deep understanding of the industry and a strong track record of success.
-                            </p>
-                            <h5 className="mt-3">SUP is the hurdle-free way to Raise Capital:</h5>
-                            <button className="btn btn-block-pri mt-2">What are utility tokens?</button>
-                        </div>
-                        <div className="col-sm-6">
-                            <div className="normal-items">
-                                <div className="normal-item d-flex align-items-center flex-wrap mb-3">
-                                    <div className="normal-image">
-                                        <img src={sustainable} alt="Sustainable Financial Resistance" className='w-100' />
-                                    </div>
-                                    <h6>Sustainable Financial Resistance</h6>
+            <Section name={"normal"} mt={120} className="border-bottom">
+                <div className="row">
+                    <div className="col-sm-6 mt-3">
+                        <h2 className='pri-color heading mb-3'>Unlock the new normal</h2>
+                        <p className='mt-2'>We are offering you an exciting opportunity that we believe may be of interest to you. We are currently seeking early stage supporters for Supelle, and we want to share some key details with you.</p>
+                        <p className="mt-2">Supelle/Supcoin has tremendous potential for growth and is positioned to disrupt the freelancing marketplace. Our team is comprised of highly talented individuals with a deep understanding of the industry and a strong track record of success.
+                        </p>
+                        <h5 className="mt-3">SUP is the hurdle-free way to Raise Capital:</h5>
+                        <button className="btn btn-block-pri mt-2">What are utility tokens?</button>
+                    </div>
+                    <div className="col-sm-6 mt-3">
+                        <div className="normal-items">
+                            <div className="normal-item d-flex align-items-center flex-wrap mb-3">
+                                <div className="normal-image">
+                                    <img src={sustainable} alt="Sustainable Financial Resistance" className='w-100' />
                                 </div>
-                                <div className="normal-item d-flex align-items-center flex-wrap mb-3">
-                                    <div className="normal-image">
-                                        <img src={esteemed} alt="Esteemed Founder and Accomplished Team of Experts" className='w-100' />
-                                    </div>
-                                    <h6>Esteemed Founder and Accomplished Team of Experts</h6>
+                                <h6>Sustainable Financial Resistance</h6>
+                            </div>
+                            <div className="normal-item d-flex align-items-center flex-wrap mb-3">
+                                <div className="normal-image">
+                                    <img src={esteemed} alt="Esteemed Founder and Accomplished Team of Experts" className='w-100' />
                                 </div>
-                                <div className="normal-item d-flex align-items-center flex-wrap mb-3">
-                                    <div className="normal-image">
-                                        <img src={unparallel} alt="Unparalleled Growth Potential & Uniqueness" className='w-100' />
-                                    </div>
-                                    <h6>Unparalleled Growth Potential & Uniqueness</h6>
+                                <h6>Esteemed Founder and Accomplished Team of Experts</h6>
+                            </div>
+                            <div className="normal-item d-flex align-items-center flex-wrap mb-3">
+                                <div className="normal-image">
+                                    <img src={unparallel} alt="Unparalleled Growth Potential & Uniqueness" className='w-100' />
                                 </div>
-                                <div className="normal-item d-flex align-items-center flex-wrap mb-3">
-                                    <div className="normal-image">
-                                        <img src={robust} alt="Robust and Strategic Business Model " className='w-100' />
-                                    </div>
-                                    <h6>Robust and Strategic Business Model </h6>
+                                <h6>Unparalleled Growth Potential & Uniqueness</h6>
+                            </div>
+                            <div className="normal-item d-flex align-items-center flex-wrap mb-3">
+                                <div className="normal-image">
+                                    <img src={robust} alt="Robust and Strategic Business Model " className='w-100' />
                                 </div>
-                                <div className="normal-item d-flex align-items-center flex-wrap mb-3">
-                                    <div className="normal-image">
-                                        <img src={scale} alt="The Industry Demonstrates Proven Stability and Scalability " className='w-100' />
-                                    </div>
-                                    <h6>The Industry Demonstrates Proven Stability and Scalability </h6>
+                                <h6>Robust and Strategic Business Model </h6>
+                            </div>
+                            <div className="normal-item d-flex align-items-center flex-wrap mb-3">
+                                <div className="normal-image">
+                                    <img src={scale} alt="The Industry Demonstrates Proven Stability and Scalability " className='w-100' />
                                 </div>
-                                <div className="normal-item d-flex align-items-center flex-wrap mb-3">
-                                    <div className="normal-image">
-                                        <img src={strong} alt="Strong Competitive Advantage" className='w-100' />
-                                    </div>
-                                    <h6>Strong Competitive Advantage</h6>
+                                <h6>The Industry Demonstrates Proven Stability and Scalability </h6>
+                            </div>
+                            <div className="normal-item d-flex align-items-center flex-wrap mb-3">
+                                <div className="normal-image">
+                                    <img src={strong} alt="Strong Competitive Advantage" className='w-100' />
                                 </div>
+                                <h6>Strong Competitive Advantage</h6>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Section>
 
-            {/*  */}
-            <div className="section">
-                <div className="container">
-                    <div className="mb-5">
-                        <div className="row">
-                            <div className="col-sm-6">
-                                <div className="card shadow  h-100">
-                                    <div className="card-body">
 
-                                        <h5 className="pri-color card-title">Early stage supporters for Exciting New Crypto Opportunity</h5>
-                                        <p className="mt-2 card-text">Early stage supporters like yourself are crucial to our success. Your expertise and financial backing can provide the resources necessary for us to scale our operations, penetrate the market, and ultimately achieve our vision. We believe that with the right early stage supporters, Supelle has the potential to become a market leader and generate substantial returns.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-sm-6">
-                                <div className="card shadow  h-100">
-                                    <div className="card-body">
-                                        <h5 className="pri-color card-title">Key Reasons to become an Early stage supporter: </h5>
-                                        <p className="mt-2 card-text">Investing with a reputable and trustworthy company is one of the smartest decisions that can lead to great rewards. So take the leap and invest with us and you will be in awe at the amazing returns in store for you.
-                                        </p>
+            <Section mt={120}>
+                <div className="row">
+                    <div className="col-sm-6 mt-3">
+                        <div className="card shadow  h-100">
+                            <div className="card-body">
 
-                                    </div>
-
-                                </div>
+                                <h5 className="pri-color card-title">Early stage supporters for Exciting New Crypto Opportunity</h5>
+                                <p className="mt-2 card-text">Early stage supporters like yourself are crucial to our success. Your expertise and financial backing can provide the resources necessary for us to scale our operations, penetrate the market, and ultimately achieve our vision. We believe that with the right early stage supporters, Supelle has the potential to become a market leader and generate substantial returns.
+                                </p>
                             </div>
                         </div>
                     </div>
+                    <div className="col-sm-6 mt-3">
+                        <div className="card shadow  h-100">
+                            <div className="card-body">
+                                <h5 className="pri-color card-title">Key Reasons to become an Early stage supporter: </h5>
+                                <p className="mt-2 card-text">Investing with a reputable and trustworthy company is one of the smartest decisions that can lead to great rewards. So take the leap and invest with us and you will be in awe at the amazing returns in store for you.
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </Section>
+
 
             {/* Solution */}
-            <div className="section solution">
-                <div className="container">
-                    <div className="solution-context">
-                        <h1 className="pri-color">End to End Solution</h1>
-                        <h5>Out team will guide you through the process of issuign a blockchain based utility token.</h5>
-                    </div>
+            <Section name={"solution"} mt={120}>
+                <div className="overlay"></div>
+                <div className="solution-context">
+                    <h1 className="pri-color heading">End to End Solution</h1>
+                    <h5 className='sub-heading'>Out team will guide you through the process of issuign a blockchain based utility token.</h5>
+                </div>
 
-
-                    <div id="values">
-                        <div>
-                            <div className="row text-center">
+                <div id="values">
+                    <div>
+                        <div className="row text-center">
+                            <div className="col-sm-4 my-4">
+                                <div className="custom-card shadow h-100">
+                                    <div className="card-image">
+                                        <img src={growth} alt="Growth Potential" />
+                                    </div>
+                                    <h6 className="form-4 mt-4 mb-3">Growth Potential</h6>
+                                    <p>Our business has demonstrated significant growth potential based on market research, early customer traction, and the scalability of the company. With your financial support and guidance, we can accelerate our market penetration and maximize our potential returns.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="col-sm-4 my-4">
+                                <div className="custom-card shadow h-100">
+                                    <div className="card-image">
+                                        <img src={eye} alt="Unique Value Proposition" />
+                                    </div>
+                                    <h6 className="form-4 mt-4 mb-3">Unique Value Proposition</h6>
+                                    <p>Our venture offers a unique value proposition that sets us apart from competitors. By leveraging cutting-edge technology, innovative strategies, and a customer-centric approach, we have the potential to disrupt the market and capture a substantial market share.</p>
+                                </div>
+                            </div>
+                            <div className="col-sm-4 my-4">
+                                <div className="custom-card shadow h-100">
+                                    <div className="card-image">
+                                        <img src={time} alt="Experienced and Committed Team" />
+                                    </div>
+                                    <h6 className="form-4 mt-4 mb-3">Experienced and Committed Team</h6>
+                                    <p>Our team comprises highly skilled professionals with diverse backgrounds and a shared vision for success. We have a proven track record of execution and are deeply committed to delivering exceptional results.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="text-center">
+                            <div className="row justify-content-center mx-auto">
                                 <div className="col-sm-4 my-4">
                                     <div className="custom-card shadow h-100">
                                         <div className="card-image">
-                                            <img src={growth} alt="Growth Potential" />
+                                            <img src={target} alt="Timely Opportunity" />
                                         </div>
-                                        <h6 className="form-4 mt-4 mb-3">Growth Potential</h6>
-                                        <p>Our business has demonstrated significant growth potential based on market research, early customer traction, and the scalability of the company. With your financial support and guidance, we can accelerate our market penetration and maximize our potential returns.
+                                        <h6 className="form-4 mt-4 mb-3">Timely Opportunity</h6>
+                                        <p>Investing with us at this stage allows you to enter the market early and capitalize on the rapid growth potential. As the market evolves and competition increases, being a pre-launch investor positions you for enhanced returns on your investment.
                                         </p>
                                     </div>
                                 </div>
                                 <div className="col-sm-4 my-4">
                                     <div className="custom-card shadow h-100">
                                         <div className="card-image">
-                                            <img src={eye} alt="Unique Value Proposition" />
+                                            <img src={shuffle} alt="End to End Solution" />
                                         </div>
-                                        <h6 className="form-4 mt-4 mb-3">Unique Value Proposition</h6>
-                                        <p>Our venture offers a unique value proposition that sets us apart from competitors. By leveraging cutting-edge technology, innovative strategies, and a customer-centric approach, we have the potential to disrupt the market and capture a substantial market share.</p>
-                                    </div>
-                                </div>
-                                <div className="col-sm-4 my-4">
-                                    <div className="custom-card shadow h-100">
-                                        <div className="card-image">
-                                            <img src={time} alt="Experienced and Committed Team" />
-                                        </div>
-                                        <h6 className="form-4 mt-4 mb-3">Experienced and Committed Team</h6>
-                                        <p>Our team comprises highly skilled professionals with diverse backgrounds and a shared vision for success. We have a proven track record of execution and are deeply committed to delivering exceptional results.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="text-center">
-                                <div className="row justify-content-center mx-auto">
-                                    <div className="col-sm-4 my-4">
-                                        <div className="custom-card shadow h-100">
-                                            <div className="card-image">
-                                                <img src={target} alt="Timely Opportunity" />
-                                            </div>
-                                            <h6 className="form-4 mt-4 mb-3">Timely Opportunity</h6>
-                                            <p>Investing with us at this stage allows you to enter the market early and capitalize on the rapid growth potential. As the market evolves and competition increases, being a pre-launch investor positions you for enhanced returns on your investment.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-4 my-4">
-                                        <div className="custom-card shadow h-100">
-                                            <div className="card-image">
-                                                <img src={shuffle} alt="End to End Solution" />
-                                            </div>
-                                            <h6 className="form-4 mt-4 mb-3">End to End Solution</h6>
-                                            <p>Invest in solutions; our team will guide you through the process of issuing and addressing the major problems, advantages, and stable customers for significant growth.
-                                            </p>
-                                        </div>
+                                        <h6 className="form-4 mt-4 mb-3">End to End Solution</h6>
+                                        <p>Invest in solutions; our team will guide you through the process of issuing and addressing the major problems, advantages, and stable customers for significant growth.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-            </div>
+            </Section>
 
             {/* Benefits */}
-            <div className="section benefits">
+            <Section mt={120} className="benefits">
                 <div className="container">
                     <div className="text-content text-center col-sm-9 mx-auto">
                         <h2 className="pri-color">Benefits of an early stage supporter</h2>
@@ -225,19 +215,19 @@ function Invest() {
 
                         >
                             <SwiperSlide>
-                                <div className="col-sm-6 mx-auto">
+                                <div className="col-sm-6 mt-3 mx-auto">
                                     <h2 className="pri-color">Our team is here from the beginning of the journey to the end</h2>
                                     <p className="mt-3">In return for your support, we are offering advantages such as discounted token prices, bonus rewards, and exclusive access to platform features.  </p>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="col-sm-6 mx-auto">
+                                <div className="col-sm-6 mt-3 mx-auto">
                                     <h2 className="pri-color">We help to manage your investment.</h2>
                                     <p className="mt-3">By getting involved at an early stage, investors can position themselves to benefit  from the platform's growth and future enhancements, potentially reaping  substantial rewards as Supelle Coin gains traction.</p>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="col-sm-6 mx-auto">
+                                <div className="col-sm-6 mt-3 mx-auto">
                                     <h2 className="pri-color">We Deliver Pre-Launch Investors a Seamless Journey.</h2>
                                     <p className="mt-3">Our team is committed to transparency, open communication, and delivering results.</p>
                                 </div>
@@ -245,10 +235,10 @@ function Invest() {
                         </Swiper>
                     </div>
                 </div>
-            </div>
+            </Section>
 
             {/* Investment */}
-            <div className="section investment">
+            <Section mt={120} className="investment">
                 <div className="container">
                     <div className="investment-heading">
                         <h2 className="text-center mb-5">Early stage investment possibility with SUPELLE</h2>
@@ -278,10 +268,10 @@ function Invest() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Section>
 
             {/* Factors */}
-            <div className="section factors">
+            <Section mt={120} className="factors">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
@@ -326,22 +316,22 @@ function Invest() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Section>
 
-            <div className="revolution section mb-0">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm-8 text-center mx-auto d-flex justify-content-center align-items-center">
-                            <div className="rev-context">
-                                <h1>We embraced the financial revolution by creating our very own utility token and marketplace</h1>
-                                <p>We are currently inviting early stage supporters to become part of a growing community early on and join us on this exciting journey. If you are interested in exploring this opportunity further, we would be delighted to provide you with more details.
-                                </p>
-                                <button className="btn btn-block-light mx-auto d-inline-block">Explore sup token here</button>
-                            </div>
+            <Section name="create-token" mt={120}>
+                <div className="overlay"></div>
+                <div className="row">
+                    <div className="col-sm-8 text-center mx-auto d-flex justify-content-center align-items-center">
+                        <div className="rev-context">
+                            <h1>We embraced the financial revolution by creating our very own utility token and marketplace</h1>
+                            <p>We are currently inviting early stage supporters to become part of a growing community early on and join us on this exciting journey. If you are interested in exploring this opportunity further, we would be delighted to provide you with more details.
+                            </p>
+                            <button className="btn btn-block-light mx-auto d-inline-block">Explore sup token here</button>
                         </div>
                     </div>
                 </div>
-            </div>
+
+            </Section>
 
         </div>
 

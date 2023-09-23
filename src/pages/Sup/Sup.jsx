@@ -6,113 +6,109 @@ import backdoor from "../../images/sup/backdoor.png"
 import community from "../../images/sup/community.png"
 import revolution from "../../images/sup/revolution.png"
 import { FaChevronRight } from 'react-icons/fa'
+import { Hero, Section } from '../../Utilities'
 
 function Sup() {
     return (
         <div id='sup'>
-            <div className="sup-hero">
-                <div className="container d-flex justify-content align-items-center h-100">
-                    <div className="hero-context text-light">
-                        <h1 className='hero-title'>Wealth of Opportunities and Your Key to a Successful Future Endless </h1>
-                        <div className="hero-caption ">Exclusively on Supelle, discover a wealth of business opportunities with valuable crypto assets and utility tokens (SUP).</div>
-                        <div className="action-btns mt-4 justify-content-start">
-                            <button className="btn btn-block-light mt-2 mr-4">CONNECT</button>
-                            <button className="btn btn-inline-light mt-2">LOGIN</button>
+            <Hero container={750}>
+                <div className="hero-context text-light">
+                    <h1 className='heading hero-heading' data-aos="fade-up">Wealth of Opportunities and Your Key to a Successful Future Endless </h1>
+                    <div className="sub-heading hero-caption " data-aos="zoom-out">Exclusively on Supelle, discover a wealth of business opportunities with valuable crypto assets and utility tokens (SUP).</div>
+                    <div className="action-btns mt-4 justify-content-start" >
+                        <button className="btn btn-block-light mt-2 mr-4" > CONNECT</button>
+                        <button className="btn btn-inline-light mt-2">LOGIN</button>
+                    </div>
+                </div>
+            </Hero>
+
+            {/* Endless Posibilities */}
+            <Section name={"endless"} mt={120} className="border-bottom">
+                <div className="row" data-aos="zoom-in">
+                    <div className="col-md-6 mt-3 d-flex justify-content-center align-items-center">
+                        <div className="endless-context">
+                            <h2 className="pri-color heading">Endless Possibilities with Supcoin ($SUP)</h2>
+                            <p className="mt-2">Introducing Supcoin, a revolutionary fusion of cryptocurrency and marketplace. Supcoin isn't just a currency; it's a visionary currency that enhances the value of your investment, ensuring unprecedented stability. Have greater security, increase wealth, and create opportunities with this global currency. Gain exclusive access to the backdoor opportunities that await early adopters, allowing you to seize the advantage before anyone else. Embrace the future of finance with Supelle and unlock a world of limitless possibilities!
+                                Crypto Currency + Pioneer Global Marketplace = high value
+                            </p>
+                        </div>
+                    </div>
+                    <div className="col-md-6 mt-3">
+                        <div className="endless-image sup-image">
+                            <img src={endless} alt="" className='w-100' />
                         </div>
                     </div>
                 </div>
+            </Section>
 
-            </div>
+            {/* Become Member */}
+            <Section name={"membership"} mt={120}>
+                <div className="row" data-aos="zoom-in">
+                    <div className="col-md-6 mt-3 pr-sm-5 d-flex justify-content-center align-items-center order-2">
+                        <div className="endless-context">
+                            <h1 className="pri-color heading">Become a Supcoin Token holder today to enjoy Supcoin discounts!
+                            </h1>
+                            <button className="btn btn-inline-pri mt-5">Buy Supelle Tokens</button>
 
-            <div className="endless section">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm-6 pr-sm-5 d-flex justify-content-center align-items-center">
-                            <div className="endless-context">
-                                <h2 className="pri-color">Endless Possibilities with Supcoin ($SUP)</h2>
-                                <p className="mt-2">Introducing Supcoin, a revolutionary fusion of cryptocurrency and marketplace. Supcoin isn't just a currency; it's a visionary currency that enhances the value of your investment, ensuring unprecedented stability. Have greater security, increase wealth, and create opportunities with this global currency. Gain exclusive access to the backdoor opportunities that await early adopters, allowing you to seize the advantage before anyone else. Embrace the future of finance with Supelle and unlock a world of limitless possibilities!
-                                    Crypto Currency + Pioneer Global Marketplace = high value
-                                </p>
-                            </div>
                         </div>
-                        <div className="col-sm-6">
-                            <div className="endless-image">
-                                <img src={endless} alt="" className='w-100' />
-                            </div>
+                    </div>
+                    <div className="col-md-6 mt-3 order-1">
+                        <div className="endless-image sup-image">
+                            <img src={membership} alt="" className='w-100' />
                         </div>
                     </div>
                 </div>
-            </div>
+            </Section>
 
-            <div className="membership section">
-                <div className="container">
+            {/* Get Through the back door */}
+            <Section name={"backdoor"} mt={120} className="border-top">
+                    <h1 className="pri-color text-center my-5 heading title" data-aos="fade-up">Get In Through The Backdoor!</h1>
                     <div className="row">
-                        <div className="col-sm-6 pr-sm-5 d-flex justify-content-center align-items-center order-2">
-                            <div className="endless-context">
-                                <h1 className="pri-color">Become a Supcoin Token holder today to enjoy Supcoin discounts!
-                                </h1>
-                                <button className="btn btn-inline-pri mt-5">Buy Supelle Tokens</button>
-
-                            </div>
-                        </div>
-                        <div className="col-sm-6 order-1">
-                            <div className="endless-image">
-                                <img src={membership} alt="" className='w-100' />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div className="backdoor section">
-                <div className="container">
-                    <h1 className="pri-color text-center my-5">Get In Through The Backdoor!</h1>
-                    <div className="row">
-                        <div className="col-sm-6 pr-sm-5 d-flex justify-content-center align-items-center">
-                            <div className="endless-context">
-                                <h3>Be one of the early birds to own Supcoin (SUP) and increase your wealth tremendously!
+                        <div className="col-md-6 mt-3 pr-sm-5 d-flex justify-content-center align-items-center">
+                            <div className="endless-context" data-aos="fade-right">
+                                <h3 className='sub-heading sub-title'>Be one of the early birds to own Supcoin (SUP) and increase your wealth tremendously!
                                     Invest in token offerings with a global marketplace you can trust and tap into an international network of opportunities.
                                 </h3>
                                 <button className="btn btn-inline-pri mt-5">Get In Now!!!</button>
                             </div>
                         </div>
-                        <div className="col-sm-6">
-                            <div className="endless-image">
+                        <div className="col-md-6 mt-3">
+                            <div className="endless-image sup-image" data-aos="fade-left">
                                 <img src={backdoor} alt="" className='w-100' />
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+            </Section>
 
-            <div className="community section">
+            {/* Community */}
+            <Section name={"community"} mt={120} className="border-top" >
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-6 pr-sm-5 d-flex justify-content-center align-items-center">
-                            <div className="endless-context">
-                                <h3>Our Inspiring Community is The Place to Be</h3>
+                        <div className="col-md-6 mt-3 pr-sm-5 d-flex justify-content-center align-items-center">
+                            <div className="endless-context" data-aos="fade-right">
+                                <h3 className='heading'>Our Inspiring Community is The Place to Be</h3>
                                 <p className="mt-2">Communities are created when people share a common purpose. The growth of the Supcoin community is the immense growth   of every member. We encourage involvement and investment because we want you to reach your maximum potential too.
                                     Global Supelle members are exploring the brand-new opportunities that the platform offers every day. We harness the power of our strong, growing community to maximize the potential value of crypto and trading.
-
                                 </p>
 
                             </div>
                         </div>
-                        <div className="col-sm-6">
-                            <div className="endless-image">
+                        <div className="col-md-6 mt-3">
+                            <div className="endless-image sup-image" data-aos="fade-left">
                                 <img src={community} alt="" className='w-100' />
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Section>
 
-            <div className="revolution mb-0 section">
+            {/* Become a revolutionary */}
+            <Section name={"revolution"} mt={120}>
+                <div className="overlay"></div>
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-6 pr-sm-5 d-flex justify-content-center align-items-center">
-                            <div className="endless-context">
+                        <div className="col-md-6 mt-3 pr-sm-5 d-flex justify-content-center align-items-center">
+                            <div className="endless-context" data-aos="zoom-in">
                                 <div className="mb-3">
                                     <div className="d-flex-align-items-center">
                                         <FaChevronRight className='mr-3' />
@@ -139,14 +135,14 @@ function Sup() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-6">
-                            <div className="endless-image">
+                        <div className="col-md-6 mt-3">
+                            <div className="endless-image" data-aos="zoom-in">
                                 <img src={revolution} alt="" className='w-100' />
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Section>
 
         </div>
     )
