@@ -84,7 +84,6 @@
 #presale {
     background: url("../../images/roadmap/coin-bg.jpg") center center/cover no-repeat;
     text-align: center;
-    min-height: 100vh !important;
 }
 
 .presale-container {
