@@ -32,43 +32,103 @@ function Roadmap() {
                         <Button className="mt-5 presale-btn" type={"block"} color={"light"}>Presale</Button>
                     </div>
                 </Hero>
-                {/* 
-            <Section name={"maps"} className={'position-relative'}>
-                <div className="overlay"></div>
-                <div className="map-container">
-                    <h1 className="heading pri-color">Bringing the <br />SUP Token to Life</h1>
 
-                    <div className="map">
-                        <div className="map-line"></div>
+                {/* RoadMap */}
+                <Section container={750} center={true}>
+                    <div className="roadmap-container">
+                        <h1 className="hero-heading heading my-5"> Bringing the <br />SUP Token to Life</h1>
+                        <div className="roadmap-items pt-5">
 
-                        <div className="map-items row">
-                            <div className="col-sm-4">
-                                <div className="map-item map-item-top"></div>
+
+                            <div className="roadmap-content">
+                                <h2 className="heading roadmap-heading" data-aos="fade-right">2017</h2>
+                                <div className='lead roadmap-text'>
+                                    <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
+                                    <span className='d-inline-block' data-aos="fade-left">
+                                        The world witnesses a
+                                        massive wave of ICO's
+                                        conducted with little to
+                                        no consideration for
+                                        securities laws
+                                    </span>
+                                </div>
                             </div>
-                            <div className="col-sm-4">
-                                <div className="map-item map-item-top"></div>
+
+                            <div className="roadmap-content">
+                                <h2 className="heading roadmap-heading" data-aos="fade-right">2018</h2>
+                                <div className='lead roadmap-text'>
+                                    <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
+                                    <span className='d-inline-block' data-aos="fade-left">
+                                        SUP works closely with
+                                        regulators to define the
+                                        framework for regulated
+                                        token offerings, creating
+                                        a path for them to
+                                        become a valid asset
+                                        in the future of finance
+                                    </span>
+                                </div>
                             </div>
-                            <div className="col-sm-4">
-                                <div className="map-item map-item-top"></div>
+
+                            <div className="roadmap-content">
+                                <h2 className="heading roadmap-heading" data-aos="fade-right">2019</h2>
+                                <div className='lead roadmap-text'>
+                                    <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
+                                    <span className='d-inline-block' data-aos="fade-left">
+                                        SUP announces filing of
+                                        F-1 registration statement
+                                        for a regulated Token
+                                        Offering
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <div className="map-items row">
-                            <div className="col-sm-4">
-                                <div className="map-item map-item-bottom"></div>
+
+                            <div className="roadmap-content">
+                                <h2 className="heading roadmap-heading" data-aos="fade-right">2020</h2>
+                                <div className='lead roadmap-text'>
+                                    <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
+                                    <span className='d-inline-block' data-aos="fade-left">
+                                        The first ever SEC-registered
+                                        Security Token IPO is live!
+                                        SUP Tokens are available for
+                                        the general public to invest in the primary market
+                                    </span>
+                                </div>
                             </div>
-                            <div className="col-sm-4">
-                                <div className="map-item map-item-bottom"></div>
+
+                            <div className="roadmap-content">
+                                <h2 className="heading roadmap-heading" data-aos="fade-right">April 2021</h2>
+                                <div className='lead roadmap-text'>
+                                    <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
+                                    <span className='d-inline-block' data-aos="fade-left">
+                                        With $85M raised
+                                        SUP officially closes its
+                                        primary offering with 7,200
+                                        retail & institutional
+                                        investors across 75
+                                        countries
+                                    </span>
+                                </div>
                             </div>
-                            <div className="col-sm-4">
-                                <div className="map-item map-item-bottom"></div>
+
+
+                            <div className="roadmap-content">
+                                <h2 className="heading roadmap-heading" data-aos="fade-right">July 2021</h2>
+                                <div className='lead roadmap-text'>
+                                    <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
+                                    <span className='d-inline-block' data-aos="fade-left">
+                                        SUP is listed on the
+                                        secondary market making
+                                        it available for trading to
+                                        the general public
+                                    </span>
+                                </div>
                             </div>
+
                         </div>
 
                     </div>
-
-                </div>
-
-            </Section> */}
+                </Section>
 
                 <Section name={"presale"} >
                     <div className="presale-container">

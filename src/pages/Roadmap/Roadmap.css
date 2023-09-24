@@ -18,68 +18,54 @@
     padding-inline: 20px !important;
 }
 
-#maps {
-    background: url("../../images/roadmap/map-bg.jpeg") center center/cover no-repeat fixed;
-    height: 100%;
-}
+/* Roadmap */
 
-#maps .overlay {
-    background-color: rgba(255,255,255,0.8) ;
-}
 
-.map-container {
-    z-index: 1;
-    position: relative;
-    min-height: 500px;
-}
-
-.map {
-    position: relative;
+.roadmap-content {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    min-height: 520px;
+    flex-wrap: wrap;
 }
 
-.map-line {
-    height: 5px;
+.road-circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: solid 3px #102252;
+    border-radius: 50%;
+    left: -14px;
+    top: 0px;
+    background-color: #fff;
+    padding: 2px;
+    
+}
+
+.inner-circle {
+    height: 100%;
     width: 100%;
     background-color: #102252;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
+    border-radius: 50%;
 }
 
-.map-item {
-    border: solid 1px #102252;
-    height: 200px;
+.roadmap-content:last-child .roadmap-text {
+    border: none;
+}
+
+
+.roadmap-heading {
+    flex: 1;
+    padding: 0px 0px 10px 30px;
+}
+.roadmap-text {
     position: relative;
-    background: #fff;
-}
-
-.map-item::before {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    content: "";
-    border-style: solid;
-    height: 60px;
-    width: 5px;
+    border-left: solid 2px #102252;
+    flex: 1.8;
+    padding: 0px 0px 50px 30px;
+    margin-bottom: 0;
     
 }
 
-.map-item-top::before {
-    top: 115%;
-    left: 20%;
-}
 
-.map-item-bottom::before {
-    top: -15%;
-    right: 20%;
-}
+
 
 #presale {
     background: url("../../images/roadmap/coin-bg.jpg") center center/cover no-repeat;
@@ -119,4 +105,21 @@
 .tech .icon {
     min-width: 15px;
     height: 15px;
+}
+
+@media (max-width: 576px) {
+    .roadmap-content {
+        display: block;
+    }
+
+    .road-circle {
+        left: -13px;
+        top: -30px;
+    }
+
+    .roadmap-heading {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-left: #102252 solid 2px;
+    }
 }

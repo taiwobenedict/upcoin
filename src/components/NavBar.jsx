@@ -21,7 +21,7 @@ function NavBar() {
                 <div className="navbar-container flex-wrap">
 
                     {/* Logo */}
-                    <div className='logo'>
+                    <div className='logo' onClick={closeToggler}>
                         <Link to="/" className='nav-link'><img src={logo} alt="" /></Link>
                     </div>
 

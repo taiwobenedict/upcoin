@@ -82,6 +82,10 @@
     width: 95%;
 }
 
+.change {
+    display: none;
+}
+
 
 @media (max-width: 768px) {
     .hero {
