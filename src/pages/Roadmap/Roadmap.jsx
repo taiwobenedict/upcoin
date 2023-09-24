@@ -175,7 +175,7 @@ function Roadmap() {
                 </Section>
 
             </div>
-            <div className='tech row' >
+            <div className='tech mx-0 row' >
                 <div className=" pri-color px-5 pt-5 col-md-6" data-aos="fade-right">
                     <h1 className="title">Token <br />Technical <br /> Features</h1>
                     <div className="d-flex justify-content-start align-items-center mt-4">
