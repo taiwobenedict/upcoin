@@ -14,8 +14,6 @@ import "aos/dist/aos.css"
 
 AOS.init({
   duration: 1000,
-  offset: 300,
-  // delay: 200,
 })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

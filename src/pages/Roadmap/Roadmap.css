@@ -2,6 +2,7 @@
     background: url("../../images/roadmap/roadmap-hero.jpg") center center/cover no-repeat;
 }
 
+
 .roadmap-hero {
     color: #fff;
 }
@@ -111,14 +112,10 @@
 
 .tech {
     margin-top: 130px;
-    align-items: flex-end;
-    height: 600px;
     overflow: hidden;
 }
 
-.flex-1 {
-    flex: 1;
-}
+
 
 .tech .icon {
     min-width: 15px;

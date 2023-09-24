@@ -175,8 +175,8 @@ function Roadmap() {
                 </Section>
 
             </div>
-            <div className='tech d-flex justify-content-center align-items-end align-items-center' >
-                <div className=" pri-color px-5 flex-1 w-100 h-100 pt-5" data-aos="fade-right">
+            <div className='tech row' >
+                <div className=" pri-color px-5 pt-5 col-md-6" data-aos="fade-right">
                     <h1 className="title">Token <br />Technical <br /> Features</h1>
                     <div className="d-flex justify-content-start align-items-center mt-4">
                         <FaArrowRight size={25} className="d-block icon mr-3" />
@@ -190,9 +190,8 @@ function Roadmap() {
                         <FaArrowRight size={25} className="d-block icon mr-3" />
                         <p className='lead'>It is an ERC-20 utility coin, a type of secure, smart contract-enabled token on the Ethereum blockchain that is interchangeable.</p>
                     </div>
-
                 </div>
-                <div className="pri-bg text-light px-5 flex-1 w-100 h-100 pt-5" data-aos="fade-left">
+                <div className="pri-bg text-light px-5 pt-5 col-md-6" data-aos="fade-left">
                     <h1 className="title">OTC <br />Desk</h1>
                     <p className='lead'>Over-The-Counter (OTC) trading takes place off the open SUP order book. We offer deeper liquidity and a private, more personalized service to institutions and high net-worth individuals needing to fill large orders that might be too disruptive if placed on the open market. Whether you are trading blocks of $100,000, $1,000,000 or 200,000 SUP, the OTC desk will provide you with execution and settlement services that are discreet, secure and ultra-competitive
                     </p>
