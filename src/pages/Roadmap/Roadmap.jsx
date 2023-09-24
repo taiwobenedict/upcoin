@@ -41,7 +41,9 @@ function Roadmap() {
 
 
                             <div className="roadmap-content">
-                                <h2 className="heading roadmap-heading" data-aos="fade-right">2017</h2>
+                                <h2 className="heading roadmap-heading">
+                                    <span className="d-inline-block"  data-aos="fade-right">2017</span>
+                                </h2>
                                 <div className='lead roadmap-text'>
                                     <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
                                     <span className='d-inline-block' data-aos="fade-left">
@@ -55,7 +57,9 @@ function Roadmap() {
                             </div>
 
                             <div className="roadmap-content">
-                                <h2 className="heading roadmap-heading" data-aos="fade-right">2018</h2>
+                                <h2 className="heading roadmap-heading">
+                                <span className="d-inline-block"  data-aos="fade-right">2018</span>
+                                </h2>
                                 <div className='lead roadmap-text'>
                                     <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
                                     <span className='d-inline-block' data-aos="fade-left">
@@ -71,7 +75,9 @@ function Roadmap() {
                             </div>
 
                             <div className="roadmap-content">
-                                <h2 className="heading roadmap-heading" data-aos="fade-right">2019</h2>
+                                <h2 className="heading roadmap-heading">
+                                <span className="d-inline-block"  data-aos="fade-right">2019</span>
+                                </h2>
                                 <div className='lead roadmap-text'>
                                     <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
                                     <span className='d-inline-block' data-aos="fade-left">
@@ -84,7 +90,9 @@ function Roadmap() {
                             </div>
 
                             <div className="roadmap-content">
-                                <h2 className="heading roadmap-heading" data-aos="fade-right">2020</h2>
+                                <h2 className="heading roadmap-heading">
+                                <span className="d-inline-block"  data-aos="fade-right">2020</span>
+                                </h2>
                                 <div className='lead roadmap-text'>
                                     <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
                                     <span className='d-inline-block' data-aos="fade-left">
@@ -97,7 +105,9 @@ function Roadmap() {
                             </div>
 
                             <div className="roadmap-content">
-                                <h2 className="heading roadmap-heading" data-aos="fade-right">April 2021</h2>
+                                <h2 className="heading roadmap-heading">
+                                <span className="d-inline-block"  data-aos="fade-right">Apri 2021</span>
+                                </h2>
                                 <div className='lead roadmap-text'>
                                     <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
                                     <span className='d-inline-block' data-aos="fade-left">
@@ -113,7 +123,9 @@ function Roadmap() {
 
 
                             <div className="roadmap-content">
-                                <h2 className="heading roadmap-heading" data-aos="fade-right">July 2021</h2>
+                                <h2 className="heading roadmap-heading">
+                                <span className="d-inline-block"  data-aos="fade-right">July 2021</span>
+                                </h2>
                                 <div className='lead roadmap-text'>
                                     <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
                                     <span className='d-inline-block' data-aos="fade-left">
