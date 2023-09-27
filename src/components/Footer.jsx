@@ -6,7 +6,7 @@ import './Components.css'
 
 function Footer() {
   return (
-    <footer className="footer" data-aos="fade-up">
+    <footer className="footer">
         <div className="container-lg py-4">
             <div className="">
                 <img src={coingold} alt="" className='mr-5' />

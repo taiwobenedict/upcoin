@@ -32,16 +32,7 @@
 
 
 /* Welcome Section */
-.welcome-container {
-    max-width: 619px;
-    text-align: center;
-    margin:auto;
-}
 
-
-.welcome-text {
-    font-size: 54px;
-}
 
 .action-btns {
     display: flex;
@@ -88,7 +79,9 @@
     align-items: center;
 }
 
-
+#supelle.pb-0 {
+    padding-bottom: 0 !important;
+}
 /* Watch Video */
 #watch-video {
     min-height: 685px;
@@ -96,7 +89,7 @@
 }
 
 .video-content {
-    max-width: 327px;
+    max-width: 400px;
 }
 
 .video {

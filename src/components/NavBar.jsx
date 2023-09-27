@@ -2,27 +2,27 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { FaBars, FaCaretRight, FaLink, FaTimes } from "react-icons/fa"
 import logo from '../images/home/logo.png'
-import { uiContext } from '../context/UIcontext'
+import { UIContext } from '../context/UIcontext'
 
 import { Button } from '../Utilities'
 
 function NavBar() {
     
-    const { toggle, setToggler, handleDropDown, learnTog, howTog } = useContext(uiContext)
+    const { toggle, setToggle, handleDropDown, navDrop, } = useContext(UIContext)
 
     const closeToggler = (e)=> {
-        setToggler(false)
+        setToggle(false)
         handleDropDown(e)
     }
 
     return (
         <div id='navbar'>
-            <div className="container container-expand">
+            <div className="container-fluid">
                 <div className="navbar-container flex-wrap">
 
                     {/* Logo */}
                     <div className='logo' onClick={closeToggler}>
-                        <Link to="/" className='nav-link'><img src={logo} alt="" /></Link>
+                        <Link to="/" className='nav-link pl-0'><img src={logo} alt="" /></Link>
                     </div>
 
                     {/* Main Navigation */}
@@ -33,15 +33,15 @@ function NavBar() {
 
                         <div className="nav-link">
                             <div className="position-relative">
-                                <span style={{ fontSize: "14px" }}>Learn</span> <FaCaretRight className={`icon transition ${!learnTog && "rotate"}`} />
-                                <span onClick={handleDropDown} id='learn' className="dropdown-btn"></span>
+                                <span style={{ fontSize: "14px" }}>Learn</span> <FaCaretRight className={`icon transition ${!navDrop.drop1 && "rotate"}`} />
+                                <span onClick={handleDropDown} id='drop1' className="dropdown-btn"></span>
                             </div>
 
-                            <div className={`dropdown-items ${learnTog && "drop"}`}>
+                            <div className={`dropdown-items ${navDrop.drop1 && "drop"}`}>
                                 <div className='row text-light dropdown-container'>
                                     <div className='col-sm-6'>
-                                        <h1 className='heading title'>Learn</h1>
-                                        <p className='sub-heading'>Supcoin help you navigate the digital asset landscape with exiting, cofidence and knowledge. The digital asset space is continuously evolving, with new projects, trends, and technologies emerging frequently.</p>
+                                        <h1 className='heading-md bold title'>Learn</h1>
+                                        <p className='text-big'>Supcoin help you navigate the digital asset landscape with exiting, cofidence and knowledge. The digital asset space is continuously evolving, with new projects, trends, and technologies emerging frequently.</p>
                                     </div>
                                     <div className="dropdown col-sm-6">
                                         <li onClick={closeToggler}><Link to="#home" className='nav-link dropdown-item'> Cryptocurrencies  <FaLink className='ml-2' /></Link></li>
@@ -57,22 +57,22 @@ function NavBar() {
 
                         <div className='nav-link'>
                             <div className="position-relative">
-                                <span style={{ fontSize: "14px" }}>How To Buy</span> <FaCaretRight className={`icon transition ${!howTog && "rotate"}`} />
-                                <span onClick={handleDropDown} id='how' className="dropdown-btn"></span>
+                                <span style={{ fontSize: "14px" }}>How To Buy</span> <FaCaretRight className={`icon transition ${!navDrop.drop2 && "rotate"}`} />
+                                <span onClick={handleDropDown} id='drop2' className="dropdown-btn"></span>
                             </div>
 
-                            <div className={`dropdown-items ${howTog && "drop"}`} >
+                            <div className={`dropdown-items ${navDrop.drop2 && "drop"}`} >
                                 <div className='row dropdown-container'>
                                     <div className="col-sm-6 text-light">
-                                        <h1 className='heading title'>New comer</h1>
-                                        <p className='sub-heading'>Multiple markets from two different asset classes all available to you in ONE place.</p>
+                                        <h1 className='heading-md bold title'>New comer</h1>
+                                        <p className='text-big'>Welcome to the world of cryptocurrencies! Crypto is an exciting and rapidly evolving space that offers various opportunities for investment, innovation, and financial empowerment.</p>
                                     </div>
                                     <div className="dropdown col-sm-6">
-                                        <li onClick={() => setToggler(false)}>
-                                            <Link to="#home" className='nav-link dropdown-item'>New To Cryto  <FaLink className='ml-2'/></Link>
+                                        <li onClick={closeToggler}>
+                                            <Link to="/new-to-crypto" className='nav-link dropdown-item'>New To Cryto  <FaLink className='ml-2'/></Link>
                                         </li>
-                                        <li onClick={() => setToggler(false)}>
-                                            <Link to="#home" className='nav-link dropdown-item'>Win $100k   <FaLink className='ml-2'/></Link>
+                                        <li onClick={closeToggler}>
+                                            <Link to="/win" className='nav-link dropdown-item'>Win $100k   <FaLink className='ml-2'/></Link>
                                         </li>
                                     </div>
                                 </div>
@@ -94,7 +94,7 @@ function NavBar() {
                     {/* Toggler */}
                     <div className="d-flex align-items-center side-nav justify-content-center ">
                         <Link href="#" className="nav-link">Sign In</Link>
-                        <div className={`toggler transition ${toggle && "rotate"}`} onClick={()=> setToggler(prev => !prev)}>
+                        <div className={`toggler transition ${toggle && "rotate"}`} onClick={()=> setToggle(prev => !prev)}>
                             {toggle ? <FaTimes size={20} /> : <FaBars size={25} />}
                         </div>
                     </div>

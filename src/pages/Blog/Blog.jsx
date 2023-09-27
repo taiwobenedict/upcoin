@@ -51,15 +51,15 @@ function Blog() {
 
     return (
         <div id='blog'>
-            <Hero container={500} centerContent className="blog-container">
+            <Hero container={700} centerContent className="blog-container">
                 <div className="text-light text-center">
-                    <h1 className="heading hero-heading">Blog</h1>
-                    <p className="sub-heading hero-caption">Here, you'll find a variety of interesting articles related to our products and services.</p>
+                    <h1 className="heading-xl bold">Blog</h1>
+                    <p className="text-big bold">Here, you'll find a variety of interesting articles related to our products and services.</p>
                 </div>
             </Hero>
 
             {/* Articles */}
-            <Section mt={70} expand={false}>
+            <Section mt={70} expand={true}>
                 <div className="row">
                     <div className="col-md-8">
                         {
@@ -88,7 +88,7 @@ function Blog() {
                 </div>
             </Section>
 
-            <Section>
+            <Section className="container">
                 <nav>
                     <ul className="pagination">
                         <li className="page-item"><Link className="page-link">Prev</Link></li>
@@ -160,13 +160,15 @@ function PostDetails({ img, title, text, date, id }) {
                     <li className="breadcrumb-item heading">{title}</li>
                 </ol>
             </nav>
-            <div className='card'>
-                <div className="card shadow border-0">
-                    <img className="card-img-top" src={img} alt={title} />
-                    <div className="card-body">
-                        <h2 className="card-title heading">{title}</h2>
-                        <p className="card-text text-muted"> Posted {date} mins ago.</p>
-                        <p className="card-text lead">{text}</p>
+            <div className="container">
+                <div className='card'>
+                    <div className="card shadow border-0">
+                        <img className="card-img-top" src={img} alt={title} />
+                        <div className="card-body">
+                            <h2 className="card-title heading">{title}</h2>
+                            <p className="card-text text-muted"> Posted {date} mins ago.</p>
+                            <p className="card-text lead">{text}</p>
+                        </div>
                     </div>
                 </div>
             </div>

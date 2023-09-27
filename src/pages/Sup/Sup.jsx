@@ -11,10 +11,10 @@ import { Hero, Section } from '../../Utilities'
 function Sup() {
     return (
         <div id='sup'>
-            <Hero container={750}>
+            <Hero container={750} className="container">
                 <div className="hero-context text-light">
-                    <h1 className='heading hero-heading' data-aos="fade-up">Wealth of Opportunities and Your Key to a Successful Future Endless </h1>
-                    <div className="sub-heading hero-caption " data-aos="zoom-out">Exclusively on Supelle, discover a wealth of business opportunities with valuable crypto assets and utility tokens (SUP).</div>
+                    <h1 className='heading-lg bold' data-aos="fade-up">Wealth of Opportunities and Your Key to a Successful Future Endless </h1>
+                    <div className="text-big bold " data-aos="zoom-out">Exclusively on Supelle, discover a wealth of business opportunities with valuable crypto assets and utility tokens (SUP).</div>
                     <div className="action-btns mt-4 justify-content-start" >
                         <button className="btn btn-block-light mt-2 mr-4" > CONNECT</button>
                         <button className="btn btn-inline-light mt-2">LOGIN</button>
@@ -23,12 +23,12 @@ function Sup() {
             </Hero>
 
             {/* Endless Posibilities */}
-            <Section name={"endless"} mt={120} className="border-bottom">
+            <Section name={"endless"} mt={120} className="border-bottom container py-5">
                 <div className="row" data-aos="zoom-in">
                     <div className="col-md-6 mt-3 d-flex justify-content-center align-items-center">
                         <div className="endless-context">
-                            <h2 className="pri-color heading">Endless Possibilities with Supcoin ($SUP)</h2>
-                            <p className="mt-2">Introducing Supcoin, a revolutionary fusion of cryptocurrency and marketplace. Supcoin isn't just a currency; it's a visionary currency that enhances the value of your investment, ensuring unprecedented stability. Have greater security, increase wealth, and create opportunities with this global currency. Gain exclusive access to the backdoor opportunities that await early adopters, allowing you to seize the advantage before anyone else. Embrace the future of finance with Supelle and unlock a world of limitless possibilities!
+                            <h2 className="pri-color heading-md bold">Endless Possibilities with Supcoin ($SUP)</h2>
+                            <p className="mt-2 text-big">Introducing Supcoin, a revolutionary fusion of cryptocurrency and marketplace. Supcoin isn't just a currency; it's a visionary currency that enhances the value of your investment, ensuring unprecedented stability. Have greater security, increase wealth, and create opportunities with this global currency. Gain exclusive access to the backdoor opportunities that await early adopters, allowing you to seize the advantage before anyone else. Embrace the future of finance with Supelle and unlock a world of limitless possibilities!
                                 Crypto Currency + Pioneer Global Marketplace = high value
                             </p>
                         </div>
@@ -42,11 +42,11 @@ function Sup() {
             </Section>
 
             {/* Become Member */}
-            <Section name={"membership"} mt={120}>
+            <Section name={"membership"} mt={120} className="container">
                 <div className="row" data-aos="zoom-in">
                     <div className="col-md-6 mt-3 pr-sm-5 d-flex justify-content-center align-items-center order-2">
                         <div className="endless-context">
-                            <h1 className="pri-color heading">Become a Supcoin Token holder today to enjoy Supcoin discounts!
+                            <h1 className="pri-color heading-md">Become a Supcoin Token holder today to enjoy Supcoin discounts!
                             </h1>
                             <button className="btn btn-inline-pri mt-5">Buy Supelle Tokens</button>
 
@@ -61,12 +61,12 @@ function Sup() {
             </Section>
 
             {/* Get Through the back door */}
-            <Section name={"backdoor"} mt={120} className="border-top">
+            <Section name={"backdoor"} mt={120} className="border-top container">
                     <h1 className="pri-color text-center my-5 heading title" data-aos="fade-up">Get In Through The Backdoor!</h1>
                     <div className="row">
                         <div className="col-md-6 mt-3 pr-sm-5 d-flex justify-content-center align-items-center">
                             <div className="endless-context" data-aos="fade-right">
-                                <h3 className='sub-heading sub-title'>Be one of the early birds to own Supcoin (SUP) and increase your wealth tremendously!
+                                <h3 className='heading-sm'>Be one of the early birds to own Supcoin (SUP) and increase your wealth tremendously!
                                     Invest in token offerings with a global marketplace you can trust and tap into an international network of opportunities.
                                 </h3>
                                 <button className="btn btn-inline-pri mt-5">Get In Now!!!</button>
@@ -86,8 +86,8 @@ function Sup() {
                     <div className="row">
                         <div className="col-md-6 mt-3 pr-sm-5 d-flex justify-content-center align-items-center">
                             <div className="endless-context" data-aos="fade-right">
-                                <h3 className='heading'>Our Inspiring Community is The Place to Be</h3>
-                                <p className="mt-2">Communities are created when people share a common purpose. The growth of the Supcoin community is the immense growth   of every member. We encourage involvement and investment because we want you to reach your maximum potential too.
+                                <h3 className='heading-sm'>Our Inspiring Community is The Place to Be</h3>
+                                <p className="mt-2 text-big">Communities are created when people share a common purpose. The growth of the Supcoin community is the immense growth   of every member. We encourage involvement and investment because we want you to reach your maximum potential too.
                                     Global Supelle members are exploring the brand-new opportunities that the platform offers every day. We harness the power of our strong, growing community to maximize the potential value of crypto and trading.
                                 </p>
 

@@ -54,12 +54,12 @@ function Home() {
                         </SwiperSlide>
             </Swiper>
 
-            <Hero centerContent={true}>
-                <div className="row  w-100 justify-content-between align-items-center">
-                    <div className="col-md-6 mt-4">
+            <Hero centerContent={true} expand={true} className={"container-fluid"} >
+                <div className="row  w-100 mx-auto justify-content-between align-items-center">
+                    <div className="col-md-7 mt-4">
                         <div className="hero-context text-light">
-                            <h2 className='heading'>EMBRACE AND EMBARK ON A PATH TOWARDS A PROSPEROUS OPPORTUNITY.</h2>
-                            <p className='sub-heading'>Begin your journey leading the way to a brighter future
+                            <h2 className='heading-sm bold'>EMBRACE AND EMBARK ON A PATH TOWARDS A PROSPEROUS OPPORTUNITY.</h2>
+                            <p className='text-big bold'>Begin your journey leading the way to a brighter future
                                 with Supcoin to embrace the potential of this cutting-edge
                                 digital currency. Supcoin- Unleash massive financial
                                 potential with the ultimate fusion of finance and freelancing!</p>
@@ -75,11 +75,11 @@ function Home() {
 
 
                         <div className="action-btns mt-4 justify-content-start">
-                            <Button color={"light"} type={"block"}>CONNECT</Button>
-                            <Button color={"light"} type={"inline"}>CERDIK AUDI</Button>
+                            <Button color={"light"} type={"block"}>WHITEPAPER</Button>
+                            <Button color={"light"} type={"inline"}>CERDIK AUDIT</Button>
                         </div>
                     </div>
-                    <div className="col-md-6  mt-4">
+                    <div className="col-md-5  mt-4">
                         <div className="buying-section">
                             <img src={buyingSection} alt="Buying Section" className='ml-md-auto d-block' />
                         </div>
@@ -91,7 +91,7 @@ function Home() {
 
 
             {/* Marquee */}
-            <div className="marquee text-center">
+            <div className="marquee text-center fixed-bottom">
                 <Marquee autoFill>
                     <div className="d-flex mr-5 align-items-center p-2">
                         <h5 className='mr-2'>Coin</h5>
@@ -121,27 +121,27 @@ function Home() {
             </div>
 
             {/* Welcome Section */}
-            <Section name={"welcome"} mt={50}>
-                <div className="welcome-container" data-aos="zoom-in">
-                    <h1 className="heading title pri-color">Welcome to Supcoin</h1>
-                    <h5 className='pri-color sub-heading'>SUPCON IS THE FUTURE OF GENE-RATONAL WEALTH</h5>
-                    <h3 className='mt-5 heading'>What is a Crypto Presale?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur. Lorem tellus scelerisque morbi vivamus lobortis. Morbi cursus pellentesque ultrices senectus nulla vivamus ullamcorper aenean velit. Nec sit integer lectus viverra tempus purus.</p>
+            <Section name={"welcome"} mt={50} className="container">
+                <div className="text-center" data-aos="zoom-in">
+                    <h1 className="heading-lg pri-color">Welcome to Supcoin</h1>
+                    <h5 className='pri-color heading-sm'>SUPCON IS THE FUTURE OF GENE-RATONAL WEALTH</h5>
+                    <h3 className='mt-5 heading-sm'>What is a Crypto Presale?</h3>
+                    <p className='text-big'>A crypto presale grants a unique opportunity to purchase ahead of others and unlock immense profits. Our presale serves as your exclusive gateway to discounted digital assets, paving the way for million-dollar returns!</p>
                     <div className="action-btns mx-auto mt-4">
-                        <Button color={"pri"} type={"block"}>WHITEPAPER</Button>
-                        <Button color={"pri"} type={"inline"}>CERDIK AUDI</Button>
+                        <Button color={"pri"} type={"block"}>Explore Our Project</Button>
+                        <Button color={"pri"} type={"inline"}>Sale Whitelist</Button>
                     </div>
                 </div>
             </Section>
 
             {/* Opportunity Section */}
-            <Section name={"opportunity"} mt={50}>
+            <Section name={"opportunity"} mt={50} className="container">
                 <div className="row align-items-center h-100">
                     <div className="col-md-6 mt-5 text-center" data-aos="fade-right">
-                        <h2 className='heading pri-color mb-5'>Abundance of Opportunities awaits</h2>
-                        <div className="w-75 mx-auto">
-                            <p>Lorem ipsum dolor sit amet consectetur. Lorem tellus scelerisque morbi vivamus lobortis.</p>
-                            <p className='mt-3'>Morbi cursus pellentesque ultrices senectus nulla vivamus ullamcorper aenean velit.</p>
+                        <h2 className='heading-sm pri-color mb-5'>Abundance of Opportunities awaits</h2>
+                        <div className=" mx-auto">
+                            <p className=''>Be among the pioneering investors to possess Supcoin (SUP) and witness remarkable growth in your wealth!</p>
+                            <p className='mt-3'>Engage in token offerings with a trusted global marketplace, unlocking a vast network of international Opportunities.</p>
                         </div>
                     </div>
                 </div>
@@ -150,12 +150,12 @@ function Home() {
 
             {/* Access Opportunity Section */}
             <Section name={"access"} expand={true} mt={82}>
-                <div className="col-sm-7 mx-auto text-center" data-aos="fade-up">
-                    <h3 className="pri-color">Access the opportunity through an alternate route!</h3>
-                    <p className="mt-3">Lorem ipsum dolor sit amet consectetur. Lorem tellus scelerisque morbi vivamus lobortis. Morbi cursus pellentesque ultrices senectus nulla vivamus ullamcorper aenean velit.</p>
+                <div className="col-sm-8 mx-auto text-center" data-aos="fade-up">
+                    <h3 className="pri-color heading-sm">Access the opportunity through an alternate route!</h3>
+                    <p className="mt-3">Envision seizing a rare, once-in-a-lifetime opportunity to aquire a highly profitable assets ahead of most investors-akin to invest in the next Facebook or Amazon and reaping multimillion gains <br /> This is the extraordinary opportunity that awaits YOU.</p>
                 </div>
 
-                <div className="access-gallery" data-aos="zoom-out">
+                <div className="access-gallery container-fluid" data-aos="zoom-out">
                     <div className="row">
                         <div className="col-sm-6 mt-5 h-100">
                             <div className="gallery h-100">
@@ -168,7 +168,7 @@ function Home() {
                             </div>
                         </div>
                         <div className="col-sm-6 mt-5">
-                            <div className="gallery">
+                            <div className="gallery h-100">
                                 <img src={pix2} className='w-100' alt="" />
                                 <div className="px-3">
                                     <h6 className="pri-color">Whitepaper</h6>
@@ -179,7 +179,7 @@ function Home() {
                     </div>
                     <div className="row">
                         <div className="col-sm-6 mt-5">
-                            <div className="gallery">
+                            <div className="gallery h-100">
                                 <img src={pix3} className='w-100' alt="" />
                                 <div className="px-3">
                                     <h6 className="pri-color">Certik Audit</h6>
@@ -188,7 +188,7 @@ function Home() {
                             </div>
                         </div>
                         <div className="col-sm-6 mt-5">
-                            <div className="gallery">
+                            <div className="gallery h-100">
                                 <img src={pix4} className='w-100' alt="" />
                                 <div className="px-3">
                                     <h6 className="pri-color">Team</h6>
@@ -201,12 +201,12 @@ function Home() {
             </Section>
 
             {/* Sup Section */}
-            <Section name="subcoin">
+            <Section name="subcoin" className="container">
             <div className="row">
                 <div className="col-sm-6 mt-5 d-flex justify-content-center align-items-center">
                     <div className="text-center" data-aos="fade-right">
-                        <h2 className='pri-color'>What is Supcoin SUP?</h2>
-                        <p className='mt-4'>Lorem ipsum dolor sit amet consectetur. Lorem tellus scelerisque morbi vivamus lobortis. Morbi cursus pellentesque ultrices senectus nulla vivamus ullamcorper aenean velit.Lorem ipsum dolor sit amet consectetur. Lorem tellus scelerisque morbi vivamus lobortis.</p>
+                        <h2 className='pri-color heading-md'>What is Supcoin SUP?</h2>
+                        <p className='mt-4'>Supcoin is the official cryptocurrency of Suppelle Global Marketplace. Suppelle and Supcoin pioneer together like a married duo, synergistically complementing each other to generate value and prosperity for their forward-thinking investors. Supcoin serves a payment system and currency that allows Suppelle not just to be a global marketplace but a global decentralized marketplace. </p>
                         <div className="d-flex justify-content-center align-items-center mt-5 flex-wrap">
                             <Button type={"block"} color={"pri"} className="mt-3 mr-3">What is Supcoin SUP?</Button>
                             <Button type={"block"} color={"pri"} className="mt-3">Learn more about digital money</Button>
@@ -220,9 +220,9 @@ function Home() {
             </Section>
 
             {/* New Letter */}
-            <Section name={"newsletter"} mt={82}>
+            <Section name={"newsletter"} mt={82} className="container">
                 <div className="col-sm-7 text-center" data-aos="fade-up">
-                    <h2>OUR NEWSLETTER</h2>
+                    <h2 className='heading-md'>OUR NEWSLETTER</h2>
                     <p>Sign up to our newsletter and be first to hear about Supcoin news</p>
                     <input type="email" className="form-control w-75 mx-auto" />
                     <p className='mt-3'>By clicking Sign Up you're confirming that you agree with our Terms & Conditions</p>
@@ -230,39 +230,36 @@ function Home() {
             </Section>
 
             {/* Supelle */}
-            <Section name="supelle" mt={32}>
-                <div className="container">
+            <Section name="supelle" mt={32}  className={"container"} pd="pb-0">
                     <div className="row">
-                        <div className="col-sm-6 mt-5" data-aos="fade-right">
+                        <div className="col-sm-6 mt-5 align-self-end" data-aos="fade-right">
                             <img src={supelle} alt="Supelle" className="w-100" />
                         </div>
                         <div className="col-sm-6 mt-5 d-flex align-items-center">
                             <div className="mx-auto text-center" data-aos="fade-left">
-                                <h2 className="pri-color heading">What is Supelle?</h2>
-                                <h5 className='sub-heading'>The People First Marketplace</h5>
-                                <p className='mt-3'>Lorem ipsum dolor sit amet consectetur. Lorem tellus scelerisque morbi vivamus lobortis. Morbi cursus pellentesque ultrices senectus nulla vivamus ullamcorper aenean velit. Nec sit integer lectus viverra tempus purus.</p>
-                                <div className="action-btns mx-auto mt-4">
-                                    <Button type={"block"} color={"pri"}>What is Supelle?</Button>
+                                <h2 className="pri-color heading-md">What is Supelle?</h2>
+                                <h5 className='heading-sm'>The People First Marketplace</h5>
+                                <p className='mt-3'>Supelle is a global marketplace that serves as an umbrella. Where we provide work opportunities for freelancers and offer solution to individuals and bussiness alike. The innovative platform is the present and future of global connectivity and collaboration. We offer essential support for freelancers' success and deliver top-notch customer supports to clients.</p>
+                                <div className="action-btns mx-auto mt-4 pb-4">
+                                    <Button type={"block"} color={"pri"} >What is Supelle?</Button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                </div>
             </Section>
 
             {/* Watch Video */}
-            <Section name={"watch-video"} className="text-light d-flex align-items-center" mt={47}>
-                    <div className="row" data-aos="zoom-in">
-                        <div className="col-md-6 mt-4">
+            <Section name={"watch-video"} className="text-light container">
+                    <div className="row justify-content-between" data-aos="zoom-in">
+                        <div className="col-md-7 mt-4">
                             <div className="video-content">
-                                <p>Supcoin team put this together for youEmbrace the World of Visual Delights:</p>
-                                <h3>WATCH OUR VIDEOS</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur. Lorem tellus scelerisque morbi vivamus lobortis. Morbi cursus pellentesque ultrices senectus nulla vivamus ullamcorper aenean velit. Nec sit integer lectus viverra tempus purus.Lorem ipsum dolor sit amet consectetur. Lorem tellus scelerisque morbi vivamus lobortis.</p>
+                                <p >SUPCOIN TEAM PUT THIS TOGETHER FOR YOU Embrace the World of Visual Delights:</p>
+                                <h3 className='heading-sm'>WATCH OUR VIDEOS</h3>
+                                <p >Don't miss out on the opportunity enrich your mind and expand your horizons. Whether you have few minutes to spare or you're looking for deep dive into a specific topic, our video collection is here to serve you. Watch as experts in their fields share valuable insights, discover fascinating stories, and delve into the latest trends; a journey of discovery and enjoyment. Our videos are designed to keep you informed, enlightened, knowledgeable and inspirational. Happy Viewing!</p>
                                 <Button color={"light"} type={"block"} className="mx-auto d-block mt-4">Watch More</Button>
                             </div>
                         </div>
-                        <div className="col-md-6 mt-4">
+                        <div className="col-md-5 mt-4">
                             <div className="video">
 
                             </div>

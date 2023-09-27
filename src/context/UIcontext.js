@@ -1,47 +1,57 @@
-import React, { useState } from 'react'
-import { createContext } from 'react'
+import React, { useState, createContext } from 'react';
 
-export const uiContext = createContext()
-
+export const UIContext = createContext();
 
 const UIContextProvider = ({ children }) => {
-    const [toggle, setToggler ] = useState(false)
-    const [learnTog, setLearnTog] = useState(false)
-    const [howTog, setHowTog] = useState(false)
+  const [toggle, setToggle] = useState(false);
+  const [navDrop, setNavDrop] = useState({ drop1: false, drop2: false });
+  const [formDrop, setFormDrop] = useState({ drop3: false, drop4: false });
+  const [optHeight, setOptHeight] = useState(0);
+  const [openModal, setModal ] = useState(false)
+  const [teamMember, setTeamMember] = useState({})
 
-    
-    const handleDropDown = (e) => {
-        switch (e.target.id) {
-            case "learn":
-                setHowTog(false)
-                setLearnTog(prev => !prev)
-                break;
+  const handleDropDown = (e) => {
+    const id = e.target.id;
 
-            case "how":
-                setLearnTog(false)
-                setHowTog(prev => !prev)
-                break;
-
-            default:
-                setLearnTog(false)
-                setHowTog(false)
-                break;
-        }
-
-
+    if (id === "drop3" || id === "drop4") {
+      const opt = e.target.parentElement.nextElementSibling.firstElementChild.clientHeight;
+      setOptHeight(opt);
     }
+    
 
+    // Toggle the dropdown if it's already open; otherwise, set it to open
+    setNavDrop((prevState) => ({
+      drop1: id === "drop1" ? !prevState.drop1 : false,
+      drop2: id === "drop2" ? !prevState.drop2 : false,
+    }));
 
-    return <uiContext.Provider value={{
-        toggle,
-        learnTog,
-        howTog,
-        setToggler,
-        handleDropDown
+    setFormDrop((prevState) => ({
+      drop3: id === "drop3" ? !prevState.drop3 : false,
+      drop4: id === "drop4" ? !prevState.drop4 : false,
+    }));
 
+  };
+
+  const handleModal = (member) => {
+    setTeamMember(member)
+    setModal(prev => !prev)
+  }
+
+  return (
+    <UIContext.Provider value={{
+      toggle,
+      navDrop,
+      formDrop,
+      optHeight,
+      openModal,
+      teamMember,
+      setToggle,
+      handleDropDown,
+      handleModal
     }}>
-        {children}
-    </uiContext.Provider>
-}
+      {children}
+    </UIContext.Provider>
+  );
+};
 
-export default UIContextProvider
+export default UIContextProvider;

@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState} from 'react'
 
 import sustainable from "../../images/invest/sustainable.png"
 import esteemed from "../../images/invest/esteemed.png"
@@ -25,30 +25,39 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { FaChevronCircleRight } from 'react-icons/fa'
+import { FaChevronCircleRight, FaChevronRight } from 'react-icons/fa'
+
+
 
 import './invest.css'
 
 function Invest() {
+    const [isChecked, setCheck] = useState(true)
+    const handleCheck = () => {
+
+        setCheck(prev => !prev)
+    }
+
+
     return (
         <div id='invest'>
             {/* Hero Section */}
-            <Hero container={750}>
+            <Hero container={750} className="container">
                 <div className="text-light">
-                    <h1 className="heading hero-heading">Pioneering The Future with Us</h1>
-                    <p className='sub-heading hero-caption'>Be the first to be a part of Supelle's comprehensive opportunity by becoming an early stage supporter. </p>
+                    <h1 className="heading-lg bold">Pioneering The Future with Us</h1>
+                    <p className='text-big bold'>Be the first to be a part of Supelle's comprehensive opportunity by becoming an early stage supporter. </p>
                     <Button type={"inline"} color={"light"} >Let's Talk</Button>
                 </div>
             </Hero>
 
 
             {/* Normal  */}
-            <Section name={"normal"} mt={120} className="border-bottom">
+            <Section name={"normal"} mt={120} className="border-bottom container py-5">
                 <div className="row">
                     <div className="col-sm-6 mt-3">
-                        <h2 className='pri-color heading mb-3'>Unlock the new normal</h2>
-                        <p className='mt-2'>We are offering you an exciting opportunity that we believe may be of interest to you. We are currently seeking early stage supporters for Supelle, and we want to share some key details with you.</p>
-                        <p className="mt-2">Supelle/Supcoin has tremendous potential for growth and is positioned to disrupt the freelancing marketplace. Our team is comprised of highly talented individuals with a deep understanding of the industry and a strong track record of success.
+                        <h2 className='pri-color heading-md bold mb-3'>Unlock the new normal</h2>
+                        <p className='mt-2 text-big'>We are offering you an exciting opportunity that we believe may be of interest to you. We are currently seeking early stage supporters for Supelle, and we want to share some key details with you.</p>
+                        <p className="mt-2 text-big">Supelle/Supcoin has tremendous potential for growth and is positioned to disrupt the freelancing marketplace. Our team is comprised of highly talented individuals with a deep understanding of the industry and a strong track record of success.
                         </p>
                         <h5 className="mt-3">SUP is the hurdle-free way to Raise Capital:</h5>
                         <button className="btn btn-block-pri mt-2">What are utility tokens?</button>
@@ -59,37 +68,37 @@ function Invest() {
                                 <div className="normal-image">
                                     <img src={sustainable} alt="Sustainable Financial Resistance" className='w-100' />
                                 </div>
-                                <h6>Sustainable Financial Resistance</h6>
+                                <h6 className="text-big">Sustainable Financial Resistance</h6>
                             </div>
                             <div className="normal-item d-flex align-items-center flex-wrap mb-3">
                                 <div className="normal-image">
                                     <img src={esteemed} alt="Esteemed Founder and Accomplished Team of Experts" className='w-100' />
                                 </div>
-                                <h6>Esteemed Founder and Accomplished Team of Experts</h6>
+                                <h6 className="text-big">Esteemed Founder and Accomplished Team of Experts</h6>
                             </div>
                             <div className="normal-item d-flex align-items-center flex-wrap mb-3">
                                 <div className="normal-image">
                                     <img src={unparallel} alt="Unparalleled Growth Potential & Uniqueness" className='w-100' />
                                 </div>
-                                <h6>Unparalleled Growth Potential & Uniqueness</h6>
+                                <h6 className="text-big">Unparalleled Growth Potential & Uniqueness</h6>
                             </div>
                             <div className="normal-item d-flex align-items-center flex-wrap mb-3">
                                 <div className="normal-image">
                                     <img src={robust} alt="Robust and Strategic Business Model " className='w-100' />
                                 </div>
-                                <h6>Robust and Strategic Business Model </h6>
+                                <h6 className="text-big">Robust and Strategic Business Model </h6>
                             </div>
                             <div className="normal-item d-flex align-items-center flex-wrap mb-3">
                                 <div className="normal-image">
                                     <img src={scale} alt="The Industry Demonstrates Proven Stability and Scalability " className='w-100' />
                                 </div>
-                                <h6>The Industry Demonstrates Proven Stability and Scalability </h6>
+                                <h6 className="text-big">The Industry Demonstrates Proven Stability and Scalability </h6>
                             </div>
                             <div className="normal-item d-flex align-items-center flex-wrap mb-3">
                                 <div className="normal-image">
                                     <img src={strong} alt="Strong Competitive Advantage" className='w-100' />
                                 </div>
-                                <h6>Strong Competitive Advantage</h6>
+                                <h6 className="text-big">Strong Competitive Advantage</h6>
                             </div>
                         </div>
                     </div>
@@ -97,23 +106,23 @@ function Invest() {
             </Section>
 
 
-            <Section mt={120}>
+            <Section mt={120} className="container">
                 <div className="row">
                     <div className="col-sm-6 mt-3">
-                        <div className="card shadow  h-100">
+                        <div className="card  h-100">
                             <div className="card-body">
 
-                                <h5 className="pri-color card-title">Early stage supporters for Exciting New Crypto Opportunity</h5>
-                                <p className="mt-2 card-text">Early stage supporters like yourself are crucial to our success. Your expertise and financial backing can provide the resources necessary for us to scale our operations, penetrate the market, and ultimately achieve our vision. We believe that with the right early stage supporters, Supelle has the potential to become a market leader and generate substantial returns.
+                                <h5 className="pri-color heading-sm">Early stage supporters for Exciting New Crypto Opportunity</h5>
+                                <p className="mt-2">Early stage supporters like yourself are crucial to our success. Your expertise and financial backing can provide the resources necessary for us to scale our operations, penetrate the market, and ultimately achieve our vision. We believe that with the right early stage supporters, Supelle has the potential to become a market leader and generate substantial returns.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div className="col-sm-6 mt-3">
-                        <div className="card shadow  h-100">
+                        <div className="card  h-100">
                             <div className="card-body">
-                                <h5 className="pri-color card-title">Key Reasons to become an Early stage supporter: </h5>
-                                <p className="mt-2 card-text">Investing with a reputable and trustworthy company is one of the smartest decisions that can lead to great rewards. So take the leap and invest with us and you will be in awe at the amazing returns in store for you.
+                                <h5 className="pri-color heading-sm">Key Reasons to become an Early stage supporter: </h5>
+                                <p className="mt-2">Investing with a reputable and trustworthy company is one of the smartest decisions that can lead to great rewards. So take the leap and invest with us and you will be in awe at the amazing returns in store for you.
                                 </p>
 
                             </div>
@@ -125,66 +134,69 @@ function Invest() {
 
 
             {/* Solution */}
-            <Section name={"solution"} mt={120}>
+            <Section name={"solution"} mt={120} className="container">
                 <div className="overlay"></div>
                 <div className="solution-context">
-                    <h1 className="pri-color heading">End to End Solution</h1>
-                    <h5 className='sub-heading'>Out team will guide you through the process of issuign a blockchain based utility token.</h5>
+                    <h1 className="pri-color heading-md bold">End to End Solution</h1>
+                    <p className='text-big'>Out team will guide you through the process of issuign a blockchain based utility token.</p>
                 </div>
 
+
                 <div id="values">
-                    <div>
-                        <div className="row text-center">
-                            <div className="col-sm-4 my-4">
-                                <div className="custom-card shadow h-100">
-                                    <div className="card-image">
-                                        <img src={growth} alt="Growth Potential" />
-                                    </div>
-                                    <h6 className="form-4 mt-4 mb-3">Growth Potential</h6>
-                                    <p>Our business has demonstrated significant growth potential based on market research, early customer traction, and the scalability of the company. With your financial support and guidance, we can accelerate our market penetration and maximize our potential returns.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="col-sm-4 my-4">
-                                <div className="custom-card shadow h-100">
-                                    <div className="card-image">
-                                        <img src={eye} alt="Unique Value Proposition" />
-                                    </div>
-                                    <h6 className="form-4 mt-4 mb-3">Unique Value Proposition</h6>
-                                    <p>Our venture offers a unique value proposition that sets us apart from competitors. By leveraging cutting-edge technology, innovative strategies, and a customer-centric approach, we have the potential to disrupt the market and capture a substantial market share.</p>
-                                </div>
-                            </div>
-                            <div className="col-sm-4 my-4">
-                                <div className="custom-card shadow h-100">
-                                    <div className="card-image">
-                                        <img src={time} alt="Experienced and Committed Team" />
-                                    </div>
-                                    <h6 className="form-4 mt-4 mb-3">Experienced and Committed Team</h6>
-                                    <p>Our team comprises highly skilled professionals with diverse backgrounds and a shared vision for success. We have a proven track record of execution and are deeply committed to delivering exceptional results.</p>
+
+                    <div className="row text-center">
+                        <div className="col-md-4 my-4">
+                            <div className="custom-card h-100">
+                                <h3 className="form-4 pt-4  pri-color mt-4 mb-3">Growth Potential</h3>
+                                <p>Our business has demonstrated significant growth potential based on market research, early customer traction, and the scalability of the company. With your financial support and guidance, we can accelerate our market penetration and maximize our potential returns.
+                                </p>
+                                <div className="card-image top">
+                                    <img src={growth} alt="Growth Potential" />
                                 </div>
                             </div>
                         </div>
-                        <div className="text-center">
-                            <div className="row justify-content-center mx-auto">
-                                <div className="col-sm-4 my-4">
-                                    <div className="custom-card shadow h-100">
-                                        <div className="card-image">
-                                            <img src={target} alt="Timely Opportunity" />
-                                        </div>
-                                        <h6 className="form-4 mt-4 mb-3">Timely Opportunity</h6>
-                                        <p>Investing with us at this stage allows you to enter the market early and capitalize on the rapid growth potential. As the market evolves and competition increases, being a pre-launch investor positions you for enhanced returns on your investment.
-                                        </p>
-                                    </div>
+                        <div className="col-md-4 my-4">
+                            <div className="custom-card h-100">
+                                <h3 className="form-4 pt-4  pri-color mt-4 mb-3">Unique Value Proposition</h3>
+                                <p>Our venture offers a unique value proposition that sets us apart from competitors. By leveraging cutting-edge technology, innovative strategies, and a customer-centric approach, we have the potential to disrupt the market and capture a substantial market share.</p>
+                                <div className="card-image top">
+                                    <img src={time} alt="Experienced and Committed Team" />
                                 </div>
-                                <div className="col-sm-4 my-4">
-                                    <div className="custom-card shadow h-100">
-                                        <div className="card-image">
-                                            <img src={shuffle} alt="End to End Solution" />
-                                        </div>
-                                        <h6 className="form-4 mt-4 mb-3">End to End Solution</h6>
-                                        <p>Invest in solutions; our team will guide you through the process of issuing and addressing the major problems, advantages, and stable customers for significant growth.
-                                        </p>
+                            </div>
+                        </div>
+                        <div className="col-md-4 my-4">
+                            <div className="custom-card h-100">
+                                <h3 className="form-4 pt-4  pri-color mt-4 mb-3">Experienced and Committed Team</h3>
+                                <p>Our team comprises highly skilled professionals with diverse backgrounds and a shared vision for success. We have a proven track record of execution and are deeply committed to delivering exceptional results.</p>
+                                <div className="card-image top">
+                                    <img src={shuffle} alt="Shuffle" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div className="text-center mt-5">
+                        <div className="row justify-content-center mx-auto">
+                            <div className="col-md-4 my-4">
+                                <div className="custom-card h-100">
+                                    <div className="card-image bot">
+                                        <img src={eye} alt="Unique Value Proposition" />
                                     </div>
+                                    <h3 className="form-4 pt-4 pri-color mt-4 mb-3">Timely Opportunity</h3>
+                                    <p>Investing with us at this stage allows you to enter the market early and capitalize on the rapid growth potential. As the market evolves and competition increases, being a pre-launch investor positions you for enhanced returns on your investment.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="col-md-4 my-4">
+                                <div className="custom-card h-100">
+                                    <div className="card-image bot">
+                                        <img src={target} alt="Timely Opportunity" />
+                                    </div>
+                                    <h3 className="form-4 pt-4 pri-color mt-4 mb-3">End to End Solution</h3>
+                                    <p>Invest in solutions; our team will guide you through the process of issuing and addressing the major problems, advantages, and stable customers for significant growth.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -196,8 +208,8 @@ function Invest() {
             <Section mt={120} className="benefits">
                 <div className="container">
                     <div className="text-content text-center col-sm-9 mx-auto">
-                        <h2 className="pri-color">Benefits of an early stage supporter</h2>
-                        <p className="mt-3">
+                        <h2 className="pri-color heading-sm">Benefits of an early stage supporter</h2>
+                        <p className="mt-3 text-big">
                             As an early stage supporter, success comes from finding opportunities. Are you ready to dive into the exciting world of cryptocurrencies? Here's your chance to be a part and participate in our thrilling pre-launch of the new normal. Your support will be invaluable as we navigate challenges, make strategic decisions, and build a sustainable and profitable business.
                         </p>
                     </div>
@@ -215,19 +227,19 @@ function Invest() {
 
                         >
                             <SwiperSlide>
-                                <div className="col-sm-6 mt-3 mx-auto">
+                                <div className="col-sm-8 mt-3 mx-auto">
                                     <h2 className="pri-color">Our team is here from the beginning of the journey to the end</h2>
                                     <p className="mt-3">In return for your support, we are offering advantages such as discounted token prices, bonus rewards, and exclusive access to platform features.  </p>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="col-sm-6 mt-3 mx-auto">
+                                <div className="col-sm-8 mt-3 mx-auto">
                                     <h2 className="pri-color">We help to manage your investment.</h2>
                                     <p className="mt-3">By getting involved at an early stage, investors can position themselves to benefit  from the platform's growth and future enhancements, potentially reaping  substantial rewards as Supelle Coin gains traction.</p>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="col-sm-6 mt-3 mx-auto">
+                                <div className="col-sm-8 mt-3 mx-auto">
                                     <h2 className="pri-color">We Deliver Pre-Launch Investors a Seamless Journey.</h2>
                                     <p className="mt-3">Our team is committed to transparency, open communication, and delivering results.</p>
                                 </div>
@@ -238,10 +250,11 @@ function Invest() {
             </Section>
 
             {/* Investment */}
-            <Section mt={120} className="investment">
+            <Section mt={120} className="investment" center={true}>
+                <div className="overlay"></div>
                 <div className="container">
                     <div className="investment-heading">
-                        <h2 className="text-center mb-5">Early stage investment possibility with SUPELLE</h2>
+                        <h2 className="text-center mb-5">Early Stage Investment Possibility With SUPELLE</h2>
                     </div>
                     <div className="row">
                         <div className="col-sm-4 pr-5">
@@ -271,7 +284,7 @@ function Invest() {
             </Section>
 
             {/* Factors */}
-            <Section mt={120} className="factors">
+            <Section mt={80} className="factors">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
@@ -287,33 +300,41 @@ function Invest() {
                                     <p className='pri-color'>Technological Advancements: The advancement of technology, particularly digital platforms and communication tools, has revolutionized the freelancing marketplace. Supelle's online platform will make it easier for freelancers to showcase their skills and for clients to find and hire talent globally.
                                     </p>
                                 </div>
-                                <div className="factor-item">
-                                    <FaChevronCircleRight className='icon' />
-                                    <p>Globalization and Remote Work: Globalization has led to increased connectivity and the ability to work remotely. Freelancers now have access to a global client base, while clients can tap into talent pools worldwide. This has increased competition and opened up a broader range of opportunities for freelancers and clients.
-                                    </p>
-                                </div>
-                                <div className="factor-item">
-                                    <FaChevronCircleRight className='icon' />
-                                    <p>Skill Demand and Supply: The demand for specific skills in the freelancing marketplace can significantly impact freelancers' earning potential and marketability.</p>
-                                </div>
-                                <div className="factor-item d-flex">
-                                    <FaChevronCircleRight className='icon' />
-                                    <p>Economic Factors: Global and local economic conditions can influence the freelancing marketplace. Economic downturns may lead to reduced freelance budgets and increased competition, while periods of economic growth can create more opportunities for freelancers as businesses seek flexible talent instead of full-time employees.
-                                    </p>
-                                </div>
-                                <div className="factor-item d-flex">
-                                    <FaChevronCircleRight className='icon' />
-                                    <p>Legal and Regulatory Environment:  In which freelancers operate can impact the marketplace. Freelancers must consider tax obligations, intellectual property rights, data protection regulations, and contract laws that may vary across jurisdictions, even in a decentralized marketplace.
-                                    </p>
-                                </div>
-                                <div className="factor-item d-flex">
-                                    <FaChevronCircleRight className='icon' />
-                                    <p>Work-Life Balance and Lifestyle Choices: Freelancing provides flexibility and the ability to create a customized work-life balance. Many individuals choose freelance for lifestyle reasons, such as the ability to work from anywhere, set their own schedules, and pursue a variety of projects.
-                                    </p>
-                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <div className="factor-item">
+                                <FaChevronCircleRight className='icon' />
+                                <p>Globalization and Remote Work: Globalization has led to increased connectivity and the ability to work remotely. Freelancers now have access to a global client base, while clients can tap into talent pools worldwide. This has increased competition and opened up a broader range of opportunities for freelancers and clients.
+                                </p>
+                            </div>
+                            <div className="factor-item">
+                                <FaChevronCircleRight className='icon' />
+                                <p>Skill Demand and Supply: The demand for specific skills in the freelancing marketplace can significantly impact freelancers' earning potential and marketability.</p>
+                            </div>
+
+                            <div className="factor-item d-flex">
+                                <FaChevronCircleRight className='icon' />
+                                <p>Work-Life Balance and Lifestyle Choices: Freelancing provides flexibility and the ability to create a customized work-life balance. Many individuals choose freelance for lifestyle reasons, such as the ability to work from anywhere, set their own schedules, and pursue a variety of projects.
+                                </p>
                             </div>
 
                         </div>
+                        <div className="col-sm-6">
+                            <div className="factor-item d-flex">
+                                <FaChevronCircleRight className='icon' />
+                                <p>Economic Factors: Global and local economic conditions can influence the freelancing marketplace. Economic downturns may lead to reduced freelance budgets and increased competition, while periods of economic growth can create more opportunities for freelancers as businesses seek flexible talent instead of full-time employees.
+                                </p>
+                            </div>
+                            <div className="factor-item d-flex">
+                                <FaChevronCircleRight className='icon' />
+                                <p>Legal and Regulatory Environment:  In which freelancers operate can impact the marketplace. Freelancers must consider tax obligations, intellectual property rights, data protection regulations, and contract laws that may vary across jurisdictions, even in a decentralized marketplace.
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </Section>
@@ -321,16 +342,73 @@ function Invest() {
             <Section name="create-token" mt={120}>
                 <div className="overlay"></div>
                 <div className="row">
-                    <div className="col-sm-8 text-center mx-auto d-flex justify-content-center align-items-center">
+                    <div className="col-sm-9 text-center mx-auto d-flex justify-content-center align-items-center">
                         <div className="rev-context">
-                            <h1>We embraced the financial revolution by creating our very own utility token and marketplace</h1>
-                            <p>We are currently inviting early stage supporters to become part of a growing community early on and join us on this exciting journey. If you are interested in exploring this opportunity further, we would be delighted to provide you with more details.
+                            <h1 className='heading-md'>We embraced the financial revolution by creating our very own utility token and marketplace</h1>
+                            <p className='text-big'>We are currently inviting early stage supporters to become part of a growing community early on and join us on this exciting journey. If you are interested in exploring this opportunity further, we would be delighted to provide you with more details.
                             </p>
                             <button className="btn btn-block-light mx-auto d-inline-block">Explore sup token here</button>
                         </div>
                     </div>
                 </div>
 
+            </Section>
+
+            <Section name="letstoken" className="container">
+                <div className="row text-light">
+                    <div className="col-sm-6">
+                        <h1 className="heading-md">Let's Token</h1>
+
+                        <div className="d-flex align-items-center mt-3">
+                            <FaChevronRight size={25} className='icon mr-3'/>
+                            <p className="text-big">Tell us about you</p>
+                        </div>
+                        <div className="d-flex mt-3">
+                            <FaChevronRight  size={25} className='icon mr-3'/>
+                            <p className="text-big">Tell us about you raise</p>
+                        </div>
+                        <div className="d-flex mt-3">
+                            <FaChevronRight  size={25}  className='icon mr-3'/>
+                            <p className="text-big">Tell if you've been a supporter</p>
+                        </div>
+                    </div>
+                    <div className="col-sm-6">
+                        <form action="" className="newcomer-form">
+                            <div className="form-container">
+                                <div className="form-group">
+                                    <input type="text" className="form-input" placeholder='Your Name' />
+                                </div>
+                                <div className="form-group">
+                                    <input type="email" className="form-input" placeholder='Email Address' />
+
+                                </div>
+
+                                <div className="form-group">
+                                    <input type="tel" className="form-input" placeholder="Phone Number" />
+                                </div>
+
+                                <div className="form-group">
+                                    <input type="email" className="form-input" placeholder="Your nub" />
+                                </div>
+                                <div className="d-flex text-light align-items-center justify-content-between mb-4">
+                                    <input type="checkbox" className='form-check mr-4' name="" id="" onChange={handleCheck} />
+                                    <span>Have you been an early stage supporter in a technology platform before?</span>
+                                </div>
+                                
+                                <div className="form-group">
+                                    <input type="text" className="form-input" placeholder="If yes, please kindly explain" disabled={isChecked} />
+                                </div>
+
+                                <div className="form-group">
+                                    <input type="text" className="form-input" placeholder="What would you like us to know about you?" />
+                                </div>
+
+                            </div>
+
+                            <Button type={"block"} color={"light"} className="mx-auto mt-auto">Finish</Button>
+                        </form>
+                    </div>
+                </div>
             </Section>
 
         </div>

@@ -25,18 +25,18 @@ function Roadmap() {
 
 
             <div id='roadmap'>
-                <Hero transparent={false} container={900}>
+                <Hero transparent={false} container={900} className={"container"}>
                     <div className="text-pri roadmap-hero">
-                        <h1 className="heading hero-heading" data-aos="fade-up">SupCoin <br /> Token</h1>
-                        <p className="sub-headgin hero-caption" data-aos="fade-right">The first cryptocurrency with a global blockchain-powered marketplace to back it up. Supcoin Token is the life force of the Supelle ecosystem, developed to empower our innovative community.</p>
+                        <h1 className="heading-xl bold" data-aos="fade-up">SupCoin <br /> Token</h1>
+                        <p className="text-big bold" data-aos="fade-right">The first cryptocurrency with a global blockchain-powered marketplace to back it up. Supcoin Token is the life force of the Supelle ecosystem, developed to empower our innovative community.</p>
                         <Button className="mt-5 presale-btn" type={"block"} color={"light"}>Presale</Button>
                     </div>
                 </Hero>
 
                 {/* RoadMap */}
-                <Section container={750} center={true}>
+                <Section container={750} center={true} className={"container"}>
                     <div className="roadmap-container">
-                        <h1 className="hero-heading heading my-5"> Bringing the <br />SUP Token to Life</h1>
+                        <h1 className="heading-md my-5"> Bringing the <br />SUP Token to Life</h1>
                         <div className="roadmap-items pt-5">
 
 
@@ -142,7 +142,7 @@ function Roadmap() {
                     </div>
                 </Section>
 
-                <Section name={"presale"} >
+                <Section name={"presale"} className={"container"} >
                     <div className="presale-container">
                         <div>
                             <div className="presale-image" >
@@ -151,22 +151,22 @@ function Roadmap() {
                         </div>
 
                         <div data-aos="zoom-out-up">
-                            <h2 className="mt-2 sub-heading lead">Last Traded Price:</h2>
-                            <h1 className='total-pric'>$0.38</h1>
+                            <h2 className="mt-2 heading-sm">Last Traded Price:</h2>
+                            <h1 className='total-pric heading-md bold'>$0.38</h1>
                         </div>
                         <div>
                             <div className="d-flex justify-content-between flex-wrap mb-3" data-aos="zoom-out">
                                 <div className="d-flex align-items-center">
-                                    <h3 className="lead muted mr-3">Current Day's High:</h3>
-                                    <h3 className=''>$0.35</h3>
+                                    <h3 className="text-big mr-3">Current Day's High:</h3>
+                                    <h3 className='bold'>$0.35</h3>
                                 </div>
                                 <div className="d-flex align-items-center">
-                                    <h3 className="lead muted mr-3">Current Day's Low:</h3>
-                                    <h3 className=''>$0.30</h3>
+                                    <h3 className="text-big mr-3">Current Day's Low:</h3>
+                                    <h3 className='bold'>$0.30</h3>
                                 </div>
                                 <div className="d-flex align-items-center">
-                                    <h3 className="lead muted mr-3 ">Last 24h Volume:</h3>
-                                    <h3 className=''>54,177.00 SUP</h3>
+                                    <h3 className="text-big mr-3 ">Last 24h Volume:</h3>
+                                    <h3 className='bold'>54,177.00 SUP</h3>
                                 </div>
                             </div>
                             <small>* * The last price represents the most recent matched trade as of the time listed above. The price above is delayed and does not necessarily represent the latest match. A matched trade does not mean the trade has settled. The price is subject to change at any time. Please access the Supcoin Securities ATS for the latest bids and offers, and for more current information. See the additional disclosure below for more information. * *</small>
@@ -174,7 +174,7 @@ function Roadmap() {
                     </div>
                 </Section>
 
-                <Section name={"token"} mt={120} className={"padding-bottom"}>
+                <Section name={"token"} mt={120} className={"padding-bottom container"}>
                     <Swiper
                         modules={[Autoplay, Navigation, Pagination]}
                         spaceBetween={0}
@@ -190,8 +190,8 @@ function Roadmap() {
                             <div className="row">
                                 <div className="col-sm-6">
                                     <div className="pl-sm-5">
-                                        <h2 className='heading'>As a Security.</h2>
-                                        <p className='lead sub-heading'>
+                                        <h2 className='heading-sm'>As a Security.</h2>
+                                        <p className='text-big'>
                                             Mandatory Profit Share: Annual pro rata distribution of
                                             40% of the Company's cumulative adjusted net operating cash flow
                                         </p>
@@ -207,8 +207,8 @@ function Roadmap() {
                             <div className="row">
                                 <div className="col-sm-6">
                                     <div className="pl-sm-5">
-                                        <h2 className='heading'>As a Utility(Coming soon)</h2>
-                                        <p className='lead sub-heading'>
+                                        <h2 className='heading-sm'>As a Utility(Coming soon)</h2>
+                                        <p className='text-big'>
                                             Discounts of at least 10% on trading fees on SupCoin
                                             according to the Tiered Trading Fee Discount Program, which is based upon the
                                             number of SUP Tokens held in customers' private wallets
@@ -226,8 +226,8 @@ function Roadmap() {
                             <div className="row">
                                 <div className="col-sm-6">
                                     <div className="pl-sm-5">
-                                        <h2 className='heading'>Token Economics</h2>
-                                        <p className='lead sub-heading'>
+                                        <h2 className='heading-sm'>Token Economics</h2>
+                                        <p className='text-big'>
 
                                             Whether you are looking to participate in the SUP
                                             ecosystem as an investor or as a customer, the SUP Token has both security and
@@ -249,23 +249,23 @@ function Roadmap() {
             </div>
             <div className='tech mx-0 row' >
                 <div className=" pri-color px-5 pt-5 col-md-6" data-aos="fade-right">
-                    <h1 className="title">Token <br />Technical <br /> Features</h1>
+                    <h1 className="heading-md bold">Token <br />Technical <br /> Features</h1>
                     <div className="d-flex justify-content-start align-items-center mt-4">
                         <FaArrowRight size={25} className="d-block icon mr-3" />
-                        <p className='lead'>Supcoin is an ERC Ethereum-based (ETH) utility token that uses Binance Coin (BNB)</p>
+                        <p className='text-big'>Supcoin is an ERC Ethereum-based (ETH) utility token that uses Binance Coin (BNB)</p>
                     </div>
                     <div className="d-flex justify-content-start align-items-center mt-4">
                         <FaArrowRight size={25} className="d-block icon mr-3" />
-                        <p className='lead'>Supcoin is a type of decentralized utility token.</p>
+                        <p className='text-big'>Supcoin is a type of decentralized utility token.</p>
                     </div>
                     <div className="d-flex justify-content-start align-items-center mt-4">
                         <FaArrowRight size={25} className="d-block icon mr-3" />
-                        <p className='lead'>It is an ERC-20 utility coin, a type of secure, smart contract-enabled token on the Ethereum blockchain that is interchangeable.</p>
+                        <p className='text-big'>It is an ERC-20 utility coin, a type of secure, smart contract-enabled token on the Ethereum blockchain that is interchangeable.</p>
                     </div>
                 </div>
                 <div className="pri-bg text-light px-5 pt-5 col-md-6" data-aos="fade-left">
-                    <h1 className="title">OTC <br />Desk</h1>
-                    <p className='lead'>Over-The-Counter (OTC) trading takes place off the open SUP order book. We offer deeper liquidity and a private, more personalized service to institutions and high net-worth individuals needing to fill large orders that might be too disruptive if placed on the open market. Whether you are trading blocks of $100,000, $1,000,000 or 200,000 SUP, the OTC desk will provide you with execution and settlement services that are discreet, secure and ultra-competitive
+                    <h1 className="heading-md bold">OTC <br />Desk</h1>
+                    <p className='text-big'>Over-The-Counter (OTC) trading takes place off the open SUP order book. We offer deeper liquidity and a private, more personalized service to institutions and high net-worth individuals needing to fill large orders that might be too disruptive if placed on the open market. Whether you are trading blocks of $100,000, $1,000,000 or 200,000 SUP, the OTC desk will provide you with execution and settlement services that are discreet, secure and ultra-competitive
                     </p>
                 </div>
             </div>
