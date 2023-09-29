@@ -4,11 +4,14 @@ import KristenBragoli from "./images/about/KristenBragoli.jpg"
 import LIUBOMYRKRAICHYK from "./images/about/LIUBOMYRKRAICHYK.jpg"
 import Maksym from "./images/about/Maksym.jpg"
 import OlesPakliuk from "./images/about/OlesPakliuk.png"
-import TANYATREMEL from "./images/about/TANYATREMEL.jpeg"
+import TANYATREMEL from "./images/about/TANYATREMEL.jpg"
 import TylerGidseg from "./images/about/TylerGidseg.png"
 
 
 export const teamMembers = [
+    {
+        name: "demo1"
+    },
     {
         image: IbnatAli,
         name: "IBNAT ALI",
@@ -58,6 +61,9 @@ export const teamMembers = [
         position: "Lead Front-end Developer",
         about: `Oles has over 7 years of experience in the IT industry as a PM and Front-end developer. Having led and implemented multiple projects in various spheres of business, including entertainment, social networking, finances, crypto, education, healthcare, and others. Oles has experience in bringing projects to life from the phase of the idea up to successful market reach—a keen tech enthusiast with experience in mobile, back-end, and web development.
         `
+    },
+    {
+        name: "demo2"
     },
     {
         image: TANYATREMEL,

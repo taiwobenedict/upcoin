@@ -20,7 +20,7 @@ function TeamModal() {
                     <div className="col-sm-8 team-context-container">
                         <div>
                             <h4 className='bold'>{name}</h4>
-                            <h4 className='text-big bold'>{position}</h4>
+                            <h4 className=' bold'>{position}</h4>
                             <div className="team-info-context">
                                 <p> {about} </p>
                             </div>

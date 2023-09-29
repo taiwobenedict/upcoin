@@ -1,5 +1,13 @@
 #invest .hero {
     background: url("../../images/invest/invest_hero.jpeg") center center/cover no-repeat;
+    min-height: 75vh !important;
+    
+
+}
+
+
+#invest .invest-container {
+    min-height: 75vh !important;
 }
 
 #invest .hero-heading {

@@ -42,22 +42,22 @@ function Invest() {
     return (
         <div id='invest'>
             {/* Hero Section */}
-            <Hero container={750} className="container">
+            <Hero container={750} className="container invest-container">
                 <div className="text-light">
                     <h1 className="heading-lg bold">Pioneering The Future with Us</h1>
-                    <p className='text-big bold'>Be the first to be a part of Supelle's comprehensive opportunity by becoming an early stage supporter. </p>
+                    <p className=' bold'>Be the first to be a part of Supelle's comprehensive opportunity by becoming an early stage supporter. </p>
                     <Button type={"inline"} color={"light"} >Let's Talk</Button>
                 </div>
             </Hero>
 
 
             {/* Normal  */}
-            <Section name={"normal"} mt={120} className="border-bottom container py-5">
+            <Section name={"normal"} mt={0} className="container pb-5">
                 <div className="row">
                     <div className="col-sm-6 mt-3">
                         <h2 className='pri-color heading-md bold mb-3'>Unlock the new normal</h2>
-                        <p className='mt-2 text-big'>We are offering you an exciting opportunity that we believe may be of interest to you. We are currently seeking early stage supporters for Supelle, and we want to share some key details with you.</p>
-                        <p className="mt-2 text-big">Supelle/Supcoin has tremendous potential for growth and is positioned to disrupt the freelancing marketplace. Our team is comprised of highly talented individuals with a deep understanding of the industry and a strong track record of success.
+                        <p className='mt-2 '>We are offering you an exciting opportunity that we believe may be of interest to you. We are currently seeking early stage supporters for Supelle, and we want to share some key details with you.</p>
+                        <p className="mt-2 ">Supelle/Supcoin has tremendous potential for growth and is positioned to disrupt the freelancing marketplace. Our team is comprised of highly talented individuals with a deep understanding of the industry and a strong track record of success.
                         </p>
                         <h5 className="mt-3">SUP is the hurdle-free way to Raise Capital:</h5>
                         <button className="btn btn-block-pri mt-2">What are utility tokens?</button>
@@ -68,37 +68,37 @@ function Invest() {
                                 <div className="normal-image">
                                     <img src={sustainable} alt="Sustainable Financial Resistance" className='w-100' />
                                 </div>
-                                <h6 className="text-big">Sustainable Financial Resistance</h6>
+                                <h6 className="">Sustainable Financial Resistance</h6>
                             </div>
                             <div className="normal-item d-flex align-items-center flex-wrap mb-3">
                                 <div className="normal-image">
                                     <img src={esteemed} alt="Esteemed Founder and Accomplished Team of Experts" className='w-100' />
                                 </div>
-                                <h6 className="text-big">Esteemed Founder and Accomplished Team of Experts</h6>
+                                <h6 className="">Esteemed Founder and Accomplished Team of Experts</h6>
                             </div>
                             <div className="normal-item d-flex align-items-center flex-wrap mb-3">
                                 <div className="normal-image">
                                     <img src={unparallel} alt="Unparalleled Growth Potential & Uniqueness" className='w-100' />
                                 </div>
-                                <h6 className="text-big">Unparalleled Growth Potential & Uniqueness</h6>
+                                <h6 className="">Unparalleled Growth Potential & Uniqueness</h6>
                             </div>
                             <div className="normal-item d-flex align-items-center flex-wrap mb-3">
                                 <div className="normal-image">
                                     <img src={robust} alt="Robust and Strategic Business Model " className='w-100' />
                                 </div>
-                                <h6 className="text-big">Robust and Strategic Business Model </h6>
+                                <h6 className="">Robust and Strategic Business Model </h6>
                             </div>
                             <div className="normal-item d-flex align-items-center flex-wrap mb-3">
                                 <div className="normal-image">
                                     <img src={scale} alt="The Industry Demonstrates Proven Stability and Scalability " className='w-100' />
                                 </div>
-                                <h6 className="text-big">The Industry Demonstrates Proven Stability and Scalability </h6>
+                                <h6 className="">The Industry Demonstrates Proven Stability and Scalability </h6>
                             </div>
                             <div className="normal-item d-flex align-items-center flex-wrap mb-3">
                                 <div className="normal-image">
                                     <img src={strong} alt="Strong Competitive Advantage" className='w-100' />
                                 </div>
-                                <h6 className="text-big">Strong Competitive Advantage</h6>
+                                <h6 className="">Strong Competitive Advantage</h6>
                             </div>
                         </div>
                     </div>
@@ -106,45 +106,48 @@ function Invest() {
             </Section>
 
 
-            <Section mt={120} className="container">
-                <div className="row">
-                    <div className="col-sm-6 mt-3">
-                        <div className="card  h-100">
-                            <div className="card-body">
+            <div className="pri-bg">
+                <div className="container py-5">
+                    <div className="row px-0 py-3">
+                        <div className="col-sm-6 mt-3">
+                            <div className="card bg-transparent border-light  h-100">
+                                <div className="card-body">
 
-                                <h5 className="pri-color heading-sm">Early stage supporters for Exciting New Crypto Opportunity</h5>
-                                <p className="mt-2">Early stage supporters like yourself are crucial to our success. Your expertise and financial backing can provide the resources necessary for us to scale our operations, penetrate the market, and ultimately achieve our vision. We believe that with the right early stage supporters, Supelle has the potential to become a market leader and generate substantial returns.
-                                </p>
+                                    <h5 className=" heading-sm">Early stage supporters for Exciting New Crypto Opportunity</h5>
+                                    <p className="mt-2">Early stage supporters like yourself are crucial to our success. Your expertise and financial backing can provide the resources necessary for us to scale our operations, penetrate the market, and ultimately achieve our vision. We believe that with the right early stage supporters, Supelle has the potential to become a market leader and generate substantial returns.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-sm-6 mt-3">
-                        <div className="card  h-100">
-                            <div className="card-body">
-                                <h5 className="pri-color heading-sm">Key Reasons to become an Early stage supporter: </h5>
-                                <p className="mt-2">Investing with a reputable and trustworthy company is one of the smartest decisions that can lead to great rewards. So take the leap and invest with us and you will be in awe at the amazing returns in store for you.
-                                </p>
+                        <div className="col-sm-6 mt-3">
+                            <div className="card bg-transparent border-light  h-100">
+                                <div className="card-body">
+                                    <h5 className=" heading-sm">Key Reasons to become an Early stage supporter: </h5>
+                                    <p className="mt-2">Investing with a reputable and trustworthy company is one of the smartest decisions that can lead to great rewards. So take the leap and invest with us and you will be in awe at the amazing returns in store for you.
+                                    </p>
+
+                                </div>
 
                             </div>
-
                         </div>
                     </div>
                 </div>
-            </Section>
+
+            </div>
 
 
             {/* Solution */}
-            <Section name={"solution"} mt={120} className="container">
+            <Section name={"solution"}  className="container">
                 <div className="overlay"></div>
                 <div className="solution-context">
                     <h1 className="pri-color heading-md bold">End to End Solution</h1>
-                    <p className='text-big'>Out team will guide you through the process of issuign a blockchain based utility token.</p>
+                    <p className=''>Out team will guide you through the process of issuign a blockchain based utility token.</p>
                 </div>
 
 
                 <div id="values">
 
-                    <div className="row text-center">
+                    <div className="row">
                         <div className="col-md-4 my-4">
                             <div className="custom-card h-100">
                                 <h3 className="form-4 pt-4  pri-color mt-4 mb-3">Growth Potential</h3>
@@ -177,7 +180,7 @@ function Invest() {
 
 
 
-                    <div className="text-center mt-5">
+                    <div className=" mt-5">
                         <div className="row justify-content-center mx-auto">
                             <div className="col-md-4 my-4">
                                 <div className="custom-card h-100">
@@ -209,7 +212,7 @@ function Invest() {
                 <div className="container">
                     <div className="text-content text-center col-sm-9 mx-auto">
                         <h2 className="pri-color heading-sm">Benefits of an early stage supporter</h2>
-                        <p className="mt-3 text-big">
+                        <p className="mt-3 ">
                             As an early stage supporter, success comes from finding opportunities. Are you ready to dive into the exciting world of cryptocurrencies? Here's your chance to be a part and participate in our thrilling pre-launch of the new normal. Your support will be invaluable as we navigate challenges, make strategic decisions, and build a sustainable and profitable business.
                         </p>
                     </div>
@@ -250,9 +253,9 @@ function Invest() {
             </Section>
 
             {/* Investment */}
-            <Section mt={120} className="investment" center={true}>
+            <Section mt={120} className="investment py-5" center={true}>
                 <div className="overlay"></div>
-                <div className="container">
+                <div className="container py-5">
                     <div className="investment-heading">
                         <h2 className="text-center mb-5">Early Stage Investment Possibility With SUPELLE</h2>
                     </div>
@@ -284,22 +287,25 @@ function Invest() {
             </Section>
 
             {/* Factors */}
-            <Section mt={80} className="factors">
+            <Section className="factors">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
                             {/* <div className="fac-bg"></div> */}
                             <img src={chart} alt="chart" className='w-100' />
                         </div>
-                        <div className="col-md-6">
-                            <h3 className='mb-5 pri-color'>These factors influence freelancers' and clients' dynamics, opportunities, and challenges. Here are some key factors:
-                            </h3>
-                            <div className="factor-items">
-                                <div className="factor-item d-flex">
-                                    <FaChevronCircleRight className='icon' />
-                                    <p className='pri-color'>Technological Advancements: The advancement of technology, particularly digital platforms and communication tools, has revolutionized the freelancing marketplace. Supelle's online platform will make it easier for freelancers to showcase their skills and for clients to find and hire talent globally.
-                                    </p>
+                        <div className="col-md-6 d-flex align-items-center">
+                            <div className="">
+                                <h3 className='mb-5 pri-color'>These factors influence freelancers' and clients' dynamics, opportunities, and challenges. Here are some key factors:
+                                </h3>
+                                <div className="factor-items">
+                                    <div className="factor-item d-flex">
+                                        <FaChevronCircleRight className='icon' />
+                                        <p className='pri-color'>Technological Advancements: The advancement of technology, particularly digital platforms and communication tools, has revolutionized the freelancing marketplace. Supelle's online platform will make it easier for freelancers to showcase their skills and for clients to find and hire talent globally.
+                                        </p>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -345,7 +351,7 @@ function Invest() {
                     <div className="col-sm-9 text-center mx-auto d-flex justify-content-center align-items-center">
                         <div className="rev-context">
                             <h1 className='heading-md'>We embraced the financial revolution by creating our very own utility token and marketplace</h1>
-                            <p className='text-big'>We are currently inviting early stage supporters to become part of a growing community early on and join us on this exciting journey. If you are interested in exploring this opportunity further, we would be delighted to provide you with more details.
+                            <p className=''>We are currently inviting early stage supporters to become part of a growing community early on and join us on this exciting journey. If you are interested in exploring this opportunity further, we would be delighted to provide you with more details.
                             </p>
                             <button className="btn btn-block-light mx-auto d-inline-block">Explore sup token here</button>
                         </div>
@@ -360,16 +366,16 @@ function Invest() {
                         <h1 className="heading-md">Let's Token</h1>
 
                         <div className="d-flex align-items-center mt-3">
-                            <FaChevronRight size={25} className='icon mr-3'/>
-                            <p className="text-big">Tell us about you</p>
+                            <FaChevronRight size={20} className='icon mr-3'/>
+                            <p className="m-0">Tell us about you</p>
                         </div>
-                        <div className="d-flex mt-3">
-                            <FaChevronRight  size={25} className='icon mr-3'/>
-                            <p className="text-big">Tell us about you raise</p>
+                        <div className="d-flex mt-4">
+                            <FaChevronRight  size={20} className='icon mr-3'/>
+                            <p className="m-0">Tell us about you raise</p>
                         </div>
-                        <div className="d-flex mt-3">
-                            <FaChevronRight  size={25}  className='icon mr-3'/>
-                            <p className="text-big">Tell if you've been a supporter</p>
+                        <div className="d-flex mt-4">
+                            <FaChevronRight  size={20}  className='icon mr-3'/>
+                            <p className="m-0">Tell if you've been a supporter</p>
                         </div>
                     </div>
                     <div className="col-sm-6">

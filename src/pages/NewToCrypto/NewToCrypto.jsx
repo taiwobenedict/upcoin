@@ -20,11 +20,11 @@ function NewToCrypto() {
     return (
         <div id='newtocrypto'>
             <Hero centerContent className="container">
-                <div className="newtocryto-container">
+                <div className="newtocryto-container col-md-9 mx-auto">
                     <div className="row">
                         <div className="form-context col-md-6">
                             <h3 className='heading-sm bold' >GAIN ACCESS TO OUR EARLY BIRD PRESALE! REGISTER BELOW AND WE'LL GUIDE YOU</h3>
-                            <p className='text-big'>Supelle is a first-of-its-kind freelance and finance ecosystem that is blockchain-based. Our Supcoin (SUP) is the first cryptocurrency with a global marketplace to back it up. This eliminates all risk from your investment with a decentralized ecosystem where you have control. And if you buy with our early bird presale, you stand to make profits of up to 100,000%! PURCHASE THE SUPCOIN TOKEN TODAY.</p>
+                            <p className=''>Supelle is a first-of-its-kind freelance and finance ecosystem that is blockchain-based. Our Supcoin (SUP) is the first cryptocurrency with a global marketplace to back it up. This eliminates all risk from your investment with a decentralized ecosystem where you have control. And if you buy with our early bird presale, you stand to make profits of up to 100,000%! PURCHASE THE SUPCOIN TOKEN TODAY.</p>
                         </div>
 
                         <form action="" className="newcomer-form col-md-6">

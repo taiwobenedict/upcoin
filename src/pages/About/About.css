@@ -1,7 +1,17 @@
 #about .hero {
   background: url("../../images/about/about-hero.jpeg") center center/cover
     no-repeat;
+    max-height: 80vh;
+    min-height: 80vh !important;
+   
+   
 }
+
+#about .hero .container {
+  min-height: 80vh !important;
+}
+
+
 
 #about .hero .overlay {
   background-color: rgba(0, 0, 0, 0.5);
@@ -25,10 +35,10 @@
   margin-inline: auto;
 }
 
-#story {
-  background: url("../../images/about/story.jpeg") center center/cover no-repeat
-    fixed;
-  position: relative;
+.story-image {
+  background: url("../../images/about/story.jpeg") center center/cover no-repeat;
+  height: 100%;
+  width: 100%;
 }
 #story .overlay {
   background-color: rgba(0, 0, 0, 0.6);
@@ -48,17 +58,20 @@
 
 .members {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(224.81px, auto));
 
 }
+
 
 
 
 .member {
-  min-height: 200px;
+  height: 250.81px;
   position: relative;
   overflow: hidden;
 }
+
+
 
 .member-image img {
   transition: 0.4s;
@@ -210,6 +223,23 @@
     opacity: 1;
 }
 
+.demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-weight: 700;
+}
+
+.demo1 {
+  background-color: #4A5EC0;
+  color: #fff;
+}
+.demo2 {
+  color: #4A5EC0;
+  background-color: #F5FFB6;
+}
+
 @keyframes info {
   0% {
     transform: scale(0.8);
@@ -223,6 +253,10 @@
 
 .mb {
   margin-bottom: 5rem;
+}
+
+#ourstory.py-5 {
+  padding-bottom: 0 !important;
 }
 
 #position {

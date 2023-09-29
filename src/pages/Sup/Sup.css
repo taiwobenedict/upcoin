@@ -1,5 +1,12 @@
 #sup .hero {
     background: url("../../images/sup/sup-hero.jpeg") center center/cover no-repeat;
+    min-height:75vh !important;
+}
+
+
+
+#sup .sup-container {
+    min-height: 75vh !important;
 }
 
 
@@ -13,5 +20,10 @@
 .sup-image {
     border-radius: 50px;
     overflow: hidden;
+    max-width: 450px;
     
+}
+
+#sup #backdoor {
+    padding-top: 0rem !important;
 }

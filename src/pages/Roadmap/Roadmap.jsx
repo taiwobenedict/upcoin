@@ -28,7 +28,7 @@ function Roadmap() {
                 <Hero transparent={false} container={900} className={"container"}>
                     <div className="text-pri roadmap-hero">
                         <h1 className="heading-xl bold" data-aos="fade-up">SupCoin <br /> Token</h1>
-                        <p className="text-big bold" data-aos="fade-right">The first cryptocurrency with a global blockchain-powered marketplace to back it up. Supcoin Token is the life force of the Supelle ecosystem, developed to empower our innovative community.</p>
+                        <p className=" bold" data-aos="fade-right">The first cryptocurrency with a global blockchain-powered marketplace to back it up. Supcoin Token is the life force of the Supelle ecosystem, developed to empower our innovative community.</p>
                         <Button className="mt-5 presale-btn" type={"block"} color={"light"}>Presale</Button>
                     </div>
                 </Hero>
@@ -41,10 +41,10 @@ function Roadmap() {
 
 
                             <div className="roadmap-content">
-                                <h2 className="heading roadmap-heading">
+                                <h4 className="heading roadmap-heading">
                                     <span className="d-inline-block"  data-aos="fade-right">2017</span>
-                                </h2>
-                                <div className='lead roadmap-text'>
+                                </h4>
+                                <div className=' roadmap-text'>
                                     <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
                                     <span className='d-inline-block' data-aos="fade-left">
                                         The world witnesses a
@@ -57,10 +57,10 @@ function Roadmap() {
                             </div>
 
                             <div className="roadmap-content">
-                                <h2 className="heading roadmap-heading">
+                                <h4 className="heading roadmap-heading">
                                 <span className="d-inline-block"  data-aos="fade-right">2018</span>
-                                </h2>
-                                <div className='lead roadmap-text'>
+                                </h4>
+                                <div className=' roadmap-text'>
                                     <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
                                     <span className='d-inline-block' data-aos="fade-left">
                                         SUP works closely with
@@ -75,10 +75,10 @@ function Roadmap() {
                             </div>
 
                             <div className="roadmap-content">
-                                <h2 className="heading roadmap-heading">
+                                <h4 className="heading roadmap-heading">
                                 <span className="d-inline-block"  data-aos="fade-right">2019</span>
-                                </h2>
-                                <div className='lead roadmap-text'>
+                                </h4>
+                                <div className=' roadmap-text'>
                                     <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
                                     <span className='d-inline-block' data-aos="fade-left">
                                         SUP announces filing of
@@ -90,10 +90,10 @@ function Roadmap() {
                             </div>
 
                             <div className="roadmap-content">
-                                <h2 className="heading roadmap-heading">
+                                <h4 className="heading roadmap-heading">
                                 <span className="d-inline-block"  data-aos="fade-right">2020</span>
-                                </h2>
-                                <div className='lead roadmap-text'>
+                                </h4>
+                                <div className=' roadmap-text'>
                                     <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
                                     <span className='d-inline-block' data-aos="fade-left">
                                         The first ever SEC-registered
@@ -105,10 +105,10 @@ function Roadmap() {
                             </div>
 
                             <div className="roadmap-content">
-                                <h2 className="heading roadmap-heading">
+                                <h4 className="heading roadmap-heading">
                                 <span className="d-inline-block"  data-aos="fade-right">Apri 2021</span>
-                                </h2>
-                                <div className='lead roadmap-text'>
+                                </h4>
+                                <div className=' roadmap-text'>
                                     <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
                                     <span className='d-inline-block' data-aos="fade-left">
                                         With $85M raised
@@ -123,10 +123,10 @@ function Roadmap() {
 
 
                             <div className="roadmap-content">
-                                <h2 className="heading roadmap-heading">
+                                <h4 className="heading roadmap-heading">
                                 <span className="d-inline-block"  data-aos="fade-right">July 2021</span>
-                                </h2>
-                                <div className='lead roadmap-text'>
+                                </h4>
+                                <div className=' roadmap-text'>
                                     <div className="road-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
                                     <span className='d-inline-block' data-aos="fade-left">
                                         SUP is listed on the
@@ -157,15 +157,15 @@ function Roadmap() {
                         <div>
                             <div className="d-flex justify-content-between flex-wrap mb-3" data-aos="zoom-out">
                                 <div className="d-flex align-items-center">
-                                    <h3 className="text-big mr-3">Current Day's High:</h3>
+                                    <p className="lead mr-3">Current Day's High:</p>
                                     <h3 className='bold'>$0.35</h3>
                                 </div>
                                 <div className="d-flex align-items-center">
-                                    <h3 className="text-big mr-3">Current Day's Low:</h3>
+                                    <p className="lead mr-3">Current Day's Low:</p>
                                     <h3 className='bold'>$0.30</h3>
                                 </div>
                                 <div className="d-flex align-items-center">
-                                    <h3 className="text-big mr-3 ">Last 24h Volume:</h3>
+                                    <p className="lead mr-3 ">Last 24h Volume:</p>
                                     <h3 className='bold'>54,177.00 SUP</h3>
                                 </div>
                             </div>
@@ -191,7 +191,7 @@ function Roadmap() {
                                 <div className="col-sm-6">
                                     <div className="pl-sm-5">
                                         <h2 className='heading-sm'>As a Security.</h2>
-                                        <p className='text-big'>
+                                        <p className=''>
                                             Mandatory Profit Share: Annual pro rata distribution of
                                             40% of the Company's cumulative adjusted net operating cash flow
                                         </p>
@@ -208,7 +208,7 @@ function Roadmap() {
                                 <div className="col-sm-6">
                                     <div className="pl-sm-5">
                                         <h2 className='heading-sm'>As a Utility(Coming soon)</h2>
-                                        <p className='text-big'>
+                                        <p className=''>
                                             Discounts of at least 10% on trading fees on SupCoin
                                             according to the Tiered Trading Fee Discount Program, which is based upon the
                                             number of SUP Tokens held in customers' private wallets
@@ -227,7 +227,7 @@ function Roadmap() {
                                 <div className="col-sm-6">
                                     <div className="pl-sm-5">
                                         <h2 className='heading-sm'>Token Economics</h2>
-                                        <p className='text-big'>
+                                        <p className=''>
 
                                             Whether you are looking to participate in the SUP
                                             ecosystem as an investor or as a customer, the SUP Token has both security and
@@ -247,25 +247,25 @@ function Roadmap() {
                 </Section>
 
             </div>
-            <div className='tech mx-0 row' >
+            <div className='tech mx-auto row container p-0' >
                 <div className=" pri-color px-5 pt-5 col-md-6" data-aos="fade-right">
                     <h1 className="heading-md bold">Token <br />Technical <br /> Features</h1>
                     <div className="d-flex justify-content-start align-items-center mt-4">
                         <FaArrowRight size={25} className="d-block icon mr-3" />
-                        <p className='text-big'>Supcoin is an ERC Ethereum-based (ETH) utility token that uses Binance Coin (BNB)</p>
+                        <p className=''>Supcoin is an ERC Ethereum-based (ETH) utility token that uses Binance Coin (BNB)</p>
                     </div>
                     <div className="d-flex justify-content-start align-items-center mt-4">
                         <FaArrowRight size={25} className="d-block icon mr-3" />
-                        <p className='text-big'>Supcoin is a type of decentralized utility token.</p>
+                        <p className=''>Supcoin is a type of decentralized utility token.</p>
                     </div>
                     <div className="d-flex justify-content-start align-items-center mt-4">
                         <FaArrowRight size={25} className="d-block icon mr-3" />
-                        <p className='text-big'>It is an ERC-20 utility coin, a type of secure, smart contract-enabled token on the Ethereum blockchain that is interchangeable.</p>
+                        <p className=''>It is an ERC-20 utility coin, a type of secure, smart contract-enabled token on the Ethereum blockchain that is interchangeable.</p>
                     </div>
                 </div>
                 <div className="pri-bg text-light px-5 pt-5 col-md-6" data-aos="fade-left">
                     <h1 className="heading-md bold">OTC <br />Desk</h1>
-                    <p className='text-big'>Over-The-Counter (OTC) trading takes place off the open SUP order book. We offer deeper liquidity and a private, more personalized service to institutions and high net-worth individuals needing to fill large orders that might be too disruptive if placed on the open market. Whether you are trading blocks of $100,000, $1,000,000 or 200,000 SUP, the OTC desk will provide you with execution and settlement services that are discreet, secure and ultra-competitive
+                    <p className=''>Over-The-Counter (OTC) trading takes place off the open SUP order book. We offer deeper liquidity and a private, more personalized service to institutions and high net-worth individuals needing to fill large orders that might be too disruptive if placed on the open market. Whether you are trading blocks of $100,000, $1,000,000 or 200,000 SUP, the OTC desk will provide you with execution and settlement services that are discreet, secure and ultra-competitive
                     </p>
                 </div>
             </div>

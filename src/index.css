@@ -23,12 +23,6 @@ body {
   
 }
 
-.heading-md {
-  font-weight: 500;
-  font-size: 44.8px;
-  line-height: 53.76px;
-}
-
 .heading-sm {
   font-weight: 500;
   font-size: 28.8px;
@@ -42,6 +36,10 @@ body {
 
 .bold {
   font-weight: 600;
+}
+
+.mont-font {
+  font-family: "Montserrat", sans-serif !important;
 }
 
 
@@ -106,10 +104,17 @@ ul {
 
 
 
+
+
 /* ==================== */
 
-@media (max-width: 576px) {
-  .hero-heading {
-    font-size: 2.5rem;
+@media (min-width: 1200px) {
+
+  .container, .container-fluid {
+    max-width: 1440px !important;
   }
+
+
+  
 }
+

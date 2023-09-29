@@ -59,7 +59,7 @@ function Home() {
                     <div className="col-md-7 mt-4">
                         <div className="hero-context text-light">
                             <h2 className='heading-sm bold'>EMBRACE AND EMBARK ON A PATH TOWARDS A PROSPEROUS OPPORTUNITY.</h2>
-                            <p className='text-big bold'>Begin your journey leading the way to a brighter future
+                            <p className=' bold'>Begin your journey leading the way to a brighter future
                                 with Supcoin to embrace the potential of this cutting-edge
                                 digital currency. Supcoin- Unleash massive financial
                                 potential with the ultimate fusion of finance and freelancing!</p>
@@ -122,11 +122,11 @@ function Home() {
 
             {/* Welcome Section */}
             <Section name={"welcome"} mt={50} className="container">
-                <div className="text-center" data-aos="zoom-in">
-                    <h1 className="heading-lg pri-color">Welcome to Supcoin</h1>
-                    <h5 className='pri-color heading-sm'>SUPCON IS THE FUTURE OF GENE-RATONAL WEALTH</h5>
+                <div className="text-center col-sm-8 mx-auto" data-aos="zoom-in">
+                    <h1 className="heading-m pri-color">Welcome to Supcoin</h1>
+                    <h5 className='pri-color'>SUPCON IS THE FUTURE OF GENE-RATONAL WEALTH</h5>
                     <h3 className='mt-5 heading-sm'>What is a Crypto Presale?</h3>
-                    <p className='text-big'>A crypto presale grants a unique opportunity to purchase ahead of others and unlock immense profits. Our presale serves as your exclusive gateway to discounted digital assets, paving the way for million-dollar returns!</p>
+                    <p className=''>A crypto presale grants a unique opportunity to purchase ahead of others and unlock immense profits. Our presale serves as your exclusive gateway to discounted digital assets, paving the way for million-dollar returns!</p>
                     <div className="action-btns mx-auto mt-4">
                         <Button color={"pri"} type={"block"}>Explore Our Project</Button>
                         <Button color={"pri"} type={"inline"}>Sale Whitelist</Button>
@@ -238,7 +238,7 @@ function Home() {
                         <div className="col-sm-6 mt-5 d-flex align-items-center">
                             <div className="mx-auto text-center" data-aos="fade-left">
                                 <h2 className="pri-color heading-md">What is Supelle?</h2>
-                                <h5 className='heading-sm'>The People First Marketplace</h5>
+                                <h5 className=''>The People First Marketplace</h5>
                                 <p className='mt-3'>Supelle is a global marketplace that serves as an umbrella. Where we provide work opportunities for freelancers and offer solution to individuals and bussiness alike. The innovative platform is the present and future of global connectivity and collaboration. We offer essential support for freelancers' success and deliver top-notch customer supports to clients.</p>
                                 <div className="action-btns mx-auto mt-4 pb-4">
                                     <Button type={"block"} color={"pri"} >What is Supelle?</Button>

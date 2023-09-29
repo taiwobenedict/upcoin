@@ -54,7 +54,7 @@ function Blog() {
             <Hero container={700} centerContent className="blog-container">
                 <div className="text-light text-center">
                     <h1 className="heading-xl bold">Blog</h1>
-                    <p className="text-big bold">Here, you'll find a variety of interesting articles related to our products and services.</p>
+                    <p className="bold">Here, you'll find a variety of interesting articles related to our products and services.</p>
                 </div>
             </Hero>
 
