@@ -19,7 +19,7 @@ function About() {
         <div id='about'>
             <Hero container={800} className={'text-light container'}>
                 <h1 className="heading-md bold">We bring communities together and empower them through financial innovation</h1>
-                <p className="text-bg bold mt-4">We forge long-term partnerships with our communities by ensuring high standard products, competitive pricing and excellent customer support</p>
+                <p className="text-big bold mt-4">We forge long-term partnerships with our communities by ensuring high standard products, competitive pricing and excellent customer support</p>
 
             </Hero>
 
