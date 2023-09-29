@@ -29,7 +29,7 @@ function App() {
       // You can adjust this value to control when the background color is added back
       const triggerScrollY = 100;
 
-      if (scrollY < triggerScrollY) {
+      if (scrollY > triggerScrollY) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
