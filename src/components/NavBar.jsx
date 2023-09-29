@@ -6,7 +6,7 @@ import { UIContext } from '../context/UIcontext'
 
 import { Button } from '../Utilities'
 
-function NavBar() {
+function NavBar({isScrolled}) {
     
     const { toggle, setToggle, handleDropDown, navDrop, } = useContext(UIContext)
 
@@ -17,7 +17,7 @@ function NavBar() {
     }
 
     return (
-        <div id='navbar'>
+        <div id='navbar' className={`${isScrolled && "removeBg"}`}>
             <div className="container-fluid">
                 <div className="navbar-container flex-wrap">
 

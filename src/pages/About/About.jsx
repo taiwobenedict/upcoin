@@ -24,8 +24,8 @@ function About() {
             </Hero>
 
             <Section name="supelle-info" center={true} className={"pri-bg"}>
-                <div className="container">
-                    <div className="text-light text-center py-5 col-sm-9 mx-auto">
+                <div >
+                    <div className="text-light text-center py-5 col-lg-9 mx-auto">
                         <h1 className="heading-md bold mb-4">What is Supelle?</h1>
                         <p className="">
                             Supelle is a global marketplace that serves as an umbrella. Where we provide work opportunities for freelancers and offer solutions to individuals and businesses’ alike. This innovative platform is the present and future of global connectivity and collaboration. We offer essential support for freelancers' success and deliver top-notch customer support to clients.
@@ -62,7 +62,7 @@ function About() {
             </Section>
 
             <Section className="pri-bg">
-                <div className="row pri-bg justify-content-between">
+                <div className="row pri-bg align-items-center  justify-content-between">
                     <div className="col-sm-6 d-flex justify-content-center align-items-center">
                         <div className="text-center col-sm-9 mx-auto">
                             <h2 className="heading-md">We Believe In Transparency</h2>
@@ -98,7 +98,7 @@ function About() {
 
             <Section name={"ourstory"}  className="pri-bg pb-0">
                 <div className="row pri-bg justify-content-between mx-0">
-                    <div className="col-sm-6 d-flex justify-content-center align-items-center">
+                    <div className="col-md-6 d-flex justify-content-center align-items-center">
                         <div className="text-center  mx-auto py-4">
                             <h1 className="bold">Our Story</h1>
                             <p className="">Supelle is a global marketplace that serves as an umbrella. Where we provide work opportunities for freelancers and offer solutions to individuals and businesses' alike.
@@ -111,7 +111,7 @@ function About() {
                             </p>
                         </div>
                     </div>
-                    <div className="col-sm-6 mt-4 mt-sm-0 px-0">
+                    <div className="col-md-6 mt-4 mt-sm-0 px-0">
                         <div className="story-image">
 
                         </div>
@@ -140,7 +140,7 @@ function About() {
                                 (
                                     member.name === "demo1"
                                         ? (<>
-                                            <h1 className='demo demo1'>The Sup  <br />Team</h1>
+                                            <h1 className='demo demo1' key={i}>The Sup  <br />Team</h1>
                                         </>)
                                         :
                                         (<div className="member" key={i}>
@@ -165,7 +165,7 @@ function About() {
                     {
                         teamMembers.slice(6,).map((member, i) => (
                             member.name === "demo2"
-                                ? (<div className='demo demo2'>
+                                ? (<div className='demo demo2' key={i}>
                                     <h1>Board Of <br />
         
                                         Directors</h1>

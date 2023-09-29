@@ -37,6 +37,7 @@ const UIContextProvider = ({ children }) => {
     setModal(prev => !prev)
   }
 
+
   return (
     <UIContext.Provider value={{
       toggle,

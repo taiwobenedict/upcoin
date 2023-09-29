@@ -12,20 +12,42 @@ import About from "./pages/About/About";
 import NewToCrypto from "./pages/NewToCrypto/NewToCrypto";
 import Win from "./pages/Win/Win";
 import ScrollToTopOnNavigate from "./components/ScrollToTop";
+import { useState, useEffect } from "react";
 
 
 
 
 
 function App() {
-  const {setToggle } = useContext(UIContext)
+  const {setToggle, } = useContext(UIContext)
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      // You can adjust this value to control when the background color is added back
+      const triggerScrollY = 100;
+
+      if (scrollY < triggerScrollY) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+  }, []);
+  
 
 
   return (
     <div className="App">
       <ScrollToTopOnNavigate />
+    
 
-      <NavBar />
+      <NavBar isScrolled={isScrolled} />
 
       <div  onClick={() => setToggle(false)}>
       <Routes>
