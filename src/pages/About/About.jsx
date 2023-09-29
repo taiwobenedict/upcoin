@@ -99,7 +99,7 @@ function About() {
             <Section name={"ourstory"}  className="pri-bg pb-0">
                 <div className="row pri-bg justify-content-between mx-0">
                     <div className="col-sm-6 d-flex justify-content-center align-items-center">
-                        <div className="text-center col-sm-9 mx-auto py-4">
+                        <div className="text-center  mx-auto py-4">
                             <h1 className="bold">Our Story</h1>
                             <p className="">Supelle is a global marketplace that serves as an umbrella. Where we provide work opportunities for freelancers and offer solutions to individuals and businesses' alike.
                                 Under the expert guidance of our visionary Founder & CEO, Wefreelancer Global Tech, Inc. ("the Company") is a Boca Raton, Florida-based business embarked on an ambitious journey to create the lead freelancing platform, operating through the domain of Supelle.com. Founded in 2018 where we are set to make a resounding impacts in the freelancing landscape.
