@@ -28,7 +28,7 @@ function Roadmap() {
                 <Hero transparent={false} container={900} className={"container"}>
                     <div className="text-pri roadmap-hero">
                         <h1 className="heading-xl bold" data-aos="fade-up">SupCoin <br /> Token</h1>
-                        <p className=" bold" data-aos="fade-right">The first cryptocurrency with a global blockchain-powered marketplace to back it up. Supcoin Token is the life force of the Supelle ecosystem, developed to empower our innovative community.</p>
+                        <p className="text-big bold" data-aos="fade-right">The first cryptocurrency with a global blockchain-powered marketplace to back it up. Supcoin Token is the life force of the Supelle ecosystem, developed to empower our innovative community.</p>
                         <Button className="mt-5 presale-btn" type={"block"} color={"light"}>Presale</Button>
                     </div>
                 </Hero>
@@ -247,26 +247,31 @@ function Roadmap() {
                 </Section>
 
             </div>
-            <div className='tech mx-auto row container p-0' >
+            <div className='tech mx-auto row p-0' >
                 <div className=" pri-color px-5 pt-5 col-md-6" data-aos="fade-right">
-                    <h1 className="heading-md bold">Token <br />Technical <br /> Features</h1>
-                    <div className="d-flex justify-content-start align-items-center mt-4">
-                        <FaArrowRight size={25} className="d-block icon mr-3" />
-                        <p className=''>Supcoin is an ERC Ethereum-based (ETH) utility token that uses Binance Coin (BNB)</p>
-                    </div>
-                    <div className="d-flex justify-content-start align-items-center mt-4">
-                        <FaArrowRight size={25} className="d-block icon mr-3" />
-                        <p className=''>Supcoin is a type of decentralized utility token.</p>
-                    </div>
-                    <div className="d-flex justify-content-start align-items-center mt-4">
-                        <FaArrowRight size={25} className="d-block icon mr-3" />
-                        <p className=''>It is an ERC-20 utility coin, a type of secure, smart contract-enabled token on the Ethereum blockchain that is interchangeable.</p>
+                    <div className="tech-side ml-auto">
+                        <h1 className="heading-md bold">Token <br />Technical <br /> Features</h1>
+                        <div className="d-flex justify-content-start align-items-center mt-4">
+                            <FaArrowRight size={25} className="d-block icon mr-3" />
+                            <p className=''>Supcoin is an ERC Ethereum-based (ETH) utility token that uses Binance Coin (BNB)</p>
+                        </div>
+                        <div className="d-flex justify-content-start align-items-center mt-4">
+                            <FaArrowRight size={25} className="d-block icon mr-3" />
+                            <p className=''>Supcoin is a type of decentralized utility token.</p>
+                        </div>
+                        <div className="d-flex justify-content-start align-items-center mt-4">
+                            <FaArrowRight size={25} className="d-block icon mr-3" />
+                            <p className=''>It is an ERC-20 utility coin, a type of secure, smart contract-enabled token on the Ethereum blockchain that is interchangeable.</p>
+                        </div>
                     </div>
                 </div>
                 <div className="pri-bg text-light px-5 pt-5 col-md-6" data-aos="fade-left">
-                    <h1 className="heading-md bold">OTC <br />Desk</h1>
-                    <p className=''>Over-The-Counter (OTC) trading takes place off the open SUP order book. We offer deeper liquidity and a private, more personalized service to institutions and high net-worth individuals needing to fill large orders that might be too disruptive if placed on the open market. Whether you are trading blocks of $100,000, $1,000,000 or 200,000 SUP, the OTC desk will provide you with execution and settlement services that are discreet, secure and ultra-competitive
-                    </p>
+                    <div className="tech-side">
+                        <h1 className="heading-md bold">OTC <br />Desk</h1>
+                        <p className=''>Over-The-Counter (OTC) trading takes place off the open SUP order book. We offer deeper liquidity and a private, more personalized service to institutions and high net-worth individuals needing to fill large orders that might be too disruptive if placed on the open market. Whether you are trading blocks of $100,000, $1,000,000 or 200,000 SUP, the OTC desk will provide you with execution and settlement services that are discreet, secure and ultra-competitive
+                        </p>
+
+                    </div>
                 </div>
             </div>
         </>

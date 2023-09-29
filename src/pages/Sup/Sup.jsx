@@ -23,7 +23,7 @@ function Sup() {
             </Hero>
 
             {/* Endless Posibilities */}
-                <section name={"endless"} className="border-bottom container py-5">
+                <section id={"endless"} className="border-bottom container py-5" data-aos="fade-up">
                     <div className="col-md-11 mx-auto">
                         <div className="row mx-auto">
                             <div className="col-md-6 mt-3 d-flex justify-content-center align-items-center">
@@ -34,7 +34,7 @@ function Sup() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="col-md-6 mt-3">
+                            <div className="col-md-6 mt-3" data-aos="fade-left">
                                 <div className="endless-image sup-image ml-auto">
                                     <img src={endless} alt="" className='w-100' />
                                 </div>
