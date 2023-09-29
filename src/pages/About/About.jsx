@@ -96,7 +96,7 @@ function About() {
 
             </Section>
 
-            <Section name={"ourstory"}  className="pri-bg pb-0">
+            <Section name={"ourstory"}  className="pri-bg  pb-0">
                 <div className="row pri-bg justify-content-between mx-0">
                     <div className="col-md-6 d-flex justify-content-center align-items-center">
                         <div className="text-center  mx-auto py-4">
