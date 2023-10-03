@@ -23,7 +23,7 @@ function NavBar({isScrolled}) {
 
                     {/* Logo */}
                     <div className='logo' onClick={closeToggler}>
-                        <Link to="/" className='nav-link px-0'><img src={logo} alt="" /></Link>
+                        <Link to="/" className='nav-link px-0 mr-5'><img width={72}  src={logo} alt="" /></Link>
                     </div>
 
                     {/* Main Navigation */}
@@ -34,23 +34,23 @@ function NavBar({isScrolled}) {
 
                         <div className="nav-link drop1">
                             <div className="position-relative ">
-                                <span style={{ fontSize: "14px" }}>Learn</span> <FaCaretRight className={`icon transition ${!navDrop.drop1 && "rotate"}`} />
+                                <span style={{ fontSize: "14px" }}>Learn</span>
                                 <span onClick={handleDropDown} id='drop1' className="dropdown-btn"></span>
                             </div>
 
                             <div className={`dropdown-items ${navDrop.drop1 && "drop"}`}>
                                 <div className='row text-light dropdown-container'>
-                                    <div className='col-sm-6'>
-                                        <div className="col-sm-9">
+                                    <div className='col-md-6'>
+                                        <div className="col-md-9">
                                             <h1 className='bold '>Learn</h1>
                                             <p className='mont-font'>Supcoin help you navigate the digital asset landscape with exiting, cofidence and knowledge. The digital asset space is continuously evolving, with new projects, trends, and technologies emerging frequently.</p>
 
                                         </div>
                                     </div>
-                                    <div className="dropdown col-sm-6">
+                                    <div className="dropdown col-md-6">
                                         <li onClick={closeToggler}><Link to="#home" className='nav-link dropdown-item'> Cryptocurrencies  <FaLink className='ml-2' /></Link></li>
-                                        <li onClick={closeToggler}><Link to="#home" className='nav-link dropdown-item'>Caculator  <FaLink className='ml-2' /></Link></li>
-                                        <li onClick={closeToggler}><Link to="#home" className='nav-link dropdown-item'>Market  <FaLink className='ml-2' /></Link></li>
+                                        <li onClick={closeToggler}><Link to="/caculator" className='nav-link dropdown-item'>Caculator  <FaLink className='ml-2' /></Link></li>
+                                        <li onClick={closeToggler}><Link to="/marketplace" className='nav-link dropdown-item'>Market  <FaLink className='ml-2' /></Link></li>
                                         <li onClick={closeToggler}><Link to="/blog" className='nav-link dropdown-item'>Blog  <FaLink className='ml-2' /></Link ></li>
                                         <li onClick={closeToggler}><Link to="#home" className='nav-link dropdown-item'>Support  <FaLink className='ml-2' /></Link></li>
                                     </div>
@@ -61,19 +61,19 @@ function NavBar({isScrolled}) {
 
                         <div className='nav-link drop2'>
                             <div className="position-relative ">
-                                <span style={{ fontSize: "14px" }}>How To Buy</span> <FaCaretRight className={`icon transition ${!navDrop.drop2 && "rotate"}`} />
-                                <span onClick={handleDropDown} id='drop2' className="dropdown-btn"></span>
+                                <span style={{ fontSize: "14px" }}>How To Buy</span>
+                                <Link to='/how-to-buy' onClick={handleDropDown} id='drop2' className="dropdown-btn"></Link>
                             </div>
 
                             <div className={`dropdown-items ${navDrop.drop2 && "drop"}`} >
                                 <div className='row dropdown-container'>
-                                    <div className="col-sm-6 text-light">
-                                        <div className="col-sm-9">
+                                    <div className="col-md-6 text-light">
+                                        <div className="col-md-9">
                                             <h1 className=' bold title'>New comer</h1>
                                             <p className='mont-font'>Welcome to the world of cryptocurrencies! Crypto is an exciting and rapidly evolving space that offers various opportunities for investment, innovation, and financial empowerment.</p>
                                         </div>
                                     </div>
-                                    <div className="dropdown col-sm-6">
+                                    <div className="dropdown col-md-6">
                                         <li onClick={closeToggler}>
                                             <Link to="/new-to-crypto" className='nav-link dropdown-item'>New To Cryto  <FaLink className='ml-2'/></Link>
                                         </li>

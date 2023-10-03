@@ -29,6 +29,11 @@
     object-fit: cover;
 }
 
+.buying-section {
+    max-width: 450px;
+    margin-left: auto;
+}
+
 
 
 /* Welcome Section */
@@ -86,6 +91,10 @@
 #watch-video {
     min-height: 685px;
     background: url("../../images/home/video.png") center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px !important;
 }
 
 .video-content {

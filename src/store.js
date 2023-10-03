@@ -7,6 +7,11 @@ import OlesPakliuk from "./images/about/OlesPakliuk.png"
 import TANYATREMEL from "./images/about/TANYATREMEL.jpg"
 import TylerGidseg from "./images/about/TylerGidseg.png"
 
+// Wallet Backgrounds
+import metamask from "./images/howtobuy/metamask.jpeg"
+import walletBg from "./images/howtobuy/walletBg.png"
+import noWalletBg from "./images/howtobuy/noWalletBg.png"
+
 
 export const teamMembers = [
     {
@@ -85,4 +90,88 @@ export const teamMembers = [
         about: `Tyler Gidseg is an experienced front-end web developer and graphic designer. Driven by his passion for design, he takes pride in providing the best tailored, out-of-the-box designs to bring his own unique thumbprint to any project. Tyler got his start in creating websites using WordPress. Under Tyler’s umbrella of skills, he has learned how to best optimize websites based on best practices like SEO, Mobile responsiveness, and Domain setup. Tyler has also worked with the Walt Disney Company with Disney 2-D sketch artists, where he first discovered his innate artistic talent. It is Tyler’s hope and ambition to create the best work he can encapsulate the vision for his clients.
         `
     },
+]
+
+
+export const wallets = [
+    {
+        name: "Metamask",
+        heading: "BUY $FGHT USING METAMASK",
+        subheading: "Metamask is the leading self-custodial wallet. The safe and simple way to access blockchain applications and web3.",
+        image: metamask,
+        topics: [
+            {
+                topic: "HOW TO BUY $FGHT USING ETH (METAMASK)",
+                content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque minima possimus incidunt minus ipsa perferendis necessitatibus. Dolores quibusdam optio impedit ad sunt praesentium vero et dolorem, quis adipisci veritatis veniam mollitia sit consectetur laudantium dicta ab incidunt obcaecati expedita explicabo est autem ex ducimus minima. Corrupti laboriosam velit hic. Delectus.`,
+                image: ""
+            },
+            {
+                topic: "HOW TO BUY $FGHT USING USDT ON ETH (METAMASK)",
+                content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque minima possimus incidunt minus ipsa perferendis necessitatibus. Dolores quibusdam optio impedit ad sunt praesentium vero et dolorem, quis adipisci veritatis veniam mollitia sit consectetur laudantium dicta ab incidunt obcaecati expedita explicabo est autem ex ducimus minima. Corrupti laboriosam velit hic. Delectus.`,
+                image: ""
+            },
+            {
+                topic: "HOW TO BUY $FGHT USING BNB (METAMASK)",
+                content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque minima possimus incidunt minus ipsa perferendis necessitatibus. Dolores quibusdam optio impedit ad sunt praesentium vero et dolorem, quis adipisci veritatis veniam mollitia sit consectetur laudantium dicta ab incidunt obcaecati expedita explicabo est autem ex ducimus minima. Corrupti laboriosam velit hic. Delectus.`,
+                image: ""
+            },
+            {
+                topic: "HOW TO BUY $FGHT USING USDT ON BSC (METAMASK)",
+                content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque minima possimus incidunt minus ipsa perferendis necessitatibus. Dolores quibusdam optio impedit ad sunt praesentium vero et dolorem, quis adipisci veritatis veniam mollitia sit consectetur laudantium dicta ab incidunt obcaecati expedita explicabo est autem ex ducimus minima. Corrupti laboriosam velit hic. Delectus.`,
+                video: ""
+            },
+            {
+                topic: "HOW TO BUY $FGHT USING CREDIT CARD",
+                content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque minima possimus incidunt minus ipsa perferendis necessitatibus. Dolores quibusdam optio impedit ad sunt praesentium vero et dolorem, quis adipisci veritatis veniam mollitia sit consectetur laudantium dicta ab incidunt obcaecati expedita explicabo est autem ex ducimus minima. Corrupti laboriosam velit hic. Delectus.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque minima possimus incidunt minus ipsa perferendis necessitatibus. Dolores quibusdam optio impedit ad sunt praesentium vero et dolorem, quis adipisci veritatis veniam mollitia sit consectetur laudantium dicta ab incidunt obcaecati expedita explicabo est autem ex ducimus minima. Corrupti laboriosam velit hic. Delectus.`,
+                image: ""
+            },
+        ]
+
+    },
+    {
+        name: "TrustWallet",
+        heading: "BUY $FGHT USING TRUSTWALLET",
+        subheading: "Metamask is the leading self-custodial wallet. The safe and simple way to access blockchain applications and web3.",
+        image: walletBg,
+        topics: [
+            {
+                topic: "HOW TO BUY $FGHT USING ETH (METAMASK)",
+                content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque minima possimus incidunt minus ipsa perferendis necessitatibus. Dolores quibusdam optio impedit ad sunt praesentium vero et dolorem, quis adipisci veritatis veniam mollitia sit consectetur laudantium dicta ab incidunt obcaecati expedita explicabo est autem ex ducimus minima. Corrupti laboriosam velit hic. Delectus.`,
+                image: ""
+            },
+            {
+                topic: "HOW TO BUY $FGHT USING ETH (METAMASK)",
+                content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque minima possimus incidunt minus ipsa perferendis necessitatibus. Dolores quibusdam optio impedit ad sunt praesentium vero et dolorem, quis adipisci veritatis veniam mollitia sit consectetur laudantium dicta ab incidunt obcaecati expedita explicabo est autem ex ducimus minima. Corrupti laboriosam velit hic. Delectus.`,
+                image: ""
+            },
+            {
+                topic: "HOW TO BUY $FGHT USING ETH (METAMASK)",
+                content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque minima possimus incidunt minus ipsa perferendis necessitatibus. Dolores quibusdam optio impedit ad sunt praesentium vero et dolorem, quis adipisci veritatis veniam mollitia sit consectetur laudantium dicta ab incidunt obcaecati expedita explicabo est autem ex ducimus minima. Corrupti laboriosam velit hic. Delectus.`,
+                image: ""
+            },
+            {
+                topic: "HOW TO BUY $FGHT USING ETH (METAMASK)",
+                content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque minima possimus incidunt minus ipsa perferendis necessitatibus. Dolores quibusdam optio impedit ad sunt praesentium vero et dolorem, quis adipisci veritatis veniam mollitia sit consectetur laudantium dicta ab incidunt obcaecati expedita explicabo est autem ex ducimus minima. Corrupti laboriosam velit hic. Delectus.`,
+                image: ""
+            },
+        ]
+
+    },
+    {
+        name: "Don't have a wallet?",
+        heading: "BUY $FGHT USING METAMASK",
+        subheading: "Metamask is the leading self-custodial wallet. The safe and simple way to access blockchain applications and web3.",
+        image: noWalletBg,
+        topics: [
+            {
+                topic: "HOW TO BUY $FGHT USING ETH (METAMASK)",
+                content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque minima possimus incidunt minus ipsa perferendis necessitatibus. Dolores quibusdam optio impedit ad sunt praesentium vero et dolorem, quis adipisci veritatis veniam mollitia sit consectetur laudantium dicta ab incidunt obcaecati expedita explicabo est autem ex ducimus minima. Corrupti laboriosam velit hic. Delectus.`,
+                image: ""
+            }
+        ]
+
+    },
+
+    
 ]

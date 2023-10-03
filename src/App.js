@@ -13,7 +13,11 @@ import NewToCrypto from "./pages/NewToCrypto/NewToCrypto";
 import Win from "./pages/Win/Win";
 import ScrollToTopOnNavigate from "./components/ScrollToTop";
 import { useState, useEffect } from "react";
+import Marketplace from "./pages/Marketplace/Marketplace";
+import Caculator from "./pages/Caculator/Caculator";
 
+import { Marque } from "./components/ScrollToTop";
+import HowToBuy from "./pages/HowToBuy/HowToBuy";
 
 
 
@@ -59,10 +63,14 @@ function App() {
         <Route path="/roadmap" element={ <Roadmap /> } />
         <Route path="/about" element={ <About /> } />
         <Route path="/new-to-crypto" element={ <NewToCrypto /> } />
-        <Route path="/win" element={ <Win /> } />
+        <Route path="/win" element={ <Win /> } /> 
+        <Route path="/marketplace" element={ <Marketplace /> } /> 
+        <Route path="/caculator" element={ <Caculator /> } /> 
+        <Route path="/how-to-buy" element={ <HowToBuy /> } /> 
         
       </Routes>
       </div>
+      <Marque />
 
       <Footer />
     </div>

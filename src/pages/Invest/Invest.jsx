@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import { useState, useEffect } from 'react'
 
 import sustainable from "../../images/invest/sustainable.png"
 import esteemed from "../../images/invest/esteemed.png"
@@ -14,7 +14,11 @@ import shuffle from "../../images/invest/shuffle.png"
 import globe from "../../images/invest/globe.png"
 import marketplace from "../../images/invest/marketplace.png"
 import diligence from "../../images/invest/diligence.png"
-import chart from "../../images/invest/chart.jpg"
+import chart from "../../images/invest/chart.png"
+import earlysupport from "../../images/invest/earlysupport.jpeg"
+import keyreasons from "../../images/invest/keyreasons.jpeg"
+import investslider from "../../images/invest/investslider.png"
+
 
 import { Hero, Button, Section } from '../../Utilities'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -25,7 +29,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { FaChevronCircleRight, FaChevronRight } from 'react-icons/fa'
+import { FaChevronCircleRight } from 'react-icons/fa'
 
 
 
@@ -37,6 +41,27 @@ function Invest() {
 
         setCheck(prev => !prev)
     }
+
+    // Image Slider
+    const [scrollY, setScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const position = 400 - scrollY;
+
+    const elementStyle = {
+        transform: `translateX(${Math.max(0, position)}px)`,
+    };
 
 
     return (
@@ -52,95 +77,112 @@ function Invest() {
 
 
             {/* Normal  */}
-            <Section name={"normal"} mt={0} className="container pb-5">
-                <div className="row">
-                    <div className="col-sm-6 mt-3">
-                        <h2 className='pri-color heading-md bold mb-3'>Unlock the new normal</h2>
-                        <p className='mt-2 '>We are offering you an exciting opportunity that we believe may be of interest to you. We are currently seeking early stage supporters for Supelle, and we want to share some key details with you.</p>
-                        <p className="mt-2 ">Supelle/Supcoin has tremendous potential for growth and is positioned to disrupt the freelancing marketplace. Our team is comprised of highly talented individuals with a deep understanding of the industry and a strong track record of success.
-                        </p>
-                        <h5 className="mt-3">SUP is the hurdle-free way to Raise Capital:</h5>
-                        <button className="btn btn-block-pri mt-2">What are utility tokens?</button>
+            <div className="pri-bg">
+                <Section name={"normal"} mt={0} className="container" pd="100px 0px">
+                    <div className="row">
+                        <div className="col-md-6 mt-3">
+                            <h2 className=' heading-md bold mb-3'>Unlock the new normal</h2>
+                            <p className='mt-2 '>We are offering you an exciting opportunity that we believe may be of interest to you. We are currently seeking early stage supporters for Supelle, and we want to share some key details with you.</p>
+                            <p className="mt-2 ">Supelle/Supcoin has tremendous potential for growth and is positioned to disrupt the freelancing marketplace. Our team is comprised of highly talented individuals with a deep understanding of the industry and a strong track record of success.
+                            </p>
+
+                        </div>
+                        <div className="col-md-6">
+                            <div className="normal-slider-image" style={elementStyle}>
+                                <img src={investslider} alt="" className='w-100' />
+                            </div>
+                        </div>
                     </div>
-                    <div className="col-sm-6 mt-3">
-                        <div className="normal-items">
-                            <div className="normal-item d-flex align-items-center flex-wrap mb-3">
-                                <div className="normal-image">
-                                    <img src={sustainable} alt="Sustainable Financial Resistance" className='w-100' />
+                    <div className="row mt-5 pt-5">
+                        <div className="col-md-6 d-flex justify-content-between flex-column align-items-start">
+                            <h3 className="mt-3 bold">SUP is the hurdle-free way to Raise Capital:</h3>
+                            <button className="btn btn-block-light mt-2">What are utility tokens?</button>
+                        </div>
+                        <div className="col-md-6 mt-3">
+                            <div className="normal-items">
+                                <div className="d-flex align-items-center flex-wrap mb-3">
+                                    <div className="normal-image">
+                                        <img src={sustainable} alt="Sustainable Financial Resistance" className='w-100' />
+                                    </div>
+                                    <p className="m-0">Sustainable Financial Resistance</p>
                                 </div>
-                                <h6 className="">Sustainable Financial Resistance</h6>
-                            </div>
-                            <div className="normal-item d-flex align-items-center flex-wrap mb-3">
-                                <div className="normal-image">
-                                    <img src={esteemed} alt="Esteemed Founder and Accomplished Team of Experts" className='w-100' />
+                                <div className="normal-item d-flex align-items-center flex-wrap mb-3">
+                                    <div className="normal-image">
+                                        <img src={esteemed} alt="Esteemed Founder and Accomplished Team of Experts" className='w-100' />
+                                    </div>
+                                    <p className="m-0">Esteemed Founder and Accomplished Team of Experts</p>
                                 </div>
-                                <h6 className="">Esteemed Founder and Accomplished Team of Experts</h6>
-                            </div>
-                            <div className="normal-item d-flex align-items-center flex-wrap mb-3">
-                                <div className="normal-image">
-                                    <img src={unparallel} alt="Unparalleled Growth Potential & Uniqueness" className='w-100' />
+                                <div className="normal-item d-flex align-items-center flex-wrap mb-3">
+                                    <div className="normal-image">
+                                        <img src={unparallel} alt="Unparalleled Growth Potential & Uniqueness" className='w-100' />
+                                    </div>
+                                    <p className="m-0">Unparalleled Growth Potential & Uniqueness</p>
                                 </div>
-                                <h6 className="">Unparalleled Growth Potential & Uniqueness</h6>
-                            </div>
-                            <div className="normal-item d-flex align-items-center flex-wrap mb-3">
-                                <div className="normal-image">
-                                    <img src={robust} alt="Robust and Strategic Business Model " className='w-100' />
+                                <div className="normal-item d-flex align-items-center flex-wrap mb-3">
+                                    <div className="normal-image">
+                                        <img src={robust} alt="Robust and Strategic Business Model " className='w-100' />
+                                    </div>
+                                    <p className="m-0">Robust and Strategic Business Model </p>
                                 </div>
-                                <h6 className="">Robust and Strategic Business Model </h6>
-                            </div>
-                            <div className="normal-item d-flex align-items-center flex-wrap mb-3">
-                                <div className="normal-image">
-                                    <img src={scale} alt="The Industry Demonstrates Proven Stability and Scalability " className='w-100' />
+                                <div className="normal-item d-flex align-items-center flex-wrap mb-3">
+                                    <div className="normal-image">
+                                        <img src={scale} alt="The Industry Demonstrates Proven Stability and Scalability " className='w-100' />
+                                    </div>
+                                    <p className="m-0">The Industry Demonstrates Proven Stability and Scalability </p>
                                 </div>
-                                <h6 className="">The Industry Demonstrates Proven Stability and Scalability </h6>
-                            </div>
-                            <div className="normal-item d-flex align-items-center flex-wrap mb-3">
-                                <div className="normal-image">
-                                    <img src={strong} alt="Strong Competitive Advantage" className='w-100' />
+                                <div className="normal-item d-flex align-items-center flex-wrap mb-3">
+                                    <div className="normal-image">
+                                        <img src={strong} alt="Strong Competitive Advantage" className='w-100' />
+                                    </div>
+                                    <p className="m-0">Strong Competitive Advantage</p>
                                 </div>
-                                <h6 className="">Strong Competitive Advantage</h6>
                             </div>
+                        </div>
+                    </div>
+                </Section>
+            </div>
+
+            <Section>
+                <div className="row align-items-center  justify-content-between">
+                    <div className="col-md-6 d-flex justify-content-center align-items-center order-2">
+                        <div className="text-center col-md-9 mx-auto">
+                            <h2 className="heading-md">Early Stage Supporters For Exciting New Crypto Opportunity
+                            </h2>
+                            <p className="m-0">Early-stage supporters like yourself are crucial to our success. Your expertise and financial backing can provide the resources necessary for us to scale our operations, penetrate the market, and ultimately achieve our vision. We believe that with the right early stage supporters, Supelle has the potential to become a market leader and generate substantial returns.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="col-md-6 px-0 order-1">
+                        <div className="m-0">
+                            <img src={earlysupport} alt="" className='w-100' />
+                        </div>
+                    </div>
+                </div>
+            </Section>
+            <Section className={'pri-bg'}>
+                <div className="row align-items-center  justify-content-between">
+                    <div className="col-md-6 d-flex justify-content-center align-items-center">
+                        <div className="text-center py-5 col-md-9 mx-auto">
+                            <h2 >Key Reasons to become an Early stage supporter:
+                            </h2>
+                            <p className="m-0">Investing with a reputable and trustworthy company is one of the smartest decisions that can lead to great rewards. So take the leap and invest with us - you will be in awe at the amazing returns in store for you.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="col-md-6 d-none d-md-block px-0">
+                        <div className="m-0">
+                            <img src={keyreasons} alt="" height={550} className='w-100' />
                         </div>
                     </div>
                 </div>
             </Section>
 
 
-            <div className="pri-bg">
-                <div className="container py-5">
-                    <div className="row px-0 py-3">
-                        <div className="col-sm-6 mt-3">
-                            <div className="card bg-transparent border-light  h-100">
-                                <div className="card-body">
-
-                                    <h5 className=" heading-sm">Early stage supporters for Exciting New Crypto Opportunity</h5>
-                                    <p className="mt-2">Early stage supporters like yourself are crucial to our success. Your expertise and financial backing can provide the resources necessary for us to scale our operations, penetrate the market, and ultimately achieve our vision. We believe that with the right early stage supporters, Supelle has the potential to become a market leader and generate substantial returns.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 mt-3">
-                            <div className="card bg-transparent border-light  h-100">
-                                <div className="card-body">
-                                    <h5 className=" heading-sm">Key Reasons to become an Early stage supporter: </h5>
-                                    <p className="mt-2">Investing with a reputable and trustworthy company is one of the smartest decisions that can lead to great rewards. So take the leap and invest with us and you will be in awe at the amazing returns in store for you.
-                                    </p>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
             {/* Solution */}
-            <Section name={"solution"}  className="container">
+            <Section name={"solution"} mt={0} className="container" pd="150px 0">
                 <div className="overlay"></div>
                 <div className="solution-context">
-                    <h1 className="pri-color heading-md bold">End to End Solution</h1>
+                    <h1 className="pri-color bold">End to End Solution</h1>
                     <p className=''>Out team will guide you through the process of issuign a blockchain based utility token.</p>
                 </div>
 
@@ -210,7 +252,7 @@ function Invest() {
             {/* Benefits */}
             <Section mt={120} className="benefits">
                 <div className="container">
-                    <div className="text-content text-center col-sm-9 mx-auto">
+                    <div className="text-content text-center col-md-9 mx-auto">
                         <h2 className="pri-color heading-sm">Benefits of an early stage supporter</h2>
                         <p className="mt-3 ">
                             As an early stage supporter, success comes from finding opportunities. Are you ready to dive into the exciting world of cryptocurrencies? Here's your chance to be a part and participate in our thrilling pre-launch of the new normal. Your support will be invaluable as we navigate challenges, make strategic decisions, and build a sustainable and profitable business.
@@ -230,19 +272,19 @@ function Invest() {
 
                         >
                             <SwiperSlide>
-                                <div className="col-sm-8 mt-3 mx-auto">
+                                <div className="col-md-8 mt-3 mx-auto">
                                     <h2 className="pri-color">Our team is here from the beginning of the journey to the end</h2>
                                     <p className="mt-3">In return for your support, we are offering advantages such as discounted token prices, bonus rewards, and exclusive access to platform features.  </p>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="col-sm-8 mt-3 mx-auto">
+                                <div className="col-md-8 mt-3 mx-auto">
                                     <h2 className="pri-color">We help to manage your investment.</h2>
                                     <p className="mt-3">By getting involved at an early stage, investors can position themselves to benefit  from the platform's growth and future enhancements, potentially reaping  substantial rewards as Supelle Coin gains traction.</p>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="col-sm-8 mt-3 mx-auto">
+                                <div className="col-md-8 mt-3 mx-auto">
                                     <h2 className="pri-color">We Deliver Pre-Launch Investors a Seamless Journey.</h2>
                                     <p className="mt-3">Our team is committed to transparency, open communication, and delivering results.</p>
                                 </div>
@@ -260,21 +302,21 @@ function Invest() {
                         <h2 className="text-center mb-5">Early Stage Investment Possibility With SUPELLE</h2>
                     </div>
                     <div className="row">
-                        <div className="col-sm-4 pr-5">
+                        <div className="col-md-4 pr-5">
                             <div className="invest-image">
                                 <img src={globe} alt="Global visibility & availability" />
                             </div>
                             <h5>Global visibility & availability</h5>
                             <p>Around-the-clock and the world from any country globally.</p>
                         </div>
-                        <div className="col-sm-4  pr-5">
+                        <div className="col-md-4  pr-5">
                             <div className="invest-image">
                                 <img src={marketplace} alt="Fully decentralized marketplace" />
                             </div>
                             <h5>Fully decentralized marketplace</h5>
                             <p>Utility to early stage supporter opportunities for those who want the new normal.</p>
                         </div>
-                        <div className="col-sm-4  pr-5">
+                        <div className="col-md-4  pr-5">
                             <div className="invest-image">
                                 <img src={diligence} alt="Due Diligence" />
                             </div>
@@ -287,7 +329,7 @@ function Invest() {
             </Section>
 
             {/* Factors */}
-            <Section className="factors">
+            <Section className="factors" pd="100px 0 0 0">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
@@ -295,7 +337,7 @@ function Invest() {
                             <img src={chart} alt="chart" className='w-100' />
                         </div>
                         <div className="col-md-6 d-flex align-items-center">
-                            <div className="">
+                            <div className="mt-auto">
                                 <h3 className='mb-5 pri-color'>These factors influence freelancers' and clients' dynamics, opportunities, and challenges. Here are some key factors:
                                 </h3>
                                 <div className="factor-items">
@@ -310,7 +352,7 @@ function Invest() {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-sm-6">
+                        <div className="col-md-6">
                             <div className="factor-item">
                                 <FaChevronCircleRight className='icon' />
                                 <p>Globalization and Remote Work: Globalization has led to increased connectivity and the ability to work remotely. Freelancers now have access to a global client base, while clients can tap into talent pools worldwide. This has increased competition and opened up a broader range of opportunities for freelancers and clients.
@@ -328,7 +370,7 @@ function Invest() {
                             </div>
 
                         </div>
-                        <div className="col-sm-6">
+                        <div className="col-md-6">
                             <div className="factor-item d-flex">
                                 <FaChevronCircleRight className='icon' />
                                 <p>Economic Factors: Global and local economic conditions can influence the freelancing marketplace. Economic downturns may lead to reduced freelance budgets and increased competition, while periods of economic growth can create more opportunities for freelancers as businesses seek flexible talent instead of full-time employees.
@@ -345,10 +387,10 @@ function Invest() {
                 </div>
             </Section>
 
-            <Section name="create-token" mt={120}>
+            <Section name="create-token" mt={120} pd="150px 0px">
                 <div className="overlay"></div>
                 <div className="row">
-                    <div className="col-sm-9 text-center mx-auto d-flex justify-content-center align-items-center">
+                    <div className="col-md-9 text-center mx-auto d-flex justify-content-center align-items-center">
                         <div className="rev-context">
                             <h1 className='heading-md'>We embraced the financial revolution by creating our very own utility token and marketplace</h1>
                             <p className=''>We are currently inviting early stage supporters to become part of a growing community early on and join us on this exciting journey. If you are interested in exploring this opportunity further, we would be delighted to provide you with more details.
@@ -360,58 +402,63 @@ function Invest() {
 
             </Section>
 
-            <Section name="letstoken" className="container">
+                {/* Let Token */}
+            <Section name="letstoken" className="container" pd="100px 0px">
                 <div className="row text-light">
-                    <div className="col-sm-6">
-                        <h1 className="heading-md">Let's Token</h1>
+                    <div className="col-md-6">
+                        <div className="token-content">
+                            <h1 className="heading-md mb-5">Let's Token</h1>
+                            <div className=' token-text'>
+                                <div className="token-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
+                                <p>Tell Us About You</p>
+                            </div>
+                            <div className='token-text'>
+                                <div className="token-circle"></div>
+                                <p>Tell Us About Your Raise</p>
+                            </div>
+                            <div className=' token-text'>
+                                <div className="token-circle"></div>
+                                <p>Tell If You've Been A Supporter</p>
+                            </div>
+                        </div>
 
-                        <div className="d-flex align-items-center mt-3">
-                            <FaChevronRight size={20} className='icon mr-3'/>
-                            <p className="m-0">Tell us about you</p>
-                        </div>
-                        <div className="d-flex mt-4">
-                            <FaChevronRight  size={20} className='icon mr-3'/>
-                            <p className="m-0">Tell us about you raise</p>
-                        </div>
-                        <div className="d-flex mt-4">
-                            <FaChevronRight  size={20}  className='icon mr-3'/>
-                            <p className="m-0">Tell if you've been a supporter</p>
-                        </div>
                     </div>
-                    <div className="col-sm-6">
-                        <form action="" className="newcomer-form">
-                            <div className="form-container">
+                    <div className="col-md-6">
+                        <form action="">
+                            <div className="form-container ">
                                 <div className="form-group">
-                                    <input type="text" className="form-input" placeholder='Your Name' />
+                                    <label htmlFor="name">Your Name</label>
+                                    <input type="text" className="form-control" id='name' placeholder='John Smith' />
                                 </div>
                                 <div className="form-group">
-                                    <input type="email" className="form-input" placeholder='Email Address' />
+                                    <label htmlFor="email">Email Address</label>
+                                    <input type="email" className="form-control" id='email' placeholder='Johnsmith@mail.com' />
 
                                 </div>
 
                                 <div className="form-group">
-                                    <input type="tel" className="form-input" placeholder="Phone Number" />
+                                    <label htmlFor="phone_number">Phone Number</label>
+                                    <input type="tel" className="form-control" id='phone_number' placeholder="+17723427995" />
                                 </div>
 
-                                <div className="form-group">
-                                    <input type="email" className="form-input" placeholder="Your nub" />
-                                </div>
-                                <div className="d-flex text-light align-items-center justify-content-between mb-4">
+                                
+                                <div className="d-flex text-lightmb-4">
                                     <input type="checkbox" className='form-check mr-4' name="" id="" onChange={handleCheck} />
                                     <span>Have you been an early stage supporter in a technology platform before?</span>
                                 </div>
-                                
+
                                 <div className="form-group">
-                                    <input type="text" className="form-input" placeholder="If yes, please kindly explain" disabled={isChecked} />
+                                    <input type="text" className="form-control" placeholder="If yes, please kindly explain" disabled={isChecked} />
                                 </div>
 
                                 <div className="form-group">
-                                    <input type="text" className="form-input" placeholder="What would you like us to know about you?" />
+                                    <label htmlFor="about_yourself">About Yourself</label>
+                                    <input type="text" className="form-control" id='about_yourself' placeholder="What would you like us to know about you?" />
                                 </div>
 
                             </div>
 
-                            <Button type={"block"} color={"light"} className="mx-auto mt-auto">Finish</Button>
+                            <Button type={"block"} color={"light"} className="mx-auto px-5 d-block mt-auto">Finish</Button>
                         </form>
                     </div>
                 </div>

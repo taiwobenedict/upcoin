@@ -12,125 +12,17 @@
     background-color: rgba(0,0,0,0.6);
 }
 
-.newcomer-form {
-    background-color: rgb(16, 34, 82, 0.85);
-    padding: 35px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+.newform-container {
+    border: solid 1px #fff;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.6);
+    margin-inline: auto;
+    max-width: 650px;
+}
+
+.form-context .heading-md {
+    font-size: 3rem;
 
 }
 
-.form-context {
-    background-color: #fff;
-    color: #1b1b1b;
-    text-align: justify;
-    padding: 35px !important;
-
-}
-
-  
- 
-.form-input {
-    width: 100%;
-    background: none;
-    outline: none;
-    box-shadow: none;
-    border: none;
-    color: rgb(255, 255, 255, 0.8);
-    padding: 10px;
-    border-bottom: solid 1px rgba(255, 255, 255, 0.37);
-    font-family: 'Montserrat', sans-serif;
-    transition: 0.4s;
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #fff 4%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #fff 4%);
-    background-position: -800px 0;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    color: #fff;
-}
-
-
-
-.form-input:focus, .text:valid {
-    box-shadow: none;
-    outline: none;
-    background-position: 0 0;
-  }
-
-
-
-.form-input::placeholder,
-.option-btn .i {
-    color: rgb(255, 255, 255, 0.8);
-    font-family: 'Montserrat', sans-serif;
-    
-}
-
-.form-input:focus::-webkit-input-placeholder, .text:valid::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 14px;
-  -webkit-transform: translateY(-30px);
-  -moz-transform: translateY(-30px);
-  -o-transform: translateY(-30px);
-  -ms-transform: translateY(-30px);
-  transform: translateY(-30px);
-  visibility: visible !important;
-  
-}
-
-
-/* Form Dropdown */
-.option-btn {
-    justify-content: space-between;
-    width: 100%;
-    color: rgb(255, 255, 255, 0.8);
-    font-family: 'Montserrat', sans-serif;
-    border-bottom: solid 1px rgba(255, 255, 255, 0.37);
-    padding: 10px;
-    align-items: center;
-    position: relative;
-}
-
-
-.select {
-    position: relative;
-}
-
-.select-cover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-}
-
-.options {
-    background-color: rgb(16, 34, 82, 1);
-    border: solid 1px rgba(255, 255, 255, 0.37);
-    
-}
-
-.option-input {
-    cursor: pointer;
-}
-
-.option-input:hover {
-    background-color: rgba(27, 27, 27,0.5);
-}
-
-.option-container {
-overflow: hidden;
-    transition: 0.4s;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    height: 0;
-    z-index: 1;
-}
-
-#newtocrypto .btn {
-    position: relative;
-    z-index: -1;
-}

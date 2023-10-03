@@ -25,7 +25,7 @@ function Roadmap() {
 
 
             <div id='roadmap'>
-                <Hero transparent={false} container={900} className={"container"}>
+                <Hero height={100} transparent={false} container={900} className={"container"}>
                     <div className="text-pri roadmap-hero">
                         <h1 className="heading-xl bold" data-aos="fade-up">SupCoin <br /> Token</h1>
                         <p className="text-big bold" data-aos="fade-right">The first cryptocurrency with a global blockchain-powered marketplace to back it up. Supcoin Token is the life force of the Supelle ecosystem, developed to empower our innovative community.</p>
@@ -34,7 +34,7 @@ function Roadmap() {
                 </Hero>
 
                 {/* RoadMap */}
-                <Section container={750} center={true} className={"container"}>
+                <Section container={750} center={true} className={"container"} pd="100px 0">
                     <div className="roadmap-container">
                         <h1 className="heading-md my-5"> Bringing the <br />SUP Token to Life</h1>
                         <div className="roadmap-items pt-5">
@@ -142,7 +142,7 @@ function Roadmap() {
                     </div>
                 </Section>
 
-                <Section name={"presale"} className={"container"} >
+                <Section name={"presale"} className={"container"}   pd="100px 0">
                     <div className="presale-container">
                         <div>
                             <div className="presale-image" >
@@ -174,7 +174,7 @@ function Roadmap() {
                     </div>
                 </Section>
 
-                <Section name={"token"} mt={120} className={"padding-bottom container"}>
+                <Section name={"token"} mt={50} className={"padding-bottom container"} >
                     <Swiper
                         modules={[Autoplay, Navigation, Pagination]}
                         spaceBetween={0}
@@ -187,7 +187,7 @@ function Roadmap() {
 
                     >
                         <SwiperSlide>
-                            <div className="row">
+                            <div className="row align-items-center img-slider">
                                 <div className="col-sm-6">
                                     <div className="pl-sm-5">
                                         <h2 className='heading-sm'>As a Security.</h2>
@@ -199,12 +199,12 @@ function Roadmap() {
                                     </div>
                                 </div>
                                 <div className="col-sm-6">
-                                    <img src={Adoption} alt="" className='w-100' />
+                                    <img src={Adoption} alt="" className='w-75 d-block ml-auto' />
                                 </div>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="row">
+                            <div className="row align-items-center img-slider">
                                 <div className="col-sm-6">
                                     <div className="pl-sm-5">
                                         <h2 className='heading-sm'>As a Utility(Coming soon)</h2>
@@ -218,12 +218,12 @@ function Roadmap() {
 
                                 </div>
                                 <div className="col-sm-6">
-                                    <img src={Utility} alt="" className='w-100' />
+                                    <img src={Utility} alt="" className='w-75 d-block ml-auto' />
                                 </div>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="row">
+                            <div className="row align-items-center img-slider">
                                 <div className="col-sm-6">
                                     <div className="pl-sm-5">
                                         <h2 className='heading-sm'>Token Economics</h2>
@@ -238,7 +238,7 @@ function Roadmap() {
                                     </div>
                                 </div>
                                 <div className="col-sm-6">
-                                    <img src={Token} alt={Token} className='w-100' />
+                                    <img src={Token} alt={Token} className='w-75 d-block ml-auto' />
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -248,9 +248,9 @@ function Roadmap() {
 
             </div>
             <div className='tech mx-auto row p-0' >
-                <div className=" pri-color px-5 pt-5 col-md-6" data-aos="fade-right">
+                <div className="  px-5 pt-5 col-md-6" data-aos="fade-right">
                     <div className="tech-side ml-auto">
-                        <h1 className="heading-md bold">Token <br />Technical <br /> Features</h1>
+                        <h1 className="pri-light-color bold">Token <br />Technical <br /> Features</h1>
                         <div className="d-flex justify-content-start align-items-center mt-4">
                             <FaArrowRight size={25} className="d-block icon mr-3" />
                             <p className=''>Supcoin is an ERC Ethereum-based (ETH) utility token that uses Binance Coin (BNB)</p>
@@ -265,10 +265,10 @@ function Roadmap() {
                         </div>
                     </div>
                 </div>
-                <div className="pri-bg text-light px-5 pt-5 col-md-6" data-aos="fade-left">
+                <div className="pri-light-bg text-light px-5 pt-5 col-md-6" data-aos="fade-left">
                     <div className="tech-side">
-                        <h1 className="heading-md bold">OTC <br />Desk</h1>
-                        <p className=''>Over-The-Counter (OTC) trading takes place off the open SUP order book. We offer deeper liquidity and a private, more personalized service to institutions and high net-worth individuals needing to fill large orders that might be too disruptive if placed on the open market. Whether you are trading blocks of $100,000, $1,000,000 or 200,000 SUP, the OTC desk will provide you with execution and settlement services that are discreet, secure and ultra-competitive
+                        <h1 className="bold">OTC <br />Desk</h1>
+                        <p className='mt-5'>Over-The-Counter (OTC) trading takes place off the open SUP order book. We offer deeper liquidity and a private, more personalized service to institutions and high net-worth individuals needing to fill large orders that might be too disruptive if placed on the open market. Whether you are trading blocks of $100,000, $1,000,000 or 200,000 SUP, the OTC desk will provide you with execution and settlement services that are discreet, secure and ultra-competitive
                         </p>
 
                     </div>

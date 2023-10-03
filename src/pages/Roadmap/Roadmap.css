@@ -21,50 +21,6 @@
 /* Roadmap */
 
 
-.roadmap-content {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.road-circle {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border: solid 3px #102252;
-    border-radius: 50%;
-    left: -14px;
-    top: 0px;
-    background-color: #fff;
-    padding: 2px;
-    
-}
-
-.inner-circle {
-    height: 100%;
-    width: 100%;
-    background-color: #102252;
-    border-radius: 50%;
-}
-
-.roadmap-content:last-child .roadmap-text {
-    border: none;
-}
-
-
-.roadmap-heading {
-    flex: 1;
-    padding: 0px 0px 10px 30px;
-}
-.roadmap-text {
-    position: relative;
-    border-left: solid 2px #102252;
-    flex: 1.8;
-    padding: 0px 0px 50px 30px;
-    margin-bottom: 0;
-    
-}
-
-
 
 
 #presale {
@@ -91,6 +47,11 @@
     margin-bottom: 5rem;
 }
 
+.img-slider {
+    max-width: 1200px;
+    margin-inline: auto !important;
+}
+
 .total-pric {
     margin-bottom: 6rem;
 }
@@ -101,10 +62,12 @@
 }
 
 .tech-side {
-    max-width: 700px;
+    max-width: 500px;
+    margin: auto;
+    padding: 100px 0;
 }
-
-
+    
+    
 
 .tech .icon {
     min-width: 15px;

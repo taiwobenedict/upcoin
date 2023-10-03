@@ -1,17 +1,7 @@
 #about .hero {
   background: url("../../images/about/about-hero.jpeg") center center/cover
     no-repeat;
-    max-height: 80vh;
-    min-height: 80vh !important;
-   
-   
 }
-
-#about .hero .container {
-  min-height: 80vh !important;
-}
-
-
 
 #about .hero .overlay {
   background-color: rgba(0, 0, 0, 0.5);
@@ -129,7 +119,7 @@
   align-items: center;
   backdrop-filter: blur(3px);
   opacity: 0;
-  transform: scale(0);
+  visibility: hidden;
   transition: 0.4s;
 }
 
@@ -219,7 +209,7 @@
 }
 
 .toggle-modal {
-    transform: scale(1);
+    visibility: visible;
     opacity: 1;
 }
 

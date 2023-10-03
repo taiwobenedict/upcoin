@@ -18,6 +18,10 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.transition {
+  transition: 0.4s !important;
+}
+
 /* Buttons */
 .btn {
   transition: 0.4s !important;
@@ -42,7 +46,7 @@
   color: #102252 !important;
 }
 
-.btn-inline-pri {
+.btn-inline-pri:hover {
   background-color: #102252 !important;
   color: #fff !important;
 }
@@ -77,6 +81,10 @@
 .change {
   display: none;
 }
+
+/* .section {
+  padding: 7rem 0px !important;
+} */
 
 @media (max-width: 768px) {
   .hero {

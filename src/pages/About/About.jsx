@@ -17,13 +17,13 @@ function About() {
 
     return (
         <div id='about'>
-            <Hero container={800} className={'text-light container'}>
+            <Hero container={800} className={'text-light container'} height={75}>
                 <h1 className="heading-md bold">We bring communities together and empower them through financial innovation</h1>
                 <p className="text-big bold mt-4">We forge long-term partnerships with our communities by ensuring high standard products, competitive pricing and excellent customer support</p>
 
             </Hero>
 
-            <Section name="supelle-info" center={true} className={"pri-bg"}>
+            <Section name="supelle-info" center={true} className={"pri-bg"} pd="100px 0">
                 <div >
                     <div className="text-light text-center py-5 col-lg-9 mx-auto">
                         <h1 className="heading-md bold mb-4">What is Supelle?</h1>
@@ -41,17 +41,16 @@ function About() {
                 </div>
             </Section>
 
-            <Section name={"info"} center={true} container={1000} >
+            <Section name={"info"} center={true} container={1200} pd="100px 0" >
                 <div className="info-container">
 
-
                     <div className="row align-items-center">
-                        <div className="col-sm-4">
-                            <div className="info-image w-100">
+                        <div className="col-md-4">
+                            <div className="info-image w-100 mr-auto">
                                 <img src={krithen} alt={krithen} className='w-100' />
                             </div>
                         </div>
-                        <div className="col-sm-8 w-100">
+                        <div className="col-md-8 w-100">
                             <h1 className="bold text-center my-5">A message from our CEO, Kristen Bragoli</h1>
                             <p className="">My vision of shaping capital markets and their evolution from the traditional world to a digital economy is coming to life.
                                 The SUP Token was the first and significant milestone  the first SEC-registered security token to IPO on the blockchain.
@@ -63,13 +62,13 @@ function About() {
 
             <Section className="pri-bg">
                 <div className="row pri-bg align-items-center  justify-content-between">
-                    <div className="col-sm-6 d-flex justify-content-center align-items-center">
-                        <div className="text-center col-sm-9 mx-auto">
+                    <div className="col-md-6 d-flex justify-content-center align-items-center">
+                        <div className="text-center col-md-9 mx-auto">
                             <h2 className="heading-md">We Believe In Transparency</h2>
                             <p className="">Transparency and regulation are the cornerstone values of SUP, allowing the investors community to benefit from our platform and the evolution of capital markets.</p>
                         </div>
                     </div>
-                    <div className="col-sm-6 px-0">
+                    <div className="col-md-6 px-0">
                         <div className="">
                             <img src={robot} alt="" className='w-100' />
                         </div>
@@ -78,14 +77,14 @@ function About() {
 
             </Section>
 
-            <Section className='container-fluid'>
+            <Section className='container-fluid' pd="100px 0">
                 <div className="row mb">
-                    <div className="col-sm-6">
+                    <div className="col-md-6">
                         <div className="">
                             <img src={tech} alt="" className='w-100' />
                         </div>
                     </div>
-                    <div className="col-sm-6 d-flex justify-content-center align-items-center">
+                    <div className="col-md-6 d-flex justify-content-center align-items-center">
                         <div className="text-center">
                             <h2 className="heading-md">We strive to provide unique opportunities</h2>
                             <p className="">We are the pioneers of a new tokenized economy providing access to new financial opportunities. All assets on Supcoin are carefully vetted as we operate a fully regulated platform and are committed to guaranteeing a secure trading experience for all traders.</p>
@@ -99,7 +98,7 @@ function About() {
             <Section name={"ourstory"}  className="pri-bg  pb-0">
                 <div className="row pri-bg justify-content-between mx-0">
                     <div className="col-md-6 d-flex justify-content-center align-items-center">
-                        <div className="text-center  mx-auto py-4">
+                        <div className="text-center  mx-auto py-5">
                             <h1 className="bold">Our Story</h1>
                             <p className="">Supelle is a global marketplace that serves as an umbrella. Where we provide work opportunities for freelancers and offer solutions to individuals and businesses' alike.
                                 Under the expert guidance of our visionary Founder & CEO, Wefreelancer Global Tech, Inc. ("the Company") is a Boca Raton, Florida-based business embarked on an ambitious journey to create the lead freelancing platform, operating through the domain of Supelle.com. Founded in 2018 where we are set to make a resounding impacts in the freelancing landscape.

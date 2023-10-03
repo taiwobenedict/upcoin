@@ -1,13 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+  --pri-color: #102252;
+  --pri-light-color: #2f5fe2;
+}
 
 
 /* Typography */
 
 body {
-  background-color: #fff;
-  font-family: "Montserrat", sans-serif !important;
-  font-size: 20.8px;
-  font-weight: 400;
+  background-color: #f1f1f1 !important;
+  font-weight: 300;
+  font-family: 'Lato', sans-serif !important;
+  line-height: 2 !important;
+  overflow-x: hidden;
 }
 
 .heading-xl {
@@ -39,7 +45,7 @@ body {
 }
 
 .mont-font {
-  font-family: "Montserrat", sans-serif !important;
+  font-family: 'Lato', sans-serif !important;
 }
 
 
@@ -74,11 +80,18 @@ ul {
 }
 
 .pri-color {
-  color: #102252;
+  color: var(--pri-color);
+}
+.pri-light-color {
+  color: var(--pri-light-color);
 }
 
 .pri-bg {
-  background-color: #102252;
+  background-color: var(--pri-color);
+  color: #fff;
+}
+.pri-light-bg {
+  background-color: var(--pri-light-color);
   color: #fff;
 }
 
@@ -102,6 +115,30 @@ ul {
   padding-top: 130px;
 }
 
+.badge {
+  padding: 8px 20px !important;
+  border: 1px solid var(--pri-light-color);
+  border-radius: 10px !important;
+  color: var(--pri-light-color);
+  background-color: transparent;
+  display: inline-block;
+  transition: 0.4s !important;
+  font-size: 1rem !important;
+  margin-right: 1rem;
+  cursor: pointer;
+  
+  
+}
+
+.badge-bg {
+  background-color: var(--pri-light-color);
+  color: #fff ;
+}
+
+.badge:hover {
+  background-color: var(--pri-light-color);
+  color: #fff;
+}
 
 
 
