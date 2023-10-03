@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 import { Hero } from '../../Utilities'
 import { UIContext } from '../../context/UIcontext'
 import { FaChevronDown } from 'react-icons/fa'

@@ -1,19 +1,9 @@
-import React, { useState } from 'react'
-import { Button, Hero } from '../../Utilities'
 
-
-
+import {  Hero } from '../../Utilities'
 
 import "./NewToCrypto.css"
 
 function NewToCrypto() {
-
-    const [budget, setBudget] = useState("Budget")
-    const [bestTime, setBestTime] = useState("Contact Time")
-
-
-
-
 
     return (
         <div id='newtocrypto'>
