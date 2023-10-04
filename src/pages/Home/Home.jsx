@@ -233,8 +233,7 @@ function Home() {
                     </div>
                     <div className="col-md-5 mt-4">
                         <div className="video">
-                            <iframe title='supcoin' className='h-100 w-100' src="https://youtu.be/wFIjt8Gn2B8">
-                    
+                            <iframe title='https://www.youtube.com/embed/wFIjt8Gn2B8'  src="https://www.youtube.com/embed/wFIjt8Gn2B8" className='w-100 h-100'>
                             </iframe>
                         </div>
                     </div>
