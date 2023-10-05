@@ -6,36 +6,20 @@ export const UIContext = createContext();
 const UIContextProvider = ({ children }) => {
   const [toggle, setToggle] = useState(false);
   const [navDrop, setNavDrop] = useState({ drop1: false, drop2: false });
-  const [formDrop, setFormDrop] = useState({ drop3: false, drop4: false });
   const [openAcc, setOpenAcc] = useState({ acc1: true, acc2: false, acc3: false, acc4: false });
-  const [bg, setBg ] = useState([true, false, false])
-  const [optHeight, setOptHeight] = useState(0);
+  const [bg, setBg ] = useState([true, false, false, false])
   const [openModal, setModal] = useState(false)
   const [teamMember, setTeamMember] = useState({})
   const [walletGuide, setWalletGuide] = useState(wallets[0])
 
-  const handleDropDown = (e) => {
-    const id = e.target.id;
-
-    if (id === "drop3" || id === "drop4") {
-      const opt = e.target.parentElement.nextElementSibling.firstElementChild.clientHeight;
-      setOptHeight(opt);
-    }
-
-
+  const handleDropDown = (id) => {
+  
     // Toggle the dropdown if it's already open; otherwise, set it to open
     setNavDrop((prevState) => ({
-      drop1: id === "drop1" ? !prevState.drop1 : false,
-      drop2: id === "drop2" ? !prevState.drop2 : false,
+      drop1: id === "drop1",
+      drop2: id === "drop2",
     }));
-
-    setFormDrop((prevState) => ({
-      drop3: id === "drop3" ? !prevState.drop3 : false,
-      drop4: id === "drop4" ? !prevState.drop4 : false,
-    }));
-    
-
-    
+     
   };
 
   const handleAccordion = (id) => {
@@ -62,7 +46,8 @@ const UIContextProvider = ({ children }) => {
     setBg( [
       id === "bg1" ,
       id === "bg2" ,
-      id === "bg3" 
+      id === "bg3",
+      id === "bg4" 
     ]);
   }
 
@@ -73,8 +58,6 @@ const UIContextProvider = ({ children }) => {
     <UIContext.Provider value={{
       toggle,
       navDrop,
-      formDrop,
-      optHeight,
       openModal,
       teamMember,
       openAcc,

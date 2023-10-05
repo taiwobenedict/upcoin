@@ -15,6 +15,7 @@ import ScrollToTopOnNavigate from "./components/ScrollToTop";
 import { useState, useEffect } from "react";
 import Marketplace from "./pages/Marketplace/Marketplace";
 import Caculator from "./pages/Caculator/Caculator";
+import Support from "./pages/support/Support";
 
 import { Marque } from "./components/ScrollToTop";
 import HowToBuy from "./pages/HowToBuy/HowToBuy";
@@ -66,7 +67,8 @@ function App() {
         <Route path="/win" element={ <Win /> } /> 
         <Route path="/marketplace" element={ <Marketplace /> } /> 
         <Route path="/caculator" element={ <Caculator /> } /> 
-        <Route path="/how-to-buy" element={ <HowToBuy /> } /> 
+        <Route path="/how-to-buy" element={ <HowToBuy /> } />
+        <Route path="/support" element={ <Support /> } />
         
       </Routes>
       </div>

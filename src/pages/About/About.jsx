@@ -143,8 +143,7 @@ function About() {
                                         </>)
                                         :
                                         (<div className="member" key={i}>
-                                            <div className="member-image h-100">
-                                                <img src={member.image} alt="Maksym" className='w-100 h-100' />
+                                            <div className="member-image h-100" style={{background: `url(${member.image}) center center/cover no-repeat`}}>
                                                 <div className="img-cover d-flex justify-content-center align-items-center">
                                                     <div className="img-context">
                                                         <h5 className='bold '>{member.name}</h5>
@@ -160,7 +159,7 @@ function About() {
                         </div>
                     </div>
                 </div>
-                <div className="members">
+                <div className="members-b">
                     {
                         teamMembers.slice(6,).map((member, i) => (
                             member.name === "demo2"

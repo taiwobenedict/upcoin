@@ -48,8 +48,13 @@
 
 .members {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(224.81px, auto));
+  grid-template-columns: repeat(3, 1fr);
 
+}
+
+.members-b {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr) !important;
 }
 
 

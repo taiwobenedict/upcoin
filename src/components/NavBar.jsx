@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { FaBars, FaCaretRight, FaLink, FaTimes } from "react-icons/fa"
+import { FaBars, FaCaretRight, FaArrowUp, FaTimes } from  "react-icons/fa"
 import logo from '../images/home/logo.png'
 import { UIContext } from '../context/UIcontext'
 
@@ -35,10 +35,10 @@ function NavBar({isScrolled}) {
                         <div className="nav-link drop1">
                             <div className="position-relative ">
                                 <span style={{ fontSize: "14px" }}>Learn</span>
-                                <span onClick={handleDropDown} id='drop1' className="dropdown-btn"></span>
+                                <span onMouseEnter={()=>handleDropDown("drop1")} onMouseLeave={closeToggler} className="dropdown-btn"></span>
                             </div>
 
-                            <div className={`dropdown-items ${navDrop.drop1 && "drop"}`}>
+                            <div className={`dropdown-items ${navDrop.drop1 && "drop"}`}  onMouseEnter={()=>handleDropDown("drop1")} onMouseLeave={closeToggler}>
                                 <div className='row text-light dropdown-container'>
                                     <div className='col-md-6'>
                                         <div className="col-md-9">
@@ -48,11 +48,11 @@ function NavBar({isScrolled}) {
                                         </div>
                                     </div>
                                     <div className="dropdown col-md-6">
-                                        <li onClick={closeToggler}><Link to="#home" className='nav-link dropdown-item'> Cryptocurrencies  <FaLink className='ml-2' /></Link></li>
-                                        <li onClick={closeToggler}><Link to="/caculator" className='nav-link dropdown-item'>Caculator  <FaLink className='ml-2' /></Link></li>
-                                        <li onClick={closeToggler}><Link to="/marketplace" className='nav-link dropdown-item'>Market  <FaLink className='ml-2' /></Link></li>
-                                        <li onClick={closeToggler}><Link to="/blog" className='nav-link dropdown-item'>Blog  <FaLink className='ml-2' /></Link ></li>
-                                        <li onClick={closeToggler}><Link to="#home" className='nav-link dropdown-item'>Support  <FaLink className='ml-2' /></Link></li>
+                                        <li onClick={closeToggler}><Link to="#home" className='nav-link dropdown-item'> Cryptocurrencies  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}} /></Link></li>
+                                        <li onClick={closeToggler}><Link to="/caculator" className='nav-link dropdown-item'>Caculator  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}} /></Link></li>
+                                        <li onClick={closeToggler}><Link to="/marketplace" className='nav-link dropdown-item'>Market  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}} /></Link></li>
+                                        <li onClick={closeToggler}><Link to="/blog" className='nav-link dropdown-item'>Blog  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}} /></Link ></li>
+                                        <li onClick={closeToggler}><Link to="/support" className='nav-link dropdown-item'>Support  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}} /></Link></li>
                                     </div>
                                 </div>
                                 <div className="close"><FaTimes size={25} onClick={handleDropDown} /></div>
@@ -61,28 +61,27 @@ function NavBar({isScrolled}) {
 
                         <div className='nav-link drop2'>
                             <div className="position-relative ">
-                                <span style={{ fontSize: "14px" }}>How To Buy</span>
-                                <Link to='/how-to-buy' onClick={handleDropDown} id='drop2' className="dropdown-btn"></Link>
+                                <span style={{ fontSize: "14px" }}>How To Obtain</span>
+                                <Link to='/how-to-buy' onMouseEnter={()=>handleDropDown("drop2")} onClick={closeToggler} onMouseLeave={closeToggler} className="dropdown-btn"></Link>
                             </div>
 
-                            <div className={`dropdown-items ${navDrop.drop2 && "drop"}`} >
+                            <div className={`dropdown-items ${navDrop.drop2 && "drop"}`}  onMouseEnter={()=>handleDropDown("drop2")} onMouseLeave={closeToggler} >
                                 <div className='row dropdown-container'>
                                     <div className="col-md-6 text-light">
                                         <div className="col-md-9">
-                                            <h1 className=' bold title'>New comer</h1>
-                                            <p className='mont-font'>Welcome to the world of cryptocurrencies! Crypto is an exciting and rapidly evolving space that offers various opportunities for investment, innovation, and financial empowerment.</p>
+                                            <h1 className=' bold title'>Obtain </h1>
+                                            <p className='mont-font'>Begin by researching the asset you want to purchase. Understand its features, specifications, and pricing to make an informed decision. Take charge and buy Supcoin in presale using ETH, BNB, USDT, or bank card before it lists on DEX.</p>
                                         </div>
                                     </div>
                                     <div className="dropdown col-md-6">
                                         <li onClick={closeToggler}>
-                                            <Link to="/new-to-crypto" className='nav-link dropdown-item'>New To Cryto  <FaLink className='ml-2'/></Link>
+                                            <Link to="/new-to-crypto" className='nav-link dropdown-item'>New To Cryto  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}}/></Link>
                                         </li>
                                         <li onClick={closeToggler}>
-                                            <Link to="/win" className='nav-link dropdown-item'>Win $100k   <FaLink className='ml-2'/></Link>
+                                            <Link to="/win" className='nav-link dropdown-item'>Airdrop<FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}}/></Link>
                                         </li>
                                     </div>
                                 </div>
-                                <div className="close" onClick={handleDropDown}><FaTimes size={25} color='#fff' /></div>
                             </div>
                         </div>
 
