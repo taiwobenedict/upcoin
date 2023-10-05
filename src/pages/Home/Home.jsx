@@ -231,10 +231,10 @@ function Home() {
                             <Button color={"light"} type={"block"} className="mx-auto d-block mt-4">Watch More</Button>
                         </div>
                     </div>
-                    <div className="col-md-5 mt-4">
+                    <div className="col-md-5 my-4">
                         <div className="video">
-                            <iframe title='https://www.youtube.com/embed/wFIjt8Gn2B8'  src="https://www.youtube.com/embed/wFIjt8Gn2B8" className='w-100 h-100'>
-                            </iframe>
+                        <iframe  className='w-100 h-100' src="https://www.youtube.com/embed/YLE6_GCC7zw?si=8mYPX4gpl5JI3AMX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
                         </div>
                     </div>
                 </div>
