@@ -10,8 +10,8 @@ function Support() {
             <Hero height={80} centerContent={true} className="container">
                 <h1 className="heading-lg text-center bold mb-4 text-light support-heading">Support Center</h1>
                 <div className="d-flex justify-content-center">
-                    <Button type={"block"} color={"pri"} className="mr-5 support-btn">FAQs</Button>
-                    <Button type={"block"} color={"light"} className="support-btn">Videos</Button>
+                    <Link   className="mr-5 support-btn"><Button type={"block"} color={"pri"} className="w-100">FAQs</Button></Link>
+                    <Link to="videos"  className="support-btn"><Button type={"block"} color={"light"} className="w-100">Videos</Button></Link>
                 </div>
 
             </Hero>

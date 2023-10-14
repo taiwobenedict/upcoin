@@ -1,0 +1,52 @@
+/* Videos */
+
+.coin {
+    width: 45px;
+    height: 45px;
+}
+
+.search {
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    color: #333;
+    min-width: 300px;
+    width: 100%;
+    height: 40px;
+    padding-inline: 15px;
+    border-radius: 30px;
+}
+
+.search-icon {
+    font-size: 1.3rem;
+    margin-right: 0.8rem;
+}
+
+.search-videos {
+    border: none;
+    outline: none;
+}
+
+.search-videos:focus {
+    border: none;
+}
+
+.user-support {
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #1b1b1b;
+    padding: 2px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.support-footer {
+    padding: 20px 0 60px 0;
+    border-top: solid 1px #fff;
+}

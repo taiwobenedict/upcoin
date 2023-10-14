@@ -2,12 +2,18 @@ import React, { useContext } from 'react'
 import { Hero, Section } from '../../Utilities'
 import { UIContext } from '../../context/UIcontext'
 import { wallets } from '../../store'
+import DOMPurify from 'dompurify'
 
 import "./HowToBuy.css"
 
 function HowToBuy() {
 
     const { openAcc, handleAccordion, walletGuide, uploadGuide, bg } = useContext(UIContext)
+
+    function renderHTML(htmlString) {
+        const sanitizedHTML = DOMPurify.sanitize(htmlString);
+        return `<div>${sanitizedHTML}</div>`;
+      }
    
 
 
@@ -65,7 +71,7 @@ function HowToBuy() {
                             <div className={` content ${openAcc.acc2 && "open"}`}>
                                 <div className="inner-content">
                                     <h2 className="heading text-left">
-                                        BUY <span className="pri-light-color">ETH</span> WITH A CARD
+                                        Purchase <span className="pri-light-color">ETH</span> WITH A CARD
                                     </h2>
                                     <p>Click the “Buy ETH with Card” button to use Transak if you need to purchase ETH using your credit card, then swap the ETH for $UP. Make sure you have enough ETH left over to cover gas fees.</p>
                                 </div>
@@ -76,7 +82,7 @@ function HowToBuy() {
                                 <h4 className="pri-light-color">03</h4>
 
                                 <h4 className="heading text-left">
-                                    BUY <span className="pri-light-color">SUP</span> WITH A ETH
+                                    BUY <span className="pri-light-color">$UP</span> WITH A ETH
                                 </h4>
                                 <div className="dropdown-btn" id='acc3' onClick={(e) => handleAccordion(e.target.id)}></div>
                             </div>
@@ -95,7 +101,7 @@ function HowToBuy() {
                                 <h4 className="pri-light-color">04</h4>
 
                                 <h4 className="heading text-left">
-                                    BUY <span className="pri-light-color">SUP</span> WITH USDT
+                                    Obtain <span className="pri-light-color">SUP</span> WITH USDT
                                 </h4>
                                 <div className="dropdown-btn" id='acc4' onClick={(e) => handleAccordion(e.target.id)}></div>
                             </div>
@@ -163,8 +169,7 @@ function HowToBuy() {
                                             </div>
 
                                             <div id={`collapse${i}`} className="collapse transition" aria-labelledby={`heading${i}`} data-parent="#accordionExample">
-                                                <div className="card-body transition text-dark">
-                                                    {topic.content}
+                                                <div className="card-body transition text-dark" dangerouslySetInnerHTML={{__html: renderHTML(topic.content)}}>
                                                 </div>
                                             </div>
                                         </div>

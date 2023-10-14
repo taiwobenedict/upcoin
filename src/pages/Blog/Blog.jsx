@@ -1,10 +1,7 @@
 import React from 'react'
 import { Button, Hero, Section } from '../../Utilities'
-import post1 from "../../images/blog/post1.jpg"
-import post2 from "../../images/blog/post2.jpg"
-import post3 from "../../images/blog/post3.jpg"
-import post4 from "../../images/blog/post4.jpg"
 import { Link, useParams, useResolvedPath } from 'react-router-dom'
+import {posts} from "../../store"
 
 
 import "./Blog.css"
@@ -14,38 +11,6 @@ function Blog() {
     const { pathname } = useResolvedPath()
     const path = pathname.search('post')
 
-
-    // Dummy Post
-    const posts = [
-        {
-            id: 1,
-            img: post1,
-            title: "Blog Title One",
-            text: "Some quick example text to build on the blog title and make up the bulk of the blog's content.",
-            date: new Date().getMinutes()
-        },
-        {
-            id: 2,
-            img: post2,
-            title: "Blog Title Two",
-            text: "Some quick example text to build on the blog title and make up the bulk of the blog's content.",
-            date: new Date().getMinutes()
-        },
-        {
-            id: 3,
-            img: post3,
-            title: "Blog Title Three",
-            text: "Some quick example text to build on the blog title and make up the bulk of the blog's content.",
-            date: new Date().getMinutes()
-        },
-        {
-            id: 4,
-            img: post4,
-            title: "Blog Title Four",
-            text: "Some quick example text to build on the blog title and make up the bulk of the blog's content.",
-            date: new Date().getMinutes()
-        },
-    ]
 
 
 
@@ -88,7 +53,7 @@ function Blog() {
                 </div>
             </Section>
 
-            <Section className="container">
+            <Section className="container mt-5">
                 <nav>
                     <ul className="pagination">
                         <li className="page-item"><Link className="page-link">Prev</Link></li>

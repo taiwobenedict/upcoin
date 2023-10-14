@@ -20,7 +20,15 @@
 
 /* Roadmap */
 
+.roadmap-content {
+   max-width: 1200px;
+   margin-inline: auto;
+   padding-bottom: 30px;
+}
 
+.roadmap-content ul {
+    list-style: inside;
+}
 
 
 #presale {

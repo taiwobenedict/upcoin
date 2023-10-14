@@ -1,7 +1,7 @@
 import Home from "./pages/Home/Home";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer"
-import {Route, Routes} from "react-router-dom"
+import { Route, Routes, useLocation } from "react-router-dom"
 import Invest from "./pages/Invest/Invest";
 import Sup from "./pages/Sup/Sup";
 import { UIContext } from "./context/UIcontext";
@@ -19,64 +19,87 @@ import Support from "./pages/support/Support";
 
 import { Marque } from "./components/ScrollToTop";
 import HowToBuy from "./pages/HowToBuy/HowToBuy";
+import SupportHeading from "./pages/support/components/SupportHeading";
+import SupportFooter from "./pages/support/components/SupportFooter";
+import Videos from "./pages/support/components/Videos";
 
 
 
 
 function App() {
-  const {setToggle, } = useContext(UIContext)
-  const [isScrolled, setIsScrolled] = useState(false);
+    const { setToggle, hideNav, setHideNav } = useContext(UIContext)
+    const [isScrolled, setIsScrolled] = useState(false);
+    const location = useLocation()
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
+    useEffect(() => {
 
-      // You can adjust this value to control when the background color is added back
-      const triggerScrollY = 100;
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
 
-      if (scrollY > triggerScrollY) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
+            // You can adjust this value to control when the background color is added back
+            const triggerScrollY = 100;
 
-    window.addEventListener('scroll', handleScroll);
-    
-  }, []);
-  
+            if (scrollY > triggerScrollY) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        if (location.pathname === "/support/videos") {
+            setHideNav(false)
+        } else setHideNav(true)
+
+        window.addEventListener('scroll', handleScroll);
+        // eslint-disable-next-line
+    }, [location]);
 
 
-  return (
-    <div className="App">
-      <ScrollToTopOnNavigate />
-    
 
-      <NavBar isScrolled={isScrolled} />
+    return (
+        <div className="App" onClick={setToggle}>
+            <ScrollToTopOnNavigate />
 
-      <div  onClick={() => setToggle(false)}>
-      <Routes>
-        <Route path="/" element={ <Home /> } />
-        <Route path="/invest" element={ <Invest /> } />
-        <Route path="/sup" element={ <Sup /> } />
-        <Route path="/blog" element={ <Blog /> } />
-        <Route path="/post/:id" element={ <Blog /> } />
-        <Route path="/roadmap" element={ <Roadmap /> } />
-        <Route path="/about" element={ <About /> } />
-        <Route path="/new-to-crypto" element={ <NewToCrypto /> } />
-        <Route path="/win" element={ <Win /> } /> 
-        <Route path="/marketplace" element={ <Marketplace /> } /> 
-        <Route path="/caculator" element={ <Caculator /> } /> 
-        <Route path="/how-to-buy" element={ <HowToBuy /> } />
-        <Route path="/support" element={ <Support /> } />
-        
-      </Routes>
-      </div>
-      <Marque />
+            {
+                hideNav && <NavBar isScrolled={isScrolled} />
+            }
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/invest" element={<Invest />} />
+                <Route path="/sup" element={<Sup />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/post/:id" element={<Blog />} />
+                <Route path="/roadmap" element={<Roadmap />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/new-to-crypto" element={<NewToCrypto />} />
+                <Route path="/win" element={<Win />} />
+                <Route path="/marketplace" element={<Marketplace />} />
+                <Route path="/caculator" element={<Caculator />} />
+                <Route path="/how-to-buy" element={<HowToBuy />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/support/videos" element={<SupportPages />} />
+            </Routes>
+            <Marque />
+            {
+                hideNav && <Footer />
+            }
 
-      <Footer />
-    </div>
-  );
+        </div>
+    );
 }
 
 export default App;
+
+
+
+function SupportPages() {
+
+    return (
+        <>
+            <SupportHeading />
+            <Videos />
+            <SupportFooter />
+        </>
+
+    )
+}

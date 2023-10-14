@@ -11,7 +11,7 @@ function NavBar({isScrolled}) {
     const { toggle, setToggle, handleDropDown, navDrop, } = useContext(UIContext)
 
     const closeToggler = (e)=> {
-        setToggle(false)
+        // setToggle(false)
         handleDropDown(e)
 
     }

@@ -1,5 +1,6 @@
 #support .hero {
-    background: url("../../images/support/support.jpeg") center center/cover no-repeat;
+    background: url("../../images/support/support.png") center center/cover no-repeat;
+    background-position: top;
 }
 
 .support-form {

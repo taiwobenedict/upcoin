@@ -11,6 +11,7 @@ const UIContextProvider = ({ children }) => {
   const [openModal, setModal] = useState(false)
   const [teamMember, setTeamMember] = useState({})
   const [walletGuide, setWalletGuide] = useState(wallets[0])
+  const [hideNav, setHideNav] = useState(true)
 
   const handleDropDown = (id) => {
   
@@ -63,11 +64,13 @@ const UIContextProvider = ({ children }) => {
       openAcc,
       walletGuide,
       bg,
+      hideNav,
       setToggle,
       handleDropDown,
       handleModal,
       uploadGuide,
-      handleAccordion
+      handleAccordion,
+      setHideNav
     }}>
       {children}
     </UIContext.Provider>
