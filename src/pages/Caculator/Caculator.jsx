@@ -22,7 +22,7 @@ function Caculator() {
 
             <div className="caculator-info position-relative text-light">
                 <div className="overlay"></div>
-                <Section pd={'100px'} className={"container"}>
+                <Section pd={'100px 0'} className={"container"}>
                     <div className="row">
                         <div className="col-md-6">
                             <h1 className='bold'>The SUP <br />Cryptocurrency Calculator</h1>

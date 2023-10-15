@@ -35,10 +35,10 @@ function NavBar({isScrolled}) {
                         <div className="nav-link drop1">
                             <div className="position-relative ">
                                 <span style={{ fontSize: "14px" }}>Learn</span>
-                                <span onMouseEnter={()=>handleDropDown("drop1")} onMouseLeave={handleDropDown} onClick={closeToggler} className="dropdown-btn"></span>
+                                <span onMouseEnter={()=>handleDropDown("drop1")} onMouseLeave={handleDropDown} className="dropdown-btn"></span>
                             </div>
 
-                            <div className={`dropdown-items ${navDrop.drop1 && "drop"}`}  onMouseEnter={()=>handleDropDown("drop1")} onMouseLeave={handleDropDown} onClick={closeToggler}>
+                            <div className={`dropdown-items ${navDrop.drop1 && "drop"}`}  onMouseEnter={()=>handleDropDown("drop1")} onMouseLeave={handleDropDown}>
                                 <div className='row text-light dropdown-container'>
                                     <div className='col-md-6'>
                                         <div className="col-md-9">

@@ -15,7 +15,7 @@ function Footer() {
                     </div>
                     <div>
                         <Link to="#home" className="nav-link d-inline-block">Find us on</Link>
-                        <div className="social-links nav-link d-flex">
+                        <div className="social-links nav-link d-flex flex-wrap">
                             <FaFacebook className='social-link' />
                             <FaTwitter className='social-link' />
                             <FaInstagram className='social-link' />
