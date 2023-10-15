@@ -11,7 +11,7 @@ function NavBar({isScrolled}) {
     const { toggle, setToggle, handleDropDown, navDrop, } = useContext(UIContext)
 
     const closeToggler = (e)=> {
-        // setToggle(false)
+        setToggle(false)
         handleDropDown(e)
 
     }
@@ -35,10 +35,10 @@ function NavBar({isScrolled}) {
                         <div className="nav-link drop1">
                             <div className="position-relative ">
                                 <span style={{ fontSize: "14px" }}>Learn</span>
-                                <span onMouseEnter={()=>handleDropDown("drop1")} onMouseLeave={closeToggler} className="dropdown-btn"></span>
+                                <span onMouseEnter={()=>handleDropDown("drop1")} onMouseLeave={handleDropDown} onClick={closeToggler} className="dropdown-btn"></span>
                             </div>
 
-                            <div className={`dropdown-items ${navDrop.drop1 && "drop"}`}  onMouseEnter={()=>handleDropDown("drop1")} onMouseLeave={closeToggler}>
+                            <div className={`dropdown-items ${navDrop.drop1 && "drop"}`}  onMouseEnter={()=>handleDropDown("drop1")} onMouseLeave={handleDropDown} onClick={closeToggler}>
                                 <div className='row text-light dropdown-container'>
                                     <div className='col-md-6'>
                                         <div className="col-md-9">
@@ -62,10 +62,10 @@ function NavBar({isScrolled}) {
                         <div className='nav-link drop2'>
                             <div className="position-relative ">
                                 <span style={{ fontSize: "14px" }}>How To Obtain</span>
-                                <Link to='/how-to-buy' onMouseEnter={()=>handleDropDown("drop2")} onClick={closeToggler} onMouseLeave={closeToggler} className="dropdown-btn"></Link>
+                                <Link to='/how-to-buy' onMouseEnter={()=>handleDropDown("drop2")} onClick={closeToggler} onMouseLeave={handleDropDown} className="dropdown-btn"></Link>
                             </div>
 
-                            <div className={`dropdown-items ${navDrop.drop2 && "drop"}`}  onMouseEnter={()=>handleDropDown("drop2")} onMouseLeave={closeToggler} >
+                            <div className={`dropdown-items ${navDrop.drop2 && "drop"}`}  onMouseEnter={()=>handleDropDown("drop2")} onMouseLeave={handleDropDown} >
                                 <div className='row dropdown-container'>
                                     <div className="col-md-6 text-light">
                                         <div className="col-md-9">
@@ -99,7 +99,7 @@ function NavBar({isScrolled}) {
                     {/* Toggler */}
                     <div className="d-flex align-items-center side-nav justify-content-center ">
                         <Link href="#" className="nav-link">Sign In</Link>
-                        <div className={`toggler transition ${toggle && "rotate"}`} onClick={()=> setToggle(prev => !prev)}>
+                        <div className={`toggler transition ${toggle && "rotate"}`} onClick={()=>{setToggle(pre => !pre)}}>
                             {toggle ? <FaTimes size={20} /> : <FaBars size={25} />}
                         </div>
                     </div>

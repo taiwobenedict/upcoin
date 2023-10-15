@@ -57,12 +57,13 @@ function App() {
 
 
     return (
-        <div className="App" onClick={setToggle}>
+        <div className="App">
             <ScrollToTopOnNavigate />
 
             {
                 hideNav && <NavBar isScrolled={isScrolled} />
             }
+            <div  onClick={()=>setToggle(false)}>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/invest" element={<Invest />} />
@@ -79,6 +80,7 @@ function App() {
                 <Route path="/support" element={<Support />} />
                 <Route path="/support/videos" element={<SupportPages />} />
             </Routes>
+            </div>
             <Marque />
             {
                 hideNav && <Footer />

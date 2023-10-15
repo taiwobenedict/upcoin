@@ -1809,3 +1809,50 @@ export const videos = [
        src: "https://www.youtube.com/embed/YLE6_GCC7zw"
     },
 ]
+
+
+export const cryptos = [
+  { id: 'bitcoin', symbol: 'BTC' },
+  { id: 'ethereum', symbol: 'ETH' },
+  { id: 'ripple', symbol: 'XRP' },
+  { id: 'bitcoin-cash', symbol: 'BCH' },
+  { id: 'litecoin', symbol: 'LTC' },
+  { id: 'cardano', symbol: 'ADA' },
+  { id: 'polkadot', symbol: 'DOT' },
+  { id: 'binancecoin', symbol: 'BNB' },
+  { id: 'chainlink', symbol: 'LINK' },
+  { id: 'stellar', symbol: 'XLM' },
+  { id: 'dogecoin', symbol: 'DOGE' },
+  { id: 'tether', symbol: 'USDT' },
+  { id: 'monero', symbol: 'XMR' },
+  { id: 'eos', symbol: 'EOS' },
+  { id: 'tron', symbol: 'TRX' },
+  { id: 'dash', symbol: 'DASH' },
+  { id: 'neo', symbol: 'NEO' },
+  { id: 'tezos', symbol: 'XTZ' },
+  { id: 'cosmos', symbol: 'ATOM' },
+  { id: 'iota', symbol: 'MIOTA' }
+];
+
+export const currencies = [
+  'USD', // United States Dollar
+  'EUR', // Euro
+  'JPY', // Japanese Yen
+  'GBP', // British Pound Sterling
+  'AUD', // Australian Dollar
+  'CAD', // Canadian Dollar
+  'CHF', // Swiss Franc
+  'CNY', // Chinese Yuan
+  'INR', // Indian Rupee
+  'SGD', // Singapore Dollar
+  'NZD', // New Zealand Dollar
+  'HKD', // Hong Kong Dollar
+  'SEK', // Swedish Krona
+  'NOK', // Norwegian Krone
+  'DKK', // Danish Krone
+  'ZAR', // South African Rand
+  'BRL', // Brazilian Real
+  'RUB', // Russian Ruble
+  'KRW', // South Korean Won
+  'AED', // United Arab Emirates Dirham
+];
