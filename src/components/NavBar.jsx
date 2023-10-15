@@ -62,7 +62,7 @@ function NavBar({isScrolled}) {
                         <div className='nav-link drop2'>
                             <div className="position-relative ">
                                 <span style={{ fontSize: "14px" }}>How To Obtain</span>
-                                <Link to='/how-to-buy' onMouseEnter={()=>handleDropDown("drop2")} onClick={closeToggler} onMouseLeave={handleDropDown} className="dropdown-btn"></Link>
+                                <Link to='/how-to-buy' onMouseEnter={()=>handleDropDown("drop2")} onMouseLeave={handleDropDown} className="dropdown-btn"></Link>
                             </div>
 
                             <div className={`dropdown-items ${navDrop.drop2 && "drop"}`}  onMouseEnter={()=>handleDropDown("drop2")} onMouseLeave={handleDropDown} >
