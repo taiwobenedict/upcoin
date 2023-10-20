@@ -75,6 +75,11 @@
     margin-top: 10px;
 }
 
+.access-gallery a {
+    color: #1b1b1b !important;
+    text-decoration: none !important;
+}
+
 /* News Letter */
 #newsletter {
     background: linear-gradient(90deg, #102252 32.81%, rgba(16, 34, 82, 0.00) 100%);

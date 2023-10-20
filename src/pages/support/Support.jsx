@@ -1,22 +1,33 @@
-import React from 'react'
+import {useEffect} from 'react'
 import { Hero, Button } from "../../Utilities/index"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from 'react-router-dom'
 
 import "./Support.css"
 
 function Support() {
+
+    const { hash } = useLocation();
+
+    useEffect(() => {
+        if (hash) {
+            const element = document.querySelector(hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [hash]);
     return (
         <div id='support'>
             <Hero height={80} centerContent={true} className="container">
-                <h1 className="heading-lg text-center bold mb-4 text-light support-heading">Support Center</h1>
+                <h1 className="heading-lg text-center bold mb-5 text-light support-heading" data-aos="fade-up">Support Center</h1>
                 <div className="d-flex justify-content-center">
-                    <Link   className="mr-5 support-btn"><Button type={"block"} color={"pri"} className="w-100">FAQs</Button></Link>
-                    <Link to="videos"  className="support-btn"><Button type={"block"} color={"light"} className="w-100">Videos</Button></Link>
+                    <Link to="faqs" className="mr-5 support-btn"><Button type={"block"} color={"pri"} className="w-100">FAQs</Button></Link>
+                    <Link to="videos" className="support-btn"><Button type={"block"} color={"light"} className="w-100">Videos</Button></Link>
                 </div>
 
             </Hero>
 
-            <div className='row p-0' >
+            <div className='row p-0' id='contact'>
                 <div className="pri-light-bg  col-md-6">
                     <div className="support-form ml-auto">
                         <div className="contact-us">
@@ -28,13 +39,18 @@ function Support() {
                                 <br />Suite C
                                 <br />Boca Raton, Florida 33487
                             </p>
-                            <h4 className='bold'>Wefreelancer GMB</h4>
+
+                            <br />
+                            <h4 className='bold'>Wefreelancer GMB (Head-Quarter)</h4>
+                            <p>Rheinstrasse 11 <br />
+                                Berlin , 10178, Germany
+                            </p>
                             <br />
                             <Link to="#">
                                 Presale@supcoin.com
                             </Link><br />
                             <Link to="#">
-                                 Info@wefreelancer.com
+                                Info@wefreelancer.com
                             </Link>
                             <br />
                             <p>Toll-free 1-800-310-3129</p>
@@ -63,13 +79,8 @@ function Support() {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="budget">Select topic *</label>
-                                    <select className="form-control" id="budget">
-                                        <option>Onboarding</option>
-                                        <option>Funding</option>
-                                        <option>Trading</option>
-                                        <option>Primary Offerings</option>
-                                    </select>
+                                    <label htmlFor="budget">Topic </label>
+                                    <input type="text" className='form-control' />
                                 </div>
 
 

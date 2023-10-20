@@ -13,8 +13,8 @@ function Caculator() {
     return (
         <div id='caculator'>
             <Hero height={80} className={"container text-light"}>
-                <h1 className="heading-lg">SUP Crypto Calculator</h1>
-                <h1 className='mt-3 bold'>BTC to USD Calculator</h1>
+                <h1 className="heading-lg"  data-aos="fade-up">SUP Crypto Calculator</h1>
+                <h1 className='mt-3 bold'  data-aos="fade-up">BTC to USD Calculator</h1>
 
                 <CryptoCalculator />
                 <p className='mt-5'>* The prices displayed represent market exchange rates provided for informational and estimation purposes only.</p>

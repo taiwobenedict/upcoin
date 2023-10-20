@@ -14,7 +14,7 @@ function Footer() {
                         <img src={coingold} alt="" className='' />
                     </div>
                     <div>
-                        <Link to="#home" className="nav-link d-inline-block">Find us on</Link>
+                        <p className="nav-link d-inline-block bold text-light">Find us on</p>
                         <div className="social-links nav-link d-flex flex-wrap">
                             <FaFacebook className='social-link' />
                             <FaTwitter className='social-link' />
@@ -34,17 +34,17 @@ function Footer() {
                     <div className="px-0 col-md-5">
                         <div className="row">
                             <div className="px-0 col-sm-6 mt-4">
-                                <Link to="#home" className="nav-link">Suppelle Coin</Link>
+                                <p className="nav-link bold text-light">Supelle Coin</p>
                                 <Link to="/about" className="nav-link">About us</Link>
-                                <Link to="#home" className="nav-link">Suppele Coin Team</Link>
+                                <Link to="#home" className="nav-link">Supelle Coin Team</Link>
                                 <Link to="#home" className="nav-link">SUP Updates</Link>
-                                <Link to="#home" className="nav-link">Suppelle Coin Careers</Link>
-                                <Link to="#home" className="nav-link">Newsletter</Link>
+                                <Link to="#home" className="nav-link">Supelle Coin Careers</Link>
+                                <Link to="/newletter" className="nav-link">Newsletter</Link>
                             </div>
                             <div className="px-0 col-sm-6 mt-4">
-                                <Link to="#home" className="nav-link">Trade</Link>
-                                <Link to="#home" className="nav-link">Markets</Link>
-                                <Link to="#home" className="nav-link">Cryptocurrencies</Link>
+                                <p className="nav-link bold text-light">Trade</p>
+                                <Link to="/marketplace" className="nav-link">Markets</Link>
+                                <Link to="/cryptocurrencies" className="nav-link">Cryptocurrencies</Link>
                                 <Link to="#home" className="nav-link">Cryptocurrencies Geo Availability </Link>
                                 <Link to="/invest" className="nav-link">Invest</Link>
                                 <Link to="#home" className="nav-link">Raise</Link>
@@ -55,9 +55,12 @@ function Footer() {
                     <div className="px-0 col-md-5">
                         <div className="row">
                             <div className="px-0 col-sm-6 mt-4">
-                                <Link to="#home" className="nav-link">Learn</Link>
-                                <Link to="#home" className="nav-link">What's Trending</Link>
-                                <Link to="#home" className="nav-link">What's Trading</Link>
+                                <p className="nav-link bold text-light">Learn</p>
+                                <Link to="/cryptocurrencies" className='nav-link'> Cryptocurrencies</Link>
+                                <Link to="/caculator" className='nav-link'>Caculator</Link>
+                                <Link to="/marketplace" className='nav-link'>Market</Link>
+                                <Link to="/blog" className='nav-link'>Blog</Link >
+                                <Link to="/support" className='nav-link'>Support</Link>
                                 <div className="d-md-none mt-4">
                                     <Link to="#home" className="nav-link">Support Center</Link>
                                     <Link to="#home" className="nav-link">FAQs</Link>
@@ -66,7 +69,7 @@ function Footer() {
                             </div>
 
                             <div className="px-0 col-sm-6 mt-4">
-                                <Link to="#home" className="nav-link">Legal</Link>
+                                <p className="nav-link bold text-light">Legal</p>
                                 <Link to="#home" className="nav-link">Risk Disclosure</Link>
                                 <Link to="#home" className="nav-link">Business Continuity</Link>
                                 <Link to="#home" className="nav-link">Privacy Policy</Link>
@@ -80,9 +83,9 @@ function Footer() {
                         </div>
                     </div>
                     <div className="d-none d-md-block px-0 col-md-2 mt-4">
-                        <Link to="#home" className="nav-link">Support Center</Link>
-                        <Link to="#home" className="nav-link">FAQs</Link>
-                        <Link to="#home" className="nav-link">Contact Us</Link>
+                        <p className="nav-link bold text-light">Support Center</p>
+                        <Link to="/support/faqs" className="nav-link">FAQs</Link>
+                        <Link to="/support#contact" className="nav-link">Contact Us</Link>
                     </div>
                 </div>
 

@@ -1,5 +1,5 @@
 import React, { useState, createContext } from 'react';
-import { wallets } from '../store';
+import { wallets } from '../store/wallets';
 
 export const UIContext = createContext();
 
@@ -38,7 +38,7 @@ const UIContextProvider = ({ children }) => {
 
   const handleModal = (member) => {
     setTeamMember(member)
-    setModal(prev => !prev)
+    setModal(true)
   }
 
   const uploadGuide = (guide, id) => {
@@ -70,7 +70,8 @@ const UIContextProvider = ({ children }) => {
       handleModal,
       uploadGuide,
       handleAccordion,
-      setHideNav
+      setHideNav,
+      setModal
     }}>
       {children}
     </UIContext.Provider>

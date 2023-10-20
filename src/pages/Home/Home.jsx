@@ -11,6 +11,7 @@ import pix4 from "../../images/home/pix4.png"
 import subcoin from "../../images/home/subcoin.png"
 import supelle from "../../images/home/supelle.png"
 import animation_coin from "../../images/home/animation_coin.mp4"
+import { Link } from 'react-router-dom'
 
 
 
@@ -75,8 +76,8 @@ function Home() {
 
 
                             <div className="action-btns mt-4 justify-content-start">
-                                <Button color={"light"} type={"block"}>WHITEPAPER</Button>
-                                <Button color={"light"} type={"inline"}>CERDIK AUDIT</Button>
+                                <Link to="/whitepaper"><Button color={"light"} type={"block"}>WHITEPAPER</Button></Link>
+                                <Link to="/certik_audit"><Button color={"light"} type={"inline"}>CERTIK AUDIT</Button></Link>
                             </div>
                         </div>
                         <div className="col-md-5  mt-4">
@@ -129,7 +130,7 @@ function Home() {
 
                 <div className="access-gallery container-fluid" data-aos="zoom-out">
                     <div className="row">
-                        <div className="col-sm-6 mt-5 h-100">
+                        <Link to="#" className="col-sm-6 mt-5 h-100">
                             <div className="gallery h-100">
                                 <img src={pix1} className='w-100' alt="" />
                                 <div className="px-3">
@@ -138,8 +139,8 @@ function Home() {
                                     <br />
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-sm-6 mt-5">
+                        </Link>
+                        <Link to="#" className="col-sm-6 mt-5">
                             <div className="gallery h-100">
                                 <img src={pix2} className='w-100' alt="" />
                                 <div className="px-3">
@@ -147,10 +148,10 @@ function Home() {
                                     <p>Explore the intricacies and potential of our project with our comprehensive whitepaper.</p>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                     <div className="row">
-                        <div className="col-sm-6 mt-5">
+                        <Link to="#" className="col-sm-6 mt-5">
                             <div className="gallery h-100">
                                 <img src={pix3} className='w-100' alt="" />
                                 <div className="px-3">
@@ -158,8 +159,8 @@ function Home() {
                                     <p>We assure complete security and reliability of our project with the rigorous Certik audit</p>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-sm-6 mt-5">
+                        </Link>
+                        <Link to="/about#team" className="col-sm-6 mt-5">
                             <div className="gallery h-100">
                                 <img src={pix4} className='w-100' alt="" />
                                 <div className="px-3">
@@ -167,7 +168,7 @@ function Home() {
                                     <p>Introducing our team of seasoned professionals committed to providing you with top-notch services</p>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </Section>
@@ -180,7 +181,7 @@ function Home() {
                             <h2 className='pri-color heading-md'>What is Supcoin SUP?</h2>
                             <p className='mt-4'>Supcoin is the official cryptocurrency of Suppelle Global Marketplace. Suppelle and Supcoin pioneer together like a married duo, synergistically complementing each other to generate value and prosperity for their forward-thinking investors. Supcoin serves a payment system and currency that allows Suppelle not just to be a global marketplace but a global decentralized marketplace. </p>
                             <div className="d-flex justify-content-center align-items-center mt-5 flex-wrap">
-                                <Button type={"block"} color={"pri"} className="mt-3 mr-3">What is Supcoin SUP?</Button>
+                            <Link to="/about#supcoin-info" className='d-block mr-4 mt-3'><Button type={"block"} color={"pri"} >What is Supcoin SUP?</Button></Link>
                                 <Button type={"block"} color={"pri"} className="mt-3">Learn more about digital money</Button>
                             </div>
                         </div>
@@ -213,7 +214,7 @@ function Home() {
                             <h5 className=''>The People First Marketplace</h5>
                             <p className='mt-3'>Supelle is a global marketplace that serves as an umbrella. Where we provide work opportunities for freelancers and offer solution to individuals and bussiness alike. The innovative platform is the present and future of global connectivity and collaboration. We offer essential support for freelancers' success and deliver top-notch customer supports to clients.</p>
                             <div className="action-btns mx-auto mt-4 pb-4">
-                                <Button type={"block"} color={"pri"} >What is Supelle?</Button>
+                                <Link to="/about#supelle-info"><Button type={"block"} color={"pri"} >What is Supelle?</Button></Link>
                             </div>
                         </div>
                     </div>
@@ -224,11 +225,11 @@ function Home() {
             <Section name={"watch-video"} center={true} className=" text-light container">
                 <div className="row justify-content-between align-items-center" data-aos="zoom-in">
                     <div className="col-md-7 mt-4">
-                        <div className="video-content">
+                        <div className="video-content"  data-aos="fade-up">
                             <p >SUPCOIN TEAM PUT THIS TOGETHER FOR YOU Embrace the World of Visual Delights:</p>
                             <h3 className='heading-sm'>WATCH OUR VIDEOS</h3>
                             <p >Don't miss out on the opportunity enrich your mind and expand your horizons. Whether you have few minutes to spare or you're looking for deep dive into a specific topic, our video collection is here to serve you. Watch as experts in their fields share valuable insights, discover fascinating stories, and delve into the latest trends; a journey of discovery and enjoyment. Our videos are designed to keep you informed, enlightened, knowledgeable and inspirational. Happy Viewing!</p>
-                            <Button color={"light"} type={"block"} className="mx-auto d-block mt-4">Watch More</Button>
+                            <Link to="support/videos" className='mx-auto d-block w-100'><Button type={"block"} color={"light"}  >Watch More</Button></Link>
                         </div>
                     </div>
                     <div className="col-md-5 my-4">

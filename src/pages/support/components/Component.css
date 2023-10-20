@@ -46,6 +46,79 @@
     justify-content: center;
 }
 
+.hero-faqs {
+    min-height: 300px;
+}
+
+#faqs .search {
+    max-width: 600px;
+}
+
+.position-sticky {
+   position: sticky;
+   overflow-y: auto;
+   top: 50px;
+   height: 80vh;
+}
+/* Scroll Bar styling */
+.position-sticky::-webkit-scrollbar {
+  
+    width: 10px;
+    margin-left: 10px;
+  }
+  
+  .position-sticky::-ms-scrollbar {
+    
+    width: 10px;
+    margin-left: 10px;
+  }
+  
+  .position-sticky::-moz-scrollbar {
+    
+    width: 10px;
+    margin-left: 10px;
+  }
+  
+  .position-sticky::-moz-scrollbar-track {
+    
+    background-color: #cccc;
+    border-radius: 10px;
+  }
+  
+  .position-sticky::-webkit-scrollbar-track {
+    
+    background-color: #cccc;
+    border-radius: 10px;
+  }
+  
+  .position-sticky::-moz-scrollbar-track {
+    
+    background-color: #cccc;
+    border-radius: 10px;
+  }
+  
+  .position-sticky::-webkit-scrollbar-thumb {
+    
+    background-color: #2A3F7C;
+    border-radius: 10px;
+  }
+  
+  .position-sticky::-moz-scrollbar-thumb {
+    
+    background-color: #2A3F7C;
+    border-radius: 10px;
+  }
+  
+  .position-sticky::-ms-scrollbar-thumb {
+    
+    background-color: #2A3F7C;
+    border-radius: 10px;
+  }
+
+.faqs-headings {
+    height: 400px;
+}
+
 .support-footer {
     padding: 20px 0 60px 0;
     border-top: solid 1px #fff;

@@ -68,7 +68,7 @@ function Invest() {
         <div id='invest'>
             {/* Hero Section */}
             <Hero container={750} className="container invest-container">
-                <div className="text-light">
+                <div className="text-light" data-aos='fade-up'>
                     <h1 className="heading-lg bold">Pioneering The Future with Us</h1>
                     <p className=' bold'>Be the first to be a part of Supelle's comprehensive opportunity by becoming an early stage supporter. </p>
                     <Button type={"inline"} color={"light"} >Let's Talk</Button>

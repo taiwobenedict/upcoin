@@ -1,7 +1,7 @@
 import Home from "./pages/Home/Home";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer"
-import { Route, Routes, useLocation } from "react-router-dom"
+import { Outlet, Route, Routes, useLocation } from "react-router-dom"
 import Invest from "./pages/Invest/Invest";
 import Sup from "./pages/Sup/Sup";
 import { UIContext } from "./context/UIcontext";
@@ -10,7 +10,7 @@ import Blog from "./pages/Blog/Blog";
 import Roadmap from "./pages/Roadmap/Roadmap";
 import About from "./pages/About/About";
 import NewToCrypto from "./pages/NewToCrypto/NewToCrypto";
-import Win from "./pages/Win/Win";
+import Airdrop from "./pages/Airdrop/Airdrop";
 import ScrollToTopOnNavigate from "./components/ScrollToTop";
 import { useState, useEffect } from "react";
 import Marketplace from "./pages/Marketplace/Marketplace";
@@ -22,6 +22,8 @@ import HowToBuy from "./pages/HowToBuy/HowToBuy";
 import SupportHeading from "./pages/support/components/SupportHeading";
 import SupportFooter from "./pages/support/components/SupportFooter";
 import Videos from "./pages/support/components/Videos";
+import Faqs from "./pages/support/components/Faqs";
+import Crypto from "./pages/Cryptocurrencies/Crypto";
 
 
 
@@ -45,8 +47,9 @@ function App() {
                 setIsScrolled(false);
             }
         };
+        const pattern =  /^\/support\/.*/
 
-        if (location.pathname === "/support/videos") {
+        if (pattern.test(location.pathname)) {
             setHideNav(false)
         } else setHideNav(true)
 
@@ -63,23 +66,27 @@ function App() {
             {
                 hideNav && <NavBar isScrolled={isScrolled} />
             }
-            <div  onClick={()=>setToggle(false)}>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/invest" element={<Invest />} />
-                <Route path="/sup" element={<Sup />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/post/:id" element={<Blog />} />
-                <Route path="/roadmap" element={<Roadmap />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/new-to-crypto" element={<NewToCrypto />} />
-                <Route path="/win" element={<Win />} />
-                <Route path="/marketplace" element={<Marketplace />} />
-                <Route path="/caculator" element={<Caculator />} />
-                <Route path="/how-to-buy" element={<HowToBuy />} />
-                <Route path="/support" element={<Support />} />
-                <Route path="/support/videos" element={<SupportPages />} />
-            </Routes>
+            <div onClick={() => setToggle(false)}>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/invest" element={<Invest />} />
+                    <Route path="/sup" element={<Sup />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/post/:id" element={<Blog />} />
+                    <Route path="/roadmap" element={<Roadmap />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/new-to-crypto" element={<NewToCrypto />} />
+                    <Route path="/airdrop" element={<Airdrop />} />
+                    <Route path="/marketplace" element={<Marketplace />} />
+                    <Route path="/caculator" element={<Caculator />} />
+                    <Route path="/how-to-buy" element={<HowToBuy />} />
+                    <Route path="/support" element={<Support />} />
+                    <Route path="/support/*" element={<SupportPages />} >
+                        <Route path="videos" element={<Videos />} />
+                        <Route path="faqs" element={<Faqs />} />
+                    </Route>
+                    <Route path="/cryptocurrencies" element={<Crypto />} />
+                </Routes>
             </div>
             <Marque />
             {
@@ -99,7 +106,7 @@ function SupportPages() {
     return (
         <>
             <SupportHeading />
-            <Videos />
+            <Outlet />
             <SupportFooter />
         </>
 

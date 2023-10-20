@@ -9,8 +9,8 @@ import { videos } from '../../../store'
 
 function Videos() {
     const [viedeoSrc, setVideoSrc ] = useState({
-        title: "Introduction to Digitial Currencies | Supcoin",
-        src: "https://www.youtube.com/embed/UDWna33uZ_U",
+        title: "What is money? What Would the World Be Like Without Money | Supcoinc",
+        src: "https://www.youtube.com/embed/wFIjt8Gn2B8?si=HqSgLtkYU-OOvSrT",
     })
 
     const handleVideos = (video)=> {

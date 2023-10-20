@@ -18,8 +18,8 @@ function Blog() {
         <div id='blog'>
             <Hero container={700} centerContent className="blog-container">
                 <div className="text-light text-center">
-                    <h1 className="heading-xl bold">Blog</h1>
-                    <p className="bold">Here, you'll find a variety of interesting articles related to our products and services.</p>
+                    <h1 className="heading-xl bold"  data-aos="fade-up">Blog</h1>
+                    <p className="bold"  data-aos="fade-up">Here, you'll find a variety of interesting articles related to our products and services.</p>
                 </div>
             </Hero>
 

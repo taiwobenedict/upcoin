@@ -10,7 +10,7 @@ function NewToCrypto() {
             <Hero centerContent className="container">
                 <div className="newtocryto-container mx-auto">
                     <div>
-                        <div className="form-context">
+                        <div className="form-context"  data-aos="fade-up">
                             <h1 className='heading-md font-weight-bold' >GAIN ACCESS TO OUR EARLY BIRD PRESALE! REGISTER BELOW AND WE'LL GUIDE YOU</h1>
                             <h5 className='my-5'>Supelle is a first-of-its-kind freelance and finance ecosystem that is blockchain-based. Our Supcoin (SUP) is the first cryptocurrency with a global marketplace to back it up. This eliminates all risk from your investment with a decentralized ecosystem where you have control. And if you buy with our early bird presale, you stand to make profits of up to 100,000%! PURCHASE THE SUPCOIN TOKEN TODAY.</h5>
                         </div>

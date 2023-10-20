@@ -1,0 +1,17 @@
+#crypto .hero {
+    background: url("../../images/cryptocurrencies/crypto_hero.jpeg") center center/cover no-repeat;
+}
+
+#crypto .overlay {
+    background-color: rgba(0,0,0,0.4);
+}
+
+#trade {
+    background: url("../../images/cryptocurrencies/trade.jpeg") center center/cover no-repeat;
+}
+
+.trade-image {
+    width: 150px;
+    height: 150px;
+    
+}

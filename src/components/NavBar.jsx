@@ -42,13 +42,13 @@ function NavBar({isScrolled}) {
                                 <div className='row text-light dropdown-container'>
                                     <div className='col-md-6'>
                                         <div className="col-md-9">
-                                            <h1 className='bold '>Learn</h1>
+                                            <h1 className=''>Learn</h1>
                                             <p className='mont-font'>Supcoin help you navigate the digital asset landscape with exiting, cofidence and knowledge. The digital asset space is continuously evolving, with new projects, trends, and technologies emerging frequently.</p>
 
                                         </div>
                                     </div>
                                     <div className="dropdown col-md-6">
-                                        <li onClick={closeToggler}><Link to="#home" className='nav-link dropdown-item'> Cryptocurrencies  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}} /></Link></li>
+                                        <li onClick={closeToggler}><Link to="/cryptocurrencies" className='nav-link dropdown-item'> Cryptocurrencies  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}} /></Link></li>
                                         <li onClick={closeToggler}><Link to="/caculator" className='nav-link dropdown-item'>Caculator  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}} /></Link></li>
                                         <li onClick={closeToggler}><Link to="/marketplace" className='nav-link dropdown-item'>Market  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}} /></Link></li>
                                         <li onClick={closeToggler}><Link to="/blog" className='nav-link dropdown-item'>Blog  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}} /></Link ></li>
@@ -69,7 +69,7 @@ function NavBar({isScrolled}) {
                                 <div className='row dropdown-container'>
                                     <div className="col-md-6 text-light">
                                         <div className="col-md-9">
-                                            <h1 className=' bold title'>Obtain </h1>
+                                            <h1 className=''>Obtain </h1>
                                             <p className='mont-font'>Begin by researching the asset you want to purchase. Understand its features, specifications, and pricing to make an informed decision. Take charge and buy Supcoin in presale using ETH, BNB, USDT, or bank card before it lists on DEX.</p>
                                         </div>
                                     </div>
@@ -78,7 +78,7 @@ function NavBar({isScrolled}) {
                                             <Link to="/new-to-crypto" className='nav-link dropdown-item'>New To Cryto  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}}/></Link>
                                         </li>
                                         <li onClick={closeToggler}>
-                                            <Link to="/win" className='nav-link dropdown-item'>Airdrop<FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}}/></Link>
+                                            <Link to="/airdrop" className='nav-link dropdown-item'>Airdrop<FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}}/></Link>
                                         </li>
                                     </div>
                                 </div>

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Hero, Section } from '../../Utilities'
 import { UIContext } from '../../context/UIcontext'
-import { wallets } from '../../store'
+import { wallets } from '../../store/wallets'
 import DOMPurify from 'dompurify'
 
 import "./HowToBuy.css"
@@ -21,8 +21,8 @@ function HowToBuy() {
         <div id='howtobuy'>
             <Hero className="container" height={100} container={800}>
                 <div className="text-light">
-                    <h1 className="heading-xl">The journey to an exciting opportunity</h1>
-                    <p className="text-big bold">Success comes from finding opportunities in problems. Are you ready to dive into the exciting world of cryptocurrencies? Here's your chance to be a part and participate in our thrilling presale for a shot at this incredible wealth builder.</p>
+                    <h1 className="heading-xl"  data-aos="fade-up">The journey to an exciting opportunity</h1>
+                    <p className="text-big bold"  data-aos="fade-up">Success comes from finding opportunities in problems. Are you ready to dive into the exciting world of cryptocurrencies? Here's your chance to be a part and participate in our thrilling presale for a shot at this incredible wealth builder.</p>
 
                 </div>
             </Hero>
