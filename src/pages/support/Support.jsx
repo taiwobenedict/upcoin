@@ -34,14 +34,14 @@ function Support() {
                             <h1 className='bold'>Contact Us</h1>
                             <p>We value your input and are eager to hear from you. Whether you have questions, suggestions, or feedback, we're here to help. Please feel free to reach out to us through any of the following means:
                             </p>
-                            <h4 className='bold'>Wefreelancer Global Tech, Inc.</h4>
+                            <h4 className='bold'>Wefreelancer Global Tech, Inc. (Head-Quarter)</h4>
                             <p>6000 Park of Commerce Blvd
                                 <br />Suite C
                                 <br />Boca Raton, Florida 33487
                             </p>
 
                             <br />
-                            <h4 className='bold'>Wefreelancer GMB (Head-Quarter)</h4>
+                            <h4 className='bold'>Wefreelancer GMB</h4>
                             <p>Rheinstrasse 11 <br />
                                 Berlin , 10178, Germany
                             </p>
