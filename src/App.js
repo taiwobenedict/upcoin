@@ -24,6 +24,8 @@ import SupportFooter from "./pages/support/components/SupportFooter";
 import Videos from "./pages/support/components/Videos";
 import Faqs from "./pages/support/components/Faqs";
 import Crypto from "./pages/Cryptocurrencies/Crypto";
+import Legal from "./pages/Legal/Legal";
+import Whitelist from "./pages/Whitelist/Whitelist";
 
 
 
@@ -57,6 +59,17 @@ function App() {
         // eslint-disable-next-line
     }, [location]);
 
+    const { hash } = useLocation();
+
+    useEffect(() => {
+        if (hash) {
+            const element = document.querySelector(hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [hash]);
+
 
 
     return (
@@ -86,6 +99,8 @@ function App() {
                         <Route path="faqs" element={<Faqs />} />
                     </Route>
                     <Route path="/cryptocurrencies" element={<Crypto />} />
+                    <Route path="/legals" element={<Legal />} />
+                    <Route path="/whitelist" element={<Whitelist />} />
                 </Routes>
             </div>
             <Marque />

@@ -1,11 +1,15 @@
-import React from 'react'
+import React , {useContext} from 'react'
 import { Link } from 'react-router-dom'
 import coingold from '../images/components/coingold.png'
+import legals from '../store/legals'
+import { UIContext } from '../context/UIcontext'
+import slugify from 'slugify'
 
 import './Components.css'
 import { FaDiscord, FaFacebook, FaInstagram, FaLinkedin, FaTelegram, FaTwitter, FaYoutube } from 'react-icons/fa'
 
 function Footer() {
+    const {handleLegal } = useContext(UIContext)
     return (
         <footer className="footer">
             <div className="container py-4">
@@ -43,8 +47,6 @@ function Footer() {
                             </div>
                             <div className="px-0 col-sm-6 mt-4">
                                 <p className="nav-link bold text-light">Trade</p>
-                                <Link to="/marketplace" className="nav-link">Markets</Link>
-                                <Link to="/cryptocurrencies" className="nav-link">Cryptocurrencies</Link>
                                 <Link to="#home" className="nav-link">Cryptocurrencies Geo Availability </Link>
                                 <Link to="/invest" className="nav-link">Invest</Link>
                                 <Link to="#home" className="nav-link">Raise</Link>
@@ -69,16 +71,13 @@ function Footer() {
                             </div>
 
                             <div className="px-0 col-sm-6 mt-4">
-                                <p className="nav-link bold text-light">Legal</p>
-                                <Link to="#home" className="nav-link">Risk Disclosure</Link>
-                                <Link to="#home" className="nav-link">Business Continuity</Link>
-                                <Link to="#home" className="nav-link">Privacy Policy</Link>
-                                <Link to="#home" className="nav-link">General Terms</Link>
-                                <Link to="#home" className="nav-link">Prohibited Use</Link>
-                                <Link to="#home" className="nav-link">Verification Procedures</Link>
-                                <Link to="#home" className="nav-link">E-sign Disclosure</Link>
-                                <Link to="#home" className="nav-link">Disclaimers</Link>
-                                <Link to="#home" className="nav-link">UP Token Hokler Rights</Link>
+                                <Link to="/legals" className="nav-link  text-light"><p className='bold'>Legal</p></Link>
+                                {
+                                    legals.map((legal, i) => (
+                                        <Link to={`/legals#${slugify(legal.heading)}`} className="nav-link" key={i} onClick={()=>handleLegal(legal)}>{legal.heading}</Link>
+                                    ))
+                                }
+                               
                             </div>
                         </div>
                     </div>

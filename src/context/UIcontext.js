@@ -1,6 +1,5 @@
 import React, { useState, createContext } from 'react';
 import { wallets } from '../store/wallets';
-
 export const UIContext = createContext();
 
 const UIContextProvider = ({ children }) => {
@@ -12,6 +11,9 @@ const UIContextProvider = ({ children }) => {
   const [teamMember, setTeamMember] = useState({})
   const [walletGuide, setWalletGuide] = useState(wallets[0])
   const [hideNav, setHideNav] = useState(true)
+
+  const [screen, setScreen] = useState('legalHeadings')
+  const [details, setDetails] = useState(null)
 
   const handleDropDown = (id) => {
   
@@ -52,6 +54,12 @@ const UIContextProvider = ({ children }) => {
     ]);
   }
 
+  const handleLegal = (legal) => {
+    setDetails(legal)
+    setScreen("legalDetails")
+
+}
+
 
 
 
@@ -65,13 +73,18 @@ const UIContextProvider = ({ children }) => {
       walletGuide,
       bg,
       hideNav,
+      screen,
+      details,
       setToggle,
       handleDropDown,
       handleModal,
       uploadGuide,
       handleAccordion,
       setHideNav,
-      setModal
+      setModal,
+      handleLegal,
+      setScreen,
+
     }}>
       {children}
     </UIContext.Provider>

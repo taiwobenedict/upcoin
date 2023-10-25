@@ -12,7 +12,7 @@ import subcoin from "../../images/home/subcoin.png"
 import supelle from "../../images/home/supelle.png"
 import animation_coin from "../../images/home/animation_coin.mp4"
 import { Link } from 'react-router-dom'
-
+import Whitepaper from '../Whitepaper/Whitepaper'
 
 
 import { Button, Hero, Section } from '../../Utilities'
@@ -102,7 +102,7 @@ function Home() {
                     <p className=''>A crypto presale grants a unique opportunity to purchase ahead of others and unlock immense profits. Our presale serves as your exclusive gateway to discounted digital assets, paving the way for million-dollar returns!</p>
                     <div className="action-btns mx-auto mt-4">
                         <Button color={"pri"} type={"block"}>Explore Our Project</Button>
-                        <Button color={"pri"} type={"block"}>Sale Whitelist</Button>
+                        <Link to="/whitelist" ><Button color={"pri"} type={"block"}>Sale Whitelist</Button></Link>
                     </div>
                 </div>
             </Section>
@@ -140,7 +140,7 @@ function Home() {
                                 </div>
                             </div>
                         </Link>
-                        <Link to="#" className="col-sm-6 mt-5">
+                        <Link onClick={()=> Whitepaper()} className="col-sm-6 mt-5">
                             <div className="gallery h-100">
                                 <img src={pix2} className='w-100' alt="" />
                                 <div className="px-3">

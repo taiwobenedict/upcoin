@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaBars, FaCaretRight, FaArrowUp, FaTimes } from  "react-icons/fa"
 import logo from '../images/home/logo.png'
 import { UIContext } from '../context/UIcontext'
+import Whitepaper from '../pages/Whitepaper/Whitepaper'
 
 import { Button } from '../Utilities'
 
@@ -14,6 +15,10 @@ function NavBar({isScrolled}) {
         setToggle(false)
         handleDropDown(e)
 
+    }
+    const handleWhitepaper = (e) => {
+        closeToggler()
+        Whitepaper()
     }
 
     return (
@@ -86,7 +91,7 @@ function NavBar({isScrolled}) {
                         </div>
 
                         <Link onClick={closeToggler} to="/roadmap" className="nav-link">Roadmap</Link>
-                        <Link onClick={closeToggler} to="#home" className="nav-link">Whitepaper</Link>
+                        <Link onClick={handleWhitepaper}   className="nav-link">Whitepaper</Link>
                         <Link onClick={closeToggler} to="#home" className="nav-link">Certik Audit</Link>
                     </div>
 

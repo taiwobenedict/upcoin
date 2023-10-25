@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react'
+import { useContext} from 'react'
 import krithen from "../../images/about/krithen.jpeg"
 import tech from "../../images/about/tech.jpeg"
 import robot from "../../images/about/robot.jpeg"
@@ -6,7 +6,7 @@ import TeamModal from '../../components/TeamModal'
 import { UIContext } from '../../context/UIcontext'
 import { FaInfo, FaLink } from 'react-icons/fa'
 import { Button, Hero, Section } from '../../Utilities'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { teamMembers } from '../../store'
 
 import "./About.css"
@@ -14,16 +14,7 @@ import "./About.css"
 function About() {
 
     const { handleModal, setModal } = useContext(UIContext)
-    const { hash } = useLocation();
-
-    useEffect(() => {
-        if (hash) {
-            const element = document.querySelector(hash);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    }, [hash]);
+  
 
     return (
         <div id='about'>
