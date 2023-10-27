@@ -49,7 +49,7 @@ function Footer() {
                                 <p className="nav-link bold text-light">Trade</p>
                                 <Link to="#home" className="nav-link">Cryptocurrencies Geo Availability </Link>
                                 <Link to="/invest" className="nav-link">Invest</Link>
-                                <Link to="#home" className="nav-link">Raise</Link>
+                                {/* <Link to="#home" className="nav-link">Raise</Link> */}
                                 <Link to="#home" className="nav-link">The SUP Token</Link>
                             </div>
                         </div>
