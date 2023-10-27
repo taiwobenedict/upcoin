@@ -26,6 +26,8 @@ import Faqs from "./pages/support/components/Faqs";
 import Crypto from "./pages/Cryptocurrencies/Crypto";
 import Legal from "./pages/Legal/Legal";
 import Whitelist from "./pages/Whitelist/Whitelist";
+import Careers from "./pages/Careers/Careers";
+
 
 
 
@@ -101,6 +103,7 @@ function App() {
                     <Route path="/cryptocurrencies" element={<Crypto />} />
                     <Route path="/legals" element={<Legal />} />
                     <Route path="/whitelist" element={<Whitelist />} />
+                    <Route path="/careers" element={<Careers />}  exact/>
                 </Routes>
             </div>
             <Marque />

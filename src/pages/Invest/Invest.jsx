@@ -407,18 +407,18 @@ function Invest() {
                 <div className="row text-light">
                     <div className="col-md-6">
                         <div className="token-content">
-                            <h1 className="heading-md mb-5">Let's Token</h1>
+                            <h1 className="heading-md mb-5">Let's Talk</h1>
                             <div className=' token-text'>
-                                <div className="token-circle"><div className="inner-circle" data-aos="flip-up"></div></div>
-                                <p>Tell Us About You</p>
+                                <div className="token-circle"><div className="inner-circle" data-aos="flip-up" style={{width: "100%" , height: "100%"}}></div></div>
+                                <p>Tell us about you</p>
                             </div>
                             <div className='token-text'>
                                 <div className="token-circle"></div>
-                                <p>Tell Us About Your Raise</p>
+                                <p>Tell us about your goals with SUP</p>
                             </div>
                             <div className=' token-text'>
                                 <div className="token-circle"></div>
-                                <p>Tell If You've Been A Supporter</p>
+                                <p>Tell us your concerns about this project</p>
                             </div>
                         </div>
 

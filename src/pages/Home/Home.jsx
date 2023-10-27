@@ -94,7 +94,7 @@ function Home() {
 
 
             {/* Welcome Section */}
-            <Section name={"welcome"} mt={50} className="container" pd="100px  0">
+            <Section name={"welcome"} mt={50} className="container" pd="20px 0 100px 0">
                 <div className="text-center col-sm-8 mx-auto" data-aos="zoom-in">
                     <h1 className="heading-m pri-color">Welcome to Supcoin</h1>
                     <h5 className='pri-color'>SUPCON IS THE FUTURE OF GENE-RATONAL WEALTH</h5>

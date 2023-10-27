@@ -40,9 +40,9 @@ function Footer() {
                             <div className="px-0 col-sm-6 mt-4">
                                 <p className="nav-link bold text-light">Supelle Coin</p>
                                 <Link to="/about" className="nav-link">About us</Link>
-                                <Link to="#home" className="nav-link">Supelle Coin Team</Link>
-                                <Link to="#home" className="nav-link">SUP Updates</Link>
-                                <Link to="#home" className="nav-link">Supelle Coin Careers</Link>
+                                <Link to="/about#team" className="nav-link">Supelle Coin Team</Link>
+                                <Link to="/update" className="nav-link">SUP Updates</Link>
+                                <Link to="/careers" className="nav-link">Supelle Coin Careers</Link>
                                 <Link to="/newletter" className="nav-link">Newsletter</Link>
                             </div>
                             <div className="px-0 col-sm-6 mt-4">

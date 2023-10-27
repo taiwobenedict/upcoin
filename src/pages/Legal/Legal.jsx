@@ -72,7 +72,8 @@ export default Legal
 
 
 function LegalDetails({ legal, setScreen }) {
-
+    
+    const { handleLegal } = useContext(UIContext)
 
 
     function renderHTML(htmlString) {
@@ -86,7 +87,7 @@ function LegalDetails({ legal, setScreen }) {
 
 
         <Section pd="100px 0" name={slugify(legal.heading)}>
-            <div className="container" style={{ position: "sticky", top: "100px" }}>
+            <div className="container">
                 <nav className='breadcrumb-container'>
                     <ol className="breadcrumb bg-transparent">
                         <li className="breadcrumb-item"><Link onClick={() => setScreen('legalHeadings')}> <BiChevronsLeft /> Back</Link></li>
@@ -94,9 +95,22 @@ function LegalDetails({ legal, setScreen }) {
                 </nav>
 
             </div>
-            <div className="container-lg" >
-                <h1 className='text-center bold mb-5'>{legal.heading}</h1>
-                <div dangerouslySetInnerHTML={{ __html: renderHTML(legal.body) }}></div>
+            <div className="container" >
+
+                <div className="row">
+                    <ul className="col-md-3 px-0">
+                        {
+                            legals.map((legal,i) => (
+                                <Link className='nav-link' onClick={()=> handleLegal(legal)}>{legal.heading}</Link>
+                            ))
+                        }
+                    </ul>
+
+                    <div className="col-md-9 pl-4 border-left">
+                        <h2 className='bold mb-5'>{legal.heading}</h2>
+                        <div dangerouslySetInnerHTML={{ __html: renderHTML(legal.body) }}></div>
+                    </div>
+                </div>
             </div>
         </Section>
 
