@@ -17,6 +17,18 @@ function Careers() {
     const [screen, setScreen] = useState("career-list")
     const [careerDetails, setCareerDetails] = useState({title:""})
     const [bg, setBg] = useState(Supelle_Careers)
+    const [country, setCountry] = useState({all: true, usa: false})
+
+    const handleCountry = (e)=> {
+        const id = e.target.id
+
+        setCountry({
+            all: id === "all",
+            usa: id === 'usa'
+        })
+
+
+    }
 
     const handleCareer = (career) => {
         setCareerDetails(career)
@@ -60,8 +72,8 @@ function Careers() {
                         <Section pd="80px 0" className="container">
 
                             <div className="d-flex">
-                                <div className="sm-btn mr-3 pri-bg">All</div>
-                                <div className="sm-btn mr-3">USA</div>
+                                <div className={`sm-btn mr-3 ${country.all && 'pri-bg'}`} id='all' onClick={handleCountry}>All</div>
+                                <div className={`sm-btn mr-3 ${country.usa && 'pri-bg'}`} id='usa'onClick={handleCountry}>USA</div>
                             </div>
 
 
@@ -77,7 +89,7 @@ function Careers() {
                                                 </div>
                                                 <div className='text-right'>
                                                     <p className='text-muted' style={{ cursor: "pointer", fontSize: "12px" }}> <TfiLocationPin /> {career.coutry}</p>
-                                                    <small className="pri-color bold d-block" ><BsArrowRight /> </small>
+                                                    <Link className="pri-color bold d-block" to={`/careers#${slugify(career.title)}`}><BsArrowRight  onClick={() => handleCareer(career)}/> </Link>
                                                 </div>
 
                                             </div>
