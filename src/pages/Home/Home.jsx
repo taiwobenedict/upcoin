@@ -76,7 +76,7 @@ function Home() {
 
 
                             <div className="action-btns mt-4 justify-content-start">
-                                <Link to="/whitepaper"><Button color={"light"} type={"block"}>WHITEPAPER</Button></Link>
+                                <Link onClick={()=> Whitepaper()}><Button color={"light"} type={"block"}>WHITEPAPER</Button></Link>
                                 <Link to="/certik_audit"><Button color={"light"} type={"inline"}>CERTIK AUDIT</Button></Link>
                             </div>
                         </div>
