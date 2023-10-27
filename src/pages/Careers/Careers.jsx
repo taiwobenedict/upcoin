@@ -88,7 +88,7 @@ function Careers() {
                                                     <Link to={`/careers#${slugify(career.title)}`}><small className="pri-color bold d-block" style={{ cursor: "pointer", fontSize: "10px" }} onClick={() => handleCareer(career)}>READ MORE <BiChevronsRight /> </small></Link>
                                                 </div>
                                                 <div className='text-right'>
-                                                    <p className='text-muted' style={{ cursor: "pointer", fontSize: "12px" }}> <TfiLocationPin /> {career.coutry}</p>
+                                                    <p className='text-muted' style={{ cursor: "pointer", fontSize: "12px" }}> <TfiLocationPin /> {career.location}</p>
                                                     <Link className="pri-color bold d-block" to={`/careers#${slugify(career.title)}`}><BsArrowRight  onClick={() => handleCareer(career)}/> </Link>
                                                 </div>
 

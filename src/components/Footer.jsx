@@ -50,7 +50,7 @@ function Footer() {
                                 <Link to="#home" className="nav-link">Cryptocurrencies Geo Availability </Link>
                                 <Link to="/invest" className="nav-link">Invest</Link>
                                 {/* <Link to="#home" className="nav-link">Raise</Link> */}
-                                <Link to="#home" className="nav-link">The SUP Token</Link>
+                                <Link to="/roadmap" className="nav-link">The SUP Token</Link>
                             </div>
                         </div>
                     </div>
