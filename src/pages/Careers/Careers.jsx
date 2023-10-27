@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom'
 
 function Careers() {
     const [screen, setScreen] = useState("career-list")
-    const [careerDetails, setCareerDetails] = useState("")
+    const [careerDetails, setCareerDetails] = useState({title:""})
     const [bg, setBg] = useState(Supelle_Careers)
 
     const handleCareer = (career) => {
@@ -36,7 +36,7 @@ function Careers() {
 
     return (
         <div id='careers'>
-            <div className="career-hero position-relative text-white" style={{ background: `url("${bg}") top center/cover no-repeat` }}>
+            <div className="career-hero position-relative text-white" style={{ background: `url("${bg}") top center/cover no-repeat` }} id={`${slugify(careerDetails.title)}`}>
                 <div className="overlay"></div>
                 <div className="container h-100">
 
@@ -60,7 +60,7 @@ function Careers() {
                         <Section pd="80px 0" className="container">
 
                             <div className="d-flex">
-                                <div className="sm-btn mr-3">All</div>
+                                <div className="sm-btn mr-3 pri-bg">All</div>
                                 <div className="sm-btn mr-3">USA</div>
                             </div>
 
@@ -76,7 +76,7 @@ function Careers() {
                                                     <Link to={`/careers#${slugify(career.title)}`}><small className="pri-color bold d-block" style={{ cursor: "pointer", fontSize: "10px" }} onClick={() => handleCareer(career)}>READ MORE <BiChevronsRight /> </small></Link>
                                                 </div>
                                                 <div className='text-right'>
-                                                    <p className='text-muted' style={{ cursor: "pointer", fontSize: "12px" }}> <TfiLocationPin /> Lorem, ipsum.</p>
+                                                    <p className='text-muted' style={{ cursor: "pointer", fontSize: "12px" }}> <TfiLocationPin /> {career.coutry}</p>
                                                     <small className="pri-color bold d-block" ><BsArrowRight /> </small>
                                                 </div>
 

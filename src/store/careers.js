@@ -16,6 +16,7 @@ import Technical_Project from "../images/careers/Technical_Project.jpeg"
 export const careers = [
     {
         image: Bakend_Leader,
+        coutry: "USA",
         location: "Technology | Boca Raton Headquarters",
         title: "Backend Team Leader ",
         content: `<div>
@@ -74,6 +75,7 @@ export const careers = [
     
     {
         image: Content_Writing,
+        coutry: "USA",
         location: "Specialties | Boca Raton Headquarters",
         title: "Content Writer",
         content: `<div>
@@ -121,6 +123,7 @@ export const careers = [
     
     {
         image: DevOps,
+        coutry: "USA",
         location: "Technology | Boca Raton Headquarters",
         title: "DevOps Engineer",
         content: `<div>
@@ -176,6 +179,7 @@ export const careers = [
     
     {
         image: Human_Resources,
+        coutry: "USA",
         location: "HR | Boca Raton Headquarters",
         title: "Human Resources Specialist",
         content: `<div>
@@ -230,6 +234,7 @@ export const careers = [
     
     {
         image: Marketing_Designer,
+        coutry: "USA",
         location: "Marketing  | Boca Raton Headquarters",
         title: "Marketing Designer",
         content: `<div>
@@ -280,6 +285,7 @@ export const careers = [
     
     {
         image: Office_Administrator,
+        coutry: "USA",
         location: "General & Admin | Boca Raton Headquarters",
         title: "Office Administrator",
         content: `<div>
@@ -337,6 +343,7 @@ export const careers = [
     
     {
         image: Payments,
+        coutry: "USA",
         location: "Finance/Payment | Boca Raton Headquarters",
         title: "Payments and Fraud Business Analyst",
         content: `<div>
@@ -392,6 +399,7 @@ export const careers = [
     
     {
         image: R_and_D,
+        coutry: "USA",
         location: "Technology | Boca Raton Headquarters",
         title: "R&D Project Manager",
         content: `<div>
@@ -452,6 +460,7 @@ export const careers = [
     
     {
         image: Backend_Devloper,
+        coutry: "USA",
         location: "Technology | Boca Raton Headquarters",
         title: " Senior Back-End React.js Developer",
         content: `<div>
@@ -512,6 +521,7 @@ export const careers = [
     
     {
         image: Froned_Developer,
+        coutry: "USA",
         location: "| Boca Raton HeTechnology adquarters",
         title: "Senior Front-End React.js Developer",
         content: `<div>
@@ -578,6 +588,7 @@ export const careers = [
     
     {
         image: Senior_QA,
+        coutry: "USA",
         location: "Technology | Boca Raton Headquarters",
         title: "Senior QA Automation Engineer",
         content: `<div>
@@ -636,6 +647,7 @@ export const careers = [
     
     {
         image: Social_Media,
+        coutry: "USA",
         location: "Marketing | Boca Raton Headquarters",
         title: "Social Media Manager",
         content: `<div>
@@ -691,6 +703,7 @@ export const careers = [
     
     {
         image: Technical_Project,
+        coutry: "USA",
         location: "Technology | Boca Raton Headquarters",
         title: "Technical Project Manager",
         content: `<div>
