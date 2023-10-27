@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Section } from '../../Utilities'
 import { TfiLocationPin } from 'react-icons/tfi'
 import { BiChevronsRight } from 'react-icons/bi'
 import { BsArrowRight } from 'react-icons/bs'
 import { careers } from '../../store/careers'
 import DOMPurify from 'dompurify'
+import slugify from 'slugify'
 
 import Supelle_Careers from "../../images/careers/Supelle_Careers.jpeg"
 
 import "./Careers.css"
+import { Link } from 'react-router-dom'
 
 
 function Careers() {
@@ -23,12 +25,18 @@ function Careers() {
 
 
     }
-
+    useEffect(() => {
+        const handleBackButton = () => {
+            setBg(Supelle_Careers)
+            setScreen("career-list")
+        }
+       return window.addEventListener('popstate', handleBackButton);
+    }, []);
 
 
     return (
         <div id='careers'>
-            <div className="career-hero position-relative text-white" style={{background: `url("${bg}") top center/cover no-repeat`}}>
+            <div className="career-hero position-relative text-white" style={{ background: `url("${bg}") top center/cover no-repeat` }}>
                 <div className="overlay"></div>
                 <div className="container h-100">
 
@@ -51,10 +59,10 @@ function Careers() {
                     : (
                         <Section pd="80px 0" className="container">
 
-                            <d className="d-flex">
+                            <div className="d-flex">
                                 <div className="sm-btn mr-3">All</div>
                                 <div className="sm-btn mr-3">USA</div>
-                            </d>
+                            </div>
 
 
 
@@ -65,7 +73,7 @@ function Careers() {
                                             <div className="d-flex justify-content-between">
                                                 <div>
                                                     <p className='bold'>{career.title}</p>
-                                                    <small className="pri-color bold d-block" style={{ cursor: "pointer", fontSize: "10px" }} onClick={() => handleCareer(career)}>READ MORE <BiChevronsRight /> </small>
+                                                    <Link to={`/careers#${slugify(career.title)}`}><small className="pri-color bold d-block" style={{ cursor: "pointer", fontSize: "10px" }} onClick={() => handleCareer(career)}>READ MORE <BiChevronsRight /> </small></Link>
                                                 </div>
                                                 <div className='text-right'>
                                                     <p className='text-muted' style={{ cursor: "pointer", fontSize: "12px" }}> <TfiLocationPin /> Lorem, ipsum.</p>
@@ -107,7 +115,7 @@ function CareerDetails({ career }) {
                     <div className="d-flex justify-content-between">
                         <h2 className='bold'>{career.title}</h2>
 
-                        <button className='btn-block-pri btn apply-btn'>Apply</button>
+                        <Link to="#contact"><button className='btn-block-pri btn apply-btn'>Apply</button></Link>
                     </div>
                     <p>{career.location}</p>
                     <div dangerouslySetInnerHTML={{ __html: renderHTML(career.content) }}></div>
@@ -164,16 +172,16 @@ function CareerDetails({ career }) {
                                     <textarea name="" id="" cols="30" className='form-control' rows="10"></textarea>
                                 </div>
 
-                               
-                                    <div class="form-group">
-                                        <label for="file">Upload CV *</label>
-                                        <input type="file" class="form-control-file" id="file" />
-                                    </div>
-                            
+
+                                <div className="form-group">
+                                    <label htmlFor="file">Upload CV *</label>
+                                    <input type="file" className="form-control-file" id="file" />
+                                </div>
+
 
                             </div>
 
-                            <btn className=" px-5  mt-auto btn btn-block-pri">Submit</btn>
+                            <button className=" px-5  mt-auto btn btn-block-pri">Submit</button>
                         </form>
 
                     </div>

@@ -1,6 +1,6 @@
 import React, { useState , useEffect} from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { BsSearch, } from 'react-icons/bs'
+import { Link, useNavigate} from 'react-router-dom'
+import { BsSearch } from 'react-icons/bs'
 import { BiUser } from 'react-icons/bi'
 import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa'
 import coin from "../../../images/roadmap/coin.png"
@@ -9,27 +9,26 @@ import DOMPurify from 'dompurify'
 
 
 import "./Component.css"
+import slugify from 'slugify'
 
 function Faqs() {
     const [screen, setScreen] = useState('faqHeadings')
     const [details, setDetails] = useState(null)
+    const navigate = useNavigate()
 
-    const { hash } = useLocation();
-
-    useEffect(() => {
-        if (hash) {
-            const element = document.querySelector(hash);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    }, [hash]);
 
     const handleFAQs = (faq) => {
         setDetails(faq)
         setScreen("faqDetails")
-
+        navigate(`/support/faqs#${slugify(faq.heading)}`)
     }
+
+    useEffect(() => {
+        const handleBackButton = () => {
+            setScreen("faqHeadings")
+        }
+       return window.addEventListener('popstate', handleBackButton);
+    }, []);
 
 
     return (
