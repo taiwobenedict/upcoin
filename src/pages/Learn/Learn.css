@@ -1,0 +1,53 @@
+#learn .hero {
+    background: url("../../images/Learn/LearnSlider.png") center center/cover no-repeat;
+}
+
+#learn {
+    background-color: #fff;
+}
+
+.learn-card {
+    background-color: #f7f7f7;
+    border: solid 1px #ececec;
+    padding: 1.5rem;
+    border-radius: 0.125rem;
+}
+
+.learn-card-image {
+    width: 100px;
+    height: 100px;
+}
+
+.want {
+    background-color: #E8E8FF;
+    padding: 1.5rem;
+    border-radius: 0.125rem;
+}
+
+.whatsup {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.learn-gradient {
+    background: linear-gradient(85.12deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 56.29%, rgba(58, 142, 137, 0.2) 99.99%);
+}
+
+.learn-asset {
+    padding: 50px;
+    border-radius: 0.125rem;
+}
+
+#learn .token-mg {
+    margin-right: 40px;
+    height: 100px;
+    
+}
+
+.token-mg img {
+   width: 100px !important;
+}

@@ -4,8 +4,29 @@ import goldcoin from "../../images/whitelist/goldcoin.png"
 import mission from "../../images/whitelist/mission.jpg"
 
 import "./Whitelist.css"
+// import { useState } from 'react'
 
 function Whitelist() {
+    // const [fund, setFound] = useState(false)
+    // const [contribution, setContribution] = useState(false)
+    // const [media, setMedia] = useState(false)
+    // const [agree, setAgreemt] = useState(false)
+
+
+    // const handleFunding = (e) => {
+        
+    // }
+    // const handleContribution = (e) => {
+
+    // }
+    // const handleMedia = (e) => {
+
+    // }
+    // const handleAgrement = (e) => {
+
+    // }
+  
+
     return (
         <div>
             <div className="pri-bg">
@@ -74,20 +95,20 @@ function Whitelist() {
                     <div className="card p-4">
                         <p>Please choose the relevant funding round you'd like to be whitelisted for. *</p>
                         <div className="form-check align-items-center d-flex flex-direction-column">
-                            <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" />
-                            <label className="form-check-label" htmlFor="exampleRadios1">
+                            <input className="form-check-input" type="radio" name="exampleRadios" id="fund1" value="option1" />
+                            <label className="form-check-label" htmlFor="fund1">
                                 Seed Sales
                             </label>
                         </div>
                         <div className="form-check align-items-center d-flex flex-direction-column">
-                            <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" />
-                            <label className="form-check-label" htmlFor="exampleRadios2">
+                            <input className="form-check-input" type="radio" name="fund" id="fund2" value="option2" />
+                            <label className="form-check-label" htmlFor="fund2">
                                 Private Sales
                             </label>
                         </div>
                         <div className="form-check align-items-center d-flex flex-direction-column">
-                            <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" />
-                            <label className="form-check-label" htmlFor="exampleRadios3">
+                            <input className="form-check-input" type="radio" name="fund" id="fund3" checked value="option3" />
+                            <label className="form-check-label" htmlFor="fund3">
                                 SUP
                             </label>
                         </div>

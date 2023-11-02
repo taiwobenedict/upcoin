@@ -7,11 +7,30 @@
 }
 
 #trade {
-    background: url("../../images/cryptocurrencies/trade.jpeg") center center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+    background: url("../../images/cryptocurrencies/trade_bg.png") center center/cover no-repeat;
 }
 
-.trade-image {
-    width: 150px;
-    height: 150px;
-    
+.trades {
+    display: flex;
+}
+
+.right-trade {
+    flex: 1;
+    height: 100%;
+}
+
+.left-trade {
+    flex: 3;
+}
+
+#download .download-image {
+    background: url("../../images/cryptocurrencies/download.jpg") center center/cover no-repeat;
+}
+
+
+
+#crypto .countries .hero {
+    background: url("../../images/cryptocurrencies/countries.jpeg") center center/cover no-repeat;
 }

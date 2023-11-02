@@ -40,7 +40,7 @@ function NavBar({isScrolled}) {
                         <div className="nav-link drop1">
                             <div className="position-relative ">
                                 <span style={{ fontSize: "14px" }}>Learn</span>
-                                <span onMouseEnter={()=>handleDropDown("drop1")} onMouseLeave={handleDropDown} className="dropdown-btn"></span>
+                                <Link to="/learn" onMouseEnter={()=>handleDropDown("drop1")} onMouseLeave={handleDropDown} className="dropdown-btn"></Link>
                             </div>
 
                             <div className={`dropdown-items ${navDrop.drop1 && "drop"}`}  onMouseEnter={()=>handleDropDown("drop1")} onMouseLeave={handleDropDown}>
@@ -54,7 +54,7 @@ function NavBar({isScrolled}) {
                                     </div>
                                     <div className="dropdown col-md-6">
                                         <li onClick={closeToggler}><Link to="/cryptocurrencies" className='nav-link dropdown-item'> Cryptocurrencies  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}} /></Link></li>
-                                        <li onClick={closeToggler}><Link to="/caculator" className='nav-link dropdown-item'>Caculator  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}} /></Link></li>
+                                        <li onClick={closeToggler}><Link to="/caculator" className='nav-link dropdown-item'>Calculator  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}} /></Link></li>
                                         <li onClick={closeToggler}><Link to="/marketplace" className='nav-link dropdown-item'>Market  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}} /></Link></li>
                                         <li onClick={closeToggler}><Link to="/blog" className='nav-link dropdown-item'>Blog  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}} /></Link ></li>
                                         <li onClick={closeToggler}><Link to="/support" className='nav-link dropdown-item'>Support  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}} /></Link></li>
