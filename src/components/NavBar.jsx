@@ -40,7 +40,7 @@ function NavBar({isScrolled}) {
                         <div className="nav-link drop1">
                             <div className="position-relative ">
                                 <span style={{ fontSize: "14px" }}>Learn</span>
-                                <Link to="/learn" onMouseEnter={()=>handleDropDown("drop1")} onMouseLeave={handleDropDown} className="dropdown-btn"></Link>
+                                <span onMouseEnter={()=>handleDropDown("drop1")} onMouseLeave={handleDropDown} className="dropdown-btn"></span>
                             </div>
 
                             <div className={`dropdown-items ${navDrop.drop1 && "drop"}`}  onMouseEnter={()=>handleDropDown("drop1")} onMouseLeave={handleDropDown}>
