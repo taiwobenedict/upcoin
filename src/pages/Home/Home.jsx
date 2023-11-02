@@ -76,7 +76,7 @@ function Home() {
 
 
                             <div className="action-btns mt-4 justify-content-start">
-                                <Link onClick={()=> Whitepaper()}><Button color={"light"} type={"block"}>WHITEPAPER</Button></Link>
+                                <Link onClick={() => Whitepaper()}><Button color={"light"} type={"block"}>WHITEPAPER</Button></Link>
                                 <Link to="/certik_audit"><Button color={"light"} type={"inline"}>CERTIK AUDIT</Button></Link>
                             </div>
                         </div>
@@ -140,7 +140,7 @@ function Home() {
                                 </div>
                             </div>
                         </Link>
-                        <Link onClick={()=> Whitepaper()} className="col-sm-6 mt-5">
+                        <Link onClick={() => Whitepaper()} className="col-sm-6 mt-5">
                             <div className="gallery h-100">
                                 <img src={pix2} className='w-100' alt="" />
                                 <div className="px-3">
@@ -181,8 +181,8 @@ function Home() {
                             <h2 className='pri-color heading-md'>What is Supcoin SUP?</h2>
                             <p className='mt-4'>Supcoin is the official cryptocurrency of Suppelle Global Marketplace. Suppelle and Supcoin pioneer together like a married duo, synergistically complementing each other to generate value and prosperity for their forward-thinking investors. Supcoin serves a payment system and currency that allows Suppelle not just to be a global marketplace but a global decentralized marketplace. </p>
                             <div className="d-flex justify-content-center align-items-center mt-5 flex-wrap">
-                            <Link to="/about#supcoin-info" className='d-block mr-4 mt-3'><Button type={"block"} color={"pri"} >What is Supcoin SUP?</Button></Link>
-                                <Button type={"block"} color={"pri"} className="mt-3">Learn more about digital money</Button>
+                                <Link to="/about#supcoin-info" className='d-block mr-4 mt-3'><Button type={"block"} color={"pri"} >What is Supcoin SUP?</Button></Link>
+                                <Link to="/learn"><Button type={"block"} color={"pri"} className="mt-3">Learn more about digital money</Button></Link>
                             </div>
                         </div>
                     </div>
@@ -225,7 +225,7 @@ function Home() {
             <Section name={"watch-video"} center={true} className=" text-light container">
                 <div className="row justify-content-between align-items-center" data-aos="zoom-in">
                     <div className="col-md-7 mt-4">
-                        <div className="video-content"  data-aos="fade-up">
+                        <div className="video-content" data-aos="fade-up">
                             <p >SUPCOIN TEAM PUT THIS TOGETHER FOR YOU Embrace the World of Visual Delights:</p>
                             <h3 className='heading-sm'>WATCH OUR VIDEOS</h3>
                             <p >Don't miss out on the opportunity enrich your mind and expand your horizons. Whether you have few minutes to spare or you're looking for deep dive into a specific topic, our video collection is here to serve you. Watch as experts in their fields share valuable insights, discover fascinating stories, and delve into the latest trends; a journey of discovery and enjoyment. Our videos are designed to keep you informed, enlightened, knowledgeable and inspirational. Happy Viewing!</p>
@@ -234,7 +234,7 @@ function Home() {
                     </div>
                     <div className="col-md-5 my-4">
                         <div className="video">
-                        <iframe className='w-100 h-100' src="https://www.youtube.com/embed/wFIjt8Gn2B8?si=HqSgLtkYU-OOvSrT" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> 
+                            <iframe className='w-100 h-100' src="https://www.youtube.com/embed/wFIjt8Gn2B8?si=HqSgLtkYU-OOvSrT" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
                         </div>
                     </div>
