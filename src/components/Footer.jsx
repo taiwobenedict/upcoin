@@ -57,7 +57,7 @@ function Footer() {
                     <div className="px-0 col-md-5">
                         <div className="row">
                             <div className="px-0 col-sm-6 mt-4">
-                                <Link to="/learn" className="nav-link p bold text-light">Learn</Link>
+                                <Link to="/learn" className="nav-link  bold text-light" style={{fontSize: "16px", fontWeight: "600"}}>Learn</Link>
                                 <Link to="/cryptocurrencies" className='nav-link'> Cryptocurrencies</Link>
                                 <Link to="/caculator" className='nav-link'>Caculator</Link>
                                 <Link to="/marketplace" className='nav-link'>Market</Link>
@@ -71,7 +71,7 @@ function Footer() {
                             </div>
 
                             <div className="px-0 col-sm-6 mt-4">
-                                <Link to="/legals" className="nav-link  text-light"><p className='bold'>Legal</p></Link>
+                                <Link to="/legals" className="nav-link  text-light"  style={{fontSize: "16px", fontWeight: "600"}}>Legal</Link>
                                 {
                                     legals.map((legal, i) => (
                                         <Link to={`/legals#${slugify(legal.heading)}`} className="nav-link" key={i} onClick={()=>handleLegal(legal)}>{legal.heading}</Link>
