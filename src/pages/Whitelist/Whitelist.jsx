@@ -14,7 +14,7 @@ function Whitelist() {
 
 
     // const handleFunding = (e) => {
-        
+
     // }
     // const handleContribution = (e) => {
 
@@ -25,7 +25,7 @@ function Whitelist() {
     // const handleAgrement = (e) => {
 
     // }
-  
+
 
     return (
         <div>
@@ -260,6 +260,11 @@ function Whitelist() {
                                 Disagree
                             </label>
                         </div>
+                    </div>
+
+                    <div className='mt-4 w-100 d-flex justify-content-end'>
+                        <button className='btn btn-block-pri'>Submit</button>
+
                     </div>
 
                 </form>
