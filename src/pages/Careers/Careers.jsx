@@ -81,20 +81,20 @@ function Careers() {
                             <div className="mt-4">
                                 {
                                     careers.map((career, i) => (
-                                        <div className="bg-white p-4 mt-5" key={i}>
+                                        <Link to={`/careers#${slugify(career.title)}`} style={{textDecoration: "none"}}  onClick={() => handleCareer(career)}   key={i}><div className="bg-white text-dark p-4 mt-5">
                                             <div className="d-flex justify-content-between">
                                                 <div>
                                                     <p className='bold'>{career.title}</p>
-                                                    <Link to={`/careers#${slugify(career.title)}`}><small className="pri-color bold d-block" style={{ cursor: "pointer", fontSize: "10px" }} onClick={() => handleCareer(career)}>READ MORE <BiChevronsRight /> </small></Link>
+                                                    <span ><small className="pri-color bold d-block" style={{ cursor: "pointer", fontSize: "10px" }}>READ MORE <BiChevronsRight /> </small></span>
                                                 </div>
                                                 <div className='text-right'>
                                                     <p className='text-muted' style={{ cursor: "pointer", fontSize: "12px" }}> <TfiLocationPin />Boca Raton, FL, USA</p>
-                                                    <Link className="pri-color bold d-block" to={`/careers#${slugify(career.title)}`}><BsArrowRight  onClick={() => handleCareer(career)}/> </Link>
+                                                    <span className="pri-color bold d-block"><BsArrowRight /> </span>
                                                 </div>
 
                                             </div>
 
-                                        </div>
+                                        </div></Link>
 
                                     ))
                                 }

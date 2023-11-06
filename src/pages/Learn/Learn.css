@@ -1,9 +1,25 @@
 #learn .hero {
-    background: url("../../images/Learn/LearnSlider.png") center center/cover no-repeat;
+    background: url("../../images/Learn/LearnSlider.jpeg") center center/cover no-repeat;
 }
 
 #learn {
     background-color: #fff;
+}
+
+.learn-img {
+    background: url("../../images/Learn/learnImg.png") center center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    
+}
+
+.learn-box {
+    background: linear-gradient( 0, rgba(207, 236, 224, 0.6) 0%, rgba(207, 236, 224, 0) 100%);;
+    padding: 1.5rem;
+    border: solid 1px #ececec;
+    border-radius: 0.25rem;
+    max-width: 420px;
 }
 
 .learn-card {

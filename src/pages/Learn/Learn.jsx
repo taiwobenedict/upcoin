@@ -2,6 +2,7 @@ import React from 'react'
 
 import "./Learn.css"
 import { Hero, Section } from '../../Utilities'
+import {FiArrowUpRight} from "react-icons/fi"
 
 import yours from "../../images/Learn/yours.png"
 import protect from "../../images/Learn/protect.png"
@@ -24,7 +25,11 @@ function Learn() {
     return (
         <div id='learn'>
             <Hero height={75}>
-                <div className="container text-white">
+
+            </Hero>
+
+            <Section  mt={30} className="mb-5">
+                <div className="container">
                     <div className="row">
                         <div className="col-md-6">
                             <p>WHAT IS SUPCOIN ($UP)?</p>
@@ -32,15 +37,31 @@ function Learn() {
                             <p className="mb-3 text-big">$UP is a digital currency. $UP is global money.</p>
                             <p className='text-big'>$UP is the currency of Supelle Marketplace.</p>
 
-                            <button className="btn btn-block-light mt-5">GEt SUP</button>
+                            <div className="learn-box text-center mt-5">
+                                <p style={{fontSize:"14px"}}>CURRENT SUP PRICE (USD)</p>
+                                <h1>Loading...</h1>
+                                <div className="d-flex align-items-center justify-content-center">
+                                    <h3 className='mr-3'>0.00%<FiArrowUpRight/></h3>
+                                    <p style={{fontSize:"14px"}} className='mb-0'>(LAST HOUR)</p>
+
+                                </div>
+                            </div>
+
+                            <button className="btn btn-primary mt-4">GEt SUP</button>
                         </div>
-                        <div className="col-md-6"></div>
+                        <div className="col-md-6">
+                            <div className="learn-img">
+                                
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-            </Hero>
+            </Section>
 
-            <Section pd="100px 0">
+
+
+            <Section pd="100px 0" mt={30}>
                 <div className="container">
                     <p>Digital currencies open up a world of limitless potential for innovation and economic growth <br />
                         Supcoin is projected to take the lead among cryptocurrencies within its exclusive marketplace. <br /> If you are new to crypto, here's how SUP differs from traditional money.</p>
@@ -242,7 +263,7 @@ function Learn() {
                             <div className="d-flex justify-content-center">
                                 <div className="token-mg">
                                     <div>
-                                    <img src={shitcoin} alt="" />
+                                        <img src={shitcoin} alt="" />
 
                                     </div>
                                 </div>
@@ -255,7 +276,7 @@ function Learn() {
                         <div>
                             <div className="d-flex justify-content-center">
                                 <div className="token-mg">
-                                    <img src={collectibles} alt=""  />
+                                    <img src={collectibles} alt="" />
                                 </div>
                                 <div>
                                     <p className="text-big mb-1">Collectible tokens</p>

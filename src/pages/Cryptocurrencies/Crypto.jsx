@@ -1,11 +1,10 @@
 import React from 'react'
 import { Button, Hero, Section } from '../../Utilities'
 import { FaArrowUp } from 'react-icons/fa'
-import { AiFillApple } from 'react-icons/ai'
-import { BiLogoPlayStore } from 'react-icons/bi'
-
 import { countries } from 'countries-list'
 
+import flower from "../../images/cryptocurrencies/flower.jpg"
+import bubbles from "../../images/cryptocurrencies/bubbles.jpeg"
 import "./Crypto.css"
 import { Link } from 'react-router-dom'
 
@@ -61,42 +60,60 @@ function Crypto() {
 
             <div id="download">
                 <div className="row">
-                    <div className="col-lg-8 py-5 order-2">
+                    <div className="col-lg-6 py-5 order-2">
                         <div className="member-padding">
                             <div className="d-flex justify-content-center align-items-center">
                                 <div className="sub-context">
-                                    <h1 className='bold mb-4'>CRYPTO TRADING POWERHOUSE</h1>
-                                    <p className='text-big'>Download our new Cryptocurrencies trading app</p>
-                                    <button className="btn btn-block-pri mt-5 mr-4">
-                                        <div className="d-flex  align-items-center">
-                                            <BiLogoPlayStore style={{ height: "60px", width: "60px" }} />
-                                            <div>
-                                                <small>Get It On</small>
-                                                <p className='m-0'>Google Play</p>
-                                            </div>
-                                        </div>
+                                    <h1 className='bold mb-4'>The Rise of Remote Work</h1>
+                                    <p className='text-big'>In today’s world, the digital realm has reached unparalleled heights. From working from home to the convenience of having a wide range of items delivered right to our doorstep with just one click away. The online space has become a dominant force in people's lives. Even with the touchless payment methods no longer accepting cash, acquiring goods now heavily relies on digital currency. This makes digital currency even more crucial than ever to invest in with the new age!</p>
 
-                                    </button>
-                                    <button className="btn btn-block-pri mt-5 mr-4">
-                                        <div className="d-flex align-items-center">
-                                            <AiFillApple style={{ height: "60px", width: "60px" }} />
-                                            <div>
-                                                <small>Download on the</small>
-                                                <p className='m-0'>App Store</p>
-                                            </div>
-                                        </div>
-
-                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 order-1 download-image">
+                    <div className="col-lg-6 order-1 download-image">
                         <div className="member-padding"></div>
                     </div>
                 </div>
 
             </div>
+
+            <Section className="">
+                <div className="row align-items-center  justify-content-between">
+                    <div className="col-md-6 d-flex justify-content-center align-items-center">
+                        <div className="text-center">
+                            <h2 className="heading-md">Supcoin is the first of its kind of cryptocurrency to be supported by the Supelle Marketplace.</h2>
+                            <p className="">Covid-19 has proven anyone can work anywhere, giving freelancing more of a standing than ever before and growing in popularity. Freelancing is the future of the economy and reshaping the workforce, especially since automation is increasingly replacing traditional jobs. As the online space continues to expand, Supelle envisions a future that not only adds jobs to the market but also empowers individuals to achieve financial freedom.</p>
+
+                        </div>
+                    </div>
+                    <div className="col-md-6 px-0">
+                        <div className="">
+                            <img src={flower} alt="" className='w-100' />
+                        </div>
+                    </div>
+                </div>
+
+            </Section>
+
+            <Section className="">
+                <div className="row align-items-center  justify-content-between">
+                    <div className="col-md-6 d-flex justify-content-center align-items-center order-2">
+                        <div className="text-center">
+                            <h2 className="heading-md">
+                                Supelle seeks to reinvent and redefine the freelancing marketplace.</h2>
+                            <p className="">Be a part of a platform that goes beyond facilitating business transactions. At Supelle, we are committed to redefining the freelancing experience by uplifting our talented individuals to new heights. We don’t just consider freelancers as part of our platform; we believe they are the essence of greatness. By providing cutting-edge tools and comprehensive courses, we empower freelancers to stay at the forefront of their fields.</p>
+
+                        </div>
+                    </div>
+                    <div className="col-md-6 px-0 order-1">
+                        <div className="">
+                            <img src={bubbles} alt="" className='w-100' />
+                        </div>
+                    </div>
+                </div>
+
+            </Section>
 
             <div className="countries">
                 <Hero height={60} className="container">
