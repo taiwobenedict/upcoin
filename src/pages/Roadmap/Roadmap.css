@@ -19,68 +19,29 @@
 }
 
 /* Roadmap */
+.roadmap {
+    margin-bottom: 2rem;
+}
 
-.circle {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    background-color: #2A3F7C;
-    border-radius: 50%;
+.left-roadmap {
+    font-weight: 700;
+}
+
+.right-roadmap {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
 }
 
-.inner-circle {
-    width: 40px;
-    height: 40px;
+.roadmap-content > ul {
+    list-style: none;
+    padding: 0;
 }
 
-.left-circle {
-    top: 0;
-    right: -40px;
-   
-}
-.right-circle {
-    top: 0;
-    left: -40px;
-   
-}
 
-.side {
-    width: 100%;
-    position: relative; 
-    padding: 20px 0px;
-
-}
-
-.left-side {
-    border-right: solid 1px #fff; 
-    text-align: right;
-    padding-right: 100px;
-}
-
-.left-side ul {
-    list-style: none; /* Remove default bullet points */
-    padding: 0; /* Remove default padding on the ul */
-  }
-
-
-.right-side {
-    border-left: solid 1px #fff;
-    transform: translateX(-1.5px);
-    padding-left: 100px;
-}
-
-.roadmap-content {
-   max-width: 1200px;
-   margin-inline: auto;
-   padding-bottom: 30px;
-}
-
-.roadmap-content ul {
-    list-style: inside;
+.roadmap-content h3 {
+    text-align: center;
+    background-color: #102252;
+    color: #fff;
+    padding: 10px;
 }
 
 

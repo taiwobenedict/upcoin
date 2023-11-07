@@ -2,7 +2,7 @@ import React from 'react'
 
 import "./Learn.css"
 import { Hero, Section } from '../../Utilities'
-import {FiArrowUpRight} from "react-icons/fi"
+import { FiArrowUpRight } from "react-icons/fi"
 
 import yours from "../../images/Learn/yours.png"
 import protect from "../../images/Learn/protect.png"
@@ -25,10 +25,15 @@ function Learn() {
     return (
         <div id='learn'>
             <Hero height={75}>
+                <div className="container text-white">
+                    <h1 className='heading-lg'>Digital Currency</h1>
+                    <h2 className='bold'>Global reach, fast, secure, and borderless transctions</h2>
+
+                </div>
 
             </Hero>
 
-            <Section  mt={30} className="mb-5">
+            <Section mt={30} className="mb-5">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
@@ -38,11 +43,11 @@ function Learn() {
                             <p className='text-big'>$UP is the currency of Supelle Marketplace.</p>
 
                             <div className="learn-box text-center mt-5">
-                                <p style={{fontSize:"14px"}}>CURRENT SUP PRICE (USD)</p>
+                                <p style={{ fontSize: "14px" }}>CURRENT SUP PRICE (USD)</p>
                                 <h1>Loading...</h1>
                                 <div className="d-flex align-items-center justify-content-center">
-                                    <h3 className='mr-3'>0.00%<FiArrowUpRight/></h3>
-                                    <p style={{fontSize:"14px"}} className='mb-0'>(LAST HOUR)</p>
+                                    <h3 className='mr-3'>0.00%<FiArrowUpRight /></h3>
+                                    <p style={{ fontSize: "14px" }} className='mb-0'>(LAST HOUR)</p>
 
                                 </div>
                             </div>
@@ -51,7 +56,7 @@ function Learn() {
                         </div>
                         <div className="col-md-6">
                             <div className="learn-img">
-                                
+
                             </div>
                         </div>
                     </div>

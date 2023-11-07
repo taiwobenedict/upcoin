@@ -4,7 +4,7 @@ import goldcoin from "../../images/whitelist/goldcoin.png"
 import mission from "../../images/whitelist/mission.jpg"
 
 import "./Whitelist.css"
-// import { useState } from 'react'
+import { useState } from 'react'
 
 function Whitelist() {
     // const [fund, setFound] = useState(false)
@@ -13,18 +13,26 @@ function Whitelist() {
     // const [agree, setAgreemt] = useState(false)
 
 
-    // const handleFunding = (e) => {
+    const [formData, setFormData] = useState({
+        email: '',
+        description: '',
+        firstName: '',
+        lastName: '',
+        telegramHandle: '',
+        wallet: '',
+        fund: '',
+        lastThing: '',
+        contribution: '',
+        media: '',
+        comment: '',
+        agreement: '',
+    });
 
-    // }
-    // const handleContribution = (e) => {
+    const handleRadioChange = (e) => {
 
-    // }
-    // const handleMedia = (e) => {
-
-    // }
-    // const handleAgrement = (e) => {
-
-    // }
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
 
 
     return (
@@ -58,7 +66,7 @@ function Whitelist() {
                 <form>
                     <div className="form-group card p-4">
                         <label htmlFor="email">Email *</label>
-                        <input type="email" className='form-control' placeholder='Valid email address' required />
+                        <input type="email" className='form-control' name='email' onChange={handleRadioChange} placeholder='Valid email address' required />
                     </div>
                 </form>
 
@@ -71,177 +79,195 @@ function Whitelist() {
                 </div>
 
                 <form >
+
+                    {/* Description */}
                     <div className="form-group card p-4 mt-5">
                         <label htmlFor="connect">Let's stay connected!</label>
-                        <input type="text" className="form-control" placeholder='Description (optional)' />
-                    </div>
-                    <div className="form-group card p-4">
-                        <label htmlFor="connect">First Name *</label>
-                        <input type="text" className="form-control" required />
-                    </div>
-                    <div className="form-group card p-4">
-                        <label htmlFor="connect">Last Name *</label>
-                        <input type="text" className="form-control" required />
-                    </div>
-                    <div className="form-group card p-4">
-                        <label htmlFor="connect">Your Telegram Handle *</label>
-                        <input type="text" className="form-control" required />
-                    </div>
-                    <div className="form-group card p-4">
-                        <label htmlFor="connect">Wallet address for whitelisting (Up to 3 Bsc-20/Erc-20) <br /> (Separate wallets a comma ,) *</label>
-                        <input type="text" className="form-control" required />
+                        <input type="text" className="form-control" name='description' placeholder='Description (optional)' onChange={handleRadioChange} />
                     </div>
 
+                    {/* First Name */}
+                    <div className="form-group card p-4">
+                        <label htmlFor="connect">First Name *</label>
+                        <input type="text" className="form-control" name='firstName' required  onChange={handleRadioChange}/>
+                    </div>
+
+                    {/* Last Name */}
+                    <div className="form-group card p-4">
+                        <label htmlFor="connect">Last Name *</label>
+                        <input type="text" className="form-control" name='lastName' required onChange={handleRadioChange} />
+                    </div>
+
+                    {/* Telegram handle */}
+                    <div className="form-group card p-4">
+                        <label htmlFor="connect">Your Telegram Handle *</label>
+                        <input type="text" className="form-control" name='telegramHandle' onChange={handleRadioChange} required />
+                    </div>
+
+                    {/* Wallets */}
+                    <div className="form-group card p-4">
+                        <label htmlFor="connect">Wallet address for whitelisting (Up to 3 Bsc-20/Erc-20) <br /> (Separate wallets a comma ,) *</label>
+                        <input type="text" className="form-control" name='wallet' required  onChange={handleRadioChange} />
+                    </div>
+
+
+                    {/* Funding */}
                     <div className="card p-4">
                         <p>Please choose the relevant funding round you'd like to be whitelisted for. *</p>
                         <div className="form-check align-items-center d-flex flex-direction-column">
-                            <input className="form-check-input" type="radio" name="exampleRadios" id="fund1" value="option1" />
+                            <input className="form-check-input" type="radio" onChange={handleRadioChange} name="fund" id="fund1" value="seed sales" />
                             <label className="form-check-label" htmlFor="fund1">
                                 Seed Sales
                             </label>
                         </div>
                         <div className="form-check align-items-center d-flex flex-direction-column">
-                            <input className="form-check-input" type="radio" name="fund" id="fund2" value="option2" />
+                            <input className="form-check-input" type="radio" onChange={handleRadioChange} name="fund" id="fund2" value="private sales" />
                             <label className="form-check-label" htmlFor="fund2">
                                 Private Sales
                             </label>
                         </div>
                         <div className="form-check align-items-center d-flex flex-direction-column">
-                            <input className="form-check-input" type="radio" name="fund" id="fund3" checked value="option3" />
+                            <input className="form-check-input" type="radio" onChange={handleRadioChange} name="fund" id="fund3" checked value="sup" />
                             <label className="form-check-label" htmlFor="fund3">
                                 SUP
                             </label>
                         </div>
                     </div>
 
+
+                    {/* Contribution */}
                     <div className="card mt-5 p-4">
                         <p>Contribution size per wallet (in $) *</p>
                         <div className="form-check align-items-center d-flex flex-direction-column">
-                            <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" />
-                            <label className="form-check-label" htmlFor="exampleRadios1">
+                            <input className="form-check-input" type="radio" onChange={handleRadioChange} name="contribution" id="contr1" value="250-500" />
+                            <label className="form-check-label" htmlFor="contr1">
                                 $250 to $500
                             </label>
                         </div>
                         <div className="form-check align-items-center d-flex flex-direction-column">
-                            <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" />
-                            <label className="form-check-label" htmlFor="exampleRadios2">
+                            <input className="form-check-input" type="radio" onChange={handleRadioChange} name="contribution" id="contr2" value="500-1000" />
+                            <label className="form-check-label" htmlFor="contr2">
                                 $500 to $1,000
                             </label>
                         </div>
                         <div className="form-check align-items-center d-flex flex-direction-column">
-                            <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" />
-                            <label className="form-check-label" htmlFor="exampleRadios3">
+                            <input className="form-check-input" type="radio" onChange={handleRadioChange} name="contribution" id="contr3" value="1000-5000" />
+                            <label className="form-check-label" htmlFor="contr3">
                                 $1,000 to $5,000
                             </label>
                         </div>
                         <div className="form-check align-items-center d-flex flex-direction-column">
-                            <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" />
-                            <label className="form-check-label" htmlFor="exampleRadios3">
+                            <input className="form-check-input" type="radio" onChange={handleRadioChange} name="contribution" id="contr4" value="5000-10000" />
+                            <label className="form-check-label" htmlFor="contr4">
                                 $5,000 to $10,000
                             </label>
                         </div>
                         <div className="form-check align-items-center d-flex flex-direction-column">
-                            <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" />
-                            <label className="form-check-label" htmlFor="exampleRadios3">
+                            <input className="form-check-input" type="radio" onChange={handleRadioChange} name="contribution" id="contr5" value="other" />
+                            <label className="form-check-label" htmlFor="contr5">
                                 other...
                             </label>
                         </div>
                     </div>
 
+                    {/* Last thing */}
                     <div className="form-group card p-4 mt-5">
                         <label htmlFor="connect">Last thing!</label>
-                        <input type="text" className="form-control" placeholder='Description (optional)' />
+                        <input type="text" className="form-control" name='lastThing' placeholder='Description (optional)' onChange={handleRadioChange} />
                     </div>
 
 
+                    {/* Here about us */}
                     <div className="form-group card p-4 mt-5">
                         <p>How did you hear about this sales round? *</p>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" name="" id="" className="form-check-input" />
-                            <label htmlFor="" className="form-check-label">
+                            <input type="radio" onChange={handleRadioChange} name="media" id="website" className="form-check-input" value="website"/>
+                            <label htmlFor="website" className="form-check-label">
                                 Website
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" name="" id="" className="form-check-input" />
-                            <label htmlFor="" className="form-check-label">
+                            <input type="radio" onChange={handleRadioChange} name="media" id="tv" className="form-check-input" value="tv" />
+                            <label htmlFor="tv" className="form-check-label">
                                 TV Commercial
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" name="" id="" className="form-check-input" />
-                            <label htmlFor="" className="form-check-label">
+                            <input type="radio" onChange={handleRadioChange} name="media" id="telegram" className="form-check-input" value="telegram" />
+                            <label htmlFor="telegram" className="form-check-label">
                                 Telegram
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" name="" id="" className="form-check-input" />
-                            <label htmlFor="" className="form-check-label">
+                            <input type="radio" onChange={handleRadioChange} name="media" id="youtube" className="form-check-input" value="youtube" />
+                            <label htmlFor="youtube" className="form-check-label">
                                 YouTube Video
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" name="" id="" className="form-check-input" />
-                            <label htmlFor="" className="form-check-label">
+                            <input type="radio" onChange={handleRadioChange} name="media" id="influencer" className="form-check-input" value="influencer" />
+                            <label htmlFor="influencer" className="form-check-label">
                                 Youtube Influencer
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" name="" id="" className="form-check-input" />
-                            <label htmlFor="" className="form-check-label">
+                            <input type="radio" onChange={handleRadioChange} name="media" id="twitter" className="form-check-input" value="twitter" />
+                            <label htmlFor="twitter" className="form-check-label">
                                 Twitter
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" name="" id="" className="form-check-input" />
-                            <label htmlFor="" className="form-check-label">
+                            <input type="radio" onChange={handleRadioChange} name="media" id="crypto_news" className="form-check-input" value="crypto_news" />
+                            <label htmlFor="crypto_news" className="form-check-label">
                                 Crypto News Website
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" name="" id="" className="form-check-input" />
-                            <label htmlFor="" className="form-check-label">
+                            <input type="radio" onChange={handleRadioChange} name="media" id="press" className="form-check-input"  value="press"/>
+                            <label htmlFor="press" className="form-check-label">
                                 The Press
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" name="" id="" className="form-check-input" />
-                            <label htmlFor="" className="form-check-label">
+                            <input type="radio" onChange={handleRadioChange} name="media" id="radio_commercial" className="form-check-input" value="radio_commercial" />
+                            <label htmlFor="radio_commercial" className="form-check-label">
                                 Radio Commercial
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" name="" id="" className="form-check-input" />
-                            <label htmlFor="" className="form-check-label">
+                            <input type="radio" onChange={handleRadioChange} name="media" id="tiktok" className="form-check-input" value="tiktok"/>
+                            <label htmlFor="tiktok" className="form-check-label">
                                 TikTok
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" name="" id="" className="form-check-input" />
-                            <label htmlFor="" className="form-check-label">
+                            <input type="radio" onChange={handleRadioChange} name="media" id="tiktok" className="form-check-input" value="discord" />
+                            <label htmlFor="discord" className="form-check-label">
                                 Discord
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" name="" id="" className="form-check-input" />
-                            <label htmlFor="" className="form-check-label">
+                            <input type="radio" onChange={handleRadioChange} name="media" id="instagram" className="form-check-input" value="instagram" />
+                            <label htmlFor="instagram" className="form-check-label">
                                 Instragram
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" name="" id="" className="form-check-input" />
-                            <label htmlFor="" className="form-check-label">
+                            <input type="radio" onChange={handleRadioChange} name="media" id="other" className="form-check-input" value="other"/>
+                            <label htmlFor="other" className="form-check-label">
                                 Other..
                             </label>
                         </div>
                     </div>
 
+                    {/* Comment */}
                     <div className="form-group card p-4 mt-5">
                         <label htmlFor="">Do you have any comments and/or questions you would like to share with our team? *
                         </label>
-                        <textarea name="" id="" cols="30" rows="10" className='form-control'></textarea>
+                        <textarea name="comment" onChange={handleRadioChange} id="" cols="30" rows="10" className='form-control'></textarea>
                     </div>
 
+                    {/* Agreement */}
                     <div className="card mt-5 p-4">
                         <p>
                             Please confirm https://supcoin.co .co may internally share, publish or review any information provided in this form.
@@ -249,14 +275,14 @@ function Whitelist() {
                             Your information will remain private and will not be distributed or sold for any reason. Your privacy is important to us will be kept internally.
                         </p>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" name="" id="" className="form-check-input" />
-                            <label htmlFor="" className="form-check-label">
+                            <input type="radio" onChange={handleRadioChange} name="agreement" id="agree" className="form-check-input" />
+                            <label htmlFor="agree" className="form-check-label">
                                 Agree
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" name="" id="" className="form-check-input" />
-                            <label htmlFor="" className="form-check-label">
+                            <input type="radio" onChange={handleRadioChange} name="agreement" id="disagree" className="form-check-input" />
+                            <label htmlFor="disagree" className="form-check-label">
                                 Disagree
                             </label>
                         </div>

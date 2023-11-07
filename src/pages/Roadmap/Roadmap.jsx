@@ -7,6 +7,7 @@ import coin from "../../images/roadmap/coin.png"
 import Utility from "../../images/roadmap/Utility.png"
 import Adoption from "../../images/roadmap/Adoption.png"
 import Token from "../../images/roadmap/Token.png"
+import { FaArrowRight } from "react-icons/fa"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
@@ -16,7 +17,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { FaArrowRight } from 'react-icons/fa'
+
 
 
 function Roadmap() {
@@ -26,7 +27,7 @@ function Roadmap() {
 
             <div id='roadmap'>
                 <Hero height={100} transparent={false} container={900} className={"container"}>
-                    <div className="text-pri roadmap-hero"  data-aos="fade-up">
+                    <div className="text-pri roadmap-hero" data-aos="fade-up">
                         <h1 className="heading-xl bold" data-aos="fade-up">Supcoin <br /> Token</h1>
                         <p className="text-big bold" data-aos="fade-right">The first cryptocurrency with a global blockchain-powered marketplace to back it up. Supcoin Token is the life force of the Supelle ecosystem, developed to empower our innovative community.</p>
                         <Button className="mt-5 presale-btn" type={"block"} color={"light"}>Presale</Button>
@@ -34,327 +35,207 @@ function Roadmap() {
                 </Hero>
 
                 {/* RoadMap */}
-                <div className="pri-light-bg">
-                    <Section center={true} className={"container"}  pd="100px 0">
-                        <div className="roadmap-container">
-                            <h1 className="heading-md my-5"> Bringing the <br />SUP Token to Life</h1>
-                            <div className="roadmap-items pt-5">
 
-                                <div className="row">
-                                    <div className="col-md-6 p-0 ">
-                                        <div className="side left-side">
-                                                <div className="circle left-circle"><div className="inner-circle"></div></div>
-                                            <div className="content" data-aos="fade-right">
-                                                <h2 className='mb-4'>Q4 2023</h2>
-                                                <h3 className="">SUPCOIN</h3>
-                                                <p className='mb-4'>
-                                                    <span className='bold'>PRESALE: </span>
-                                                    The Presale phase marks a pivotal step in our journey.  It offers early access to our tokens to those who share our vision, fostering our community and supporting our mission to reshape the freelancing landscape. Your participation here is more than an investment; it's a vote of confidence in our mission. Thanks for joining this exciting journey!
-                                                </p>
-                                                <h6 className='bold'>Genesis</h6>
-                                                <ul>
-                                                    <li>Social channels formation</li>
-                                                    <li>Kick-off Airdrop system-2 Campaign</li>
-                                                </ul>
+                <Section center={true} className={"container"} pd="100px 0">
+                    <div className="roadmap-container">
+                        <h1 className="heading-md my-5"> Bringing the <br />SUP Token to Life</h1>
+                        <div className="roadmap-items pt-5">
 
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 p-0"></div>
-                                </div>
-
-                                <div className="row">
-                                    <div className="col-md-6 p-0"></div>
-                                    <div className="col-md-6 p-0">
-
-                                        <div className="side right-side">
-                                                <div className="circle right-circle"><div className="inner-circle"></div></div>
-                                            <div className="content" data-aos="fade-left">
-                                                <h6 className='bold'>Documentation</h6>
-                                                <ul>
-                                                    <li>Institutional round</li>
-                                                    <li>Creation of the Tokenomics</li>
-                                                    <li>Completion of Litepaper</li>
-                                                    <li>
-                                                        <span className='bold'>Comprehensive whitepaper: </span>
-                                                        Outlining our vision, objectives, and technical aspects of the decentralized freelancing marketplace
-                                                    </li>
-                                                    <li>
-                                                        <span className='bold'>Smart contract/audit: </span>
-                                                        Smart contract creation and tested
-                                                    </li>
-                                                </ul>
-                                                <h3 className="">SUPELLE</h3>
-                                                <h6 className='bold'>Genesis</h6>
-                                                <ul>
-                                                    <li>Freelance Platform Industry Research </li>
-                                                    <li>Core team formation</li>
-                                                    <li>Founders brainstorm ideas for platform</li>
-                                                    <li>Establishment of plan and vision</li>
-                                                    <li>Business model validation</li>
-                                                    <li>Concept presentation (Mockups)</li>
-                                                    <li>Comprehensive Strategic marketing  campaign launch</li>
-                                                </ul>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="row">
-                                    <div className="col-md-6 p-0 ">
-                                        <div className="side left-side">
-                                                <div className="circle left-circle"><div className="inner-circle"></div></div>
-                                            <div className="content" data-aos="fade-right">
-                                                <h1 className='bold text-center mb-5'> ONCE PRESALE CONCLUDES</h1>
-                                                <h2 className='mb-4'>Q1 2024</h2>
-                                                <h3 className="">SUPCOIN</h3>
-                                                    <p className='mb-4'>
-                                                        <span className='bold'>PRESALE AND TOKEN DISTRIBUTION: </span>
-                                                        Our primary objective is to spread awareness about Supcoin, and our mission, which is to provide newcomers in the ever-evolving crypto market with a fresh opportunity. To achieve this, we will conduct an equitable and transparent presale event, fostering the growth of a robust community.
-                                                    </p>
-
-                                                    <ul>
-                                                        <li>Token sale begins for seed round/investors</li>
-                                                        <li>Kick-off Airdrop system-3 Campaign</li>
-                                                        <li>Awareness marketing campaigns</li>
-                                                        <li>
-                                                            <span className='bold'>Smart contract deployment/audit: </span>
-                                                            Secure and audited smart contracts for SUP tokens to ensure transparency, presale, and trust to establish a strong community.
-                                                        </li>
-                                                        <li>Private sales</li>
-                                                        <li className='bold'>Staking and Governance</li>
-                                                        <li>Staking Smart Contracts deployed</li>
-                                                        <li>Governance smart contract deployed</li>
-                                                        <li>Proposals passed within the ecosystem for the first governance exercise</li>
-                                                    </ul>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 p-0"></div>
-                                </div>
-
-                                <div className="row">
-                                    <div className="col-md-6 p-0"></div>
-                                    <div className="col-md-6 p-0">
-
-                                        <div className="side right-side">
-                                                <div className="circle right-circle"><div className="inner-circle"></div></div>
-                                            <div className="content" data-aos="fade-left">
-                                                <h3 className="">SUPELLE</h3>
-                                                    <ul>
-                                                        <li>Team Expansion </li>
-                                                        <li>Website Design UI/UX completed</li>
-                                                        <li>Platform Development incompleted</li>
-                                                    </ul>
-
-                                                    <h1 className='mb-4'>Q2 2024</h1>
-                                                    <h3 className="">SUPCOIN</h3>
-                                                    <p className='mb-4'>
-                                                        <span className='bold'>MARKETING AND AWARNESS: </span>
-                                                        Commence a marketing spotlighting that underscores the simplicity and accessibility of acquiring Supcoin, with a primary focus on its value proposition as a unique opportunity to possess and stake the token early, generating passive income.
-
-                                                    </p>
-
-                                                    <ul>
-                                                        <li>Listing drive </li>
-                                                        <li>Funding round closes </li>
-                                                        <li>Presale (Launchpad)</li>
-                                                        <li>Public launch on DEX (Uniswap)</li>
-                                                        <li>Staking Platform Kick-Off</li>
-                                                        <li>Securing strategic partners and advisor</li>
-                                                        <li>V1 marketplace Initiating</li>
-                                                        <li>Post-launch marketing campaigns</li>
-                                                        <li>Onboard crypto influencers and listing providers</li>
-                                                        <li>Initiate CEX discussionss</li>
-                                                        <li>Listing on 1st CEX (Tier 1)</li>
-                                                    </ul>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col-md-6 p-0 ">
-                                        <div className="side left-side">
-                                                <div className="circle left-circle"><div className="inner-circle"></div></div>
-                                            <div className="content" data-aos="fade-right">
-                                                <h3 className="">SUPCOIN</h3>
-                                                    <p className='mb-4'>
-                                                        <span className='bold'>Pre-Launch and Token Initiative: </span>
-                                                        Following a successful DEX launch, a key aspect of our strategy involves introducing a token mechanism. This feature will autonomously decrease the token supply with each transaction, enhancing its scarcity.
-                                                    </p>
-
-                                                    <ul>
-                                                        <li>Listing drive </li>
-                                                        <li>Funding round closes </li>
-                                                        <li>Presale (Launchpad)</li>
-                                                        <li>Public launch on DEX (Uniswap)</li>
-                                                        <li>Staking Platform Kick-Off</li>
-                                                        <li>Securing strategic partners and advisor</li>
-                                                        <li>V2 marketplace Initiating</li>
-                                                        <li>Post-launch marketing campaigns</li>
-                                                        <li>Onboard crypto influencers and listing providers</li>
-                                                        <li>Initiate CEX discussionss</li>
-                                                        <li>Listing on 1st CEX (Tier 1)</li>
-                                                    </ul>
-                                                
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 p-0"></div>
-                                </div>
-
-                                <div className="row">
-                                    <div className="col-md-6 p-0"></div>
-                                    <div className="col-md-6 p-0">
-
-                                        <div className="side right-side">
-                                                <div className="circle right-circle"><div className="inner-circle"></div></div>
-                                            <div className="content" data-aos="fade-left">
-                                                <h3 className="">SUPELLE</h3>
-                                                    <p className="bold">Pre-Launch Preparation</p>
-                                                    <p className="bold">Beta Testing and Bug Bounty Program:</p>
-                                                    <ul>
-                                                        <li>Conduct a closed beta test with a select group of users to gather feedback and identify any remaining bugs or issues.</li>
-                                                        <li>Implement a bug bounty program to incentivize the community to identify and report vulnerabilities</li>
-                                                    </ul>
-                                                    <p className="bold">Community Building and Marketing:</p>
-                                                    <ul>
-                                                        <li>Launch social media channels and engage with potential users and stakeholders.</li>
-                                                        <li>Organize webinars, AMAs, and other events to educate the community about the platform's benefits.</li>
-                                                    </ul>
-                                                    <p className="bold">Partnerships and Onboarding:</p>
-                                                    <ul>
-                                                        <li>Collaborate with freelancers, businesses, and other platforms to onboard initial users.</li>
-                                                        <li>Forge strategic partnerships to increase the platform's visibility.
-                                                        </li>
-                                                    </ul>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col-md-6 p-0 ">
-                                        <div className="side left-side">
-                                                <div className="circle left-circle"><div className="inner-circle"></div></div>
-                                            <div className="content" data-aos="fade-right">
-                                                <h1 className='mb-4'>Q4 2024</h1>
-                                                <h3 className="">SUPCOIN</h3>
-                                                    <p className='mb-4'>
-                                                        <span className='bold'>Post-Launch Community Staking: </span>
-                                                        Our aim is to cultivate an active and vibrant community that plays a pivotal role in driving the growth of Supcoin. After the launch, our primary focus shifts towards staking to incentivize community engagement and reward those who lock up their tokens.
-                                                    </p>
-
-                                                    <ul>
-                                                        <li>Public sale</li>
-                                                        <li>Crowdfund are open to the public</li>
-                                                        <li>Kick-off Airdrop system-1 Campaign</li>
-                                                        <li>Staking Smart Contracts deployed</li>
-                                                        <li>Governance smart contract deployed</li>
-                                                        <li>Token staking begins</li>
-                                                        <li>Expanding team</li>
-                                                        <li>Further tier 2 and tier 1 CEX listings</li>
-                                                        <li>MVP app release and community reviews (Service Marketplace & Social Interactive app)</li>
-                                                        <li>Multi-language website & support dashboard</li>
-                                                        <li>Growing international communities</li>
-                                                        <li>Major Partner announcements</li>
-                                                        <li>Supelle marketplace goes live</li>
-                                                    </ul>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 p-0"></div>
-                                </div>
-
-                                <div className="row">
-                                    <div className="col-md-6 p-0"></div>
-                                    <div className="col-md-6 p-0">
-
-                                        <div className="side right-side">
-                                                <div className="circle right-circle"><div className="inner-circle"></div></div>
-                                            <div className="content" data-aos="fade-left">
-                                                <h3 className="">SUPELLE</h3>
-                                                    <p className="bold">Main-net Deployment: </p>
-                                                    <ul>
-                                                        <li>Deploy the decentralized freelancing marketplace on the mainnet, making it accessible to the public.</li>
-                                                    </ul>
-                                                    <p className="bold">User Onboarding and Incentives: </p>
-                                                    <ul>
-                                                        <li>Offer incentives for early adopters, such as reduced fees or bonus tokens.</li>
-                                                        <li>Focus on seamless user onboarding and support to ensure a positive initial experience.</li>
-                                                    </ul>
-                                                    <p className="bold">Continuous Improvement and Growth: </p>
-                                                    <ul>
-                                                        <li>Monitor the platform's performance and user feedback to identify areas for improvement.</li>
-                                                        <li>Continuously enhance the platform's features and functionalities.
-
-                                                        </li>
-                                                    </ul>
-                                                    <p className="bold">Marketing and Adoption: </p>
-                                                    <ul>
-                                                        <li>Launch an extensive global marketing campaign to attract both clients and freelancers.</li>
-                                                        <li>Leverage partnerships and community support to drive adoption.
-                                                        </li>
-                                                        <li>5. Post-Launch (Ongoing)</li>
-                                                    </ul>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col-md-6 p-0 ">
-                                        <div className="side left-side">
-                                                <div className="circle left-circle"><div className="inner-circle"></div></div>
-                                            <div className="content" data-aos="fade-right ">
-                                                <h1 className='mb-4'>Q4 2024</h1>
-                                                <h3 className="">SUPELLE</h3>
-                                                    <p className="bold">Community Engagement: </p>
-                                                    <ul>
-                                                        <li>Foster an active and engaged community by organizing events, AMAs, and discussions.</li>
-                                                        <li>Encourage user feedback and suggestions for further improvement.</li>
-                                                    </ul>
-                                                    <p className="bold">Security and Compliance: </p>
-                                                    <ul>
-                                                        <li>Regularly update security measures to protect user data and funds.</li>
-                                                        <li>Stay updated on relevant legal and regulatory changes and ensure compliance.</li>
-                                                    </ul>
-                                                    <p className="bold">Scaling and Global Expansion: </p>
-                                                    <ul>
-                                                        <li>Plan for scalability to accommodate a growing user base and transaction volume.</li>
-                                                        <li>Explore opportunities for global expansion to attract users from different regions.</li>
-                                                    </ul>
-                                                    <p className="bold">Decentralized Governance Implementation: </p>
-                                                    <ul>
-                                                        <li>Plan for scalability to accommodate a growing user base and transaction volume.</li>
-                                                        <li>Gradually roll out the decentralized governance model and involve the community in decision-making processes.</li>
-                                                    </ul>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 p-0"></div>
-                                </div>
-
-                              
-
-                               
+                            <div className="col-md-10 mb-5">
+                                <h1>SUPELLE ROADMAP</h1>
+                                <p>PRESALE: The Presale phase marks a pivotal step in our journey.  It offers early access to our tokens to those who share our vision, fostering our community and supporting our mission to reshape the freelancing landscape. Your participation here is more than an investment; it's a vote of confidence in our mission. Thanks for joining this exciting journey!</p>
                             </div>
+
+                            <div className="roadmap">
+
+                                <div className="row">
+                                    <div className='col-md-4'>
+                                        <div className="left-roadmap">
+                                            <h1>2018 - 2019</h1>
+                                        </div>
+                                        <div className='roadmap-content'>
+                                            <h3> 2018 - 2019</h3>
+                                            <ul>
+                                                <li><FaArrowRight className='mr-3' />  Freelance Platform Industry Research </li>
+                                                <li><FaArrowRight className='mr-3' />  Core team formation</li>
+                                                <li><FaArrowRight className='mr-3' />  Founders brainstorm ideas for platform</li>
+                                                <li><FaArrowRight className='mr-3' />  Establishment of plan and vision</li>
+                                                <li><FaArrowRight className='mr-3' />  Business model validation</li>
+                                                <li><FaArrowRight className='mr-3' />  Concept presentation (Mockups) (initial pitch to seed investors)</li>
+                                                <li><FaArrowRight className='mr-3' />  Freelance marketplace idea conception</li>
+                                                <li><FaArrowRight className='mr-3' />  Company registration</li>
+                                                <li><FaArrowRight className='mr-3' />  Assembling of experts to kickstart platform building</li>
+
+                                            </ul>
+
+
+                                        </div>
+
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="left-roadmap">
+                                            <h1>2020 - 2022</h1>
+                                        </div>
+                                        <div className='roadmap-content'>
+                                            <h3>2020 - 2022</h3>
+                                            <ul>
+                                                <li><FaArrowRight className='mr-3' />  Pivoted business model to adapt to the changing landscape</li>
+                                                <li><FaArrowRight className='mr-3' />  Prototype creation for feasibility testing </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div className="roadmap">
+                                <div className="left-roadmap">
+                                    <h1>2023</h1>
+                                </div>
+                                <div className="row">
+                                    <div className="roadmap-content col-md-4 col-lg-3 ">
+                                        <h3>Q1 - 2023</h3>
+                                        <ul>
+                                            <li><FaArrowRight className='mr-3' />  Team expansion</li>
+                                            <li><FaArrowRight className='mr-3' />  Infrastructure improvement</li>
+                                            <li><FaArrowRight className='mr-3' />  Further platform development for better user experience</li>
+                                            <li><FaArrowRight className='mr-3' />  Privately launched a BETA version for feedback and bug fixes</li>
+                                            <li><FaArrowRight className='mr-3' />  Execution of feedback from testers’ feedback to further improve the platform</li>
+
+                                        </ul>
+                                    </div>
+                                    <div className="roadmap-content col-md-4 col-lg-3 ">
+                                        <h3>Q2 - 2023</h3>
+                                        <ul>
+                                            <li><FaArrowRight className='mr-3' />  Introduction of the following features-</li>
+                                            <li>
+                                                <ul>
+                                                    <li>Real-time messaging</li>
+                                                    <li>Project tools</li>
+                                                    <li>Rating system for user engagement</li>
+                                                </ul>
+                                            </li>
+                                            <li><FaArrowRight className='mr-3' />  Further improvements, expansion and implementation of monetary strategies</li>
+
+                                        </ul>
+                                    </div>
+                                    <div className="roadmap-content col-md-4 col-lg-3 ">
+                                        <h3>Q3 - 2023</h3>
+                                        <ul>
+                                            <li><FaArrowRight className='mr-3' />  Creation of Tokenomics</li>
+                                            <li><FaArrowRight className='mr-3' />  Completion of litepaper</li>
+                                            <li><FaArrowRight className='mr-3' />  Formation of social media channels</li>
+                                        </ul>
+                                    </div>
+                                    <div className="roadmap-content col-md-4 col-lg-3 ">
+                                        <h3>Q4 - 2023</h3>
+                                        <ul>
+                                            <li><FaArrowRight className='mr-3' />  Kick-off Airdrop system-2 Campaign</li>
+                                            <li><FaArrowRight className='mr-3' />  Comprehensive Strategic marketing campaign launch</li>
+                                            <li><FaArrowRight className='mr-3' />  Token Creation (supcoin)</li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="roadmap">
+                                <div className="left-roadmap">
+                                    <h1>2024</h1>
+                                </div>
+                                <div className="row">
+                                    <div className="roadmap-content col-md-4 col-lg-3">
+                                        <h3>Q1 - 2024</h3>
+                                        <ul>
+                                            <li><FaArrowRight className='mr-3' />  Team Expansion</li>
+                                            <li><FaArrowRight className='mr-3' />  Website Design UI/UX completed</li>
+                                            <li><FaArrowRight className='mr-3' />  Token sale commences for seed round/investors</li>
+                                            <li><FaArrowRight className='mr-3' />  Kick-off Airdrop system-3 Campaign</li>
+                                            <li><FaArrowRight className='mr-3' />  Awareness marketing campaigns</li>
+                                            <li><FaArrowRight className='mr-3' />  Smart contract deployment/audit</li>
+                                            <li><FaArrowRight className='mr-3' />  Private sale commences</li>
+                                            <li className='bold'>   Staking and Governance:</li>
+                                            <li><FaArrowRight className='mr-3' />  Staking Smart Contracts deployed</li>
+                                            <li><FaArrowRight className='mr-3' />  Governance smart contract deployed</li>
+
+                                        </ul>
+                                    </div>
+                                    <div className="roadmap-content col-md-4 col-lg-3">
+                                        <h3>Q2 - 2024</h3>
+                                        <ul>
+                                            <li><FaArrowRight className='mr-3' />  Presale (Launchpad)</li>
+                                            <li><FaArrowRight className='mr-3' />  Kick-off Airdrop system-1 Campaign</li>
+                                            <li><FaArrowRight className='mr-3' />  Public launch on DEX (Uniswap)</li>
+                                            <li><FaArrowRight className='mr-3' />  Securing strategic partners and advisor</li>
+                                            <li><FaArrowRight className='mr-3' />  V1 marketplace Initiating</li>
+                                            <li><FaArrowRight className='mr-3' />  Post-launch marketing campaigns</li>
+                                            <li><FaArrowRight className='mr-3' />  Onboard crypto influencers and listing providers</li>
+
+                                        </ul>
+                                    </div>
+                                    <div className="roadmap-content col-md-4 col-lg-3">
+                                        <h3>Q3 - 2024</h3>
+                                        <ul>
+                                            <li><FaArrowRight className='mr-3' />  Securing strategic partners and advisor</li>
+                                            <li><FaArrowRight className='mr-3' />  Launch Airdrop system 1</li>
+                                            <li><FaArrowRight className='mr-3' />  V2 Website Initiating</li>
+                                            <li><FaArrowRight className='mr-3' />  Post-launch marketing campaigns</li>
+                                            <li><FaArrowRight className='mr-3' />  Onboard crypto influencers and listing providers</li>
+                                            <li><FaArrowRight className='mr-3' />  DAO registration</li>
+                                            <li><FaArrowRight className='mr-3' />  Initiate CEX discussions</li>
+                                            <li><FaArrowRight className='mr-3' />  Listing on 1st CEX (Tier 1)</li>
+                                            <li className='bold'>  Supelle Pre-Launch Preparation:</li>
+                                            <li><FaArrowRight className='mr-3' />  Beta Testing and Bug Bounty Program</li>
+                                            <li><FaArrowRight className='mr-3' />  Community Building and Marketing</li>
+                                            <li><FaArrowRight className='mr-3' />  Partnerships and Onboarding</li>
+
+                                        </ul>
+                                    </div>
+                                    <div className="roadmap-content col-md-4 col-lg-3">
+                                        <h3>Q4 - 2024</h3>
+                                        <ul>
+                                            <li><FaArrowRight className='mr-3' />  Token staking begins</li>
+                                            <li><FaArrowRight className='mr-3' />  Team expansion continues</li>
+                                            <li><FaArrowRight className='mr-3' />  Further tier 2 and tier 1 CEX listings</li>
+                                            <li><FaArrowRight className='mr-3' />  MVP app release and community reviews (Service Marketplace & Social Interactive app)</li>
+                                            <li><FaArrowRight className='mr-3' />  Multi-language website & support dashboard</li>
+                                            <li><FaArrowRight className='mr-3' />  Growing international communities</li>
+                                            <li><FaArrowRight className='mr-3' />  Major Partner announcements</li>
+                                            <li><FaArrowRight className='mr-3' />  Supelle marketplace goes live</li>
+                                            <li><FaArrowRight className='mr-3' />  Supelle Main-net Deployment</li>
+                                            <li><FaArrowRight className='mr-3' />  User Onboarding and Incentives</li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div className="roadmap">
+                                <div className="left-roadmap">
+                                    <h1>2025</h1>
+                                </div>
+                                <div className="row">
+                                    <div className="roadmap-content col-md-4">
+                                        <h3>Q1 - 2025</h3>
+                                        <ul>
+                                            <li><FaArrowRight className='mr-3' />  Continuous Improvement and Growth</li>
+                                            <li><FaArrowRight className='mr-3' />  Marketing and Adoption</li>
+                                            <li><FaArrowRight className='mr-3' />  Community Engagement</li>
+                                            <li><FaArrowRight className='mr-3' />  Security and Compliance</li>
+                                            <li><FaArrowRight className='mr-3' />  Scaling and Global Expansion</li>
+                                            <li><FaArrowRight className='mr-3' />  Decentralized Governance Implementation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                    </Section>
-                </div>
+                    </div>
+                </Section>
+
 
                 <Section name={"presale"} className={"container"} pd="100px 0">
                     <div className="presale-container">
@@ -404,10 +285,14 @@ function Roadmap() {
                             <div className="row align-items-center img-slider">
                                 <div className="col-sm-6">
                                     <div className="pl-sm-5">
-                                        <h2 className='heading-sm'>As a Security.</h2>
+                                        <h2 className='heading-sm'>Early Adoption Benefits</h2>
                                         <p className=''>
-                                            Mandatory Profit Share: Annual pro rata distribution of
-                                            40% of the Company's cumulative adjusted net operating cash flow
+                                            Investing in Supelle Coin during its ICO phase provides potential investors with early adoption benefits.
+
+                                            Early investors often enjoy advantages such as discounted token prices, bonus  rewards, and exclusive access to platform features.
+
+                                            The discount has been seamlessly incorporated into the presale tokens, enhancing their value, while the prospect of upcoming sales and rewards further augments the potential gains on the horizon.
+
                                         </p>
 
                                     </div>
@@ -421,11 +306,9 @@ function Roadmap() {
                             <div className="row align-items-center img-slider">
                                 <div className="col-sm-6">
                                     <div className="pl-sm-5">
-                                        <h2 className='heading-sm'>As a Utility(Coming soon)</h2>
+                                        <h2 className='heading-sm'>Utility Tokens</h2>
                                         <p className=''>
-                                            Discounts of at least 10% on trading fees on SupCoin
-                                            according to the Tiered Trading Fee Discount Program, which is based upon the
-                                            number of SUP Tokens held in customers' private wallets
+                                            Major discounts for all members who gain early bird access and make backdoor purchases in our crypto presale. The earlier you buy, the higher the profit you’ll turn around!
                                         </p>
 
                                     </div>
@@ -440,12 +323,10 @@ function Roadmap() {
                             <div className="row align-items-center img-slider">
                                 <div className="col-sm-6">
                                     <div className="pl-sm-5">
-                                        <h2 className='heading-sm'>Token Economics</h2>
+                                        <h2 className='heading-sm'>Understanding Token Economics</h2>
                                         <p className=''>
 
-                                            Whether you are looking to participate in the SUP
-                                            ecosystem as an investor or as a customer, the SUP Token has both security and
-                                            utility benefits for its holders.
+                                            No matter if you intend to engage with the Supelle ecosystem as a purchaser or investor, the Supcoin Token offers a wide range of utility benefits tailored to your needs."
 
                                         </p>
 
@@ -471,7 +352,7 @@ function Roadmap() {
                         </div>
                         <div className="d-flex justify-content-start align-items-center mt-4">
                             <FaArrowRight size={25} className="d-block icon mr-3" />
-                            <p className=''>Supcoin is a type of decentralized utility token.</p>
+                            <p className=''>Supcoin is a type of decentralized utility token. <br /> It is an ERC-20 utility coin, a type of secure, smart contract-enabled token on the Ethereum blockchain that is interchangeable. Supelle Decentralized Freelancing Marketplace Launch (2024)</p>
                         </div>
                         <div className="d-flex justify-content-start align-items-center mt-4">
                             <FaArrowRight size={25} className="d-block icon mr-3" />
