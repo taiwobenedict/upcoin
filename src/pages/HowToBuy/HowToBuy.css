@@ -1,0 +1,171 @@
+#howtobuy .hero {
+    background: url("../../images/howtobuy/howtobuy.jpeg") center center/cover no-repeat;
+}
+
+.buying-text {
+    max-width: 600px;
+}
+
+.buytoken-bg {
+    background: url("../../images/howtobuy/BuyingtheSup.jpeg") center center/cover no-repeat;
+}
+
+.buytoken-bg #buy-token {
+    z-index: 1;
+    position: relative;
+}
+
+.buytoken-bg .overlay {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+
+}
+
+.accordion-slider {
+    margin: 80px 0;
+    width: fit-content;
+    height: 600px;
+    max-height: 650px;
+    border: 1px solid #007cf0;
+    display: flex;
+    overflow: hidden;
+    max-width: 1300px;
+    margin-inline: auto;
+}
+
+
+.accordion-slider .accordion-group {
+    display: flex;
+}
+
+
+.accordion-slider .header {
+    width: 75px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    border-left: 1px solid #007cf0;
+    height: 100%;
+    position: relative;
+}
+.accordion-slider .header .heading {
+    transform: translate(3%) translateY(100%) rotate(-90deg);
+    transform-origin: left top;
+    text-align: left;
+    width: 300px
+}
+
+.accordion-slider .content {
+    width: 0;
+    overflow: hidden;
+    color: #242121;
+    transition: all .4s ease-out;
+ 
+
+}
+
+.accordion-slider .inner-content {
+    padding: 25px;
+    height: 100%;
+    width: calc(100vw - 483px);
+    max-width: 995px;
+    overflow-y:  fit-content;
+}
+
+.accordion-slider .inner-content p {
+    max-width: 600px;
+}
+
+.open {
+    width: calc(100vw - 483px) !important;
+    max-width: 995px !important;
+}
+
+/* Wallets */
+.guide {
+    padding: 100px 0;
+    transition: 0.4s;
+    height: 80vh;
+  
+}
+
+
+.guide-container {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    
+}
+
+.wallets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin-inline: auto;
+    width: 100%;
+    
+}
+
+.wallet {
+    flex: 1;
+    min-width: 160px;
+    cursor: pointer;
+}
+
+.wallet .line {
+    height: 5px;
+    width: 100%;
+    max-width: 300px;
+    margin-inline: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.wallet-image {
+    height: 300px;
+    width: 100%;
+}
+
+.accordion .card-body {
+    height: 226px;
+    overflow-y: scroll;
+}
+
+.accordion .btn {
+    font-size: 1.4rem;
+}
+
+
+
+@media (max-width: 756px) {
+    /* .accordion,
+    .accordion-group,
+    .accordion-slider .header .btn,
+     .accordion-slider .header,
+    .accordion-slider .content,
+    .open
+
+     {
+        height:  unset;
+        display: block;
+        width:  unset;
+        transform: translate(0);
+        overflow: visible;
+        min-width:  unset;
+        max-width:  unset;
+        max-height:  unset;
+        min-width: unset;
+
+    } */
+
+    
+}
+

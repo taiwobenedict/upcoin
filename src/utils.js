@@ -1,0 +1,1 @@
+export const MARKET_API_KEY = "coinranking94fe84488a5fed84619deabeac12ebecb5f5beb669226683";

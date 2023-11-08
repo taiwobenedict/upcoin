@@ -1,0 +1,36 @@
+#blog .hero {
+    background: url("../../images/blog/blog.jpeg") center center/cover no-repeat;
+    min-height: 450px; 
+}
+
+#blog .blog-container {
+    min-height: 450px !important;
+}
+
+#blog .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+
+.media-img {
+    max-width:100px;
+}
+
+.page-link {
+    padding: 15px !important;
+}
+
+.breadcumb {
+    margin-bottom: 1.4rem;
+}
+
+@media (max-width:576px) {
+    .post-grid {
+        display: block;
+    }
+}

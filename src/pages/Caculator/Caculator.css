@@ -1,0 +1,110 @@
+#caculator .hero {
+    background: url("../../images/caculator/Calculatorslider.jpeg") center center/cover no-repeat;
+}
+
+#caculator .overlay {
+    background-color: rgba(15, 45, 128, 0.8) !important;
+}
+
+#caculator .newcomer-form {
+    background-color: transparent;
+}
+
+#caculator .option-btn {
+    border:  solid 1px rgba(255, 255, 255, 0.37) ;
+}
+
+.cal-input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 46px;
+    background: #2A3F7C;
+    border: 1px solid #4A5EC0;
+    border-radius: 55px;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    display: flex;
+    padding: 5px 20px;
+    max-width: 332px;
+
+}
+
+.cal-input input,
+.cal-input select {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+}
+
+.cal-input select {
+    width: initial;
+    
+}
+
+.cal-input option {
+    color: #1b1b1b;
+}
+
+
+.crypto-cal {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 5rem;
+    
+
+}
+
+.convert-btn {
+    width: 50px;
+    height: 50px;
+    background:#EEF8B1;
+    margin-inline: 10px; 
+    border-radius: 50%;
+    border: none;
+
+}
+
+.convert-icon {
+    font-size: 2rem;
+    color: #333;
+    font-weight: 100;
+}
+
+.result {
+    margin-top: 30px;
+    font-weight: 700;
+}
+
+.caculator-info {
+    background: url("../../images/caculator/Cryptocurrency_image.jpeg") center center/cover no-repeat;
+}
+
+.cal-badge .badge {
+    border: #4A5EC0 solid 1px;
+    color: #fff;
+}
+
+.badges {
+    display: flex;
+    gap: 20px;
+}
+
+
+@media (max-width: 756px) {
+    .crypto-cal {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .convert-btn {
+        margin-block: 1rem;
+    }
+
+    .result {
+        text-align: center;
+    }
+}

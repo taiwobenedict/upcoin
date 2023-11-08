@@ -1,0 +1,28 @@
+#newtocrypto .hero {
+    background: url("../../images/newtocrypto/newtocrypto.jpeg") center center/cover fixed no-repeat;
+    color: #fff;
+}
+
+.newtocryto-containerr {
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+#newtocrypto .overlay {
+    background-color: rgba(0,0,0,0.6);
+}
+
+.newform-container {
+    border: solid 1px #fff;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.6);
+    margin-inline: auto;
+    max-width: 650px;
+}
+
+.form-context .heading-md {
+    font-size: 3rem;
+
+}
+

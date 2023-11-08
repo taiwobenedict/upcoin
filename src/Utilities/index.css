@@ -1,0 +1,93 @@
+/* Hero */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.hero * {
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.transition {
+  transition: 0.4s !important;
+}
+
+/* Buttons */
+.btn {
+  transition: 0.4s !important;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+/* Inline buttons */
+.btn-inline-light {
+  background-color: transparent !important;
+  border: solid 1px #fff !important;
+  color: #fff !important;
+}
+
+.btn-inline-light:hover {
+  background-color: #fff !important;
+  color: #1b1b1b !important;
+}
+
+.btn-inline-pri {
+  background-color: transparent !important;
+  border: solid 1px #1b1b1b !important;
+  color: #102252 !important;
+}
+
+.btn-inline-pri:hover {
+  background-color: #102252 !important;
+  color: #fff !important;
+}
+
+/* Block buttons */
+.btn-block-light {
+  background-color: #fff !important;
+  color: #1b1b1b !important;
+  border: solid 1px #fff !important;
+}
+
+.btn-block-light:hover {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+.btn-block-pri {
+  background-color: #102252 !important;
+  color: #fff !important;
+  border: solid 1px #102252 !important;
+}
+
+.btn-block-pri:hover {
+  background-color: transparent !important;
+  color: #102252 !important;
+}
+
+.btn:focus {
+  box-shadow: none !important;
+}
+
+.change {
+  display: none;
+}
+
+/* .section {
+  padding: 7rem 0px !important;
+} */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: fit-content;
+  }
+}

@@ -1,0 +1,36 @@
+#crypto .hero {
+    background: url("../../images/cryptocurrencies/crypto_hero.jpeg") center center/cover no-repeat;
+}
+
+#crypto .overlay {
+    background-color: rgba(0,0,0,0.4);
+}
+
+#trade {
+    width: 100%;
+    height: 100%;
+    background: url("../../images/cryptocurrencies/trade_bg.png") center center/cover no-repeat;
+}
+
+.trades {
+    display: flex;
+}
+
+.right-trade {
+    flex: 1;
+    height: 100%;
+}
+
+.left-trade {
+    flex: 3;
+}
+
+#download .download-image {
+    background: url("../../images/cryptocurrencies/download.jpg") center center/cover no-repeat;
+}
+
+
+
+#crypto .countries .hero {
+    background: url("../../images/cryptocurrencies/countries.jpeg") center center/cover no-repeat;
+}
