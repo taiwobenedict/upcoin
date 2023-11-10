@@ -52,10 +52,10 @@ export function Marque() {
         <Marquee autoFill>
           {loading && <p>Loading coin prices...</p>}
           {!loading && coinPrices.length > 0 ? (
-            <ul className="d-flex mr-5 align-items-center p-2">
+            <ul className="d-flex mr-2 align-items-center p-2">
               {coinPrices.map(coin => (
-                <h6 key={coin.id}>
-                  {coin.name} ({coin.symbol}): ${coin.price}
+                <h6 key={coin.id} style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center"}}>
+                  <p>{coin.name}</p> <p>({coin.symbol}): </p> <p style={{marginRight: 20}}>${coin.price}</p>
                 </h6>
               ))}
             </ul>
