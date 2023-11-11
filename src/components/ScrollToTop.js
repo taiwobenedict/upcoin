@@ -30,7 +30,7 @@ export function Marque() {
   useEffect(() => {
     axios.get('https://api.coinranking.com/v2/coins', {
       headers: {
-        'x-access-token': MARKET_API_KEY, // Replace with your Coinranking API key
+        'x-access-token': MARKET_API_KEY,
       },
     })
       .then(response => {
@@ -54,38 +54,14 @@ export function Marque() {
           {!loading && coinPrices.length > 0 ? (
             <ul className="d-flex mr-2 align-items-center p-2">
               {coinPrices.map(coin => (
-                <h6 key={coin.id} style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center"}}>
-                  <p>{coin.name}</p> <p>({coin.symbol}): </p> <p style={{marginRight: 20}}>${coin.price}</p>
+                <h6 key={coin.id} style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
+                  <p>{coin.name}</p> <p>({coin.symbol}): </p> <p style={{ marginRight: 20 }}>${Math.floor(coin.price / 100).toFixed(2)}</p>
                 </h6>
               ))}
             </ul>
           ) : (
             <p>No coin prices available.</p>
           )}
-          {/* <div className="d-flex mr-5 align-items-center p-F2">
-            <h6 className='mr-2'>small</h6>
-            <small>price</small>
-          </div>
-          <div className="d-flex mr-5 align-items-center p-2">
-            <h6 className='mr-2'>small</h6>
-            <small>price</small>
-          </div>
-          <div className="d-flex mr-5 align-items-center p-2">
-            <h6 className='mr-2'>small</h6>
-            <small>price</small>
-          </div>
-          <div className="d-flex mr-5 align-items-center p-2">;/
-            <h6 className='mr-2'>small</h6>
-            <small>price</small>
-          </div>
-          <div className="d-flex mr-5 align-items-center p-2">
-            <h6 className='mr-2'>small</h6>
-            <small>price</small>
-          </div>
-          <div className="d-flex mr-5 align-items-center p-2">
-            <h6 className='mr-2'>small</h6>
-            <small>price</small>
-          </div> */}
         </Marquee>
       </div>
     </>
