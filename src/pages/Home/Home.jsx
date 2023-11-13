@@ -198,11 +198,11 @@ function Home() {
                     <h2 className='heading-md'>OUR NEWSLETTER</h2>
                     <p>Sign up to our newsletter and be first to hear about Supcoin news</p>
                     <input type="email" className="form-control w-75 mx-auto" />
-                    <p className='mt-3'>By clicking Sign Up you're confirming that you agree with our Terms & Conditions</p>
+                    <p className='mt-3'>By clicking Sign Up you're confirming that you agree with our Terms & Conditions.</p>
                 </div>
             </Section>
 
-            {/* Supelle */}
+            {/* Supelle Section */}
             <Section name="supelle" mt={32} className={"container"} pd="100px 0 0 0">
                 <div className="row">
                     <div className="col-sm-6 mt-5 align-self-end" data-aos="fade-right">
