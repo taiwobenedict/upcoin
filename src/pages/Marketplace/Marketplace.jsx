@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Hero, Button, Section } from "../../Utilities/index"
-import { FaExchangeAlt } from 'react-icons/fa'
-
-import "./Marketplace.css"
-
-function Marketplace() {
-=======
 import React, { useState, useEffect } from 'react'
 import { Hero, Button, Section } from "../../Utilities/index"
 // import { FaExchangeAlt } from 'react-icons/fa';
@@ -37,7 +28,6 @@ function Marketplace() {
 
     }, []);
 
->>>>>>> f471417bc62c0f40c89cff5d67355067c24098e7
     return (
         <div id="marketplace">
             <Hero height={75} className={"container"}>
@@ -71,122 +61,6 @@ function Marketplace() {
                                     <th scope="col">24h Low</th>
                                 </tr>
                             </thead>
-<<<<<<< HEAD
-                            <tbody>
-                                <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-danger'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
-                                </tr>
-                                <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-success'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
-                                </tr>
-                                <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-success'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
-                                </tr>
-                                <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-danger'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
-                                </tr>
-                                <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-success'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
-                                </tr>
-                                <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-danger'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
-                                </tr>
-                                <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-success'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
-                                </tr>
-                                <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-success'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
-                                </tr>
-                                <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-success'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
-                                </tr>
-                                <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-danger'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
-                                </tr>
-                                <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-danger'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
-                                </tr>
-                                <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-success'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
-                                </tr>
-                                <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-danger'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
-                                </tr>
-                                <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-success'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
-                                </tr>
-                            </tbody>
-=======
                             {marketCapData ? ( 
                             <tbody>
                                 {/* {table} */}
@@ -306,7 +180,6 @@ function Marketplace() {
                             ) : ( 
                                 <p>Loading market data....</p>
                             )}
->>>>>>> f471417bc62c0f40c89cff5d67355067c24098e7
                         </table>
                     </div>
                 </Section>
