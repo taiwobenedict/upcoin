@@ -55,7 +55,7 @@ export function Marque() {
             <ul className="d-flex mr-2 align-items-center p-2">
               {coinPrices.map(coin => (
                 <h6 key={coin.id} style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
-                  <p>{coin.name}</p> <p>({coin.symbol}): </p> <p style={{ marginRight: 20 }}>${Math.floor(coin.price / 100).toFixed(2)}</p>
+                  <p style={{ fontWeight: 500, fontSize: 15, color: "#fff" }}>{coin.name}</p> <p style={{fontWeight: 200, fontSize: 10,}}>({coin.symbol}): </p> <p style={{ marginRight: 20 }}>${Math.floor(coin.price / 100).toFixed(2)}</p>
                 </h6>
               ))}
             </ul>
