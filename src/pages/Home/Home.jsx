@@ -12,7 +12,10 @@ import subcoin from "../../images/home/subcoin.png"
 import supelle from "../../images/home/supelle.png"
 import animation_coin from "../../images/home/animation_coin.mp4"
 import { Link } from 'react-router-dom'
-import Whitepaper from '../Whitepaper/Whitepaper'
+import Whitepaper from '../Whitepaper/Whitepaper';
+import React, { useState, useEffect } from "react";
+
+import { FaEthereum } from "react-icons/fa";
 
 
 import { Button, Hero, Section } from '../../Utilities'
@@ -25,8 +28,34 @@ import { Autoplay } from 'swiper/modules'
 import 'swiper/css';
 
 import "./Home.css"
+import CustomButton from '../../components/CustomButton'
 
 function Home() {
+
+    const [countdown, setCountDown] = useState(0);
+    const targetDate = new Date('2023-12-25');
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        const timeRemaining = getTimeRemaining(targetDate);
+        setCountDown(timeRemaining);
+      }, 1000)
+      return () => clearInterval(interval);
+    }, [targetDate]);
+
+    const getTimeRemaining = (targetDate) => {
+        const now = new Date;
+        const timeDifference = targetDate.getTime() - now.getTime();
+
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        return { days, hours, minutes, seconds };
+    }
+    
 
     return (
         <>
@@ -82,7 +111,52 @@ function Home() {
                         </div>
                         <div className="col-md-5  mt-4">
                             <div className="buying-section">
-                                <img src={buyingSection} alt="Buying Section" className='ml-md-auto d-block w-100' />
+                                <p className='box-head'>Secure your purchase before price increase!</p>
+                                <p className='box-para'>Sale starts in</p>
+                                <div className='countdown'>
+                                    <p className='days'>{countdown.days} d :</p>
+                                    <p className='days'>{countdown.hours} hrs :</p>
+                                    <p className='days'>{countdown.minutes} m :</p>
+                                    <p className='days'>{countdown.seconds}s</p>
+                                </div>
+
+                                <p className='para-2'>Until Price Increase Increase to 1 SUP  = 0.0055 CARD</p>
+
+                                <p className='box-amount'>amount raised = $0,000,000.00</p>
+                                <p className='sup-amount'>1 SUP = 0.0045</p>
+                                <div className='coins'>
+                                    <div style={{color: "#fff", fontWeight: 300, fontSize: 15}}><FaEthereum style={{color: "#fff"}}/>ETH</div>
+                                    <div style={{color: "#fff", fontWeight: 300, fontSize: 15}}>USDT</div>
+                                    <div style={{color: "#fff", fontWeight: 300, fontSize: 15}}>MATIC</div>
+                                    <div style={{color: "#fff", fontWeight: 300, fontSize: 15}}>CARD</div>
+                                </div>
+
+                                <div className='input-area'>
+                                    <div className='input-1'>
+                                        <p className='input-text'>Amount in CARD you pay</p>
+                                        <input className='input'/>
+                                    </div>
+                                    <div className='input-1'>
+                                        <p className='input-text'>Amount in SUP you receive</p>
+                                        <input className='input'/>
+                                    </div>
+                                </div>
+                                <div className='box-button'>
+                                    <CustomButton to="/" className="button-1">
+                                        CONNECT WALLET
+                                    </CustomButton>
+                                    <CustomButton to="/" className="button-2">
+                                        Buy with BNB
+                                    </CustomButton>
+                                </div>
+
+                                <div className='bottom-text'>
+                                <p className='text'>Presale ends January 31st</p>
+                                <p className='text'>SUP DEX Listing February 5th</p>
+                                <p className='text'>Listing Price 1 $SUP = 0.0008 USDT</p>
+                                </div>
+                                {/* <img src={buyingSection} alt="Buying Section" className='ml-md-auto d-block w-100' /> */}
+
                             </div>
                         </div>
                     </div>

@@ -32,10 +32,151 @@
 .buying-section {
     max-width: 450px;
     margin-left: auto;
+    border-radius: 15px;
+    background-color: #1b1b1b;
 }
 
+.box-head {
+    color: #fff;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    text-transform: capitalize;
+}
 
+.box-para {
+    color: #0000ff;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
 
+.countdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.days {
+    font-weight: 600;
+    font-size: 35px;
+    color: #fff;
+}
+
+.para-2 {
+    background-color: #00ff00;
+    color: #fff;
+    padding: 10px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #00ff00;
+}
+
+.box-amount {
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.sup-amount {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.coins {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.input-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* gap: 5px; */
+}
+
+.input-text {
+    color: #fff;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.input {
+    border-color: 2px solid #fff;
+    outline: none;
+}
+
+.box-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000ff;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #0000ff;
+}
+
+.button-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000ff;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #0000ff;
+}
+
+.bottom-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 5px; */
+}
 /* Welcome Section */
 
 
@@ -47,6 +188,12 @@
     grid-gap: 20px;
 }
 
+.text {
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+}
 
 /* Marquee */
 .marquee {

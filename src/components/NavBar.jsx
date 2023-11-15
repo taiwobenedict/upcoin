@@ -108,7 +108,7 @@ function NavBar({isScrolled}) {
                     <div className='action-btns d-flex nav-link flex-nowrap ml-md-auto'>
                         <Button type={"inline"} color={"light"}>Connect <FaCaretRight /></Button>
                         <Button type={"inline"} color={"light"} onClick={() => changeLanguage('en')}>English <FaCaretRight /></Button>
-                        <Button onClick={() => changeLanguage("fr")}>French</Button>
+                        {/* <Button onClick={() => changeLanguage("fr")}>French</Button> */}
                     </div>
 
                     {/* Toggler */}
