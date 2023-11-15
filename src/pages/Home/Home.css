@@ -33,7 +33,7 @@
     max-width: 450px;
     margin-left: auto;
     border-radius: 15px;
-    background-color: #1b1b1b;
+    background-color: #0b0b0b;
 }
 
 .box-head {
@@ -45,7 +45,7 @@
 }
 
 .box-para {
-    color: #0000ff;
+    color: #102252;
     font-weight: 700;
     font-size: 24px;
     text-align: center;
@@ -141,7 +141,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #0000ff;
+    background-color: #102252;
     color: #fff;
     font-weight: 500;
     font-size: 20px;
@@ -150,7 +150,7 @@
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 8px;
-    border: 2px solid #0000ff;
+    border: 2px solid #102252;
 }
 
 .button-2 {
@@ -158,7 +158,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #0000ff;
+    background-color: #102252;
     color: #fff;
     font-weight: 500;
     font-size: 20px;
@@ -167,7 +167,7 @@
     text-transform: capitalize;
     text-decoration: none;
     border-radius: 8px;
-    border: 2px solid #0000ff;
+    border: 2px solid #102252;
 }
 
 .bottom-text {
@@ -269,4 +269,58 @@
     .swiper2{
         display: block !important;
     } 
+    .buying-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-head {
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .box-para {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .countdown {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 385px;
+    }
+    .days {
+        font-weight: bold;
+        font-size: 22px;
+    }
+    .para-2 {
+        width: 300px;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+    .box-amount {
+        width: 500px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .input-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 17px;
+    }
+    .bottom-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .text {
+        font-weight: 500;
+        font-size: 20px;
+    }
 }
