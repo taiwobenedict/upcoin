@@ -11,13 +11,12 @@ import Roadmap from "./pages/Roadmap/Roadmap";
 import About from "./pages/About/About";
 import NewToCrypto from "./pages/NewToCrypto/NewToCrypto";
 import Airdrop from "./pages/Airdrop/Airdrop";
-import ScrollToTopOnNavigate from "./components/ScrollToTop";
 import { useState, useEffect } from "react";
 import Marketplace from "./pages/Marketplace/Marketplace";
 import Caculator from "./pages/Caculator/Caculator";
 import Support from "./pages/support/Support";
 
-import { Marque } from "./components/ScrollToTop";
+import  Marque  from "./components/Marque";
 import HowToBuy from "./pages/HowToBuy/HowToBuy";
 import SupportHeading from "./pages/support/components/SupportHeading";
 import SupportFooter from "./pages/support/components/SupportFooter";
@@ -72,6 +71,17 @@ function App() {
             }
         }
     }, [hash]);
+
+    const ScrollToTopOnNavigate = () => {
+        const { pathname } = useLocation(); // Get the current pathname from the router
+      
+        useEffect(() => {
+          // Scroll the page to the top whenever the pathname changes (i.e., a new page/route is loaded)
+          window.scrollTo(0, 0);
+        }, [pathname]);
+      
+        return null;
+      };
 
 
 

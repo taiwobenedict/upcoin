@@ -19,6 +19,7 @@ function Marketplace() {
             .then(response => {
             console.log(response.data);
             const {data} = response.data;
+            console.log(data)
             setMarketCapData(data);
             })
             .catch(error => {
@@ -61,7 +62,7 @@ function Marketplace() {
                                     <th scope="col">24h Low</th>
                                 </tr>
                             </thead>
-                            {marketCapData ? ( 
+                            {marketCapData && ( 
                             <tbody>
                                 {/* {table} */}
                                 <tr>
@@ -177,8 +178,6 @@ function Marketplace() {
                                     <td>{marketCapData.referenceCurrencyRate}</td>
                                 </tr>
                             </tbody> 
-                            ) : ( 
-                                <p>Loading market data....</p>
                             )}
                         </table>
                     </div>

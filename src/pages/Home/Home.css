@@ -29,154 +29,102 @@
     object-fit: cover;
 }
 
-.buying-section {
-    max-width: 450px;
-    margin-left: auto;
-    border-radius: 15px;
-    background-color: #0b0b0b;
+.buy-section {
+    max-width: 500px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px 30px;
 }
 
-.box-head {
-    color: #fff;
-    font-weight: 700;
-    font-size: 24px;
-    text-align: center;
-    text-transform: capitalize;
-}
-
-.box-para {
-    color: #102252;
-    font-weight: 700;
-    font-size: 24px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.countdown {
+.count-down {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.CARD {
+    height: 30px;
+    margin-top: 1.5rem;
+    border-radius: 20px;
+    border: solid 1px #28a745;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.CARD-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    width: 100%;
+}
+
+.inner-card {
+    width: 30%;
+    background-color: rgba(0,0,0,0.7);
+    height: 100%;
+    border-radius: 20px;
+}
+
+.gateway {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+
+}
+
+.method {
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    border: solid 2px transparent;
+    transition: 0.4s;
+    cursor: pointer;
+    padding: 5px;
+
 }
 
-.days {
-    font-weight: 600;
-    font-size: 35px;
-    color: #fff;
+.method:hover {
+    border-color: #fff;
 }
 
-.para-2 {
-    background-color: #00ff00;
-    color: #fff;
-    padding: 10px;
-    font-weight: 700;
-    text-align: center;
-    border-radius: 15px;
-    border: 1px solid #00ff00;
+.method-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.6rem;
+    display: block;
+
 }
 
-.box-amount {
-    font-weight: 600;
-    font-size: 24px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-.sup-amount {
-    font-weight: 400;
-    font-size: 20px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-.coins {
+.buy-form {
+    margin-top: 2rem;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 34px;
-}
-
-.input-area {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.input-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    /* gap: 5px; */
-}
-
-.input-text {
-    color: #fff;
-    font-weight: 400;
-    font-size: 15px;
-}
-
-.input {
-    border-color: 2px solid #fff;
-    outline: none;
-}
-
-.box-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
-    margin-top: 20px;
 }
 
-.button-1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #102252;
-    color: #fff;
-    font-weight: 500;
-    font-size: 20px;
-    text-align: center;
-    padding: 10px;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 8px;
-    border: 2px solid #102252;
+
+
+.form-group .input {
+    width: 100%;
+    border: solid 1px #fff;
 }
 
-.button-2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #102252;
-    color: #fff;
-    font-weight: 500;
-    font-size: 20px;
-    text-align: center;
-    padding: 10px;
-    text-transform: capitalize;
-    text-decoration: none;
-    border-radius: 8px;
-    border: 2px solid #102252;
+.input input {
+background-color: transparent;
+ border: none;
+ outline: none;
+ color: #fff;
+ padding-left: 10px;
+ width: 100%;
 }
 
-.bottom-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* gap: 5px; */
+.buy-btn {
+    border-radius: 20px !important;
 }
+
 /* Welcome Section */
 
 
@@ -197,8 +145,9 @@
 
 /* Marquee */
 .marquee {
-    background-color: #102252;
+    background-color: #000b29 !important;
     color: #fff;
+    padding: 5px 0px;
 }
 
 /* Opportunity Section */

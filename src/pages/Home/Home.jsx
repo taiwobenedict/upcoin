@@ -12,9 +12,14 @@ import supelle from "../../images/home/supelle.png"
 import animation_coin from "../../images/home/animation_coin.mp4"
 import { Link } from 'react-router-dom'
 import Whitepaper from '../Whitepaper/Whitepaper';
-import React, { useState, useEffect, useMemo} from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
-import { FaEthereum } from "react-icons/fa";
+import usdt from "../../images/home/usdt.png"
+import greenDollar from '../../images/home/greenDollar.png'
+import eth from '../../images/home/eth.png'
+import card from '../../images/home/card.png'
+import iconBlue from "../../images/home/iconBlue.png"
+import matic from '../../images/home/matic.png'
 
 
 import { Button, Hero, Section } from '../../Utilities'
@@ -27,34 +32,45 @@ import { Autoplay } from 'swiper/modules'
 import 'swiper/css';
 
 import "./Home.css"
-import CustomButton from '../../components/CustomButton'
 
 function Home() {
 
     const [countdown, setCountDown] = useState(0);
+    const [payment, setPayment] = useState({
+        sup: 0,
+        other: 0
+    })
 
-  const targetDate = useMemo(() => new Date('2023-12-25'), []); // Memoize the Date creation
+    const targetDate = useMemo(() => new Date('2023-12-25'), []); // Memoize the Date creation
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const timeRemaining = getTimeRemaining(targetDate);
-      setCountDown(timeRemaining);
-    }, 1000);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            const timeRemaining = getTimeRemaining(targetDate);
+            setCountDown(timeRemaining);
+        }, 1000);
 
-    return () => clearInterval(interval);
-  }, [targetDate]);
+        return () => clearInterval(interval);
+    }, [targetDate]);
 
-  const getTimeRemaining = (targetDate) => {
-    const now = new Date();
-    const timeDifference = targetDate.getTime() - now.getTime();
+    const getTimeRemaining = (targetDate) => {
+        const now = new Date();
+        const timeDifference = targetDate.getTime() - now.getTime();
 
-    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-    return { days, hours, minutes, seconds };
-  };
+        return { days, hours, minutes, seconds };
+    };
+
+    const handlePayment = (e) => {
+        setPayment(prev => ({
+            ...prev,
+            [e.target.id]: e.target.value
+        }))
+
+    }
 
     return (
         <>
@@ -85,7 +101,7 @@ function Home() {
 
                 <Hero centerContent={true} expand={true} className={"container-fluid"} >
                     <div className="row  w-100 mx-auto justify-content-between align-items-center">
-                        <div className="col-md-7 mt-4">
+                        <div className="col-md-7 align-self-start mt-4">
                             <div className="hero-context text-light">
                                 <h1 className='heading-sm bold'>EMBRACE AND EMBARK ON A PATH TOWARDS A PROSPEROUS OPPORTUNITY.</h1>
                                 <p className='text-big bold'>Begin your journey leading the way to a brighter future
@@ -109,54 +125,83 @@ function Home() {
                             </div>
                         </div>
                         <div className="col-md-5  mt-4">
-                            <div className="buying-section">
-                                <p className='box-head'>Secure your purchase before price increase!</p>
-                                <p className='box-para'>Sale starts in</p>
-                                <div className='countdown'>
-                                    <p className='days'>{countdown.days} d :</p>
-                                    <p className='days'>{countdown.hours} hrs :</p>
-                                    <p className='days'>{countdown.minutes} m :</p>
-                                    <p className='days'>{countdown.seconds}s</p>
-                                </div>
 
-                                <p className='para-2'>Until Price Increase Increase to 1 SUP  = 0.0055 CARD</p>
+                            <div className="buy-section text-center text-light ml-md-auto">
+                                <h5 className="bold">SECURE YOUR PURCHASE BEFORE PRICE INCREASE!</h5>
+                                <h5 className="text-primary mt-4 bold">SALE STARTS IN</h5>
 
-                                <p className='box-amount'>amount raised = $0,000,000.00</p>
-                                <p className='sup-amount'>1 SUP = 0.0045</p>
-                                <div className='coins'>
-                                    <div style={{color: "#fff", fontWeight: 300, fontSize: 15}}><FaEthereum style={{color: "#fff"}}/>ETH</div>
-                                    <div style={{color: "#fff", fontWeight: 300, fontSize: 15}}>USDT</div>
-                                    <div style={{color: "#fff", fontWeight: 300, fontSize: 15}}>MATIC</div>
-                                    <div style={{color: "#fff", fontWeight: 300, fontSize: 15}}>CARD</div>
-                                </div>
-
-                                <div className='input-area'>
-                                    <div className='input-1'>
-                                        <p className='input-text'>Amount in CARD you pay</p>
-                                        <input className='input'/>
+                                <div className="count-down d">
+                                    <div className="time">
+                                        <h2 className='m-0 bold'>{countdown.days}</h2>
+                                        <p className='m-0 mt-2'>Days</p>
                                     </div>
-                                    <div className='input-1'>
-                                        <p className='input-text'>Amount in SUP you receive</p>
-                                        <input className='input'/>
+                                    <div className="time bold">
+                                        <h2 className='m-0 bold'>{countdown.hours}</h2>
+                                        <p className='m-0 mt-2'>Hours</p>
+                                    </div>
+                                    <div className="time">
+                                        <h2 className='m-0 bold'>{countdown.minutes}</h2>
+                                        <p className='m-0 mt-2'>Minutes</p>
+                                    </div>
+                                    <div className="time">
+                                        <h2 className='m-0 bold'>{countdown.seconds}</h2>
+                                        <p className='m-0 mt-2'>Seconds</p>
                                     </div>
                                 </div>
-                                <div className='box-button'>
-                                    <CustomButton to="/" className="button-1">
-                                        CONNECT WALLET
-                                    </CustomButton>
-                                    <CustomButton to="/" className="button-2">
-                                        Buy with BNB
-                                    </CustomButton>
+
+                                <div className="CARD bg-success">
+                                    <div className="inner-card"></div>
+                                    <p className="m-0 CARD-text">Until Price Increase to 1 SUP = 0.0055 CARD</p>
                                 </div>
 
-                                <div className='bottom-text'>
-                                <p className='text'>Presale ends January 31st</p>
-                                <p className='text'>SUP DEX Listing February 5th</p>
-                                <p className='text'>Listing Price 1 $SUP = 0.0008 USDT</p>
+                                <h4 className="mt-5 bold">AMOUNT RAISED:  $0,000,00.00</h4>
+                                <p className="mt-3">1 SUP = 0.0045</p>
+
+                                <div className="gateway">
+                                    <div className="method">
+                                        <img src={eth} alt="" className="w-100 method-img" />
+                                        <p className="m-0 bold">ETH</p>
+                                    </div>
+                                    <div className="method">
+                                        <img src={usdt} alt="" className="w-100 method-img" />
+                                        <p className="m-0 bold">USDT</p>
+                                    </div>
+                                    <div className="method">
+                                        <img src={matic} alt="" className="w-100 method-img" />
+                                        <p className="m-0 bold">MATIC</p>
+                                    </div>
+                                    <div className="method">
+                                        <img src={card} alt="" className="w-100 method-img" />
+                                        <p className="m-0 bold">CARD</p>
+                                    </div>
                                 </div>
-                                {/* <img src={buyingSection} alt="Buying Section" className='ml-md-auto d-block w-100' /> */}
+
+                                <div className="buy-form text-left">
+                                    <div className="form-group">
+                                        <span>Amount in CARD you pay</span>
+                                        <div className="input d-flex">
+                                            <input type="number" id='other' value={payment.other} onChange={handlePayment} />
+                                            <img src={greenDollar} className="method-img" alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="form-group">
+                                        <span>Amount in SUP you receive</span>
+                                        <div className="input d-flex">
+                                            <input type="number" value={payment.sup} id='sup' onChange={handlePayment}/>
+                                            <img src={iconBlue} className="method-img" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                    <button className="btn btn-primary buy-btn btn-block mt-4 mb-3">CONNECT WALLET</button>
+                                    <button className="btn btn-primary buy-btn btn-block">Buy with BNB</button>
+
+                                    <p className="my-1 mt-3">Presale Ends January 31st</p>
+                                    <p className="my-1">SUP DEX Listing February 5th</p>
+                                    <p className="my-1">Listing Price 1$SUP = 0.008USDT</p>
 
                             </div>
+
                         </div>
                     </div>
                 </Hero>
