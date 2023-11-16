@@ -1,10 +1,33 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Hero, Button, Section } from "../../Utilities/index"
-import { FaExchangeAlt } from 'react-icons/fa'
+// import { FaExchangeAlt } from 'react-icons/fa';
+import axios from 'axios';
 
 import "./Marketplace.css"
+import { MARKET_API_KEY } from '../../utils';
 
 function Marketplace() {
+
+    const [marketCapData, setMarketCapData] = useState(null);
+    
+    useEffect(() => {
+        axios.get('https://api.coinranking.com/v2/stats', {
+        headers: {
+            'x-access-token': MARKET_API_KEY // Replace with your Coinranking API key
+            }
+            })
+            .then(response => {
+            console.log(response.data);
+            const {data} = response.data;
+            setMarketCapData(data);
+            })
+            .catch(error => {
+            console.error('Error:', error);
+            // Handle errors here
+            });
+
+    }, []);
+
     return (
         <div id="marketplace">
             <Hero height={75} className={"container"}>
@@ -38,120 +61,125 @@ function Marketplace() {
                                     <th scope="col">24h Low</th>
                                 </tr>
                             </thead>
+                            {marketCapData ? ( 
                             <tbody>
+                                {/* {table} */}
                                 <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-danger'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
+                                    <td>{marketCapData.totalMarkets}</td>
+                                    <td>${marketCapData.totalMarketCap}</td>
+                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
+                                    <td>${marketCapData.total24hVolume}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
                                 </tr>
                                 <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-success'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
+                                <td>{marketCapData.totalMarkets}</td>
+                                    <td>${marketCapData.totalMarketCap}</td>
+                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
+                                    <td>${marketCapData.total24hVolume}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
                                 </tr>
                                 <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-success'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
+                                <td>{marketCapData.totalMarkets}</td>
+                                    <td>${marketCapData.totalMarketCap}</td>
+                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
+                                    <td>${marketCapData.total24hVolume}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
                                 </tr>
                                 <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-danger'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
+                                <td>{marketCapData.totalMarkets}</td>
+                                    <td>${marketCapData.totalMarketCap}</td>
+                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
+                                    <td>${marketCapData.total24hVolume}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
                                 </tr>
                                 <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-success'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
+                                <td>{marketCapData.totalMarkets}</td>
+                                    <td>${marketCapData.totalMarketCap}</td>
+                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
+                                    <td>${marketCapData.total24hVolume}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
                                 </tr>
                                 <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-danger'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
+                                <td>{marketCapData.totalMarkets}</td>
+                                    <td>${marketCapData.totalMarketCap}</td>
+                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
+                                    <td>${marketCapData.total24hVolume}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
                                 </tr>
                                 <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-success'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
+                                <td>{marketCapData.totalMarkets}</td>
+                                    <td>${marketCapData.totalMarketCap}</td>
+                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
+                                    <td>${marketCapData.total24hVolume}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
                                 </tr>
                                 <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-success'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
+                                <td>{marketCapData.totalMarkets}</td>
+                                    <td>${marketCapData.totalMarketCap}</td>
+                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
+                                    <td>${marketCapData.total24hVolume}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
                                 </tr>
                                 <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-success'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
+                                <td>{marketCapData.totalMarkets}</td>
+                                    <td>${marketCapData.totalMarketCap}</td>
+                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
+                                    <td>${marketCapData.total24hVolume}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
                                 </tr>
                                 <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-danger'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
+                                <td>{marketCapData.totalMarkets}</td>
+                                    <td>${marketCapData.totalMarketCap}</td>
+                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
+                                    <td>${marketCapData.total24hVolume}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
                                 </tr>
                                 <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-danger'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
+                                <td>{marketCapData.totalMarkets}</td>
+                                    <td>${marketCapData.totalMarketCap}</td>
+                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
+                                    <td>${marketCapData.total24hVolume}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
                                 </tr>
                                 <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-success'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
+                                <td>{marketCapData.totalMarkets}</td>
+                                    <td>${marketCapData.totalMarketCap}</td>
+                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
+                                    <td>${marketCapData.total24hVolume}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
                                 </tr>
                                 <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-danger'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
+                                <td>{marketCapData.totalMarkets}</td>
+                                    <td>${marketCapData.totalMarketCap}</td>
+                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
+                                    <td>${marketCapData.total24hVolume}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
                                 </tr>
                                 <tr>
-                                    <td>SUP <FaExchangeAlt /> USD </td>
-                                    <td>0.45 USD</td>
-                                    <td className='text-success'>3.95%</td>
-                                    <td>22,924.8089992 <span>SUP</span></td>
-                                    <td>0.56 USD</td>
-                                    <td>0.49 USD</td>
+                                <td>{marketCapData.totalMarkets}</td>
+                                    <td>${marketCapData.totalMarketCap}</td>
+                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
+                                    <td>${marketCapData.total24hVolume}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
+                                    <td>{marketCapData.referenceCurrencyRate}</td>
                                 </tr>
-                            </tbody>
+                            </tbody> 
+                            ) : ( 
+                                <p>Loading market data....</p>
+                            )}
                         </table>
                     </div>
                 </Section>

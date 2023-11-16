@@ -2,7 +2,11 @@ import React from 'react'
 
 import "./Learn.css"
 import { Hero, Section } from '../../Utilities'
+<<<<<<< HEAD
 import { FiArrowUpRight } from "react-icons/fi"
+=======
+import {FiArrowUpRight} from "react-icons/fi"
+>>>>>>> 400651bb91c74288cd738d506d511efefc882d04
 
 import yours from "../../images/Learn/yours.png"
 import protect from "../../images/Learn/protect.png"
@@ -56,7 +60,6 @@ function Learn() {
                         </div>
                         <div className="col-md-6">
                             <div className="learn-img">
-
                             </div>
                         </div>
                     </div>

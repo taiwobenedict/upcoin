@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 import { FaBars, FaCaretRight, FaArrowUp, FaTimes } from  "react-icons/fa"
 import logo from '../images/home/logo.png'
 import { UIContext } from '../context/UIcontext'
-import Whitepaper from '../pages/Whitepaper/Whitepaper'
+import Whitepaper from '../pages/Whitepaper/Whitepaper';
+import {useTranslation} from "react-i18next";
 
 import { Button } from '../Utilities'
+// import { changeLanguage } from 'i18next'
 
 function NavBar({isScrolled}) {
     
@@ -21,6 +23,13 @@ function NavBar({isScrolled}) {
         Whitepaper()
     }
 
+    const {i18n} = useTranslation();
+    const {t} = useTranslation();
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
     return (
         <div id='navbar' className={`${isScrolled && "removeBg"}`}>
             <div className="container-fluid">
@@ -35,7 +44,7 @@ function NavBar({isScrolled}) {
                     <div className={`main-nav align-items-center ${toggle && "visible"}`}>
 
                         <Link to="/sup" className="nav-link" onClick={closeToggler}>SUP</Link>
-                        <Link to="/invest" className="nav-link" onClick={closeToggler}>Invest</Link>
+                        <Link to="/invest" className="nav-link" onClick={closeToggler}>{t('Invest')}</Link>
 
                         <div className="nav-link drop1">
                             <div className="position-relative ">
@@ -98,7 +107,8 @@ function NavBar({isScrolled}) {
                     {/* Action Buttons */}
                     <div className='action-btns d-flex nav-link flex-nowrap ml-md-auto'>
                         <Button type={"inline"} color={"light"}>Connect <FaCaretRight /></Button>
-                        <Button type={"inline"} color={"light"}>English <FaCaretRight /></Button>
+                        <Button type={"inline"} color={"light"} onClick={() => changeLanguage('en')}>English <FaCaretRight /></Button>
+                        {/* <Button onClick={() => changeLanguage("fr")}>French</Button> */}
                     </div>
 
                     {/* Toggler */}
