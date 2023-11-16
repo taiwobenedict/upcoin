@@ -3,7 +3,6 @@ import Bloomberg from "../../images/home/Bloomberg.png"
 import CryptoNews from "../../images/home/CryptoNews.png"
 import foxnews from "../../images/home/foxnews.png"
 import nbcLogo from "../../images/home/nbcLogo.png"
-import buyingSection from "../../images/home/buyingSection.png"
 import pix1 from "../../images/home/pix1.png"
 import pix2 from "../../images/home/pix2.png"
 import pix3 from "../../images/home/pix3.png"
@@ -13,7 +12,7 @@ import supelle from "../../images/home/supelle.png"
 import animation_coin from "../../images/home/animation_coin.mp4"
 import { Link } from 'react-router-dom'
 import Whitepaper from '../Whitepaper/Whitepaper';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo} from "react";
 
 import { FaEthereum } from "react-icons/fa";
 
@@ -33,29 +32,29 @@ import CustomButton from '../../components/CustomButton'
 function Home() {
 
     const [countdown, setCountDown] = useState(0);
-    const targetDate = new Date('2023-12-25');
 
-    useEffect(() => {
-      const interval = setInterval(() => {
-        const timeRemaining = getTimeRemaining(targetDate);
-        setCountDown(timeRemaining);
-      }, 1000)
-      return () => clearInterval(interval);
-    }, [targetDate]);
+  const targetDate = useMemo(() => new Date('2023-12-25'), []); // Memoize the Date creation
 
-    const getTimeRemaining = (targetDate) => {
-        const now = new Date;
-        const timeDifference = targetDate.getTime() - now.getTime();
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const timeRemaining = getTimeRemaining(targetDate);
+      setCountDown(timeRemaining);
+    }, 1000);
 
-        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+    return () => clearInterval(interval);
+  }, [targetDate]);
 
-        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+  const getTimeRemaining = (targetDate) => {
+    const now = new Date();
+    const timeDifference = targetDate.getTime() - now.getTime();
 
-        return { days, hours, minutes, seconds };
-    }
-    
+    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+    return { days, hours, minutes, seconds };
+  };
 
     return (
         <>
