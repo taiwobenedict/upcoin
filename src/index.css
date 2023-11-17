@@ -5,10 +5,6 @@
   --pri-light-color: #2A3F7C;
 }
 
-html {
-  scroll-behavior: smooth !important;
-}
-
 /* Typography */
 
 body {

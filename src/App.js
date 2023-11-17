@@ -16,7 +16,7 @@ import Marketplace from "./pages/Marketplace/Marketplace";
 import Caculator from "./pages/Caculator/Caculator";
 import Support from "./pages/support/Support";
 
-import  Marque  from "./components/Marque";
+import Marque from "./components/Marque";
 import HowToBuy from "./pages/HowToBuy/HowToBuy";
 import SupportHeading from "./pages/support/components/SupportHeading";
 import SupportFooter from "./pages/support/components/SupportFooter";
@@ -51,7 +51,7 @@ function App() {
                 setIsScrolled(false);
             }
         };
-        const pattern =  /^\/support\/.*/
+        const pattern = /^\/support\/.*/
 
         if (pattern.test(location.pathname)) {
             setHideNav(false)
@@ -61,7 +61,7 @@ function App() {
         // eslint-disable-next-line
     }, [location]);
 
-    const { hash } = useLocation();
+    const { hash, pathname } = useLocation();
 
     useEffect(() => {
         if (hash) {
@@ -69,26 +69,15 @@ function App() {
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
+        } else {
+            // Scroll the page to the top whenever the pathname changes (i.e., a new page/route is loaded)
+            window.scrollTo(0, 0);
         }
-    }, [hash]);
-
-    const ScrollToTopOnNavigate = () => {
-        const { pathname } = useLocation(); // Get the current pathname from the router
-      
-        useEffect(() => {
-          // Scroll the page to the top whenever the pathname changes (i.e., a new page/route is loaded)
-          window.scrollTo(0, 0);
-        }, [pathname]);
-      
-        return null;
-      };
-
+    }, [hash, pathname]);
 
 
     return (
         <div className="App">
-            <ScrollToTopOnNavigate />
-
             {
                 hideNav && <NavBar isScrolled={isScrolled} />
             }
@@ -114,7 +103,7 @@ function App() {
                     <Route path="/cryptocurrencies" element={<Crypto />} />
                     <Route path="/legals" element={<Legal />} />
                     <Route path="/whitelist" element={<Whitelist />} />
-                    <Route path="/careers" element={<Careers />}  exact/>
+                    <Route path="/careers" element={<Careers />} exact />
                     <Route path="/learn" element={<Learn />} />
                 </Routes>
             </div>
