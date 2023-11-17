@@ -89,6 +89,9 @@ function NavBar({isScrolled}) {
                                     </div>
                                     <div className="dropdown col-md-6">
                                         <li onClick={closeToggler}>
+                                            <Link to="/how-to-buy" className='nav-link dropdown-item'>How To Obtain  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}}/></Link>
+                                        </li>
+                                        <li onClick={closeToggler}>
                                             <Link to="/new-to-crypto" className='nav-link dropdown-item'>New To Cryto  <FaArrowUp className='ml-2 ' style={{transform: "rotate(30deg)"}}/></Link>
                                         </li>
                                         <li onClick={closeToggler}>

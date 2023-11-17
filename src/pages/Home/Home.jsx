@@ -124,28 +124,28 @@ function Home() {
                                 <Link to="/certik_audit"><Button color={"light"} type={"inline"}>CERTIK AUDIT</Button></Link>
                             </div>
                         </div>
-                        <div className="col-md-5  mt-4">
+                        <div className="col-md-5">
 
                             <div className="buy-section text-center text-light ml-md-auto">
-                                <h5 className="bold">SECURE YOUR PURCHASE BEFORE PRICE INCREASE!</h5>
-                                <h5 className="text-primary mt-4 bold">SALE STARTS IN</h5>
+                                <h6 className="bold">SECURE YOUR PURCHASE BEFORE PRICE INCREASE!</h6>
+                                <h6 className="text-primary mt-3 bold">SALE STARTS IN</h6>
 
                                 <div className="count-down d">
                                     <div className="time">
-                                        <h2 className='m-0 bold'>{countdown.days}</h2>
-                                        <p className='m-0 mt-2'>Days</p>
+                                        <h3 className='m-0 bold'>{countdown.days}</h3>
+                                        <p className='m-0'>Days</p>
                                     </div>
                                     <div className="time bold">
-                                        <h2 className='m-0 bold'>{countdown.hours}</h2>
-                                        <p className='m-0 mt-2'>Hours</p>
+                                        <h3 className='m-0 bold'>{countdown.hours}</h3>
+                                        <p className='m-0'>Hours</p>
                                     </div>
                                     <div className="time">
-                                        <h2 className='m-0 bold'>{countdown.minutes}</h2>
-                                        <p className='m-0 mt-2'>Minutes</p>
+                                        <h3 className='m-0 bold'>{countdown.minutes}</h3>
+                                        <p className='m-0'>Minutes</p>
                                     </div>
                                     <div className="time">
-                                        <h2 className='m-0 bold'>{countdown.seconds}</h2>
-                                        <p className='m-0 mt-2'>Seconds</p>
+                                        <h3 className='m-0 bold'>{countdown.seconds}</h3>
+                                        <p className='m-0'>Seconds</p>
                                     </div>
                                 </div>
 
@@ -154,8 +154,8 @@ function Home() {
                                     <p className="m-0 CARD-text">Until Price Increase to 1 SUP = 0.0055 CARD</p>
                                 </div>
 
-                                <h4 className="mt-5 bold">AMOUNT RAISED:  $0,000,00.00</h4>
-                                <p className="mt-3">1 SUP = 0.0045</p>
+                                <h5 className="mt-3 bold">AMOUNT RAISED:  $0,000,00.00</h5>
+                                <p className="mt-2">1 SUP = 0.0045</p>
 
                                 <div className="gateway">
                                     <div className="method">
@@ -193,10 +193,10 @@ function Home() {
                                     </div>
                                 </div>
 
-                                    <button className="btn btn-primary buy-btn btn-block mt-4 mb-3">CONNECT WALLET</button>
+                                    <button className="btn btn-primary buy-btn btn-block mt-3 mb-2">CONNECT WALLET</button>
                                     <button className="btn btn-primary buy-btn btn-block">Buy with BNB</button>
 
-                                    <p className="my-1 mt-3">Presale Ends January 31st</p>
+                                    <p className="my-1 mt-2">Presale Ends January 31st</p>
                                     <p className="my-1">SUP DEX Listing February 5th</p>
                                     <p className="my-1">Listing Price 1$SUP = 0.008USDT</p>
 

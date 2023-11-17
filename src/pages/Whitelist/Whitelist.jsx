@@ -127,7 +127,7 @@ function Whitelist() {
                             </label>
                         </div>
                         <div className="form-check align-items-center d-flex flex-direction-column">
-                            <input className="form-check-input" type="radio" onChange={handleRadioChange} name="fund" id="fund3" checked value="sup" />
+                            <input className="form-check-input" type="radio" onChange={handleRadioChange} name="fund" id="fund3" value="sup" />
                             <label className="form-check-label" htmlFor="fund3">
                                 SUP
                             </label>

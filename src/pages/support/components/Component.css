@@ -119,6 +119,10 @@
     height: 400px;
 }
 
+.faq-hero {
+  background: url("../../../images/support/q_and_a.jpeg") center center/cover no-repeat;
+}
+
 .support-footer {
     padding: 20px 0 60px 0;
     border-top: solid 1px #fff;

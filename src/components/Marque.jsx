@@ -34,7 +34,7 @@ function Marque() {
 					{ loading ? <p>Loading...</p> :
           coinPrices.map((item, index) => (
 						<div className='d-flex gap-2 align-items-center px-4' key={index} >
-							<img className='rounded-circle' style={{ width: '4vh', height: '4vh' }} src={item.iconUrl} alt='' />
+							<img className='rounded-circle' style={{ width: '3vh', height: '3vh' }} src={item.iconUrl} alt='' />
 							<p style={{fontSize: "15px"}} className='text-purple px-2 m-0'>{item.name}</p>
 							<p style={{fontSize: "15px"}} className='text-purple pr-2 m-0'>{new Intl.NumberFormat('en-US', { style: 'decimal' }).format(item.price)}</p>
 							<p className='m-0' style={{ color: item.change < 0 ? 'red' : 'green', fontSize: "15px" }}>{item.change}%</p>

@@ -7,6 +7,8 @@ import { Hero, Section } from '../../Utilities'
 import { UIContext } from '../../context/UIcontext'
 import slugify from 'slugify'
 
+import "./Legal.css"
+
 function Legal() {
    const {screen, details, handleLegal, setScreen } = useContext(UIContext)
 

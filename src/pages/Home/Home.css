@@ -35,6 +35,10 @@
     padding: 20px 30px;
 }
 
+.buy-section p {
+    font-size: 14px;
+}
+
 .count-down {
     display: flex;
     justify-content: space-between;
@@ -88,13 +92,13 @@
 }
 
 .method-img {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     margin-right: 0.6rem;
 }
 
 .buy-form {
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
     gap: 10px;
 }
@@ -104,6 +108,7 @@
 .form-group .input {
     width: 100%;
     border: solid 1px #fff;
+    align-items: center;
 }
 
 .input input {
@@ -141,7 +146,7 @@ background-color: transparent;
 .marquee {
     background-color: #000b29 !important;
     color: #fff;
-    padding: 5px 0px;
+    padding: 2px 0px;
 }
 
 /* Opportunity Section */

@@ -38,9 +38,9 @@ function Faqs() {
                     ?
                     <FaqDetails faq={details} setScreen={setScreen} />
                     : <div id='faqs'>
-                        <div className=" position-relative">
+                        <div className="faq-hero position-relative">
                             <div className="overlay"></div>
-                                    provide image for this sir
+                            
                             <div className='position-relative d-flex hero-faqs justify-content-center align-items-center '>
                                 <form action="" className="search">
                                     <BsSearch className='search-icon' />

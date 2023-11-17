@@ -2,8 +2,9 @@
 import whitepaper from '../../store/docs/whitepaper.pdf'
 
 function Whitepaper() {
-  return window.open( whitepaper, '_blank', 'fullscreen=yes');
+  return window.open( whitepaper, '_self', 'fullscreen=yes');
     
 }
 
 export default Whitepaper
+
