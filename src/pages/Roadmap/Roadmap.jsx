@@ -7,7 +7,7 @@ import coin from "../../images/roadmap/coin.png"
 import Utility from "../../images/roadmap/Utility.png"
 import Adoption from "../../images/roadmap/Adoption.png"
 import Token from "../../images/roadmap/Token.png"
-import { FaArrowRight } from "react-icons/fa"
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
@@ -48,189 +48,276 @@ function Roadmap() {
                             <div className="roadmap">
 
                                 <div className="row">
-                                    <div className='col-md-4'>
-                                        <div className="left-roadmap">
-                                            <h1>2018 - 2019</h1>
-                                        </div>
-                                        <div className='roadmap-content'>
-                                            <h3> 2018 - 2019</h3>
-                                            <ul>
-                                                <li><FaArrowRight className='mr-3' />  Freelance Platform Industry Research </li>
-                                                <li><FaArrowRight className='mr-3' />  Core team formation</li>
-                                                <li><FaArrowRight className='mr-3' />  Founders brainstorm ideas for platform</li>
-                                                <li><FaArrowRight className='mr-3' />  Establishment of plan and vision</li>
-                                                <li><FaArrowRight className='mr-3' />  Business model validation</li>
-                                                <li><FaArrowRight className='mr-3' />  Concept presentation (Mockups) (initial pitch to seed investors)</li>
-                                                <li><FaArrowRight className='mr-3' />  Freelance marketplace idea conception</li>
-                                                <li><FaArrowRight className='mr-3' />  Company registration</li>
-                                                <li><FaArrowRight className='mr-3' />  Assembling of experts to kickstart platform building</li>
-
-                                            </ul>
-
-
-                                        </div>
-
-                                    </div>
-                                    <div className="col-md-4">
-                                        <div className="left-roadmap">
-                                            <h1>2020 - 2022</h1>
-                                        </div>
-                                        <div className='roadmap-content'>
-                                            <h3>2020 - 2022</h3>
-                                            <ul>
-                                                <li><FaArrowRight className='mr-3' />  Pivoted business model to adapt to the changing landscape</li>
-                                                <li><FaArrowRight className='mr-3' />  Prototype creation for feasibility testing </li>
-
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                            <div className="roadmap">
-                                <div className="left-roadmap">
-                                    <h1>2023</h1>
-                                </div>
-                                <div className="row">
-                                    <div className="roadmap-content col-md-4 col-lg-3 ">
-                                        <h3>Q1 - 2023</h3>
-                                        <ul>
-                                            <li><FaArrowRight className='mr-3' />  Team expansion</li>
-                                            <li><FaArrowRight className='mr-3' />  Infrastructure improvement</li>
-                                            <li><FaArrowRight className='mr-3' />  Further platform development for better user experience</li>
-                                            <li><FaArrowRight className='mr-3' />  Privately launched a BETA version for feedback and bug fixes</li>
-                                            <li><FaArrowRight className='mr-3' />  Execution of feedback from testers’ feedback to further improve the platform</li>
-
-                                        </ul>
-                                    </div>
-                                    <div className="roadmap-content col-md-4 col-lg-3 ">
-                                        <h3>Q2 - 2023</h3>
-                                        <ul>
-                                            <li><FaArrowRight className='mr-3' />  Introduction of the following features-</li>
-                                            <li>
+                                    <div className='col-md-6 p-0'>
+                                        <div className='roadmap-content left'>
+                                            <div className="line-circle">
+                                                <div className="line-inner-cicle"><div data-aos="flip-up"></div></div>
+                                            </div>
+                                            <div data-aos="fade-right">
+                                                <h3> 2018 - 2019</h3>
                                                 <ul>
-                                                    <li>Real-time messaging</li>
-                                                    <li>Project tools</li>
-                                                    <li>Rating system for user engagement</li>
+                                                    <li> Freelance Platform Industry Research <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Core team formation <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Founders brainstorm ideas for platform <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Establishment of plan and vision <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Business model validation <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Concept presentation (Mockups) (initial pitch to seed investors) <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Freelance marketplace idea conception<FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Company registration <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Assembling of experts to kickstart platform building <FaArrowLeft className='ml-3' /> </li>
                                                 </ul>
-                                            </li>
-                                            <li><FaArrowRight className='mr-3' />  Further improvements, expansion and implementation of monetary strategies</li>
 
-                                        </ul>
-                                    </div>
-                                    <div className="roadmap-content col-md-4 col-lg-3 ">
-                                        <h3>Q3 - 2023</h3>
-                                        <ul>
-                                            <li><FaArrowRight className='mr-3' />  Creation of Tokenomics</li>
-                                            <li><FaArrowRight className='mr-3' />  Completion of litepaper</li>
-                                            <li><FaArrowRight className='mr-3' />  Formation of social media channels</li>
-                                        </ul>
-                                    </div>
-                                    <div className="roadmap-content col-md-4 col-lg-3 ">
-                                        <h3>Q4 - 2023</h3>
-                                        <ul>
-                                            <li><FaArrowRight className='mr-3' />  Kick-off Airdrop system-2 Campaign</li>
-                                            <li><FaArrowRight className='mr-3' />  Comprehensive Strategic marketing campaign launch</li>
-                                            <li><FaArrowRight className='mr-3' />  Token Creation (supcoin)</li>
+                                            </div>
+                                        </div>
 
-                                        </ul>
                                     </div>
+                                    <div className="col-md-6 p-0"></div>
                                 </div>
-                            </div>
 
-                            <div className="roadmap">
-                                <div className="left-roadmap">
-                                    <h1>2024</h1>
-                                </div>
                                 <div className="row">
-                                    <div className="roadmap-content col-md-4 col-lg-3">
-                                        <h3>Q1 - 2024</h3>
-                                        <ul>
-                                            <li><FaArrowRight className='mr-3' />  Team Expansion</li>
-                                            <li><FaArrowRight className='mr-3' />  Website Design UI/UX completed</li>
-                                            <li><FaArrowRight className='mr-3' />  Token sale commences for seed round/investors</li>
-                                            <li><FaArrowRight className='mr-3' />  Kick-off Airdrop system-3 Campaign</li>
-                                            <li><FaArrowRight className='mr-3' />  Awareness marketing campaigns</li>
-                                            <li><FaArrowRight className='mr-3' />  Smart contract deployment/audit</li>
-                                            <li><FaArrowRight className='mr-3' />  Private sale commences</li>
-                                            <li className='bold'>   Staking and Governance:</li>
-                                            <li><FaArrowRight className='mr-3' />  Staking Smart Contracts deployed</li>
-                                            <li><FaArrowRight className='mr-3' />  Governance smart contract deployed</li>
+                                    <div className="col-md-6 p-0"></div>
+                                    <div className="col-md-6 p-0">
+                                        <div className='roadmap-content right'>
+                                            <div className="line-circle">
+                                                <div className="line-inner-cicle"><div data-aos="flip-up"></div></div>
+                                            </div>
+                                            <div data-aos="fade-left">
+                                                <h3>2020 - 2022</h3>
+                                                <ul>
+                                                    <li><FaArrowRight className='mr-3' />  Pivoted business model to adapt to the changing landscape</li>
+                                                    <li><FaArrowRight className='mr-3' />  Prototype creation for feasibility testing </li>
 
-                                        </ul>
-                                    </div>
-                                    <div className="roadmap-content col-md-4 col-lg-3">
-                                        <h3>Q2 - 2024</h3>
-                                        <ul>
-                                            <li><FaArrowRight className='mr-3' />  Presale (Launchpad)</li>
-                                            <li><FaArrowRight className='mr-3' />  Kick-off Airdrop system-1 Campaign</li>
-                                            <li><FaArrowRight className='mr-3' />  Public launch on DEX (Uniswap)</li>
-                                            <li><FaArrowRight className='mr-3' />  Securing strategic partners and advisor</li>
-                                            <li><FaArrowRight className='mr-3' />  V1 marketplace Initiating</li>
-                                            <li><FaArrowRight className='mr-3' />  Post-launch marketing campaigns</li>
-                                            <li><FaArrowRight className='mr-3' />  Onboard crypto influencers and listing providers</li>
-
-                                        </ul>
-                                    </div>
-                                    <div className="roadmap-content col-md-4 col-lg-3">
-                                        <h3>Q3 - 2024</h3>
-                                        <ul>
-                                            <li><FaArrowRight className='mr-3' />  Securing strategic partners and advisor</li>
-                                            <li><FaArrowRight className='mr-3' />  Launch Airdrop system 1</li>
-                                            <li><FaArrowRight className='mr-3' />  V2 Website Initiating</li>
-                                            <li><FaArrowRight className='mr-3' />  Post-launch marketing campaigns</li>
-                                            <li><FaArrowRight className='mr-3' />  Onboard crypto influencers and listing providers</li>
-                                            <li><FaArrowRight className='mr-3' />  DAO registration</li>
-                                            <li><FaArrowRight className='mr-3' />  Initiate CEX discussions</li>
-                                            <li><FaArrowRight className='mr-3' />  Listing on 1st CEX (Tier 1)</li>
-                                            <li className='bold'>  Supelle Pre-Launch Preparation:</li>
-                                            <li><FaArrowRight className='mr-3' />  Beta Testing and Bug Bounty Program</li>
-                                            <li><FaArrowRight className='mr-3' />  Community Building and Marketing</li>
-                                            <li><FaArrowRight className='mr-3' />  Partnerships and Onboarding</li>
-
-                                        </ul>
-                                    </div>
-                                    <div className="roadmap-content col-md-4 col-lg-3">
-                                        <h3>Q4 - 2024</h3>
-                                        <ul>
-                                            <li><FaArrowRight className='mr-3' />  Token staking begins</li>
-                                            <li><FaArrowRight className='mr-3' />  Team expansion continues</li>
-                                            <li><FaArrowRight className='mr-3' />  Further tier 2 and tier 1 CEX listings</li>
-                                            <li><FaArrowRight className='mr-3' />  MVP app release and community reviews (Service Marketplace & Social Interactive app)</li>
-                                            <li><FaArrowRight className='mr-3' />  Multi-language website & support dashboard</li>
-                                            <li><FaArrowRight className='mr-3' />  Growing international communities</li>
-                                            <li><FaArrowRight className='mr-3' />  Major Partner announcements</li>
-                                            <li><FaArrowRight className='mr-3' />  Supelle marketplace goes live</li>
-                                            <li><FaArrowRight className='mr-3' />  Supelle Main-net Deployment</li>
-                                            <li><FaArrowRight className='mr-3' />  User Onboarding and Incentives</li>
-
-                                        </ul>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
-                            </div>
-
-                            <div className="roadmap">
-                                <div className="left-roadmap">
-                                    <h1>2025</h1>
-                                </div>
                                 <div className="row">
-                                    <div className="roadmap-content col-md-4">
-                                        <h3>Q1 - 2025</h3>
-                                        <ul>
-                                            <li><FaArrowRight className='mr-3' />  Continuous Improvement and Growth</li>
-                                            <li><FaArrowRight className='mr-3' />  Marketing and Adoption</li>
-                                            <li><FaArrowRight className='mr-3' />  Community Engagement</li>
-                                            <li><FaArrowRight className='mr-3' />  Security and Compliance</li>
-                                            <li><FaArrowRight className='mr-3' />  Scaling and Global Expansion</li>
-                                            <li><FaArrowRight className='mr-3' />  Decentralized Governance Implementation</li>
-                                        </ul>
+                                    <div className="col-md-6 p-0">
+                                        <div className="roadmap-content left">
+                                            <div className="line-circle">
+                                                <div className="line-inner-cicle"><div data-aos="flip-up"></div></div>
+                                            </div>
+                                            <div data-aos="fade-right">
+                                                <div>
+                                                    <h1>2023</h1>
+                                                </div>
+                                                <h3>Q1 - 2023</h3>
+                                                <ul>
+                                                    <li>Team expansion <FaArrowLeft className='ml-3' /> </li>
+                                                    <li>Infrastructure improvement <FaArrowLeft className='ml-3' /> </li>
+                                                    <li>Further platform development for better user experience <FaArrowLeft className='ml-3' /> </li>
+                                                    <li>Privately launched a BETA version for feedback and bug fixes <FaArrowLeft className='ml-3' /> </li>
+                                                    <li>Execution of feedback from testers’ feedback to further improve the platform <FaArrowLeft className='ml-3' /> </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6 p-0"></div>
+                                </div>
+
+                                <div className="row">
+                                    <div className="col-md-6 p-0"></div>
+                                    <div className="col-md-6 p-0">
+                                        <div className="roadmap-content right">
+                                            <div className="line-circle">
+                                                <div className="line-inner-cicle"><div data-aos="flip-up"></div></div>
+                                            </div>
+                                            <div data-aos="fade-left">
+
+                                                <h3>Q2 - 2023</h3>
+                                                <ul>
+                                                    <li><FaArrowRight className='mr-3' />  Introduction of the following features-</li>
+                                                    <li>
+                                                        <ul>
+                                                            <li>Real-time messaging</li>
+                                                            <li>Project tools</li>
+                                                            <li>Rating system for user engagement</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><FaArrowRight className='mr-3' />  Further improvements, expansion and implementation of monetary strategies</li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="row">
+                                    <div className="col-md-6 p-0">
+                                        <div className="roadmap-content left">
+                                            <div className="line-circle">
+                                                <div className="line-inner-cicle"><div data-aos="flip-up"></div></div>
+                                            </div>
+                                            <h3>Q3 - 2023</h3>
+                                            <ul>
+                                                <li>Creation of Tokenomics <FaArrowLeft className='ml-3' /> </li>
+                                                <li>Completion of litepaper <FaArrowLeft className='ml-3' /> </li>
+                                                <li>Formation of social media channels <FaArrowLeft className='ml-3' /> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6 p-0"></div>
+                                </div>
+
+                                <div className="row">
+                                    <div className="col-md-6 p-0"></div>
+                                    <div className="col-md-6 p-0">
+                                        <div className="roadmap-content right">
+                                            <div className="line-circle">
+                                                <div className="line-inner-cicle"><div data-aos="flip-up"></div></div>
+                                            </div>
+                                            <div data-aos="fade-left">
+                                                <h3>Q4 - 2023</h3>
+                                                <ul>
+                                                    <li><FaArrowRight className='mr-3' />  Kick-off Airdrop system-2 Campaign</li>
+                                                    <li><FaArrowRight className='mr-3' />  Comprehensive Strategic marketing campaign launch</li>
+                                                    <li><FaArrowRight className='mr-3' />  Token Creation (supcoin)</li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="row">
+                                    <div className="col-md-6 p-0">
+                                        <div className="roadmap-content left">
+                                            <div className="line-circle">
+                                                <div className="line-inner-cicle"><div data-aos="flip-up"></div></div>
+                                            </div>
+                                            <div data-aos="fade-right">
+                                                <div>
+                                                    <h1>2024</h1>
+                                                </div>
+                                                <h3>Q1 - 2024</h3>
+                                                <ul>
+                                                    <li>Team Expansion</li>
+                                                    <li>Website Design UI/UX completed <FaArrowLeft className='ml-3' /> </li>
+                                                    <li>Token sale commences for seed round/investors <FaArrowLeft className='ml-3' /> </li>
+                                                    <li>Kick-off Airdrop system-3 Campaign <FaArrowLeft className='ml-3' /> </li>
+                                                    <li>Awareness marketing campaigns <FaArrowLeft className='ml-3' /> </li>
+                                                    <li>Smart contract deployment/audit <FaArrowLeft className='ml-3' /> </li>
+                                                    <li>Private sale commences <FaArrowLeft className='ml-3' /> </li>
+                                                    <li className='bold'>   Staking and Governance:</li>
+                                                    <li>Staking Smart Contracts deployed <FaArrowLeft className='ml-3' /> </li>
+                                                    <li>Governance smart contract deployed <FaArrowLeft className='ml-3' /> </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6 p-0"></div>
+                                </div>
+
+                                <div className="row">
+                                    <div className="col-md-6 p-0"></div>
+                                    <div className="col-md-6 p-0">
+                                        <div className="roadmap-content right">
+                                            <div className="line-circle">
+                                                <div className="line-inner-cicle"><div data-aos="flip-up"></div></div>
+                                            </div>
+                                            <div data-aos="fade-left">
+                                                <h3>Q2 - 2024</h3>
+                                                <ul>
+                                                    <li><FaArrowRight className='mr-3' />  Presale (Launchpad)</li>
+                                                    <li><FaArrowRight className='mr-3' />  Kick-off Airdrop system-1 Campaign</li>
+                                                    <li><FaArrowRight className='mr-3' />  Public launch on DEX (Uniswap)</li>
+                                                    <li><FaArrowRight className='mr-3' />  Securing strategic partners and advisor</li>
+                                                    <li><FaArrowRight className='mr-3' />  V1 marketplace Initiating</li>
+                                                    <li><FaArrowRight className='mr-3' />  Post-launch marketing campaigns</li>
+                                                    <li><FaArrowRight className='mr-3' />  Onboard crypto influencers and listing providers</li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="row">
+                                    <div className="col-md-6 p-0">
+                                        <div className="roadmap-content left">
+                                            <div className="line-circle">
+                                                <div className="line-inner-cicle"><div data-aos="flip-up"></div></div>
+                                            </div>
+                                            <div data-aos="fade-right">
+                                                <h3>Q3 - 2024</h3>
+                                                <ul>
+                                                    <li> Securing strategic partners and advisor <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Launch Airdrop system 1 <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> V2 Website Initiating <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Post-launch marketing campaigns <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Onboard crypto influencers and listing providers <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> DAO registration <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Initiate CEX discussions <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Listing on 1st CEX (Tier 1) <FaArrowLeft className='ml-3' /> </li>
+                                                    <li className='bold'>  Supelle Pre-Launch Preparation: <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Beta Testing and Bug Bounty Program <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Community Building and Marketing <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Partnerships and Onboarding <FaArrowLeft className='ml-3' /> </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6 p-0"></div>
+                                </div>
+
+                                <div className="row">
+                                    <div className="col-md-6 p-0"></div>
+                                    <div className="col-md-6 p-0">
+                                        <div className="roadmap-content right">
+                                            <div className="line-circle">
+                                                <div className="line-inner-cicle"><div data-aos="flip-up"></div></div>
+                                            </div>
+                                            <div data-aos="fade-left">
+
+                                                <h3>Q4 - 2024</h3>
+                                                <ul>
+                                                    <li><FaArrowRight className='mr-3' />  Token staking begins</li>
+                                                    <li><FaArrowRight className='mr-3' />  Team expansion continues</li>
+                                                    <li><FaArrowRight className='mr-3' />  Further tier 2 and tier 1 CEX listings</li>
+                                                    <li><FaArrowRight className='mr-3' />  MVP app release and community reviews (Service Marketplace & Social Interactive app)</li>
+                                                    <li><FaArrowRight className='mr-3' />  Multi-language website & support dashboard</li>
+                                                    <li><FaArrowRight className='mr-3' />  Growing international communities</li>
+                                                    <li><FaArrowRight className='mr-3' />  Major Partner announcements</li>
+                                                    <li><FaArrowRight className='mr-3' />  Supelle marketplace goes live</li>
+                                                    <li><FaArrowRight className='mr-3' />  Supelle Main-net Deployment</li>
+                                                    <li><FaArrowRight className='mr-3' />  User Onboarding and Incentives</li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="row">
+                                    <div className="col-md-6 p-0">
+                                        <div className="roadmap-content left border-none">
+                                            <div className="line-circle">
+                                                <div className="line-inner-cicle"><div data-aos="flip-up"></div></div>
+                                            </div>
+                                            <div data-aos="fade-right">
+                                                <div>
+                                                    <h1>2025</h1>
+                                                </div>
+                                                <h3>Q1 - 2025</h3>
+                                                <ul>
+                                                    <li> Continuous Improvement and Growth <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Marketing and Adoption <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Community Engagement <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Security and Compliance <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Scaling and Global Expansion <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> Decentralized Governance Implementation <FaArrowLeft className='ml-3' /> </li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </Section>
@@ -342,7 +429,7 @@ function Roadmap() {
 
             </div>
             <div className='tech mx-auto row p-0' >
-                <div className="  px-5 pt-5 col-md-6" >
+                <div className="  px-5 pt-5 col-md-6 p-0" >
                     <div className="tech-side ml-auto">
                         <h1 className="pri-light-color bold">Token <br />Technical <br /> Features</h1>
                         <div className="d-flex justify-content-start align-items-center mt-4">

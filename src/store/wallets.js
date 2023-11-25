@@ -3,6 +3,23 @@ import metamask from "../images/howtobuy/metamask.jpeg"
 import walletBg from "../images/howtobuy/walletBg.png"
 import noWalletBg from "../images/howtobuy/noWalletBg.png"
 
+import nowallet1 from "../images/howtobuy/nowallet1.jpeg"
+import nowallet2 from "../images/howtobuy/nowallet2.jpeg"
+import nowallet3 from "../images/howtobuy/nowallet3.jpeg"
+import nowallet4 from "../images/howtobuy/nowallet4.jpeg"
+
+import metamask1 from "../images/howtobuy/metamask1.jpeg"
+import metamask2 from "../images/howtobuy/metamask2.jpeg"
+import metamask3 from "../images/howtobuy/metamask3.jpeg"
+import metamask4 from "../images/howtobuy/metamask4.jpeg"
+import metamask5 from "../images/howtobuy/metamask5.jpeg"
+
+import twallet1 from "../images/howtobuy/twallet1.jpeg"
+import twallet2 from "../images/howtobuy/twallet2.jpeg"
+import twallet3 from "../images/howtobuy/twallet3.jpeg"
+import twallet4 from "../images/howtobuy/twallet4.jpeg"
+import twallet5 from "../images/howtobuy/twallet5.jpeg"
+
 
 export const wallets = [
     {
@@ -127,7 +144,7 @@ export const wallets = [
                     </p>
                   </div>
                 </div>`,
-          image: ""
+          image: metamask1
         },
         {
           topic: "HOW TO BUY SUP USING USDT ON ETH (METAMASK)",
@@ -257,7 +274,7 @@ export const wallets = [
                     investing in cryptocurrencies.
                   </p>
                 </div>`,
-          image: ""
+          image: metamask2
         },
         {
           topic: "HOW TO BUY SUP USING BNB (METAMASK)",
@@ -372,7 +389,7 @@ export const wallets = [
                     when investing in cryptocurrencies.
                   </p>
                 </div>`,
-          image: ""
+          image: metamask3
         },
         {
           topic: "HOW TO BUY SUP USING USDT ON BSC (METAMASK)",
@@ -498,7 +515,7 @@ export const wallets = [
                     That's it! You've completed the process of buying SUP tokens using USDT on the ERC20 network. Please be cautious and do your research when investing in cryptocurrencies.
                   </p>
                 </div>`,
-          video: ""
+          image: metamask4
         },
         {
           topic: "HOW TO BUY SUP USING CREDIT CARD",
@@ -639,7 +656,7 @@ export const wallets = [
                   </div>
             
                 </div>`,
-          image: ""
+          image: metamask5
         },
       ]
   
@@ -755,7 +772,7 @@ export const wallets = [
                     </ul>
                   </div>
                 </div>`,
-          image: ""
+          image: twallet1
         },
         {
           topic: "How to buy SUP using USDT on ETH (Trustwallet)",
@@ -913,7 +930,7 @@ export const wallets = [
                     That's it! You've completed the process of buying SUP tokens using USDT on the ERC20 network. Please be cautious and do your research when investing in cryptocurrencies.
                   </p>
                 </div>`,
-          image: ""
+          image: twallet2
         },
         {
           topic: "How to buy SUP using BNB (Trustwallet)",
@@ -1041,7 +1058,7 @@ export const wallets = [
                     That's it! You've completed the process of buying SUP tokens using BNB on the BNB Smart Chain. Always be vigilant and do your due diligence when investing in cryptocurrencies.
                   </p>
                 </div>`,
-          image: ""
+          image: twallet3
         },
         {
           topic: "How to buy SUP using USDT on BSC (Trustwallet)",
@@ -1205,7 +1222,7 @@ export const wallets = [
                     investing in cryptocurrencies.
                   </p>
                 </div>`,
-          image: ""
+          image: twallet4
         },
         {
           topic: "How to buy SUP using CREDIT CARD",
@@ -1350,7 +1367,7 @@ export const wallets = [
                     </ul>
                   </div>
                 </div>`,
-          image: ""
+          image: twallet5
         },
       ]
   
@@ -1495,7 +1512,7 @@ export const wallets = [
                     anyone to protect your cryptocurrency assets.
                   </p>
                 </div>`,
-          image: ""
+          image: nowallet1
         },
         {
           topic: "PC & Laptop Users",
@@ -1584,7 +1601,7 @@ export const wallets = [
                     </ul>
                   </div>
                 </div>`,
-          image: ""
+          image: nowallet2
         },
         {
           topic: "Phone & Tablet",
@@ -1639,7 +1656,7 @@ export const wallets = [
             
             
                 </div>`,
-          image: ""
+          image: nowallet3
         },
         {
           topic: "Add SUP to Trust Wallet",
@@ -1652,7 +1669,7 @@ export const wallets = [
                     </ul>
                   </div>
                 </div>`,
-          image: ""
+          image: nowallet4
         },
       ]
   

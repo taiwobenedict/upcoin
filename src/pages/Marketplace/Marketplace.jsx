@@ -1,33 +1,37 @@
-import React, { useState, useEffect } from 'react'
-import { Hero, Button, Section } from "../../Utilities/index"
-// import { FaExchangeAlt } from 'react-icons/fa';
-import axios from 'axios';
+import React, { useEffect, useRef } from 'react'
+import { Hero, Button } from "../../Utilities/index"
 
-import "./Marketplace.css"
-import { MARKET_API_KEY } from '../../utils';
+import './Marketplace.css'
 
 function Marketplace() {
-
-    const [marketCapData, setMarketCapData] = useState(null);
-    
+    const trading = useRef()
     useEffect(() => {
-        axios.get('https://api.coinranking.com/v2/stats', {
-        headers: {
-            'x-access-token': MARKET_API_KEY // Replace with your Coinranking API key
-            }
-            })
-            .then(response => {
-            console.log(response.data);
-            const {data} = response.data;
-            console.log(data)
-            setMarketCapData(data);
-            })
-            .catch(error => {
-            console.error('Error:', error);
-            // Handle errors here
+        const fetchData = async () => {
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-screener.js';
+
+            script.innerHTML = JSON.stringify({
+                width: '100%',
+                height: '800',
+                defaultColumn: 'overview',
+                screener_type: 'crypto_mkt',
+                displayCurrency: 'USD',
+                colorTheme: 'light',
+                locale: 'en',
             });
 
+            trading.current.appendChild(script);
+
+            return () => {
+                trading.current.removeChild(script);
+            };
+        };
+
+        fetchData();
     }, []);
+
 
     return (
         <div id="marketplace">
@@ -42,156 +46,37 @@ function Marketplace() {
             </Hero>
 
             {/* Marketplace Table */}
-            <div id="market-table">
-                <Section pd="80px 0">
-                    <div className="container">
-                        <div className="badges d-flex mb-3">
-                            <div className="badge">All</div>
-                            <div className="badge">Crypto</div>
-                            <div className="badge">Security tokens</div>
-                        </div>
-
-                        <table className="table table-hover ">
-                            <thead className='pri-bg'>
-                                <tr>
-                                    <th scope="col">Market</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Last 24h</th>
-                                    <th scope="col">24h Vol</th>
-                                    <th scope="col">24h High</th>
-                                    <th scope="col">24h Low</th>
-                                </tr>
-                            </thead>
-                            {marketCapData && ( 
-                            <tbody>
-                                {/* {table} */}
-                                <tr>
-                                    <td>{marketCapData.totalMarkets}</td>
-                                    <td>${marketCapData.totalMarketCap}</td>
-                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
-                                    <td>${marketCapData.total24hVolume}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                </tr>
-                                <tr>
-                                <td>{marketCapData.totalMarkets}</td>
-                                    <td>${marketCapData.totalMarketCap}</td>
-                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
-                                    <td>${marketCapData.total24hVolume}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                </tr>
-                                <tr>
-                                <td>{marketCapData.totalMarkets}</td>
-                                    <td>${marketCapData.totalMarketCap}</td>
-                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
-                                    <td>${marketCapData.total24hVolume}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                </tr>
-                                <tr>
-                                <td>{marketCapData.totalMarkets}</td>
-                                    <td>${marketCapData.totalMarketCap}</td>
-                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
-                                    <td>${marketCapData.total24hVolume}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                </tr>
-                                <tr>
-                                <td>{marketCapData.totalMarkets}</td>
-                                    <td>${marketCapData.totalMarketCap}</td>
-                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
-                                    <td>${marketCapData.total24hVolume}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                </tr>
-                                <tr>
-                                <td>{marketCapData.totalMarkets}</td>
-                                    <td>${marketCapData.totalMarketCap}</td>
-                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
-                                    <td>${marketCapData.total24hVolume}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                </tr>
-                                <tr>
-                                <td>{marketCapData.totalMarkets}</td>
-                                    <td>${marketCapData.totalMarketCap}</td>
-                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
-                                    <td>${marketCapData.total24hVolume}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                </tr>
-                                <tr>
-                                <td>{marketCapData.totalMarkets}</td>
-                                    <td>${marketCapData.totalMarketCap}</td>
-                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
-                                    <td>${marketCapData.total24hVolume}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                </tr>
-                                <tr>
-                                <td>{marketCapData.totalMarkets}</td>
-                                    <td>${marketCapData.totalMarketCap}</td>
-                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
-                                    <td>${marketCapData.total24hVolume}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                </tr>
-                                <tr>
-                                <td>{marketCapData.totalMarkets}</td>
-                                    <td>${marketCapData.totalMarketCap}</td>
-                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
-                                    <td>${marketCapData.total24hVolume}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                </tr>
-                                <tr>
-                                <td>{marketCapData.totalMarkets}</td>
-                                    <td>${marketCapData.totalMarketCap}</td>
-                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
-                                    <td>${marketCapData.total24hVolume}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                </tr>
-                                <tr>
-                                <td>{marketCapData.totalMarkets}</td>
-                                    <td>${marketCapData.totalMarketCap}</td>
-                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
-                                    <td>${marketCapData.total24hVolume}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                </tr>
-                                <tr>
-                                <td>{marketCapData.totalMarkets}</td>
-                                    <td>${marketCapData.totalMarketCap}</td>
-                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
-                                    <td>${marketCapData.total24hVolume}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                </tr>
-                                <tr>
-                                <td>{marketCapData.totalMarkets}</td>
-                                    <td>${marketCapData.totalMarketCap}</td>
-                                    <td className='text-danger'>${marketCapData.total24hVolume}</td>
-                                    <td>${marketCapData.total24hVolume}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                    <td>{marketCapData.referenceCurrencyRate}</td>
-                                </tr>
-                            </tbody> 
-                            )}
-                        </table>
+            <div className="container my-5">
+                <div className="tradingview-widget-container">
+                    <div className="tradingview-widget-container__widget" ref={trading}></div>
+                    <div className="tradingview-widget-copyright">
+               
                     </div>
-                </Section>
+                </div>
 
-                {/* Article */}
-                <Section name={"aritcle"}>
-
-
-                </Section>
             </div>
+
         </div>
     )
 }
 
 
 export default Marketplace
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -176,7 +176,7 @@ function HowToBuy() {
                                     </div>
                                 </div>
                                 <div className={`col-md-6 ${i % 2 === 0 && "order-md-2"}`}>
-                                    <div className="wallet-image pri-bg">
+                                    <div className="wallet-image pri-bg" style={{background: `url(${topic.image}) top center/cover no-repeat`}}>
                                             
                                     </div>
                                 </div>
