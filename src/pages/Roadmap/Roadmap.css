@@ -144,19 +144,24 @@
   height: 15px;
 }
 
-@media (max-width: 576px) {
-  .roadmap-content {
-    display: block;
+@media (max-width: 768px) {
+  .roadmap-content.left {
+    border: none;
+    border-left: solid 3px #102252;
+    margin-left: 0;
+    transform: translateX(0px);
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 0px;
   }
 
-  .road-circle {
-    left: -13px;
-    top: -30px;
-  }
+  .roadmap-content.left .line-circle {
+    left: -40px;
+}
 
-  .roadmap-heading {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-left: #102252 solid 2px;
-  }
+.roadmap-content.right {
+  padding-left: 50px;
+}
+
+ 
 }

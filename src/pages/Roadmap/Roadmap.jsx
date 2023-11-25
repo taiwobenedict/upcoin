@@ -56,15 +56,15 @@ function Roadmap() {
                                             <div data-aos="fade-right">
                                                 <h3> 2018 - 2019</h3>
                                                 <ul>
-                                                    <li> Freelance Platform Industry Research <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Core team formation <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Founders brainstorm ideas for platform <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Establishment of plan and vision <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Business model validation <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Concept presentation (Mockups) (initial pitch to seed investors) <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Freelance marketplace idea conception<FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Company registration <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Assembling of experts to kickstart platform building <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Freelance Platform Industry Research <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Core team formation <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Founders brainstorm ideas for platform <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Establishment of plan and vision <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Business model validation <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Concept presentation (Mockups) (initial pitch to seed investors) <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Freelance marketplace idea conception<FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Company registration <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Assembling of experts to kickstart platform building <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
                                                 </ul>
 
                                             </div>
@@ -105,11 +105,11 @@ function Roadmap() {
                                                 </div>
                                                 <h3>Q1 - 2023</h3>
                                                 <ul>
-                                                    <li>Team expansion <FaArrowLeft className='ml-3' /> </li>
-                                                    <li>Infrastructure improvement <FaArrowLeft className='ml-3' /> </li>
-                                                    <li>Further platform development for better user experience <FaArrowLeft className='ml-3' /> </li>
-                                                    <li>Privately launched a BETA version for feedback and bug fixes <FaArrowLeft className='ml-3' /> </li>
-                                                    <li>Execution of feedback from testers’ feedback to further improve the platform <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' /> Team expansion <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' /> Infrastructure improvement <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' /> Further platform development for better user experience <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' /> Privately launched a BETA version for feedback and bug fixes <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' /> Execution of feedback from testers’ feedback to further improve the platform <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
 
                                                 </ul>
                                             </div>
@@ -132,9 +132,9 @@ function Roadmap() {
                                                     <li><FaArrowRight className='mr-3' />  Introduction of the following features-</li>
                                                     <li>
                                                         <ul>
-                                                            <li>Real-time messaging</li>
-                                                            <li>Project tools</li>
-                                                            <li>Rating system for user engagement</li>
+                                                            <li><FaArrowRight className='mr-3 d-md-none' /> Real-time messaging</li>
+                                                            <li><FaArrowRight className='mr-3 d-md-none' /> Project tools</li>
+                                                            <li><FaArrowRight className='mr-3 d-md-none' /> Rating system for user engagement</li>
                                                         </ul>
                                                     </li>
                                                     <li><FaArrowRight className='mr-3' />  Further improvements, expansion and implementation of monetary strategies</li>
@@ -153,9 +153,9 @@ function Roadmap() {
                                             </div>
                                             <h3>Q3 - 2023</h3>
                                             <ul>
-                                                <li>Creation of Tokenomics <FaArrowLeft className='ml-3' /> </li>
-                                                <li>Completion of litepaper <FaArrowLeft className='ml-3' /> </li>
-                                                <li>Formation of social media channels <FaArrowLeft className='ml-3' /> </li>
+                                                <li><FaArrowRight className='mr-3 d-md-none' /> Creation of Tokenomics <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                <li><FaArrowRight className='mr-3 d-md-none' /> Completion of litepaper <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                <li><FaArrowRight className='mr-3 d-md-none' /> Formation of social media channels <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -194,16 +194,16 @@ function Roadmap() {
                                                 </div>
                                                 <h3>Q1 - 2024</h3>
                                                 <ul>
-                                                    <li>Team Expansion</li>
-                                                    <li>Website Design UI/UX completed <FaArrowLeft className='ml-3' /> </li>
-                                                    <li>Token sale commences for seed round/investors <FaArrowLeft className='ml-3' /> </li>
-                                                    <li>Kick-off Airdrop system-3 Campaign <FaArrowLeft className='ml-3' /> </li>
-                                                    <li>Awareness marketing campaigns <FaArrowLeft className='ml-3' /> </li>
-                                                    <li>Smart contract deployment/audit <FaArrowLeft className='ml-3' /> </li>
-                                                    <li>Private sale commences <FaArrowLeft className='ml-3' /> </li>
+                                                    <li><FaArrowRight className='mr-3 d-md-none' /> Team Expansion</li>
+                                                    <li><FaArrowRight className='mr-3 d-md-none' /> Website Design UI/UX completed <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li><FaArrowRight className='mr-3 d-md-none' /> Token sale commences for seed round/investors <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li><FaArrowRight className='mr-3 d-md-none' /> Kick-off Airdrop system-3 Campaign <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li><FaArrowRight className='mr-3 d-md-none' /> Awareness marketing campaigns <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li><FaArrowRight className='mr-3 d-md-none' /> Smart contract deployment/audit <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li><FaArrowRight className='mr-3 d-md-none' /> Private sale commences <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
                                                     <li className='bold'>   Staking and Governance:</li>
-                                                    <li>Staking Smart Contracts deployed <FaArrowLeft className='ml-3' /> </li>
-                                                    <li>Governance smart contract deployed <FaArrowLeft className='ml-3' /> </li>
+                                                    <li><FaArrowRight className='mr-3 d-md-none' /> Staking Smart Contracts deployed <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li><FaArrowRight className='mr-3 d-md-none' /> Governance smart contract deployed <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
 
                                                 </ul>
                                             </div>
@@ -245,18 +245,18 @@ function Roadmap() {
                                             <div data-aos="fade-right">
                                                 <h3>Q3 - 2024</h3>
                                                 <ul>
-                                                    <li> Securing strategic partners and advisor <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Launch Airdrop system 1 <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> V2 Website Initiating <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Post-launch marketing campaigns <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Onboard crypto influencers and listing providers <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> DAO registration <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Initiate CEX discussions <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Listing on 1st CEX (Tier 1) <FaArrowLeft className='ml-3' /> </li>
-                                                    <li className='bold'>  Supelle Pre-Launch Preparation: <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Beta Testing and Bug Bounty Program <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Community Building and Marketing <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Partnerships and Onboarding <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Securing strategic partners and advisor <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Launch Airdrop system 1 <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  V2 Website Initiating <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Post-launch marketing campaigns <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Onboard crypto influencers and listing providers <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  DAO registration <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Initiate CEX discussions <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Listing on 1st CEX (Tier 1) <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li className='bold'>  Supelle Pre-Launch Preparation: <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Beta Testing and Bug Bounty Program <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Community Building and Marketing <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Partnerships and Onboarding <FaArrowLeft className='ml-3 d-none d-md-inline' /></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -304,12 +304,12 @@ function Roadmap() {
                                                 </div>
                                                 <h3>Q1 - 2025</h3>
                                                 <ul>
-                                                    <li> Continuous Improvement and Growth <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Marketing and Adoption <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Community Engagement <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Security and Compliance <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Scaling and Global Expansion <FaArrowLeft className='ml-3' /> </li>
-                                                    <li> Decentralized Governance Implementation <FaArrowLeft className='ml-3' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Continuous Improvement and Growth <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Marketing and Adoption <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Community Engagement <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Security and Compliance <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Scaling and Global Expansion <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
+                                                    <li> <FaArrowRight className='mr-3 d-md-none' />  Decentralized Governance Implementation <FaArrowLeft className='ml-3 d-none d-md-inline' /> </li>
                                                 </ul>
 
                                             </div>
