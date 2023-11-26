@@ -18,7 +18,7 @@ function Support() {
     }, [hash]);
     return (
         <div id='support'>
-            <Hero height={90} centerContent={true} className="container">
+            <Hero height={100} centerContent={true} className="container">
                 <h1 className="heading-lg text-center bold mb-5 text-light support-heading" data-aos="fade-up">Support Center</h1>
                 <div className="d-flex justify-content-center">
                     <Link to="faqs" className="mr-5 support-btn"><Button type={"block"} color={"pri"} className="w-100">FAQs</Button></Link>

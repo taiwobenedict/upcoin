@@ -115,7 +115,7 @@ function Crypto() {
 
             </Section>
 
-            <div className="countries">
+            <div className="countries" id="countries">
                 <Hero height={60} className="container">
                     <div className="row text-white">
                         <div className="col-md-6">

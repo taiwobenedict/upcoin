@@ -23,6 +23,8 @@ import investslider from "../../images/invest/investslider.png"
 import { Hero, Button, Section } from '../../Utilities'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Link } from 'react-router-dom'
+
 
 // Import Swiper styles
 import 'swiper/css';
@@ -34,6 +36,7 @@ import { FaChevronCircleRight } from 'react-icons/fa'
 
 
 import './invest.css'
+import Whitepaper from '../Whitepaper/Whitepaper'
 
 function Invest() {
     const [isChecked, setCheck] = useState(true)
@@ -71,7 +74,7 @@ function Invest() {
                 <div className="text-light" data-aos='fade-up'>
                     <h1 className="heading-lg bold">Pioneering The Future with Us</h1>
                     <p className=' bold'>Be the first to be a part of Supelle's comprehensive opportunity by becoming an early stage supporter. </p>
-                    <Button type={"inline"} color={"light"} >Let's Talk</Button>
+                    <Link to="/support/#contact"><Button type={"inline"} color={"light"} >Let's Talk</Button></Link> 
                 </div>
             </Hero>
 
@@ -96,7 +99,7 @@ function Invest() {
                     <div className="row mt-5 pt-5">
                         <div className="col-md-6 d-flex justify-content-between flex-column align-items-start">
                             <h3 className="mt-3 bold">SUP is the hurdle-free way to Raise Capital:</h3>
-                            <button className="btn btn-block-light mt-2">What are utility tokens?</button>
+                           <Link to="/learn/#utility"> <button className="btn btn-block-light mt-2">What are utility tokens?</button></Link>
                         </div>
                         <div className="col-md-6 mt-3">
                             <div className="normal-items">
@@ -395,7 +398,7 @@ function Invest() {
                             <h1 className='heading-md'>We embraced the financial revolution by creating our very own utility token and marketplace</h1>
                             <p className=''>We are currently inviting early stage supporters to become part of a growing community early on and join us on this exciting journey. If you are interested in exploring this opportunity further, we would be delighted to provide you with more details.
                             </p>
-                            <button className="btn btn-block-light mx-auto d-inline-block">Explore sup token here</button>
+                            <button className="btn btn-block-light mx-auto d-inline-block" onClick={()=> Whitepaper()}>Explore sup token here</button>
                         </div>
                     </div>
                 </div>

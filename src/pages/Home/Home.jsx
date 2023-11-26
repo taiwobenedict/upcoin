@@ -35,34 +35,53 @@ import "./Home.css"
 
 function Home() {
 
-    const [countdown, setCountDown] = useState(0);
+    const [method, setMethod] = useState("ETH")
     const [payment, setPayment] = useState({
         sup: 0,
         other: 0
     })
 
+    const [countdown, setCountDown] = useState({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+        percentage: 100, // Initial percentage set to 100%
+    });
+    
     const targetDate = useMemo(() => new Date('2023-12-25'), []); // Memoize the Date creation
-
+    
     useEffect(() => {
         const interval = setInterval(() => {
             const timeRemaining = getTimeRemaining(targetDate);
             setCountDown(timeRemaining);
+            console.log(timeRemaining.percentage);
         }, 1000);
-
+    
         return () => clearInterval(interval);
     }, [targetDate]);
-
+    
     const getTimeRemaining = (targetDate) => {
         const now = new Date();
         const timeDifference = targetDate.getTime() - now.getTime();
-
-        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-        return { days, hours, minutes, seconds };
+    
+        const totalMilliseconds = timeDifference;
+        const elapsedMilliseconds = Math.max(0, targetDate.getTime() - now.getTime());
+    
+        const days = Math.floor(elapsedMilliseconds / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((elapsedMilliseconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((elapsedMilliseconds % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((elapsedMilliseconds % (1000 * 60)) / 1000);
+    
+        // Calculate percentage based on remaining time, considering the initial totalMilliseconds
+        const percentage = ((totalMilliseconds - elapsedMilliseconds) / totalMilliseconds) * 100;
+    
+        return { days, hours, minutes, seconds, percentage };
     };
+    
+    
+    
+    
 
     const handlePayment = (e) => {
         setPayment(prev => ({
@@ -70,6 +89,10 @@ function Home() {
             [e.target.id]: e.target.value
         }))
 
+    }
+
+    const handleMethod = (e) => {
+        setMethod(e.target.id)
     }
 
     return (
@@ -100,7 +123,7 @@ function Home() {
                 </Swiper>
 
                 <Hero centerContent={true} expand={true} className={"container-fluid"} >
-                    <div className="row  w-100 mx-auto justify-content-between align-items-center">
+                    <div className="row  w-100 mx-auto justify-content-between align-items-center mb-4">
                         <div className="col-md-7 align-self-start mt-4">
                             <div className="hero-context text-light">
                                 <h1 className='heading-sm bold'>EMBRACE AND EMBARK ON A PATH TOWARDS A PROSPEROUS OPPORTUNITY.</h1>
@@ -124,7 +147,7 @@ function Home() {
                                 <Link to="/certik_audit"><Button color={"light"} type={"inline"}>CERTIK AUDIT</Button></Link>
                             </div>
                         </div>
-                        <div className="col-md-5">
+                        <div className="col-md-5" id='sale'>
 
                             <div className="buy-section text-center text-light ml-md-auto">
                                 <h6 className="bold">SECURE YOUR PURCHASE BEFORE PRICE INCREASE!</h6>
@@ -158,19 +181,23 @@ function Home() {
                                 <p className="mt-2">1 SUP = 0.0045</p>
 
                                 <div className="gateway">
-                                    <div className="method">
+                                    <div className="method position-relative">
+                                        <div className="position-absolute w-100 h-100 method-btn" onClick={handleMethod}  id='ETH'></div>
                                         <img src={eth} alt="" className="w-100 method-img" />
                                         <p className="m-0 bold">ETH</p>
                                     </div>
-                                    <div className="method">
+                                    <div className="method position-relative">
+                                        <div className="position-absolute w-100 h-100 method-btn" onClick={handleMethod}  id='USDT'></div>
                                         <img src={usdt} alt="" className="w-100 method-img" />
                                         <p className="m-0 bold">USDT</p>
                                     </div>
-                                    <div className="method">
+                                    <div className="method position-relative">
+                                        <div className="position-absolute w-100 h-100 method-btn" onClick={handleMethod}  id='MATIC'></div>
                                         <img src={matic} alt="" className="w-100 method-img" />
                                         <p className="m-0 bold">MATIC</p>
                                     </div>
-                                    <div className="method">
+                                    <div className="method position-relative">
+                                        <div className="position-absolute w-100 h-100 method-btn" onClick={handleMethod}  id='CARD'></div>
                                         <img src={card} alt="" className="w-100 method-img" />
                                         <p className="m-0 bold">CARD</p>
                                     </div>
@@ -178,7 +205,7 @@ function Home() {
 
                                 <div className="buy-form text-left">
                                     <div className="form-group">
-                                        <span>Amount in CARD you pay</span>
+                                        <span>Amount in {method} you pay</span>
                                         <div className="input d-flex">
                                             <input type="number" id='other' value={payment.other} onChange={handlePayment} />
                                             <img src={greenDollar} className="method-img" alt="" />
@@ -219,7 +246,7 @@ function Home() {
                     <h3 className='mt-5 heading-sm'>What is a Crypto Presale?</h3>
                     <p className=''>A crypto presale grants a unique opportunity to purchase ahead of others and unlock immense profits. Our presale serves as your exclusive gateway to discounted digital assets, paving the way for million-dollar returns!</p>
                     <div className="action-btns mx-auto mt-4">
-                        <Button color={"pri"} type={"block"}>Explore Our Project</Button>
+                        <Link to="/about" ><Button color={"pri"} type={"block"}>Explore Our Project</Button></Link>
                         <Link to="/whitelist" ><Button color={"pri"} type={"block"}>Sale Whitelist</Button></Link>
                     </div>
                 </div>

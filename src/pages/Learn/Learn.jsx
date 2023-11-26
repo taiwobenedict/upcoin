@@ -145,6 +145,41 @@ function Learn() {
                 </div>
             </Section>
 
+            <Section name="utility" center={true} className="text-dark" pd="40px 0">
+
+                <div className='container-lg' >
+                    <div className="py-5 mx-auto">
+                        <h1 className="heading-md bold mb-4 text-center">What are Utility tokens? </h1>
+
+                        <p>
+                            Money meant paper and coins. Tangible objects are held in banks and handed from one to another during transactions. Stuffing bills in couches, to jars full of coins, and counting money by hand. Then a new way of paying for goods came into the picture, paying with these rectangular plastic objects that we call credit cards and debit cards. The new way of paying made people hesitate, and some even rejected it at first, but eventually, this was proven to be more convenient and easier to use.
+
+                        </p>
+
+                        <p>
+                            Before you know it, you could use these cards for online goods and payments. Eliminating the need to go to the bank or mailing in checks. This became the normal way of making a transaction.
+
+                        </p>
+                        <p>
+                            Enter Paypal, the world's first digital payment platform, to make money work better, faster, and easier than ever in the online space; without Paypal, online stores like eBay would not exist. Shortly after, Venmo, Cashapp, and Zelle followed suit.
+                        </p>
+                        <p>
+                            With the online world developing rapidly, Digital Payment needed to keep up too. Birthing cryptocurrency, most famously Bitcoin created in 2009. Bitcoin was the first of its kind to create a new currency that can be communicated globally while eliminating the middleman and having fewer transaction fees.
+
+                        </p>
+
+                        <p>So, present-day working at home, the increase of shopping online, to most transactions happening in the online space. Innovation strikes again with the Utility token.</p>
+                        <p>Transactions and currencies are no longer just about spending and receiving. With Utility token, it can provide a more secure and transparent way to conduct transactions, reducing fees, and offer a number of benefits to users who participate. You are investing your money that is backed up with a progressive company that will continuously bring value to the token. Unlike cryptocurrencies such as bitcoin, Ethereum, and dogecoin where their values fluctuate widely and rapidly, making them a risky investment, not to mention the lack of regulation, and security concerns, it does not have a company to back up the coin to keep the value. In fact, Utility Tokens are a completely distinct and innovative compared to the cryptocurrencies mentioned, due to the token design that provides access to specific services or functions within the platform, it has value being supported by the progressive company.</p>
+                        <p>Look at Utility coin as a key that unlocks features and services within the company that only those are participate in benefit from. You can keep your keys and watch your investment grow over time or use them within the company.</p>
+
+
+
+                    </div>
+
+                </div>
+
+            </Section>
+
             <div className="container-lg">
 
                 <Section pd="100px 0" >
@@ -197,6 +232,8 @@ function Learn() {
                         <li>Cross-border transactions - send money fast to anyone, anywhere, and with no limitations.</li>
                     </ul>
                 </Section>
+
+
 
             </div>
 

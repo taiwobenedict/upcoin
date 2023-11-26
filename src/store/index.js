@@ -6,6 +6,7 @@ import Maksym from "../images/about/Maksym.jpg"
 import OlesPakliuk from "../images/about/OlesPakliuk.png"
 import TANYATREMEL from "../images/about/TANYATREMEL.jpg"
 import TylerGidseg from "../images/about/TylerGidseg.png"
+import board from "../images/about/board.jpg"
 
 
 // Post Images
@@ -37,7 +38,7 @@ export const teamMembers = [
   {
     image: KristenBragoli,
     name: "KRISTEN BRAGOLI",
-    position: "President & CEO",
+    position: "CEO",
     about: `
         Brandishing undiscovered potential, Supelle lights the spark that ignites the future of finance and freelancing, revolutionizing how we work, transact, and succeed in a borderless digital era.
         
@@ -70,12 +71,32 @@ export const teamMembers = [
         `
   },
   {
-    name: "demo2"
+    image: board,
+    name: "Mr. Ramesses || Narmer",
+    position: "Founder",
+    about: `About the Founder.
+    Unveiling the Visionary: Delve into the Fascinating Journey of the Mastermind behind Our Crypto-Powered Freelance Ecosystem!
+    With over 18 years of executive experience in leading on-demand software vendors, -Mr.  Ramesses ll Narmer, the founder, and CEO of Supelle Global Tech, has brought a wealth of expertise to the table. His pivotal role in adopting technology within the global service exchange and B2B trading has been instrumental in shaping our company’s trajectory.
+    In the first of his companies, he held the position of Vice President and General Manager of the On-Demand Hosting Business Unit. In this capacity, he spearheaded the development and execution of all service-related activities for the company’s inaugural release of its groundbreaking website hosting solution. He was the driving force behind the creation and seamless performance of this solution, marking a pivotal milestone for the company.
+    Moving further in his exceptional career, he proceeded to become the founder and CEO of a Data and Business Solutions Consultancy. During his tenure, he gained direct experience with the expenses and intricacies of constructing on-premise analysis and reporting solutions.
+    In pursuit of greater heights, he ascended to the position of founder and CEO of a multinational company, where he led the creation of a scalable systems program for Real Estate. Through his visionary leadership, he pioneered the implementation of cutting-edge, highly parallel software technology in Real Estate investment and property flipping.
+    Finally, to crown all of his remarkable accomplishments over nearly 2 decades, he has embarked on building Supelle: a first-of-its-kind decentralized marketplace that will transform the future of global freelancing.
+    Supelle, unlike traditional platforms, operates as a Decentralized Autonomous Organization, free from government restrictions and payment limitations. This grants freelancers and clients unmatched flexibility and freedom to collaborate worldwide, using any currency they prefer. Consequently, disadvantaged nations can finally attain a fair opportunity, leveling the global playing field and promoting workplace equality. Most importantly, Supelle’s decentralized structure guarantees full transparency and fairness for all users.
+    
+    A Message from Our CEO & Founder.
+    Here, our mission is clear: to usher in a new era where the traditional world transforms into a thriving digital economy. We’ve begun achieving this by reshaping the freelancing and capital marketplaces to become inclusive to every person, anywhere and at any time.
+    At Supelle, our commitment is to deliver exceptional freelancing services, instilling hope and empathy in every interaction. We strive to be more than just a platform; we aim to empower individuals and provide them with new and boundless opportunities for growth and success.
+    Guided by our core values of Innovation, Collaboration, Accountability, Respect, and Excellence, our vision and purpose is to become a globally recognized freelancing marketplace that sets the standard for cutting-edge excellence. We are poised to revolutionize the freelancing landscape and foster the professional development of freelancers within the international communities we serve.
+    Together, we will create a future where talent is nurtured, connections are forged, and remarkable achievements are realized. Join us as we embark on this transformative journey!
+    -Mr.  Ramesses ll Narmer
+    
+        `
   },
+
   {
     image: TANYATREMEL,
     name: "TANYA TREMEL ",
-    position: "Chief Executive Officer",
+    position: "Chief Marketing Officer (CMO)",
     about: `Tanya Tremel is an exceptional marketing leader with a remarkable blend of intuitive business skills and artistic prowess. With her extensive experience in design, branding, and marketing, including a specialization in higher education in marketing, Tanya has consistently demonstrated her ability to drive creative strategies and enhance processes for optimal results.
  
         As a natural collaborator, Tanya thrives on working closely with others, leveraging her people skills to bring out the best in everyone involved. Whether leading a team or contributing to a creative project, she consistently brings a unique perspective and a keen eye for detail to the table. Tanya's dedication to producing high-quality work is unwavering, and she takes immense pride in curating and delivering exceptional outcomes that truly represent her identity as an individual.

@@ -87,6 +87,11 @@
 
 }
 
+.method-btn {
+    cursor: pointer;
+    z-index: 100;
+}
+
 .method:hover {
     border-color: #fff;
 }
