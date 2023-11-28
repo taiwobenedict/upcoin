@@ -12,7 +12,7 @@ import supelle from "../../images/home/supelle.png"
 import animation_coin from "../../images/home/animation_coin.mp4"
 import { Link } from 'react-router-dom'
 import Whitepaper from '../Whitepaper/Whitepaper';
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 
 import usdt from "../../images/home/usdt.png"
 import greenDollar from '../../images/home/greenDollar.png'
@@ -40,48 +40,55 @@ function Home() {
         sup: 0,
         other: 0
     })
+    const targetDateTime = "2023-11-31"
 
-    const [countdown, setCountDown] = useState({
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0,
-        percentage: 100, // Initial percentage set to 100%
-    });
-    
-    const targetDate = useMemo(() => new Date('2023-12-25'), []); // Memoize the Date creation
-    
-    useEffect(() => {
-        const interval = setInterval(() => {
-            const timeRemaining = getTimeRemaining(targetDate);
-            setCountDown(timeRemaining);
-            console.log(timeRemaining.percentage);
-        }, 1000);
-    
-        return () => clearInterval(interval);
-    }, [targetDate]);
-    
-    const getTimeRemaining = (targetDate) => {
+    const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
+     // eslint-disable-next-line 
+    const [progress, setProgress] = useState(calculateProgress());
+
+
+    function calculateTimeRemaining() {
         const now = new Date();
-        const timeDifference = targetDate.getTime() - now.getTime();
+        const targetDate = new Date(targetDateTime);
+        const difference = targetDate - now;
+
+        return Math.max(0, difference);
+    }
+
+    function calculateProgress() {
+        const totalDuration = new Date(targetDateTime) - new Date();
+        const remainingDuration = calculateTimeRemaining();
+        const percentage = ((totalDuration - remainingDuration) / totalDuration) * 100;
+
+        return percentage.toFixed(2);
+    }
+
+    useEffect(() => {
+        const timerId = setInterval(() => {
+            const remainingTime = calculateTimeRemaining();
+
+            if (remainingTime <= 0) {
+                clearInterval(timerId);
+            } else {
+                setTimeRemaining(remainingTime);
+                setProgress(calculateProgress());
+            }
+        }, 1000);
+
+        return () => clearInterval(timerId);
+         // eslint-disable-next-line 
+    }, []);
+
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+
     
-        const totalMilliseconds = timeDifference;
-        const elapsedMilliseconds = Math.max(0, targetDate.getTime() - now.getTime());
+
     
-        const days = Math.floor(elapsedMilliseconds / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((elapsedMilliseconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((elapsedMilliseconds % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((elapsedMilliseconds % (1000 * 60)) / 1000);
-    
-        // Calculate percentage based on remaining time, considering the initial totalMilliseconds
-        const percentage = ((totalMilliseconds - elapsedMilliseconds) / totalMilliseconds) * 100;
-    
-        return { days, hours, minutes, seconds, percentage };
-    };
-    
-    
-    
-    
+
 
     const handlePayment = (e) => {
         setPayment(prev => ({
@@ -123,7 +130,7 @@ function Home() {
                 </Swiper>
 
                 <Hero centerContent={true} expand={true} className={"container-fluid"} >
-                    <div className="row  w-100 mx-auto justify-content-between align-items-center mb-4">
+                    <div className="row  w-100 mx-auto justify-content-between align-items-center">
                         <div className="col-md-7 align-self-start mt-4">
                             <div className="hero-context text-light">
                                 <h1 className='heading-sm bold'>EMBRACE AND EMBARK ON A PATH TOWARDS A PROSPEROUS OPPORTUNITY.</h1>
@@ -147,7 +154,7 @@ function Home() {
                                 <Link to="/certik_audit"><Button color={"light"} type={"inline"}>CERTIK AUDIT</Button></Link>
                             </div>
                         </div>
-                        <div className="col-md-5" id='sale'>
+                        <div className="col-md-5 mt-4" id='sale'>
 
                             <div className="buy-section text-center text-light ml-md-auto">
                                 <h6 className="bold">SECURE YOUR PURCHASE BEFORE PRICE INCREASE!</h6>
@@ -155,25 +162,25 @@ function Home() {
 
                                 <div className="count-down d">
                                     <div className="time">
-                                        <h3 className='m-0 bold'>{countdown.days}</h3>
+                                        <h3 className='m-0 bold'>{days}</h3>
                                         <p className='m-0'>Days</p>
                                     </div>
                                     <div className="time bold">
-                                        <h3 className='m-0 bold'>{countdown.hours}</h3>
+                                        <h3 className='m-0 bold'>{hours}</h3>
                                         <p className='m-0'>Hours</p>
                                     </div>
                                     <div className="time">
-                                        <h3 className='m-0 bold'>{countdown.minutes}</h3>
+                                        <h3 className='m-0 bold'>{minutes}</h3>
                                         <p className='m-0'>Minutes</p>
                                     </div>
                                     <div className="time">
-                                        <h3 className='m-0 bold'>{countdown.seconds}</h3>
+                                        <h3 className='m-0 bold'>{seconds}</h3>
                                         <p className='m-0'>Seconds</p>
                                     </div>
                                 </div>
 
                                 <div className="CARD bg-success">
-                                    <div className="inner-card"></div>
+                                    <div className="inner-card" style={{ width: `${0}%` }}></div>
                                     <p className="m-0 CARD-text">Until Price Increase to 1 SUP = 0.0055 CARD</p>
                                 </div>
 
@@ -182,22 +189,22 @@ function Home() {
 
                                 <div className="gateway">
                                     <div className="method position-relative">
-                                        <div className="position-absolute w-100 h-100 method-btn" onClick={handleMethod}  id='ETH'></div>
+                                        <div className="position-absolute w-100 h-100 method-btn" onClick={handleMethod} id='ETH'></div>
                                         <img src={eth} alt="" className="w-100 method-img" />
                                         <p className="m-0 bold">ETH</p>
                                     </div>
                                     <div className="method position-relative">
-                                        <div className="position-absolute w-100 h-100 method-btn" onClick={handleMethod}  id='USDT'></div>
+                                        <div className="position-absolute w-100 h-100 method-btn" onClick={handleMethod} id='USDT'></div>
                                         <img src={usdt} alt="" className="w-100 method-img" />
                                         <p className="m-0 bold">USDT</p>
                                     </div>
                                     <div className="method position-relative">
-                                        <div className="position-absolute w-100 h-100 method-btn" onClick={handleMethod}  id='MATIC'></div>
+                                        <div className="position-absolute w-100 h-100 method-btn" onClick={handleMethod} id='MATIC'></div>
                                         <img src={matic} alt="" className="w-100 method-img" />
                                         <p className="m-0 bold">MATIC</p>
                                     </div>
                                     <div className="method position-relative">
-                                        <div className="position-absolute w-100 h-100 method-btn" onClick={handleMethod}  id='CARD'></div>
+                                        <div className="position-absolute w-100 h-100 method-btn" onClick={handleMethod} id='CARD'></div>
                                         <img src={card} alt="" className="w-100 method-img" />
                                         <p className="m-0 bold">CARD</p>
                                     </div>
@@ -214,18 +221,18 @@ function Home() {
                                     <div className="form-group">
                                         <span>Amount in SUP you receive</span>
                                         <div className="input d-flex">
-                                            <input type="number" value={payment.sup} id='sup' onChange={handlePayment}/>
+                                            <input type="number" value={payment.sup} id='sup' onChange={handlePayment} />
                                             <img src={iconBlue} className="method-img" alt="" />
                                         </div>
                                     </div>
                                 </div>
 
-                                    <button className="btn btn-primary buy-btn btn-block mt-3 mb-2">CONNECT WALLET</button>
-                                    <button className="btn btn-primary buy-btn btn-block">Buy with BNB</button>
+                                <button className="btn btn-primary buy-btn btn-block mt-3 mb-2">CONNECT WALLET</button>
+                                <button className="btn btn-primary buy-btn btn-block">Buy with BNB</button>
 
-                                    <p className="my-1 mt-2">Presale Ends January 31st</p>
-                                    <p className="my-1">SUP DEX Listing February 5th</p>
-                                    <p className="my-1">Listing Price 1$SUP = 0.008USDT</p>
+                                <p className="my-1 mt-2">Presale Ends January 31st</p>
+                                <p className="my-1">SUP DEX Listing February 5th</p>
+                                <p className="my-1">Listing Price 1$SUP = 0.008USDT</p>
 
                             </div>
 

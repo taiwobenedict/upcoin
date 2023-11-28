@@ -275,13 +275,13 @@ function Whitelist() {
                             Your information will remain private and will not be distributed or sold for any reason. Your privacy is important to us will be kept internally.
                         </p>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" onChange={handleRadioChange} name="agreement" id="agree" className="form-check-input" />
+                            <input type="radio" onChange={handleRadioChange} name="agreement" id="agree" className="form-check-input" value="agree" />
                             <label htmlFor="agree" className="form-check-label">
                                 Agree
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" onChange={handleRadioChange} name="agreement" id="disagree" className="form-check-input" />
+                            <input type="radio" onChange={handleRadioChange} name="agreement" id="disagree" className="form-check-input" value="disagree" />
                             <label htmlFor="disagree" className="form-check-label">
                                 Disagree
                             </label>

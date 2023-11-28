@@ -14,6 +14,7 @@ const UIContextProvider = ({ children }) => {
 
   const [screen, setScreen] = useState('legalHeadings')
   const [details, setDetails] = useState(null)
+  const [updateDetails, setUpdateDetails] = useState(null)
 
   const handleDropDown = (id) => {
   
@@ -57,7 +58,11 @@ const UIContextProvider = ({ children }) => {
   const handleLegal = (legal) => {
     setDetails(legal)
     setScreen("legalDetails")
+}
 
+  const handleUpdates = (update) => {
+    setUpdateDetails(update)
+    setScreen("legalDetails")
 }
 
 
@@ -75,6 +80,7 @@ const UIContextProvider = ({ children }) => {
       hideNav,
       screen,
       details,
+      updateDetails,
       setToggle,
       handleDropDown,
       handleModal,
@@ -84,6 +90,7 @@ const UIContextProvider = ({ children }) => {
       setModal,
       handleLegal,
       setScreen,
+      handleUpdates
 
     }}>
       {children}

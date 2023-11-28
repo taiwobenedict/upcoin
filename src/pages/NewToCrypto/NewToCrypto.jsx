@@ -1,9 +1,30 @@
 
+import { useState } from 'react'
 import {  Hero } from '../../Utilities'
 
 import "./NewToCrypto.css"
 
 function NewToCrypto() {
+    const [formData, setFormData] = useState({
+        first_name: "",
+        last_name: "",
+        email: "",
+        phone_number: "",
+        contact_time: "",
+        budget: "",
+
+    })
+
+    const handleForm = (e) => {
+
+        setFormData(prev => (
+            {
+                ...prev,
+                [e.target.id]: e.target.value
+            }
+        ))
+
+    }
 
     return (
         <div id='newtocrypto'>
@@ -20,24 +41,24 @@ function NewToCrypto() {
                             <form action="" className='new-form'>
                                 <div className="form-group">
                                     <label htmlFor="first_name">First name</label>
-                                    <input type="text" className="form-control" placeholder='John' />
+                                    <input onChange={handleForm} type="text" value={formData.first_name} className="form-control" id='first_name' placeholder='John' />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="first_name">Last name</label>
-                                    <input type="text" className="form-control" placeholder='Smith' />
+                                    <input onChange={handleForm} type="text" value={formData.last_name} className="form-control" id='last_name' placeholder='Smith' />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="first_name">Email</label>
-                                    <input type="email" className="form-control" placeholder='Johnsmith@mail.com' />
+                                    <input onChange={handleForm} type="email" value={formData.email} className="form-control" id='email' placeholder='Johnsmith@mail.com' />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="first_name">Phone Number</label>
-                                    <input type="text" className="form-control" placeholder='+1 800-310-3129' />
+                                    <input onChange={handleForm} type="text" className="form-control" value={formData.phone_number} id='phone_number' placeholder='+1 800-310-3129' />
                                 </div>
 
                                 <div className="form-group">
                                     <label htmlFor="contact-time">Best Time to Contact</label>
-                                    <select className="form-control" id="contact-time">
+                                    <select className="form-control" id="contact_time" onChange={handleForm} >
                                         <option>Morning</option>
                                         <option>Afternoon</option>
                                         <option>Evening</option>
@@ -47,7 +68,7 @@ function NewToCrypto() {
 
                                 <div className="form-group">
                                     <label htmlFor="budget">Budget</label>
-                                    <select className="form-control" id="budget">
+                                    <select className="form-control" id="budget" onChange={handleForm}>
                                         <option>$1-10k</option>
                                         <option>$10-20k</option>
                                         <option>$20-50k</option>

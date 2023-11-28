@@ -43,7 +43,7 @@ function Footer() {
                                 <p className="nav-link bold text-light">Supelle Coin</p>
                                 <Link to="/about" className="nav-link">About us</Link>
                                 <Link to="/about#team" className="nav-link">Supelle Coin Team</Link>
-                                <Link to="/update" className="nav-link">SUP Updates</Link>
+                                <Link to="/updates" className="nav-link">SUP Updates</Link>
                                 <Link to="/careers" className="nav-link">Supelle Coin Careers</Link>
                                 <Link to="/whitelist" className="nav-link">Seed Sales Whitelist</Link>
                             </div>

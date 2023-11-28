@@ -27,6 +27,7 @@ import Legal from "./pages/Legal/Legal";
 import Whitelist from "./pages/Whitelist/Whitelist";
 import Careers from "./pages/Careers/Careers";
 import Learn from "./pages/Learn/Learn";
+import Updates from "./pages/SupUdate/SupUdate";
 
 
 
@@ -105,6 +106,7 @@ function App() {
                     <Route path="/whitelist" element={<Whitelist />} />
                     <Route path="/careers" element={<Careers />} exact />
                     <Route path="/learn" element={<Learn />} />
+                    <Route path="/updates" element={<Updates />} />
                 </Routes>
             </div>
             <Marque />
