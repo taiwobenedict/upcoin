@@ -37,6 +37,7 @@ import { FaChevronCircleRight } from 'react-icons/fa'
 
 import './invest.css'
 import Whitepaper from '../Whitepaper/Whitepaper'
+import Email from '../../components/Email'
 
 function Invest() {
     const [isChecked, setCheck] = useState(true)
@@ -427,7 +428,7 @@ function Invest() {
 
                     </div>
                     <div className="col-md-6">
-                        <form action="">
+                         <Email>
                             <div className="form-container ">
                                 <div className="form-group">
                                     <label htmlFor="name">Your Name</label>
@@ -461,8 +462,8 @@ function Invest() {
 
                             </div>
 
-                            <Button type={"block"} color={"light"} className="mx-auto px-5 d-block mt-auto">Finish</Button>
-                        </form>
+                            <Button type={"block"} color={"light"} className="mx-auto px-5 d-block mt-auto" method="submit">Finish</Button>
+                            </Email>
                     </div>
                 </div>
             </Section>

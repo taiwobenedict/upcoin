@@ -1,8 +1,9 @@
-import {useEffect} from 'react'
+import { useEffect } from 'react'
 import { Hero, Button } from "../../Utilities/index"
 import { Link, useLocation } from 'react-router-dom'
 
 import "./Support.css"
+import Email from '../../components/Email';
 
 function Support() {
 
@@ -35,7 +36,7 @@ function Support() {
                             <p className='mb-5'>We value your input and are eager to hear from you. Whether you have questions, suggestions, or feedback, we're here to help. Please feel free to reach out to us through any of the following means:
                             </p>
 
-                          
+
                             <h4 className='bold mt-1'>Head Quarter <br /> Wefreelancer Global Tech, Inc.</h4>
                             <p>6000 Park of Commerce Blvd
                                 <br />Suite C
@@ -63,38 +64,40 @@ function Support() {
                 </div>
                 <div className=" col-md-6">
                     <div className="support-form">
-                        <form action="">
+
+                        <Email template="template_molu7lp">
                             <div className="form-container ">
                                 <div className="form-group">
                                     <label htmlFor="first_name">First Name *</label>
-                                    <input type="text" className="form-control" id='last_name' required />
+                                    <input type="text" className="form-control" id='last_name' name='first_name' required />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="last_name">Last Name</label>
-                                    <input type="email" className="form-control" id='first_name' required />
+                                    <input type="text" className="form-control" id='first_name' name='last_name' required />
 
                                 </div>
 
                                 <div className="form-group">
                                     <label htmlFor="email">Email</label>
-                                    <input type="email" className="form-control" id='email' placeholder='Email' />
+                                    <input type="email" className="form-control" id='email' placeholder='Email' name='email' />
                                 </div>
 
                                 <div className="form-group">
                                     <label htmlFor="budget">Topic </label>
-                                    <input type="text" className='form-control' />
+                                    <input type="text" className='form-control' name='topic' />
                                 </div>
 
 
                                 <div className="form-group">
                                     <label htmlFor="about_yourself">Message</label>
-                                    <textarea name="" id="" cols="30" className='form-control' rows="10"></textarea>
+                                    <textarea name="message" id="" cols="30" className='form-control' rows="10"></textarea>
                                 </div>
 
                             </div>
 
-                            <Button type={"block"} color={"pri"} className=" px-5 d-block mt-auto">Submit</Button>
-                        </form>
+                            <Button type={"block"} color={"pri"} className=" px-5 d-block mt-auto" method={"submit"}>Submit</Button>
+                        </Email>
+
 
                     </div>
                 </div>

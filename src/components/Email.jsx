@@ -7,7 +7,7 @@ export const Email = ({children, template}) => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    emailjs.sendForm('service_taiwo', `${template}`, form.current, 'QE15DNMItP7yzj3PZ')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
@@ -18,13 +18,6 @@ export const Email = ({children, template}) => {
   return (
     <form ref={form} onSubmit={sendEmail}>
         {children}
-      {/* <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" /> */}
     </form>
   );
 };

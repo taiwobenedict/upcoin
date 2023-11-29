@@ -5,6 +5,7 @@ import mission from "../../images/whitelist/mission.jpg"
 
 import "./Whitelist.css"
 import { useState } from 'react'
+import Email from '../../components/Email'
 
 function Whitelist() {
     // const [fund, setFound] = useState(false)
@@ -50,6 +51,7 @@ function Whitelist() {
 
             </div>
 
+
             <Section pd="80px 0" className="container-lg">
                 <h1><span className='bold'>Supcoin</span> - Seed Sales - Whitetlist</h1>
                 <p>🌱 Be a Part of Our Exclusive Seed Sale Opportunity – Join the Whitetlist! 🌱</p>
@@ -63,22 +65,23 @@ function Whitelist() {
                     This is your moment to optimize your investment potential and become an early advocate for our pioneering venture.
 
                     Act now and join our whitetlist to take a leading role in our token sale!</p>
-                <form>
+
+                <Email template="template_x4pm84f">
                     <div className="form-group card p-4">
                         <label htmlFor="email">Email *</label>
                         <input type="email" className='form-control' name='email' onChange={handleRadioChange} placeholder='Valid email address' required />
                     </div>
-                </form>
 
-                <h2 className="bold text-center  mt-5">Our Mission:</h2>
-                <p>
-                    With our passion for innovation and the collective expertise of our members, we are going to reshape the freelancing landscape, opening up new opportunities for professionals and businesses alike. Together, we shall pave the way for a future where work knows no geographical bounds, where talent thrives, and where the world comes together as one interconnected ecosystem, with Supcoin.
-                </p>
-                <div className="mission-image">
-                    <img src={mission} alt="" className='w-100' />
-                </div>
 
-                <form >
+                    <h2 className="bold text-center  mt-5">Our Mission:</h2>
+                    <p>
+                        With our passion for innovation and the collective expertise of our members, we are going to reshape the freelancing landscape, opening up new opportunities for professionals and businesses alike. Together, we shall pave the way for a future where work knows no geographical bounds, where talent thrives, and where the world comes together as one interconnected ecosystem, with Supcoin.
+                    </p>
+                    <div className="mission-image">
+                        <img src={mission} alt="" className='w-100' />
+                    </div>
+
+
 
                     {/* Description */}
                     <div className="form-group card p-4 mt-5">
@@ -89,7 +92,7 @@ function Whitelist() {
                     {/* First Name */}
                     <div className="form-group card p-4">
                         <label htmlFor="connect">First Name *</label>
-                        <input type="text" className="form-control" name='firstName' required  onChange={handleRadioChange}/>
+                        <input type="text" className="form-control" name='firstName' required onChange={handleRadioChange} />
                     </div>
 
                     {/* Last Name */}
@@ -107,7 +110,7 @@ function Whitelist() {
                     {/* Wallets */}
                     <div className="form-group card p-4">
                         <label htmlFor="connect">Wallet address for whitelisting (Up to 3 Bsc-20/Erc-20) <br /> (Separate wallets a comma ,) *</label>
-                        <input type="text" className="form-control" name='wallet' required  onChange={handleRadioChange} />
+                        <input type="text" className="form-control" name='wallet' required onChange={handleRadioChange} />
                     </div>
 
 
@@ -181,7 +184,7 @@ function Whitelist() {
                     <div className="form-group card p-4 mt-5">
                         <p>How did you hear about this sales round? *</p>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" onChange={handleRadioChange} name="media" id="website" className="form-check-input" value="website"/>
+                            <input type="radio" onChange={handleRadioChange} name="media" id="website" className="form-check-input" value="website" />
                             <label htmlFor="website" className="form-check-label">
                                 Website
                             </label>
@@ -223,7 +226,7 @@ function Whitelist() {
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" onChange={handleRadioChange} name="media" id="press" className="form-check-input"  value="press"/>
+                            <input type="radio" onChange={handleRadioChange} name="media" id="press" className="form-check-input" value="press" />
                             <label htmlFor="press" className="form-check-label">
                                 The Press
                             </label>
@@ -235,7 +238,7 @@ function Whitelist() {
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" onChange={handleRadioChange} name="media" id="tiktok" className="form-check-input" value="tiktok"/>
+                            <input type="radio" onChange={handleRadioChange} name="media" id="tiktok" className="form-check-input" value="tiktok" />
                             <label htmlFor="tiktok" className="form-check-label">
                                 TikTok
                             </label>
@@ -253,7 +256,7 @@ function Whitelist() {
                             </label>
                         </div>
                         <div className="form-check d-flex align-items-center">
-                            <input type="radio" onChange={handleRadioChange} name="media" id="other" className="form-check-input" value="other"/>
+                            <input type="radio" onChange={handleRadioChange} name="media" id="other" className="form-check-input" value="other" />
                             <label htmlFor="other" className="form-check-label">
                                 Other..
                             </label>
@@ -289,11 +292,11 @@ function Whitelist() {
                     </div>
 
                     <div className='mt-4 w-100 d-flex justify-content-end'>
-                        <button className='btn btn-block-pri'>Submit</button>
-
+                        <button className='btn btn-block-pri' type='submit'>Submit</button>
                     </div>
 
-                </form>
+
+                </Email>
             </Section>
 
         </div>

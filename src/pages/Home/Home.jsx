@@ -32,6 +32,7 @@ import { Autoplay } from 'swiper/modules'
 import 'swiper/css';
 
 import "./Home.css"
+import Email from '../../components/Email'
 
 function Home() {
 
@@ -43,7 +44,7 @@ function Home() {
     const targetDateTime = "2023-11-31"
 
     const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
-     // eslint-disable-next-line 
+    // eslint-disable-next-line 
     const [progress, setProgress] = useState(calculateProgress());
 
 
@@ -60,8 +61,12 @@ function Home() {
         const remainingDuration = calculateTimeRemaining();
         const percentage = ((totalDuration - remainingDuration) / totalDuration) * 100;
 
-        return percentage.toFixed(2);
+        return Math.max(0, Math.min(100, percentage)).toFixed(2);
+
     }
+
+    console.log(progress)
+
 
     useEffect(() => {
         const timerId = setInterval(() => {
@@ -76,7 +81,7 @@ function Home() {
         }, 1000);
 
         return () => clearInterval(timerId);
-         // eslint-disable-next-line 
+        // eslint-disable-next-line 
     }, []);
 
     const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
@@ -85,9 +90,9 @@ function Home() {
     const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
 
-    
 
-    
+
+
 
 
     const handlePayment = (e) => {
@@ -349,7 +354,13 @@ function Home() {
                 <div className="col-sm-7 text-center" data-aos="fade-up">
                     <h2 className='heading-md'>OUR NEWSLETTER</h2>
                     <p>Sign up to our newsletter and be first to hear about Supcoin news</p>
-                    <input type="email" className="form-control w-75 mx-auto" />
+
+                    <Email template="">
+                    <div className="d-flex justify-content-center align-items-center">
+                        <input type="email" className="form-control w-75" />
+                        <button className="btn btn-primary border-circle-none" type='submit'>Subscribe</button>
+                    </div>
+                    </Email>
                     <p className='mt-3'>By clicking Sign Up you're confirming that you agree with our Terms & Conditions</p>
                 </div>
             </Section>
