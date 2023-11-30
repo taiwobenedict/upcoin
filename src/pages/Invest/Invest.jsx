@@ -428,36 +428,36 @@ function Invest() {
 
                     </div>
                     <div className="col-md-6">
-                         <Email>
+                         <Email serviceID="service_wowp9z2" template="template_wn8tp0b">
                             <div className="form-container ">
                                 <div className="form-group">
                                     <label htmlFor="name">Your Name</label>
-                                    <input type="text" className="form-control" id='name' placeholder='John Smith' />
+                                    <input type="text" className="form-control" id='name' name='name' placeholder='John Smith' />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="email">Email Address</label>
-                                    <input type="email" className="form-control" id='email' placeholder='Johnsmith@mail.com' />
+                                    <input type="email" className="form-control" id='email' name='email' placeholder='Johnsmith@mail.com' />
 
                                 </div>
 
                                 <div className="form-group">
                                     <label htmlFor="phone_number">Phone Number</label>
-                                    <input type="tel" className="form-control" id='phone_number' placeholder="+17723427995" />
+                                    <input type="tel" className="form-control" id='phone_number' name='number' placeholder="+17723427995" />
                                 </div>
 
                                 
                                 <div className="d-flex text-lightmb-4">
-                                    <input type="checkbox" className='form-check mr-4' name="" id="" onChange={handleCheck} />
+                                    <input type="checkbox" className='form-check mr-4' name="supporter" id="" onChange={handleCheck} />
                                     <span>Have you been an early stage supporter in a technology platform before?</span>
                                 </div>
 
                                 <div className="form-group">
-                                    <input type="text" className="form-control" placeholder="If yes, please kindly explain" disabled={isChecked} />
+                                    <input type="text" className="form-control" name='reason' placeholder="If yes, please kindly explain" disabled={isChecked} />
                                 </div>
 
                                 <div className="form-group">
                                     <label htmlFor="about_yourself">About Yourself</label>
-                                    <input type="text" className="form-control" id='about_yourself' placeholder="What would you like us to know about you?" />
+                                    <input type="text" className="form-control" id='about_yourself' name='about' placeholder="What would you like us to know about you?" />
                                 </div>
 
                             </div>

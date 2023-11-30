@@ -66,7 +66,7 @@ function Whitelist() {
 
                     Act now and join our whitetlist to take a leading role in our token sale!</p>
 
-                <Email template="template_x4pm84f">
+                <Email serviceID="service_wowp9z2" template="template_abrtxpp">
                     <div className="form-group card p-4">
                         <label htmlFor="email">Email *</label>
                         <input type="email" className='form-control' name='email' onChange={handleRadioChange} placeholder='Valid email address' required />

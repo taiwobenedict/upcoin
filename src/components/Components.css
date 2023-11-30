@@ -121,6 +121,26 @@
   visibility: visible;
 }
 
+.alert {
+  position: fixed !important;
+  z-index: 200;
+  top: -50px;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0px auto;
+  padding: 10px !important;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.4s;
+}
+
+.show-alert {
+  top: 100px;
+}
+
+
+
 
 @media (max-width: 1200px) {
   .main-nav {

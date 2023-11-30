@@ -28,13 +28,14 @@ import Whitelist from "./pages/Whitelist/Whitelist";
 import Careers from "./pages/Careers/Careers";
 import Learn from "./pages/Learn/Learn";
 import Updates from "./pages/SupUdate/SupUdate";
+import Alert from "./components/Alert";
 
 
 
 
 
 function App() {
-    const { setToggle, hideNav, setHideNav } = useContext(UIContext)
+    const { setToggle, hideNav, setHideNav, alert } = useContext(UIContext)
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation()
 
@@ -76,9 +77,11 @@ function App() {
         }
     }, [hash, pathname]);
 
+    
 
     return (
         <div className="App">
+            <Alert type={alert.type} message={alert.message} />
             {
                 hideNav && <NavBar isScrolled={isScrolled} />
             }

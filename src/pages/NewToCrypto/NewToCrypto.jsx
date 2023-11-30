@@ -39,28 +39,28 @@ function NewToCrypto() {
 
                         <div className="newform-container">
                             <h5 className='bold text-center mb-4'>leave your details below and we'll contact you to discuss purchasing Supcoin</h5>
-                            <Email template="">
+                            <Email template="template_yp7ha2r" serviceID="service_wowp9z2">
                                 <div className='new-form'>
                                     <div className="form-group">
                                         <label htmlFor="first_name">First name</label>
-                                        <input onChange={handleForm} type="text" value={formData.first_name} className="form-control" id='first_name' placeholder='John' />
+                                        <input onChange={handleForm} type="text" value={formData.first_name} className="form-control" name='first_name' id='first_name' placeholder='John' />
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="first_name">Last name</label>
-                                        <input onChange={handleForm} type="text" value={formData.last_name} className="form-control" id='last_name' placeholder='Smith' />
+                                        <input onChange={handleForm} type="text" value={formData.last_name} className="form-control" name='last_name' id='last_name' placeholder='Smith' />
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="first_name">Email</label>
-                                        <input onChange={handleForm} type="email" value={formData.email} className="form-control" id='email' placeholder='Johnsmith@mail.com' />
+                                        <input onChange={handleForm} type="email" value={formData.email} className="form-control" id='email' name='email' placeholder='Johnsmith@mail.com' />
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="first_name">Phone Number</label>
-                                        <input onChange={handleForm} type="text" className="form-control" value={formData.phone_number} id='phone_number' placeholder='+1 800-310-3129' />
+                                        <input onChange={handleForm} type="text" className="form-control" name='number' value={formData.phone_number} id='phone_number' placeholder='+1 800-310-3129' />
                                     </div>
 
                                     <div className="form-group">
                                         <label htmlFor="contact-time">Best Time to Contact</label>
-                                        <select className="form-control" id="contact_time" onChange={handleForm} >
+                                        <select className="form-control" id="contact_time" onChange={handleForm} name='contact_time' >
                                             <option>Morning</option>
                                             <option>Afternoon</option>
                                             <option>Evening</option>
@@ -70,7 +70,7 @@ function NewToCrypto() {
 
                                     <div className="form-group">
                                         <label htmlFor="budget">Budget</label>
-                                        <select className="form-control" id="budget" onChange={handleForm}>
+                                        <select className="form-control" id="budget" onChange={handleForm} name='budget'>
                                             <option>$1-10k</option>
                                             <option>$10-20k</option>
                                             <option>$20-50k</option>

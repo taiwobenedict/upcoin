@@ -65,7 +65,7 @@ function Support() {
                 <div className=" col-md-6">
                     <div className="support-form">
 
-                        <Email template="template_molu7lp">
+                        <Email template="template_vfjqt9c" serviceID="service_wowp9z2">
                             <div className="form-container ">
                                 <div className="form-group">
                                     <label htmlFor="first_name">First Name *</label>

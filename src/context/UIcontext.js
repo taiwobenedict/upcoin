@@ -16,6 +16,12 @@ const UIContextProvider = ({ children }) => {
   const [details, setDetails] = useState(null)
   const [updateDetails, setUpdateDetails] = useState(null)
 
+  const [alert, setAlert] = useState({
+    type:"",
+    message: "",
+    show: false,
+  })
+
   const handleDropDown = (id) => {
   
     // Toggle the dropdown if it's already open; otherwise, set it to open
@@ -81,6 +87,7 @@ const UIContextProvider = ({ children }) => {
       screen,
       details,
       updateDetails,
+      alert,
       setToggle,
       handleDropDown,
       handleModal,
@@ -90,7 +97,8 @@ const UIContextProvider = ({ children }) => {
       setModal,
       handleLegal,
       setScreen,
-      handleUpdates
+      handleUpdates,
+      setAlert
 
     }}>
       {children}

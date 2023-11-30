@@ -1,22 +1,52 @@
-import React, { useRef } from 'react';
+import React, { useRef, useContext } from 'react';
 import emailjs from '@emailjs/browser';
+import { UIContext } from '../context/UIcontext';
 
-export const Email = ({children, template}) => {
+export const Email = ({children, template, serviceID}) => {
   const form = useRef();
+  const {setAlert} = useContext(UIContext)
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_taiwo', `${template}`, form.current, 'QE15DNMItP7yzj3PZ')
+    emailjs.sendForm(serviceID, template , form.current, "QPJVRgZZW1eLCgMnA", this)
       .then((result) => {
-          console.log(result.text);
+
+          setAlert({
+            type: "success",
+            show: true,
+            message: `${result.text}! Form submission successful.`
+          })
+          form.current.reset()
+          setTimeout(() => {
+            setAlert(prev => ({
+              ...prev,
+              show: false
+            }))
+            
+          }, 4000);
       }, (error) => {
-          console.log(error.text);
+          
+        setAlert({
+          type: "danger",
+          show: true,
+          message: `${error.text ? error.text : "Something went wrong"}!`
+        })
+        
+        setTimeout(() => {
+          setAlert(prev => ({
+            ...prev,
+            show: false
+          }))
+          
+        }, 4000);
       });
+
+     
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
+    <form ref={form} onSubmit={sendEmail}  encType="multipart/form-data" method="post">
         {children}
     </form>
   );

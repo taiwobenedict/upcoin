@@ -13,6 +13,7 @@ body {
   font-family: 'Lato', sans-serif !important;
   line-height: 2 !important;
   overflow-x: hidden;
+  top: 0 !important;
 }
 
 .heading-xl {
@@ -153,3 +154,37 @@ a:hover {
   
 }
 
+
+[id=":0.targetLanguage"] ~ span {
+  display: none;
+  color: transparent;
+  visibility: hidden;
+}
+
+[id=":1.container"] {
+ display: none;
+}
+
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc {
+  display: none;
+}
+
+
+.goog-te-gadget .goog-te-combo {
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.25rem;
+  text-align: center;
+  width: fit-content;
+  background-color: transparent;
+  color: #fff;
+  line-height: 1.5;
+  border-color: #fff;
+  outline: none;
+}
+.goog-te-gadget .goog-te-combo option {
+  color: #333;
+}
+
+.VIpgJd-ZVi9od-ORHb-OEVmcd  {
+  display: none;
+}

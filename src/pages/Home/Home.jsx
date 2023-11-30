@@ -65,7 +65,6 @@ function Home() {
 
     }
 
-    console.log(progress)
 
 
     useEffect(() => {
@@ -355,10 +354,11 @@ function Home() {
                     <h2 className='heading-md'>OUR NEWSLETTER</h2>
                     <p>Sign up to our newsletter and be first to hear about Supcoin news</p>
 
-                    <Email template="">
+                    <Email template="template_123zbf9" serviceID="service_9xd790e">
                     <div className="d-flex justify-content-center align-items-center">
-                        <input type="email" className="form-control w-75" />
-                        <button className="btn btn-primary border-circle-none" type='submit'>Subscribe</button>
+                        <input type="hidden" name="message" value="You have a new subscriber!"/>
+                        <input type="email" name='value' className="form-control w-75" />
+                        <button className="btn btn-primary" type='submit'>Subscribe</button>
                     </div>
                     </Email>
                     <p className='mt-3'>By clicking Sign Up you're confirming that you agree with our Terms & Conditions</p>

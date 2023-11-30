@@ -7,6 +7,7 @@ import flower from "../../images/cryptocurrencies/flower.jpg"
 import bubbles from "../../images/cryptocurrencies/bubbles.jpeg"
 import "./Crypto.css"
 import { Link } from 'react-router-dom'
+import Email from '../../components/Email'
 
 function Crypto() {
     const nation = Object.keys(countries).map(key => ({ key, value: countries[key] }));
@@ -121,16 +122,21 @@ function Crypto() {
                         <div className="col-md-6">
                             <h1 className="bold">Can I trade crypto on <br /> SUPCOIN in my country?</h1>
 
-                            <form action="" className="mt-5">
-                                <select className="custom-select">
-                                    <option >Choose your country</option>
-                                    {
-                                        nation.map(country => (
-                                            <option key={country.key} value={country.value.name}>{country.value.name} </option>
-                                        ))
-                                    }
-                                </select>
-                            </form>
+                            <Email template="template_123zbf9" serviceID="service_9xd790e">
+                                <div className="mt-5 d-flex">
+                                    <select className="custom-select" name='value'>
+                                        <option >Choose your country</option>
+                                        {
+                                            nation.map(country => (
+                                                <option key={country.key} value={country.value.name}>{country.value.name} </option>
+                                            ))
+                                        }
+                                    </select>
+                                    <input type="hidden" name="message" value="New customer submitted his/her country name" />
+                                    <button className="btn btn-primary" type='submit'>Submit</button>
+                                </div>
+
+                            </Email>
                         </div>
                         <div className="col-md-6"></div>
 
