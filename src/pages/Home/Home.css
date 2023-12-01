@@ -1,0 +1,280 @@
+/* Home */
+#home {
+    position: relative;
+}
+
+.swiper {
+    z-index: -1;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+}
+
+#home .hero-bg1 {
+    background:url("../../images/home/hero_bg.png") center center/cover no-repeat;
+    background-position-x: left;
+}
+
+.hero-bg2 {
+    background-color: #1b1b1b;
+}
+
+#home .hero-context {
+    max-width: 391px;
+}
+
+.animation-coin {
+    object-fit: cover;
+}
+
+.buy-section {
+    max-width: 500px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px 30px;
+}
+
+.buy-section p {
+    font-size: 14px;
+}
+
+.count-down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.CARD {
+    margin-top: 1.5rem;
+    border-radius: 20px;
+    border: solid 1px #28a745;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+
+.inner-card {
+    position: absolute;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    height: 100%;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.gateway {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+
+}
+
+.method {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px transparent;
+    transition: 0.4s;
+    cursor: pointer;
+    padding: 5px;
+
+}
+
+.method-btn {
+    cursor: pointer;
+    z-index: 100;
+}
+
+.method:hover {
+    border-color: #fff;
+}
+
+.method-img {
+    max-width: 20px;
+    max-height: 20px;
+    margin-right: 0.6rem;
+    justify-self: flex-start;
+    display: inline-block;
+}
+
+.buy-form {
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+}
+
+
+
+.form-group .input {
+    width: 100%;
+    border: solid 1px #fff;
+    align-items: center;
+}
+
+.input input {
+background-color: transparent;
+ border: none;
+ outline: none;
+ color: #fff;
+ padding-left: 10px;
+ width: 100%;
+}
+
+.buy-btn {
+    border-radius: 20px !important;
+}
+
+/* Welcome Section */
+
+
+.action-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+}
+
+.text {
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* Marquee */
+.marquee {
+    background-color: #000b29 !important;
+    color: #fff;
+    padding: 2px 0px;
+}
+
+/* Opportunity Section */
+#opportunity {
+    background: url("../../images/home/opportunity.png") center center/cover no-repeat;
+    min-height: 480px;
+}
+
+
+/* Acesss */
+.access-gallery {
+    margin-top: 132px;
+}
+
+.gallery {
+    border: solid 1px #102252;
+}
+
+.access-gallery h6 {
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.access-gallery a {
+    color: #1b1b1b !important;
+    text-decoration: none !important;
+}
+
+/* News Letter */
+#newsletter {
+    background: linear-gradient(90deg, #102252 32.81%, rgba(16, 34, 82, 0.00) 100%);
+    min-height: 333px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+#supelle.pb-0 {
+    padding-bottom: 0 !important;
+}
+/* Watch Video */
+#watch-video {
+    min-height: 685px;
+    background: url("../../images/home/video.png") center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px !important;
+}
+
+.video-content {
+    max-width: 400px;
+}
+
+.video {
+    max-width: 560px;
+    height: 315px;
+    background-color: #2A3F7C;
+}
+
+
+@media (max-width: 768px) {
+
+    .hero-bg1 {
+        background-position-x: 30%;  
+    }
+
+    .swiper2{
+        display: block !important;
+    } 
+    .buying-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-head {
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .box-para {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .countdown {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 385px;
+    }
+    .days {
+        font-weight: bold;
+        font-size: 22px;
+    }
+    .para-2 {
+        width: 300px;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+    .box-amount {
+        width: 500px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .input-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 17px;
+    }
+    .bottom-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .text {
+        font-weight: 500;
+        font-size: 20px;
+    }
+}

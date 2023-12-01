@@ -1,0 +1,167 @@
+#roadmap .hero {
+  background: url("../../images/roadmap/roadmap-hero.jpg") center center/cover
+    no-repeat;
+}
+
+.roadmap-hero {
+  color: #fff;
+}
+
+#roadmap .title {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.presale-btn {
+  font-size: 1.3rem !important;
+  font-weight: 500 !important;
+  padding-inline: 20px !important;
+}
+
+/* Roadmap */
+.roadmap {
+  margin-bottom: 2rem;
+}
+
+.roadmap-content {
+    position: relative;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.roadmap-content ul {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.roadmap-content.left {
+  border-right: solid 3px #102252;
+  margin-left: auto;
+  transform: translateX(2.7px);
+  text-align: right;
+  padding-right: 100px
+}
+
+
+.roadmap-content.right {
+  border-left: solid 3px #102252;
+  padding-left: 100px;
+}
+
+.line-circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+}
+
+.line-inner-cicle {
+    background-color: #102252;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line-inner-cicle div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+
+}
+
+.roadmap-content.left .line-circle {
+    right: -40px;
+}
+
+.roadmap-content.right .line-circle {
+    left: -40px;
+}
+
+.border-none {
+    border: none !important;
+}
+
+
+
+/* Presale */
+
+#presale {
+  background: url("../../images/roadmap/coin-bg.jpg") center center/cover
+    no-repeat;
+  text-align: center;
+}
+
+.presale-container {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+
+.presale-image {
+  max-width: 200px;
+  height: 200px;
+  background-color: #102252;
+  border-radius: 50%;
+  padding: 10px;
+  margin-inline: auto;
+  margin-bottom: 5rem;
+}
+
+.img-slider {
+  max-width: 1200px;
+  margin-inline: auto !important;
+}
+
+.total-pric {
+  margin-bottom: 6rem;
+}
+
+.tech {
+  margin-top: 130px;
+  overflow: hidden;
+}
+
+.tech-side {
+  max-width: 500px;
+  margin: auto;
+  padding: 100px 0;
+}
+
+.tech .icon {
+  min-width: 15px;
+  height: 15px;
+}
+
+@media (max-width: 768px) {
+  .roadmap-content.left {
+    border: none;
+    border-left: solid 3px #102252;
+    margin-left: 0;
+    transform: translateX(0px);
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 0px;
+  }
+
+  .roadmap-content.left .line-circle {
+    left: -40px;
+}
+
+.roadmap-content.right {
+  padding-left: 50px;
+}
+
+ 
+}

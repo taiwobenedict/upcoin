@@ -1,0 +1,9 @@
+#marketplace .hero {
+    background: url("../../images/marketplace/themarket.jpeg") center center/cover no-repeat;
+    color: #fff;
+}
+
+.table {
+    font-size: 12.8px;
+    color: #1b1b1b !important;
+}

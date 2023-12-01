@@ -1,0 +1,130 @@
+/* Videos */
+
+.coin {
+    width: 45px;
+    height: 45px;
+}
+
+.search {
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    color: #333;
+    min-width: 300px;
+    width: 100%;
+    height: 40px;
+    padding-inline: 15px;
+    border-radius: 30px;
+}
+
+.search-icon {
+    font-size: 1.3rem;
+    margin-right: 0.8rem;
+}
+
+.search-videos {
+    border: none;
+    outline: none;
+}
+
+.search-videos:focus {
+    border: none;
+}
+
+.user-support {
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #1b1b1b;
+    padding: 2px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-faqs {
+    min-height: 300px;
+}
+
+#faqs .search {
+    max-width: 600px;
+}
+
+.position-sticky {
+   position: sticky;
+   overflow-y: auto;
+   top: 50px;
+   height: 80vh;
+}
+/* Scroll Bar styling */
+.position-sticky::-webkit-scrollbar {
+  
+    width: 10px;
+    margin-left: 10px;
+  }
+  
+  .position-sticky::-ms-scrollbar {
+    
+    width: 10px;
+    margin-left: 10px;
+  }
+  
+  .position-sticky::-moz-scrollbar {
+    
+    width: 10px;
+    margin-left: 10px;
+  }
+  
+  .position-sticky::-moz-scrollbar-track {
+    
+    background-color: #cccc;
+    border-radius: 10px;
+  }
+  
+  .position-sticky::-webkit-scrollbar-track {
+    
+    background-color: #cccc;
+    border-radius: 10px;
+  }
+  
+  .position-sticky::-moz-scrollbar-track {
+    
+    background-color: #cccc;
+    border-radius: 10px;
+  }
+  
+  .position-sticky::-webkit-scrollbar-thumb {
+    
+    background-color: #2A3F7C;
+    border-radius: 10px;
+  }
+  
+  .position-sticky::-moz-scrollbar-thumb {
+    
+    background-color: #2A3F7C;
+    border-radius: 10px;
+  }
+  
+  .position-sticky::-ms-scrollbar-thumb {
+    
+    background-color: #2A3F7C;
+    border-radius: 10px;
+  }
+
+.faqs-headings {
+    height: 400px;
+}
+
+.faq-hero {
+  background: url("../../../images/support/q_and_a.jpeg") center center/cover no-repeat;
+  
+}
+
+.support-footer {
+    padding: 20px 0 60px 0;
+    border-top: solid 1px #fff;
+}

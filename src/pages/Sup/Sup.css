@@ -1,0 +1,35 @@
+#sup .hero {
+    background: url("../../images/sup/sup-hero.jpeg") center center/cover no-repeat
+}
+
+
+
+
+#revolution {
+    background: url('../../images/sup/revolution-bg.jpg') center center/cover no-repeat;
+    color: #fff;
+    position: relative;
+}
+
+
+.membership-image {
+    background: url('../../images/sup/membership.jpg') center center/cover no-repeat;
+}
+
+
+.member-padding {
+    padding-block: 100px;
+}
+
+.sup-image {
+    /* border-radius: 50px; */
+    overflow: hidden;
+    /* max-width: 450px; */
+    
+}
+
+
+
+.sub-context {
+    max-width: 700px;
+}

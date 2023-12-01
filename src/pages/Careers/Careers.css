@@ -1,0 +1,44 @@
+.career-hero {
+    min-height: 60vh;
+    height: 100%;
+}
+
+.career-hero-content {
+    display: flex;
+    align-items: flex-end;
+    height: 60vh;
+    padding-bottom: 10px;
+}
+
+
+
+
+.sm-btn {
+    padding: 10px;
+    border-radius: 15px;
+    border: solid 1px #102252;
+    cursor: pointer;
+    font-size: 12px;
+    width: 45px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.sm-btn:hover {
+    background-color: #102252;
+    color: #fff;
+}
+
+.apply-btn {
+    width: 110px;
+    border-radius: 20px !important;
+
+}
+
+.support-form {
+    max-width: 700px;
+    padding: 60px;
+}
