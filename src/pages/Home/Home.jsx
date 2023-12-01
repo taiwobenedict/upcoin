@@ -12,7 +12,7 @@ import supelle from "../../images/home/supelle.png"
 import animation_coin from "../../images/home/animation_coin.mp4"
 import { Link } from 'react-router-dom'
 import Whitepaper from '../Whitepaper/Whitepaper';
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 import usdt from "../../images/home/usdt.png"
 import greenDollar from '../../images/home/greenDollar.png'
@@ -20,7 +20,6 @@ import eth from '../../images/home/eth.png'
 import card from '../../images/home/card.png'
 import iconBlue from "../../images/home/iconBlue.png"
 import matic from '../../images/home/matic.png'
-
 
 import { Button, Hero, Section } from '../../Utilities'
 
@@ -41,57 +40,6 @@ function Home() {
         sup: 0,
         other: 0
     })
-    const targetDateTime = "2023-11-31"
-
-    const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
-    // eslint-disable-next-line 
-    const [progress, setProgress] = useState(calculateProgress());
-
-
-    function calculateTimeRemaining() {
-        const now = new Date();
-        const targetDate = new Date(targetDateTime);
-        const difference = targetDate - now;
-
-        return Math.max(0, difference);
-    }
-
-    function calculateProgress() {
-        const totalDuration = new Date(targetDateTime) - new Date();
-        const remainingDuration = calculateTimeRemaining();
-        const percentage = ((totalDuration - remainingDuration) / totalDuration) * 100;
-
-        return Math.max(0, Math.min(100, percentage)).toFixed(2);
-
-    }
-
-
-
-    useEffect(() => {
-        const timerId = setInterval(() => {
-            const remainingTime = calculateTimeRemaining();
-
-            if (remainingTime <= 0) {
-                clearInterval(timerId);
-            } else {
-                setTimeRemaining(remainingTime);
-                setProgress(calculateProgress());
-            }
-        }, 1000);
-
-        return () => clearInterval(timerId);
-        // eslint-disable-next-line 
-    }, []);
-
-    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-
-
-
-
 
 
     const handlePayment = (e) => {
@@ -105,6 +53,55 @@ function Home() {
     const handleMethod = (e) => {
         setMethod(e.target.id)
     }
+
+
+
+    const targetDate = useMemo(() => new Date('2023-12-01T20:20:59'), []);
+
+    const [countdown, setCountdown] = useState({
+        days: '00',
+        hours: '00',
+        minutes: '00',
+        seconds: '00',
+        percentage: 0,
+    });
+
+    useEffect(() => {
+        const startTime = Date.now();
+        const totalTime = targetDate - startTime;
+
+        const updateCountdown = () => {
+            const currentTime = Date.now();
+            const elapsedTime = currentTime - startTime;
+
+            let percentage = (elapsedTime / totalTime) * 100;
+            percentage = Math.min(100, percentage);
+
+            const remainingTime = Math.max(0, totalTime - elapsedTime);
+
+            const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24))
+                .toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
+            const hours = Math.floor((remainingTime / (1000 * 60 * 60)) % 24)
+                .toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
+            const minutes = Math.floor((remainingTime / (1000 * 60)) % 60)
+                .toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
+            const seconds = Math.floor((remainingTime / 1000) % 60)
+                .toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
+
+            setCountdown({ days, hours, minutes, seconds, percentage });
+        };
+
+        const timerLoop = setInterval(updateCountdown, 1000);
+
+        return () => clearInterval(timerLoop);
+    }, [targetDate]);
+
+    const { days, hours, minutes, seconds, percentage } = countdown
+
+
+
+
+
 
     return (
         <>
@@ -184,7 +181,7 @@ function Home() {
                                 </div>
 
                                 <div className="CARD bg-success">
-                                    <div className="inner-card" style={{ width: `${0}%` }}></div>
+                                    <div className="inner-card" style={{ width: `${percentage}%` }}></div>
                                     <p className="m-0 CARD-text">Until Price Increase to 1 SUP = 0.0055 CARD</p>
                                 </div>
 
@@ -355,11 +352,11 @@ function Home() {
                     <p>Sign up to our newsletter and be first to hear about Supcoin news</p>
 
                     <Email template="template_123zbf9" serviceID="service_9xd790e">
-                    <div className="d-flex justify-content-center align-items-center">
-                        <input type="hidden" name="message" value="You have a new subscriber!"/>
-                        <input type="email" name='value' className="form-control w-75" />
-                        <button className="btn btn-primary" type='submit'>Subscribe</button>
-                    </div>
+                        <div className="d-flex justify-content-center align-items-center">
+                            <input type="hidden" name="message" value="You have a new subscriber!" />
+                            <input type="email" name='value' className="form-control w-75" />
+                            <button className="btn btn-primary" type='submit'>Subscribe</button>
+                        </div>
                     </Email>
                     <p className='mt-3'>By clicking Sign Up you're confirming that you agree with our Terms & Conditions</p>
                 </div>

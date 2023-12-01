@@ -40,7 +40,6 @@ function App() {
     const location = useLocation()
 
     useEffect(() => {
-
         const handleScroll = () => {
             const scrollY = window.scrollY;
 
@@ -109,6 +108,7 @@ function App() {
                     <Route path="/whitelist" element={<Whitelist />} />
                     <Route path="/careers" element={<Careers />} exact />
                     <Route path="/learn" element={<Learn />} />
+                    <Route path="/updates" element={<Updates />} />
                     <Route path="/updates" element={<Updates />} />
                 </Routes>
             </div>
