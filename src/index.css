@@ -185,6 +185,12 @@ a:hover {
   color: #333;
 }
 
-.VIpgJd-ZVi9od-ORHb-OEVmcd  {
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+.jsx-437803386  {
   display: none;
+}
+
+div.eapps-widget {
+  position: fixed !important;
+  bottom: 0;
 }
