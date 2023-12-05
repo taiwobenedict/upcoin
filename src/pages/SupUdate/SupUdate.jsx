@@ -15,6 +15,7 @@ function Updates() {
     const { hash } = useLocation();
 
     useEffect(() => {
+        document.title = "SUP updates"
         if (hash) {
             const element = document.querySelector(hash);
             if (element) {

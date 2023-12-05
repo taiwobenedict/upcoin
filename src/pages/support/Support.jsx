@@ -10,6 +10,7 @@ function Support() {
     const { hash } = useLocation();
 
     useEffect(() => {
+        document.title = "Support Center"
         if (hash) {
             const element = document.querySelector(hash);
             if (element) {

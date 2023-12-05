@@ -15,6 +15,7 @@ function Legal() {
     const { hash } = useLocation();
 
     useEffect(() => {
+        document.title = "SUP Legals"
         if (hash) {
             const element = document.querySelector(hash);
             if (element) {

@@ -4,8 +4,13 @@ import { Hero } from '../../Utilities'
 
 import "./NewToCrypto.css"
 import Email from '../../components/Email'
+import { useEffect } from 'react'
 
 function NewToCrypto() {
+    useEffect(()=> {
+        document.title = "GAIN ACCESS TO OUR EARLY BIRD PRESALE! REGISTER BELOW AND WE'LL GUIDE YOU"
+    },[])
+    
     const [formData, setFormData] = useState({
         first_name: "",
         last_name: "",

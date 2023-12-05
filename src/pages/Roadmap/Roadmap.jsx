@@ -18,9 +18,13 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { useEffect } from 'react';
 
 
 function Roadmap() {
+    useEffect(()=> {
+        document.title = "Supcoin Token | Bringing the Sup Token To Life"
+    },[])
     return (
         <>
 

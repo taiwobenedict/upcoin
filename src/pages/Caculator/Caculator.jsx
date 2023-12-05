@@ -8,6 +8,9 @@ import { currencies, cryptos } from '../../store'
 import "./Caculator.css"
 
 function Caculator() {
+    useEffect(()=> {
+        document.title = "Cryptocurrency Calculator"
+    },[])
 
 
     return (

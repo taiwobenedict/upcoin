@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Sup.css"
 import endless from "../../images/sup/endless.jpg"
 import backdoor from "../../images/sup/backdoor.png"
@@ -10,6 +10,9 @@ import { Hero, Section } from '../../Utilities'
 import { Link } from 'react-router-dom'
 
 function Sup() {
+    useEffect(()=> {
+        document.title = "Wealth of Opportunities and Your Key to a Successful Future Endless"
+    },[])
     return (
         <div id='sup'>
             <Hero container={750} className="container" height={80}>

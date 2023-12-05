@@ -67,6 +67,7 @@ function Home() {
     });
 
     useEffect(() => {
+        document.title = "Supcoin | EMBRACE AND EMBARK ON A PATH TOWARDS A PROSPEROUS OPPORTUNITY."
         const startTime = Date.now();
         const totalTime = targetDate - startTime;
 

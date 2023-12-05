@@ -31,6 +31,10 @@ function Careers() {
 
     }
 
+    useEffect(()=> {
+        document.title = "SUP Careers | Join the SUP team around the world"
+    },[])
+
     const handleCareer = (career) => {
         setCareerDetails(career)
         setBg(career.image)

@@ -1,4 +1,4 @@
-import { useContext} from 'react'
+import { useContext, useEffect } from 'react'
 import krithen from "../../images/about/krithen.jpeg"
 import tech from "../../images/about/tech.jpeg"
 import robot from "../../images/about/robot.jpeg"
@@ -12,6 +12,10 @@ import { teamMembers } from '../../store'
 import "./About.css"
 
 function About() {
+
+    useEffect(() => {
+        document.title = "About Us | We bring communities together and empower them through financial innovation"
+    }, [])
 
     const { handleModal, setModal } = useContext(UIContext)
   

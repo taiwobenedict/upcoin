@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import "./Learn.css"
 import { Hero, Section } from '../../Utilities'
@@ -22,6 +22,9 @@ import { Link } from 'react-router-dom'
 
 
 function Learn() {
+    useEffect(()=> {
+        document.title = "Digital Currency | Global reach, fast, secure, and borderless transctions"
+    },[])
     return (
         <div id='learn'>
             <Hero height={75}>

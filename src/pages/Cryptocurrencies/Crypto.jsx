@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Button, Hero, Section } from '../../Utilities'
 import { FaArrowUp } from 'react-icons/fa'
 import { countries } from 'countries-list'
@@ -10,6 +10,9 @@ import { Link } from 'react-router-dom'
 import Email from '../../components/Email'
 
 function Crypto() {
+    useEffect(()=> {
+        document.title = "Supelle: Your Time Is Now!"
+    },[])
     const nation = Object.keys(countries).map(key => ({ key, value: countries[key] }));
     return (
         <div id='crypto'>

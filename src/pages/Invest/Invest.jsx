@@ -50,6 +50,7 @@ function Invest() {
     const [scrollY, setScrollY] = useState(0);
 
     useEffect(() => {
+        document.title = "Pioneering The Future With Us"
         const handleScroll = () => {
             setScrollY(window.scrollY);
         };

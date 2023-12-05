@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Button, Hero, Section } from '../../Utilities'
 import { Link, useParams, useResolvedPath } from 'react-router-dom'
 import {posts} from "../../store"
@@ -11,7 +11,10 @@ function Blog() {
     const { pathname } = useResolvedPath()
     const path = pathname.search('post')
 
-
+    
+    useEffect(()=> {
+        document.title = "Blog | Here, you'll find a variety of interesting articles related to our products and services."
+    },[])
 
 
     return (

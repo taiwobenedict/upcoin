@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Hero, Section } from "../../Utilities"
 import goldcoin from "../../images/whitelist/goldcoin.png"
 import mission from "../../images/whitelist/mission.jpg"
@@ -8,10 +8,9 @@ import { useState } from 'react'
 import Email from '../../components/Email'
 
 function Whitelist() {
-    // const [fund, setFound] = useState(false)
-    // const [contribution, setContribution] = useState(false)
-    // const [media, setMedia] = useState(false)
-    // const [agree, setAgreemt] = useState(false)
+    useEffect(()=> {
+        document.title = "IS THE FUTURE OF GENERATIONAL WEALTH"
+    }, [])
 
 
     const [formData, setFormData] = useState({

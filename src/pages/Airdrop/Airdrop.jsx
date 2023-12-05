@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Hero, Section } from "../../Utilities"
 
 
 import "./Airdrop.css"
 function Airdrop() {
+  useEffect(()=> {
+    document.title = "Airdrop | Available tokkens => 11,260,00 tokens "
+},[])
   return (
     <div id='airdrop'>
       <Hero className="container" height={100} container={1000}>

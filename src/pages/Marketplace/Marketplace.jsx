@@ -6,6 +6,7 @@ import './Marketplace.css'
 function Marketplace() {
     const trading = useRef()
     useEffect(() => {
+        document.title = "OUr Markets"
         const fetchData = async () => {
             const script = document.createElement('script');
             script.type = 'text/javascript';
