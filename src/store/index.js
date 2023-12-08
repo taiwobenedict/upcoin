@@ -7,6 +7,7 @@ import OlesPakliuk from "../images/about/OlesPakliuk.png"
 import TANYATREMEL from "../images/about/TANYATREMEL.jpg"
 import TylerGidseg from "../images/about/TylerGidseg.png"
 import board from "../images/about/board.jpg"
+import LamotheMildort from "../images/about/LamotheMildort.jpg"
 
 
 // Post Images
@@ -113,6 +114,27 @@ export const teamMembers = [
     about: `Tyler Gidseg is an experienced front-end web developer and graphic designer. Driven by his passion for design, he takes pride in providing the best tailored, out-of-the-box designs to bring his own unique thumbprint to any project. Tyler got his start in creating websites using WordPress. Under Tyler’s umbrella of skills, he has learned how to best optimize websites based on best practices like SEO, Mobile responsiveness, and Domain setup. Tyler has also worked with the Walt Disney Company with Disney 2-D sketch artists, where he first discovered his innate artistic talent. It is Tyler’s hope and ambition to create the best work he can encapsulate the vision for his clients.
         `
   },
+  {
+    image: LamotheMildort,
+    name: "Lamothe Mildort",
+    position: "Senior Manager of Operations and Organizational Development",
+    about: `Lamothe Mildort, a trailblazer in the ever-evolving landscape of technology, is a dynamic and results-oriented leader with a career spanning over a  decade. Mildort has established himself as a visionary leader, driving innovation and excellence in the dynamic field of technology. He consistently demonstrated his operational excellence, organizational development, and strategic leadership prowess.
+    Early Career and Rise to Leadership:
+    Lamothe's career commenced at a boutique consulting firm, where her analytical skills and natural leadership abilities quickly propelled him into management roles. Recognized for his ability to optimize processes and foster a positive workplace culture, he became a trusted advisor to both executives and team members.
+    In 2012, Lamothe transitioned to a multinational corporation, assuming the role of Operations Manager. His strategic mindset and innovative problem-solving approach led to significant efficiency improvements, earning his successive promotions within the organization.
+    Strategic Leadership at Wefreelancer Global Tech, Inc..:
+    As the Senior Manager of Operations and Organizational Development at Wefreelancer Global Tech, Inc.., Lamothe plays a pivotal role in driving the company's operational strategy and nurturing a culture of continuous improvement. He oversees day-to-day operations, implements organizational development initiatives, and ensures seamless collaboration across departments.
+    Under Lamothe's leadership, Wefreelancer Global Tech, Inc.. has experienced a notable increase in productivity, with a 20% reduction in operational costs due to streamlined processes and the implementation of cutting-edge technologies. His strategic vision has optimized internal functions and positioned the company as an industry leader in operational efficiency.
+    Team Building and Employee Engagement:
+    Mildort is passionate about fostering a positive and inclusive work environment. He has cultivated a culture where employees feel empowered to contribute their best work through targeted team-building initiatives and mentorship programs. His emphasis on professional development has resulted in high employee satisfaction and retention rates.
+    Industry Recognition and Awards:
+    Lamother's contributions to the field have been acknowledged with the Operational Excellence Award by the Association of Operations Professionals. This prestigious recognition reflects his commitment to setting and achieving high operational standards, thereby enhancing the overall success of Wefreelancr Global Tech, Inc.
+    Thought Leadership and Community Involvement:
+    Beyond his managerial responsibilities, Lamothe is an advocate for thought leadership in organizational development. 
+    He is a sought-after speaker at technology industry conferences, sharing insights on effective leadership, employee engagement, and the future of work. Committed to community service, he also volunteers with organizations focused on professional development and mentorship.
+    Lamothe Mildort's journey as the Senior Manager of Operations and Organizational Development is characterized by his unwavering dedication to excellence, strategic foresight, and a passion for cultivating environments where both individuals and organizations thrive in the Advanced Technologies Division is a testament to her unwavering commitment. His influence and impact extend beyond the boardroom, shaping the future of operational management and employee development in today's dynamic business landscape.
+    `
+  },
 ]
 
 
@@ -173,6 +195,10 @@ export const videos = [
   {
     title: "Can Lighting Strike Twice | Supcoin | Supellecoin",
     src: "https://www.youtube.com/embed/YLE6_GCC7zw"
+  },
+  {
+    title: "The Insiders Uncovering the Dark Secrets of Why They Succeed While We Struggle Supcoin",
+    src: "https://www.youtube.com/embed/pl1yLZ00sN0"
   },
 ]
 
