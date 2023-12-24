@@ -251,7 +251,7 @@ function Home() {
             <Section name={"welcome"} mt={50} className="container" pd="20px 0 100px 0">
                 <div className="text-center col-sm-8 mx-auto" data-aos="zoom-in">
                     <h1 className="heading-m pri-color">Welcome to Supcoin</h1>
-                    <h5 className='pri-color'>SUPCON IS THE FUTURE OF GENE-RATONAL WEALTH</h5>
+                    <h5 className='pri-color'>SUPCON IS THE FUTURE OF GENERATONAL WEALTH</h5>
                     <h3 className='mt-5 heading-sm'>What is a Crypto Presale?</h3>
                     <p className=''>A crypto presale grants a unique opportunity to purchase ahead of others and unlock immense profits. Our presale serves as your exclusive gateway to discounted digital assets, paving the way for million-dollar returns!</p>
                     <div className="action-btns mx-auto mt-4">
@@ -395,7 +395,7 @@ function Home() {
                     </div>
                     <div className="col-md-5 my-4">
                         <div className="video">
-                            <iframe className='w-100 h-100' src="https://www.youtube.com/embed/wFIjt8Gn2B8?si=HqSgLtkYU-OOvSrT" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                            <iframe className='w-100 h-100' src="https://www.youtube.com/embed/YLE6_GCC7zw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
                         </div>
                     </div>
