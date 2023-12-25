@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react'
+import { useContext} from 'react'
 import krithen from "../../images/about/krithen.jpeg"
 import tech from "../../images/about/tech.jpeg"
 import robot from "../../images/about/robot.jpeg"
@@ -12,10 +12,6 @@ import { teamMembers } from '../../store'
 import "./About.css"
 
 function About() {
-
-    useEffect(() => {
-        document.title = "About Us | We bring communities together and empower them through financial innovation"
-    }, [])
 
     const { handleModal, setModal } = useContext(UIContext)
   
@@ -177,7 +173,7 @@ function About() {
                         <div className="about-team">
                             <h3 className="heading-sm bold">Meet the industry leaders behind Supcoin</h3>
                             <p>An experienced and dedicated team of business, finance, and technology veterans with the shared vision of redefining the world of regulated security tokens and crypto trading.</p>
-                            <Link to="/support/#contact" className='mt-4'><Button type="block" color={"pri"}>Contact Us <FaLink /></Button></Link>
+                            <Link to="/contact" className='mt-4'><Button type="block" color={"pri"}>Contact Us <FaLink /></Button></Link>
 
                         </div>
                     </div>
@@ -241,7 +237,7 @@ function About() {
                 <div className='text-center text-light py-5'>
                     <h1 className="">Work with us to design a new digital economy</h1>
                     <p className=" mt-4">Explore the career opportunities at one of our SUP offices around the world</p>
-                   <Link to="/careers"> <Button type={"inline"} color={'light'}>Go to open positions</Button></Link>
+                    <Button type={"inline"} color={'light'}>Go to open positions</Button>
 
                 </div>
             </Section>

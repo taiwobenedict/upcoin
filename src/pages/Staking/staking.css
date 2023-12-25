@@ -1,0 +1,373 @@
+.gap-20 {
+  gap: 20px
+ }
+  
+.text-16 {
+  font-size: 16px;
+}
+
+.text-17 {
+  font-size: 17px;
+ }
+
+ .text-25 {
+  font-size: 25px;
+ }
+
+ .text-27 {
+  font-size: 27px;
+ }
+
+ .text-28 {
+  font-size: 28px;
+ }
+
+ .text-12 {
+  font-size: 12px;
+ }
+
+ .text-35 {
+  font-size: 35px;
+ }
+
+ .text-22 {
+  font-size: 22px;
+ }
+
+ .gap-2 {
+  gap: 2px
+ }
+
+ .absolute {
+  position: absolute;
+ }
+
+ .top-5 {
+  top: 5px;
+ }
+ 
+ .left-5 {
+  left: 5px;
+ }
+
+ .h-full {
+  height: 100vh;
+ }
+
+ .w-full {
+  width: 100%;
+ }
+
+ .w-200px {
+  width: 200px;
+ }
+
+ .h-59px {
+  height: 59px;
+ }
+
+ .w-22 {
+  width: 22px;
+ }
+
+ .h-22 {
+  height: 22px;
+ }
+
+ .max-w-72 {
+  max-width: 72px;
+ }
+
+.h-160 {
+  height: 160px;
+}
+
+.bg-custom-blue {
+  background-color: rgb(1 159 198);
+}
+
+.bg-custom-green {
+  background-color: rgb(1 198 163);
+}
+
+.bg-custom-yellow {
+  background-color: rgb(250 190 122);
+}
+
+.bg-custom-red {
+  background-color: rgb(198 1 106);
+}
+
+.bg-custom-blue2 {
+  background-color: rgb(36 139 128);
+}
+
+.bg-custom-green2 {
+  background-color: rgb(6 223 168);
+}
+
+.bg-custom-yellow2 {
+  background-color: rgb(255 105 127);
+}
+
+.bg-custom-red2 {
+  background-color: rgb(190 36 118);
+}
+
+.rounded-4 {
+  border-radius: 4px;
+}
+
+.rounded-t-lg {
+  border-radius: 8px;
+}
+
+.w-4 {
+  width: 20px;
+}
+
+.h-4 {
+  height: 20px;
+}
+
+.rounded-3xl {
+  border-radius: 16px;
+}
+
+.text-custom-medium-white {
+  color: #FFF6;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.pt-20 {
+  padding-top: 45px;
+}
+
+.max-w-100 {
+  max-width: 100px;
+}
+
+.bg-transparent {
+  background: transparent;
+}
+.top-5 {
+  top: 15px;
+} 
+.left-5 {
+  left: 15px;
+}
+
+.bg-gradient {
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(53,7,65,0.87718837535014) 35%, rgba(34,69,75,0.8379726890756303) 100%);
+}
+
+.min-h-350 {
+  min-height: 350px;
+}
+
+.border-b-1 {
+  border-bottom: 1px solid white;
+}
+
+.bg-checkbox {
+  background: #3a2758;
+}
+
+.h-40p {
+  height: 50px;
+}
+
+.select-box {
+  outline: none;
+  border-width: 0px;
+  border-bottom: 1px solid transparent;
+}
+
+.input-box {
+  outline: none;
+  border-width: 0px;
+}
+
+.select-box:hover {
+  border-bottom: 1px solid white;
+}
+
+.select-item:hover {
+  background-color: #9065d6;
+}
+
+.px-10 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.pt-10 {
+  padding-top: 40px;
+}
+
+.h-60p {
+  height: 60px;
+}
+
+.text-10 {
+  font-size: 10px;
+}
+
+.max-w-150 {
+  min-width: 100px;
+}
+
+.primary-button {
+  width: 200px;
+  height: 60px;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.border-t-1 {
+  border-top: 1px solid white;
+}
+
+.h-445p {
+  height: 445px;
+}
+
+.min-h-350p {
+  min-height: 0px;
+}
+
+.max-h-330p {
+  max-height: 300px;
+}
+
+.bg-custom-light-white {
+  background-color: #FFFFFF08;
+}
+
+.min-h-175 {
+  min-height: 175px;
+}
+
+.min-h-86 {
+  min-height: 86px;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.bg-custom-heavy-white {
+  background-color: #FFF1
+}
+
+.outline-none {
+  outline: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.min-h-110 {
+  min-height: 110px;
+}
+
+.text-gray-500 {
+  color: #888888; /* Replace #888888 with the desired shade of gray */
+}
+
+.border-l-1 {
+  border-left: 1px solid white;
+}
+
+.border-t-2 {
+  border-top: 2px solid #888888;
+}
+
+.border-r-2 {
+  border-right: 2px solid #888888;
+}
+
+
+.MuiDataGrid-cell:focus, .MuiDataGrid-columnHeader, .MuiDataGrid-cell:focus-within {
+  outline: none !important;
+  }
+  .MuiDataGrid-cell {
+    overflow-x: hidden !important;
+  }
+  
+  .MuiDataGrid-iconSeparator{
+  display: none !important;
+  }
+  
+  .MuiDataGrid-columnHeaderDraggableContainer .MuiDataGrid-menuIcon {
+  display: none !important;
+  }
+
+  
+.MuiDataGrid-footerContainer {
+  border: none !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  }
+
+  .MuiTablePagination-root {
+    color: white !important;
+  }
+
+  .MuiDataGrid-cell, .MuiDataGrid-columnHeader {
+    font-size: 15px;
+  }
+
+  .react-datepicker__input-container>input{
+    font-size: 16px;
+    color: white;
+  }
+
+  .calculator-placeholder::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-size: 16px;
+    font-style: italic;
+  }
+  
+  .react-datepicker__navigation-icon {
+    position: relative;
+    top: 14px!important;
+    font-size: 20px!important;
+    width: 0!important;
+}
+
+.menu-button {
+  position: fixed;
+  top: 45%;
+  left: 0;
+  font-size: 24px;
+  color: #FFFFFF;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu-icon {
+  background: #88888880;
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  padding-right: 5px;
+}

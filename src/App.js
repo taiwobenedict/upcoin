@@ -1,3 +1,4 @@
+import { io } from 'socket.io-client';
 import Home from "./pages/Home/Home";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer"
@@ -27,19 +28,23 @@ import Legal from "./pages/Legal/Legal";
 import Whitelist from "./pages/Whitelist/Whitelist";
 import Careers from "./pages/Careers/Careers";
 import Learn from "./pages/Learn/Learn";
-import Updates from "./pages/SupUdate/SupUdate";
-import Alert from "./components/Alert";
+import Stake from "./pages/Staking/Stake";
+import { StripeResult } from "./pages/StripeResult";
+
+import Claim from "./pages/Staking/Claim";
+import Overview from "./pages/Staking/Overview";
+import CalculatorPage from "./pages/Staking/CalculatorPage";
 
 
-
-
+export const socket = io(`${process.env.REACT_APP_SERVER_SOCKET_URL}`);
 
 function App() {
-    const { setToggle, hideNav, setHideNav, alert } = useContext(UIContext)
+    const { setToggle, hideNav, setHideNav } = useContext(UIContext)
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation()
 
     useEffect(() => {
+
         const handleScroll = () => {
             const scrollY = window.scrollY;
 
@@ -76,11 +81,9 @@ function App() {
         }
     }, [hash, pathname]);
 
-    
 
     return (
         <div className="App">
-            <Alert type={alert.type} message={alert.message} />
             {
                 hideNav && <NavBar isScrolled={isScrolled} />
             }
@@ -108,8 +111,12 @@ function App() {
                     <Route path="/whitelist" element={<Whitelist />} />
                     <Route path="/careers" element={<Careers />} exact />
                     <Route path="/learn" element={<Learn />} />
-                    <Route path="/updates" element={<Updates />} />
-                    <Route path="/updates" element={<Updates />} />
+
+                    <Route path="/overview" element={<Overview />} />
+                    <Route path="/claim" element={<Claim />} />
+                    <Route path="/calculator" element={<CalculatorPage />} />
+                    <Route path="/stake" element={<Stake />} />
+                    <Route path="/stripeResult" element={<StripeResult />} />
                 </Routes>
             </div>
             <Marque />

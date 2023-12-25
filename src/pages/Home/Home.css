@@ -61,6 +61,7 @@
 .inner-card {
     position: absolute;
     left: 0;
+    width: 100%;   width: 30%;
     background-color: rgba(0,0,0,0.7);
     height: 100%;
     border-radius: 20px;
@@ -86,21 +87,14 @@
 
 }
 
-.method-btn {
-    cursor: pointer;
-    z-index: 100;
-}
-
 .method:hover {
     border-color: #fff;
 }
 
 .method-img {
-    max-width: 20px;
-    max-height: 20px;
+    width: 24px;
+    height: 24px;
     margin-right: 0.6rem;
-    justify-self: flex-start;
-    display: inline-block;
 }
 
 .buy-form {

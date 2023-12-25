@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 
 import { Button, Hero, Section } from '../../Utilities'
 import "./Roadmap.css"
@@ -18,13 +17,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { useEffect } from 'react';
 
 
 function Roadmap() {
-    useEffect(()=> {
-        document.title = "Supcoin Token | Bringing the Sup Token To Life"
-    },[])
     return (
         <>
 
@@ -34,7 +29,7 @@ function Roadmap() {
                     <div className="text-pri roadmap-hero" data-aos="fade-up">
                         <h1 className="heading-xl bold" data-aos="fade-up">Supcoin <br /> Token</h1>
                         <p className="text-big bold" data-aos="fade-right">The first cryptocurrency with a global blockchain-powered marketplace to back it up. Supcoin Token is the life force of the Supelle ecosystem, developed to empower our innovative community.</p>
-                      <Link to="/#sale"><Button className="mt-5 presale-btn" type={"block"} color={"light"}>Presale</Button> </Link>
+                        <Button className="mt-5 presale-btn" type={"block"} color={"light"}>Presale</Button>
                     </div>
                 </Hero>
 
@@ -338,21 +333,21 @@ function Roadmap() {
 
                         <div data-aos="zoom-out-up">
                             <h2 className="mt-2 heading-sm">Last Traded Price:</h2>
-                            <h1 className='total-pric heading-md bold'>$0</h1>
+                            <h1 className='total-pric heading-md bold'>$0.38</h1>
                         </div>
                         <div>
                             <div className="d-flex justify-content-between flex-wrap mb-3" data-aos="zoom-out">
                                 <div className="d-flex align-items-center">
                                     <p className="lead mr-3">Current Day's High:</p>
-                                    <h3 className='bold'>$0</h3>
+                                    <h3 className='bold'>$0.35</h3>
                                 </div>
                                 <div className="d-flex align-items-center">
                                     <p className="lead mr-3">Current Day's Low:</p>
-                                    <h3 className='bold'>$0</h3>
+                                    <h3 className='bold'>$0.30</h3>
                                 </div>
                                 <div className="d-flex align-items-center">
                                     <p className="lead mr-3 ">Last 24h Volume:</p>
-                                    <h3 className='bold'>0 SUP</h3>
+                                    <h3 className='bold'>54,177.00 SUP</h3>
                                 </div>
                             </div>
                             <small>* * The last price represents the most recent matched trade as of the time listed above. The price above is delayed and does not necessarily represent the latest match. A matched trade does not mean the trade has settled. The price is subject to change at any time. Please access the Supcoin Securities ATS for the latest bids and offers, and for more current information. See the additional disclosure below for more information. * *</small>

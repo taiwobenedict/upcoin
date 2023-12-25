@@ -1,16 +1,14 @@
-import { useEffect } from 'react'
+import {useEffect} from 'react'
 import { Hero, Button } from "../../Utilities/index"
 import { Link, useLocation } from 'react-router-dom'
 
 import "./Support.css"
-import Email from '../../components/Email';
 
 function Support() {
 
     const { hash } = useLocation();
 
     useEffect(() => {
-        document.title = "Support Center"
         if (hash) {
             const element = document.querySelector(hash);
             if (element) {
@@ -20,7 +18,7 @@ function Support() {
     }, [hash]);
     return (
         <div id='support'>
-            <Hero height={100} centerContent={true} className="container">
+            <Hero height={90} centerContent={true} className="container">
                 <h1 className="heading-lg text-center bold mb-5 text-light support-heading" data-aos="fade-up">Support Center</h1>
                 <div className="d-flex justify-content-center">
                     <Link to="faqs" className="mr-5 support-btn"><Button type={"block"} color={"pri"} className="w-100">FAQs</Button></Link>
@@ -37,7 +35,7 @@ function Support() {
                             <p className='mb-5'>We value your input and are eager to hear from you. Whether you have questions, suggestions, or feedback, we're here to help. Please feel free to reach out to us through any of the following means:
                             </p>
 
-
+                          
                             <h4 className='bold mt-1'>Head Quarter <br /> Wefreelancer Global Tech, Inc.</h4>
                             <p>6000 Park of Commerce Blvd
                                 <br />Suite C
@@ -65,40 +63,38 @@ function Support() {
                 </div>
                 <div className=" col-md-6">
                     <div className="support-form">
-
-                        <Email template="template_vfjqt9c" serviceID="service_wowp9z2">
+                        <form action="">
                             <div className="form-container ">
                                 <div className="form-group">
                                     <label htmlFor="first_name">First Name *</label>
-                                    <input type="text" className="form-control" id='last_name' name='first_name' required />
+                                    <input type="text" className="form-control" id='last_name' required />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="last_name">Last Name</label>
-                                    <input type="text" className="form-control" id='first_name' name='last_name' required />
+                                    <input type="email" className="form-control" id='first_name' required />
 
                                 </div>
 
                                 <div className="form-group">
                                     <label htmlFor="email">Email</label>
-                                    <input type="email" className="form-control" id='email' placeholder='Email' name='email' />
+                                    <input type="email" className="form-control" id='email' placeholder='Email' />
                                 </div>
 
                                 <div className="form-group">
                                     <label htmlFor="budget">Topic </label>
-                                    <input type="text" className='form-control' name='topic' />
+                                    <input type="text" className='form-control' />
                                 </div>
 
 
                                 <div className="form-group">
                                     <label htmlFor="about_yourself">Message</label>
-                                    <textarea name="message" id="" cols="30" className='form-control' rows="10"></textarea>
+                                    <textarea name="" id="" cols="30" className='form-control' rows="10"></textarea>
                                 </div>
 
                             </div>
 
-                            <Button type={"block"} color={"pri"} className=" px-5 d-block mt-auto" method={"submit"}>Submit</Button>
-                        </Email>
-
+                            <Button type={"block"} color={"pri"} className=" px-5 d-block mt-auto">Submit</Button>
+                        </form>
 
                     </div>
                 </div>

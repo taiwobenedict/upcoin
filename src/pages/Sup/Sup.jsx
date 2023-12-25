@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import "./Sup.css"
 import endless from "../../images/sup/endless.jpg"
 import backdoor from "../../images/sup/backdoor.png"
@@ -7,12 +7,7 @@ import revolution from "../../images/sup/revolution.png"
 import { FaChevronRight } from 'react-icons/fa'
 import { Hero, Section } from '../../Utilities'
 
-import { Link } from 'react-router-dom'
-
 function Sup() {
-    useEffect(()=> {
-        document.title = "Wealth of Opportunities and Your Key to a Successful Future Endless"
-    },[])
     return (
         <div id='sup'>
             <Hero container={750} className="container" height={80}>
@@ -58,7 +53,7 @@ function Sup() {
                                 <div className="sub-context">
                                     <h2>Seize the opportunity as an early investor in token offerings.</h2>
                                     <p>Have you ever dreamed of becoming an investor in companies you have faith in? Well, now you have the opportunity to get in at the very beginning! Be the pioneer in acquiring security tokens directly from the issuing company before trading begins.</p>
-                                    <Link to="/"><button className="btn btn-inline-light mt-5">Buy Supelle Tokens</button></Link> 
+                                    <button className="btn btn-inline-light mt-5">Buy Supelle Tokens</button>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +74,7 @@ function Sup() {
                                 <p className=''>Be one of the early birds to own Supcoin (SUP) and increase your wealth tremendously!
                                     Invest in token offerings with a global marketplace you can trust and tap into an international network of opportunities.
                                 </p>
-                               <Link to="/whitelist"><button className="btn btn-inline-pri mt-5">Get In Now!!!</button></Link> 
+                                <button className="btn btn-inline-pri mt-5">Get In Now!!!</button>
                             </div>
                         </div>
                         <div className="col-lg-6 mt-3">

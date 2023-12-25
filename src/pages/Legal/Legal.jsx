@@ -15,7 +15,6 @@ function Legal() {
     const { hash } = useLocation();
 
     useEffect(() => {
-        document.title = "SUP Legals"
         if (hash) {
             const element = document.querySelector(hash);
             if (element) {
@@ -104,7 +103,7 @@ function LegalDetails({ legal, setScreen }) {
                     <ul className="col-md-3 px-0">
                         {
                             legals.map((legal,i) => (
-                                <Link className='nav-link' key={i} onClick={()=> handleLegal(legal)}>{legal.heading}</Link>
+                                <Link className='nav-link' onClick={()=> handleLegal(legal)}>{legal.heading}</Link>
                             ))
                         }
                     </ul>

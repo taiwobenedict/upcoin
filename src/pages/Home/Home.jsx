@@ -7,102 +7,412 @@ import pix1 from "../../images/home/pix1.png"
 import pix2 from "../../images/home/pix2.png"
 import pix3 from "../../images/home/pix3.png"
 import pix4 from "../../images/home/pix4.png"
+import bnb from "../../images/home/bnb.png"
 import subcoin from "../../images/home/subcoin.png"
 import supelle from "../../images/home/supelle.png"
 import animation_coin from "../../images/home/animation_coin.mp4"
 import { Link } from 'react-router-dom'
 import Whitepaper from '../Whitepaper/Whitepaper';
-import { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 import usdt from "../../images/home/usdt.png"
 import greenDollar from '../../images/home/greenDollar.png'
 import eth from '../../images/home/eth.png'
-import card from '../../images/home/card.png'
 import iconBlue from "../../images/home/iconBlue.png"
-import matic from '../../images/home/matic.png'
-
 import { Button, Hero, Section } from '../../Utilities'
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules'
+import { formatTimestampToDateString } from '../../common/methods'
+import {
+    useAccount,
+    useNetwork,
+    useWalletClient,
+    useContractRead,
+    useSwitchNetwork
+} from 'wagmi';
+import { formatUnits, parseUnits, parseEther, formatEther } from "viem";
+import { readContract } from '@wagmi/core'
+import { toast } from "react-toastify";
+import { Backdrop, CircularProgress } from "@mui/material";
+import { useDebounce } from 'use-debounce';
+import TokenABI from "../../chain_interaction/SupCoin.json";
+import PresalePlatformABI from "../../chain_interaction/PresalePlatform.json";
+import { stripeApi } from "../../services/stripe";
+import { bnbApi } from "../../services/bnb";
+import { mainnet, goerli, bsc, bscTestnet } from 'wagmi/chains';
 
 // Import Swiper styles
 import 'swiper/css';
-
 import "./Home.css"
-import Email from '../../components/Email'
+import { useSelector } from 'react-redux'
+import { confirmTransactionReceipt, confirmTransactionReceiptBSC } from '../../chain_interaction/client';
+import { socket } from "../../App";
+
+const buyModes = ["byETH", "byUSDT", "byCard", "byBNB"];
+const definedPresalePrices = [0.45, 0.55, 0.6, 0.75, 0.8];
 
 function Home() {
 
-    const [method, setMethod] = useState("ETH")
-    const [payment, setPayment] = useState({
-        sup: 0,
-        other: 0
+    const { isLoading: isSwitchingLoading, switchNetwork } =
+        useSwitchNetwork()
+
+    const ethPrice = useSelector(state => state.price.ethPrice || 0);
+    const usdtPrice = useSelector(state => state.price.usdtPrice || 0);
+    const bnbPrice = useSelector(state => state.price.bnbPrice || 0);
+
+    const [maxAmountOfPhase, setMaxAmountOfPhase] = useState(0);
+    const [soldAmountOfPhase, setSoldAmountOfPhase] = useState(0);
+    const [startTime, setStartTime] = useState(process.env.REACT_APP_SUPCOIN_PRESALE_START_DATE);
+    const [endTime, setEndTime] = useState(process.env.REACT_APP_SUPCOIN_PRESALE_END_DATE);
+    const [buyMode, setBuyMode] = useState(buyModes[0]);
+    const [countdown, setCountDown] = useState(0);
+    const [inputAmount, setInputAmount] = useState(0);
+    const [outputAmount, setOutputAmount] = useState(0);
+    const [debouncedInputAmount] = useDebounce(inputAmount, 100);
+    const { address, isConnected } = useAccount();
+    const { data: walletClient } = useWalletClient();
+    const { chain } = useNetwork();
+    const [working, setWorking] = useState(false);
+    const [targetDate, setTargetDate] = useState(new Date(process.env.REACT_APP_SUPCOIN_PRESALE_END_DATE * 1000));
+    const [approvingTxHash, setApprovingTxHash] = useState("");
+    const [presaleTxHash, setPresaleTxHash] = useState("");
+    const [bnbTxHash, setBnbTxHash] = useState("");
+    const [presalePriceOfPhase, setPresalePriceOfPhase] = useState(0);
+    const [minPerWalletOfPhase, setMinPerWalletOfPhase] = useState(0);
+    const [maxPerWalletOfPhase, setMaxPerWalletOfPhase] = useState(0);
+    const [paidBnbAmount, setPaidBnbAmount] = useState(0);
+
+    useEffect(() => {
+
+        socket.on("ServerTime", (data) => {
+            // console.log("Sever time >>> ", data);
+        })
+        socket.on("SupCoinPaid", (data) => {
+            console.log("Got SupCoinPaid event >>> ", data);
+            if (data && data.wallet && data.wallet?.toString()?.toLowerCase() === address?.toString()?.toLowerCase()) {
+                toast.success(`Please check your wallet on Goerli network. You've received ${data?.amount} Supcoin.`);
+            }
+        });
+
+    }, []);
+
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            const timeRemaining = getTimeRemaining(targetDate);
+            setCountDown(timeRemaining);
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, [targetDate]);
+
+    const getTimeRemaining = (targetDate) => {
+        const now = new Date();
+        console.log(targetDate, now);
+        const timeDifference = targetDate.getTime() - now.getTime();
+
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        return { days, hours, minutes, seconds };
+    };
+
+    useEffect(() => {
+
+        const supAmount = buyMode === "byETH" ?
+            debouncedInputAmount * ethPrice / parseFloat(presalePriceOfPhase || (definedPresalePrices[0] / 100)) :
+            buyMode === "byUSDT" ?
+                debouncedInputAmount * usdtPrice / parseFloat(presalePriceOfPhase || (definedPresalePrices[0] / 100))
+                :
+                buyMode === "byBNB" ?
+                    debouncedInputAmount * bnbPrice / parseFloat(presalePriceOfPhase || (definedPresalePrices[0] / 100))
+                    :
+                    Math.floor(debouncedInputAmount / parseFloat(presalePriceOfPhase || (definedPresalePrices[0] / 100)));
+
+        if (buyMode === "byCard" && supAmount % 100 > 0) {
+            let q = supAmount / 100;
+            q = Math.ceil(q);
+            q = q * 100;
+            setOutputAmount(q);
+        } else {
+            setOutputAmount(supAmount);
+        }
+    }, [debouncedInputAmount]);
+
+    const { data: currentPhaseIndex } = useContractRead({
+        address: process.env.REACT_APP_PRESALE_PLATFORM_ADDRESS,
+        abi: PresalePlatformABI,
+        functionName: 'activePhase',
+        enabled: true,
+        watch: true,
+        chainId: 5
+    });
+
+    const { data: activePhaseStatus } = useContractRead({
+        address: process.env.REACT_APP_PRESALE_PLATFORM_ADDRESS,
+        abi: PresalePlatformABI,
+        functionName: 'phases',
+        enabled: true,
+        args: [currentPhaseIndex],
+        watch: true,
+        chainId: 5
     })
 
-
-    const handlePayment = (e) => {
-        setPayment(prev => ({
-            ...prev,
-            [e.target.id]: e.target.value
-        }))
-
-    }
-
-    const handleMethod = (e) => {
-        setMethod(e.target.id)
-    }
-
-
-
-    const targetDate = useMemo(() => new Date('2024-01-01T20:59:59'), []);
-
-    const [countdown, setCountdown] = useState({
-        days: '00',
-        hours: '00',
-        minutes: '00',
-        seconds: '00',
-        percentage: 0,
+    const { data: userPaidUSDT } = useContractRead({
+        address: process.env.REACT_APP_PRESALE_PLATFORM_ADDRESS,
+        abi: PresalePlatformABI,
+        functionName: 'getUserPaidUSDT',
+        args: [address, currentPhaseIndex],
+        enabled: true,
+        watch: true,
+        chainId: 5
     });
 
     useEffect(() => {
-        document.title = "Supcoin | EMBRACE AND EMBARK ON A PATH TOWARDS A PROSPEROUS OPPORTUNITY."
-        const startTime = Date.now();
-        const totalTime = targetDate - startTime;
+        if (!activePhaseStatus) return;
+        setMaxAmountOfPhase(formatEther(activePhaseStatus[0]?.toString()));
+        setSoldAmountOfPhase(formatEther(activePhaseStatus[6]?.toString()));
+        setStartTime(activePhaseStatus[4]);
+        setTargetDate(new Date(parseInt(activePhaseStatus[5]) * 1000));
+        setEndTime(activePhaseStatus[5]);
+        console.log("startTIme >>> ", activePhaseStatus[4], " endTIme >>> ", activePhaseStatus[5]);
+        setPresalePriceOfPhase(formatUnits(activePhaseStatus[1]?.toString(), 6));
+        setMaxPerWalletOfPhase(formatUnits(activePhaseStatus[3]?.toString(), 6));
+        setMinPerWalletOfPhase(formatUnits(activePhaseStatus[2]?.toString(), 6));
 
-        const updateCountdown = () => {
-            const currentTime = Date.now();
-            const elapsedTime = currentTime - startTime;
+        console.log("activePhase >>> ", formatEther(activePhaseStatus[0]?.toString()),
+            formatEther(activePhaseStatus[6]?.toString()),
+            activePhaseStatus[4],
+            activePhaseStatus[5],
+            formatUnits(activePhaseStatus[1]?.toString(), 6),
+            Number(parseFloat(formatEther(activePhaseStatus[6]?.toString())) * 100 / parseFloat(formatEther(activePhaseStatus[0]?.toString())))?.toFixed(2) + "%"
+        );
+    }, [activePhaseStatus]);
 
-            let percentage = (elapsedTime / totalTime) * 100;
-            percentage = Math.min(100, percentage);
+    const onClickBuy = async () => {
+        if (isConnected !== true) {
 
-            const remainingTime = Math.max(0, totalTime - elapsedTime);
+            toast.warning("Connect your wallet!");
+            return;
+        }
+        if (outputAmount <= 0) {
+            toast.warning("Invalid amount!");
+            return;
+        }
+        try {
+            if (buyMode === buyModes[0]) {
+                if (chain.id !== 5) {
+                    toast.warning("This platform works on Goerli network for ETH payment. Please change the network of your wallet into Goerli and try again. ");
+                    return;
+                }
+                if (parseFloat(debouncedInputAmount * parseFloat(ethPrice)) > parseFloat(maxPerWalletOfPhase)) {
+                    toast.warn(`In this phrase of presale, maximum is ${Number(parseFloat(ethPrice) / parseFloat(maxPerWalletOfPhase)).toFixed(2)} ETH (${parseInt(maxPerWalletOfPhase)} USDT). Please input valid amount and try again.`)
+                    return;
+                }
+                if (parseFloat(debouncedInputAmount * parseFloat(ethPrice)) < parseFloat(minPerWalletOfPhase)) {
+                    toast.warn(`In this phrase of presale, minimum is ${Number(parseFloat(ethPrice) / parseFloat(minPerWalletOfPhase)).toFixed(2)} ETH (${parseInt(minPerWalletOfPhase)} USDT). Please input valid amount and try again.`)
+                    return;
+                }
+                setWorking(true);
 
-            const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24))
-                .toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
-            const hours = Math.floor((remainingTime / (1000 * 60 * 60)) % 24)
-                .toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
-            const minutes = Math.floor((remainingTime / (1000 * 60)) % 60)
-                .toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
-            const seconds = Math.floor((remainingTime / 1000) % 60)
-                .toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
+                const presaleHash = await walletClient.writeContract({
+                    address: process.env.REACT_APP_PRESALE_PLATFORM_ADDRESS,
+                    abi: PresalePlatformABI,
+                    functionName: 'buyTokensWithETH',
+                    value: parseEther(debouncedInputAmount !== undefined && debouncedInputAmount?.toString()),
 
-            setCountdown({ days, hours, minutes, seconds, percentage });
-        };
+                });
+                setPresaleTxHash(presaleHash);
+            }
+            if (buyMode === buyModes[1]) {
 
-        const timerLoop = setInterval(updateCountdown, 1000);
+                if (chain.id !== 5) {
+                    toast.warning("This platform works on Goerli network for USDT payment. Please change the network of your wallet into Goerli and try again. ");
+                    return;
+                }
+                console.log("debouncedInputAmount  >>> ", debouncedInputAmount);
+                if (parseFloat(debouncedInputAmount) > parseFloat(maxPerWalletOfPhase)) {
+                    toast.warn(`In this phrase of presale, maximum is ${parseInt(maxPerWalletOfPhase)} USDT. Please input valid amount and try again.`)
+                    return;
+                }
+                if (parseFloat(debouncedInputAmount) < parseFloat(minPerWalletOfPhase)) {
+                    toast.warn(`In this phrase of presale, minimum is ${parseInt(minPerWalletOfPhase)} USDT. Please input valid amount and try again.`)
+                    return;
+                }
+                setWorking(true);
+                const allowance = await readContract({
+                    address: process.env.REACT_APP_USDT_ADDRESS,
+                    abi: TokenABI,
+                    functionName: 'allowance',
+                    args: [address, process.env.REACT_APP_PRESALE_PLATFORM_ADDRESS],
 
-        return () => clearInterval(timerLoop);
-    }, [targetDate]);
+                })
+                console.log(allowance, parseFloat(formatUnits(allowance !== undefined && allowance?.toString(), 6)), parseFloat(outputAmount));
+                if (parseFloat(formatUnits(allowance !== undefined && allowance?.toString(), 6)) < parseFloat(outputAmount)) {
 
-    const { days, hours, minutes, seconds, percentage } = countdown
+                    const aproveHash = await walletClient.writeContract({
+                        address: process.env.REACT_APP_USDT_ADDRESS,
+                        abi: TokenABI,
+                        functionName: "approve",
+                        args: [process.env.REACT_APP_PRESALE_PLATFORM_ADDRESS, parseUnits(debouncedInputAmount !== undefined && debouncedInputAmount?.toString(), 6)], wallet: address,
+
+                    });
+                    setApprovingTxHash(aproveHash);
+                }
+
+                const presaleHash = await walletClient.writeContract({
+                    address: process.env.REACT_APP_PRESALE_PLATFORM_ADDRESS,
+                    abi: PresalePlatformABI,
+                    functionName: 'buyTokensWithUSDT',
+                    args: [parseUnits(debouncedInputAmount !== undefined && debouncedInputAmount?.toString(), 6)],
+
+                });
+                setPresaleTxHash(presaleHash);
+            }
+            if (buyMode === buyModes[2]) {
+                if (parseFloat(debouncedInputAmount) > parseFloat(maxPerWalletOfPhase)) {
+                    toast.warn(`In this phrase of presale, maximum is ${parseInt(maxPerWalletOfPhase)} USD. Please input valid amount and try again.`)
+                    return;
+                }
+                if (parseFloat(debouncedInputAmount) < parseFloat(minPerWalletOfPhase)) {
+                    toast.warn(`In this phrase of presale, minimum is ${parseInt(minPerWalletOfPhase)} USD. Please input valid amount and try again.`)
+                    return;
+                }
+                stripeApi.checkout({
+                    phaseIndex: parseInt(currentPhaseIndex),
+                    quantity: outputAmount / 100,
+                    walletAddress: address
+                })
+                    .then(res => {
+                        window.location = res.url?.url;
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    })
+            }
+            if (buyMode === buyModes[3]) {
+                if (chain.id !== bscTestnet?.id) {
+                    toast.warning("This platform works on BSC testnet network for BNB payment. Please change the network of your wallet into BSC testnet and try again. ");
+                    return;
+                }
+                const ManagerAddress = process.env.REACT_APP_CARD_PAY_MANAGER_WALLET;
+                if (parseFloat(debouncedInputAmount * parseFloat(bnbPrice)) > parseFloat(maxPerWalletOfPhase)) {
+                    toast.warn(`In this phrase of presale, maximum is ${Number(parseFloat(ethPrice) / parseFloat(maxPerWalletOfPhase)).toFixed(2)} BNB (${parseInt(maxPerWalletOfPhase)} USDT). Please input valid amount and try again.`)
+                    return;
+                }
+                if (parseFloat(debouncedInputAmount * parseFloat(bnbPrice)) < parseFloat(minPerWalletOfPhase)) {
+                    toast.warn(`In this phrase of presale, minimum is ${Number(parseFloat(bnbPrice) / parseFloat(minPerWalletOfPhase)).toFixed(2)} BNB (${parseInt(minPerWalletOfPhase)} USDT). Please input valid amount and try again.`)
+                    return;
+                }
+
+                setWorking(true);
+                const bnbHash = await walletClient.sendTransaction({
+                    to: ManagerAddress, // Required except during contract publications.
+                    from: address, // must match user's active address.
+                    value: debouncedInputAmount ? parseEther(debouncedInputAmount?.toString()) : undefined
+                });
+                setPaidBnbAmount((debouncedInputAmount));
+                setBnbTxHash(bnbHash);
+
+            }
+        } catch (err) {
+            console.error(err);
+            setWorking(false);
+        }
+    }
+
+    useEffect(() => {
+        ; (async () => {
+            if (bnbTxHash) {
+                setTimeout(async () => {
+                    try {
+                        const receipt = await confirmTransactionReceiptBSC(bnbTxHash, bscTestnet?.id);
+                        console.log(receipt);
+                        setInputAmount(0);
+                        setOutputAmount(0);
 
 
+                        //report bnb payment to backend
+                        bnbApi.reportBnbPay({
+                            transactionHash: bnbTxHash,
+                            bnbAmount: paidBnbAmount,
+                            walletAddress: address
+                        })
+                            .then(res => {
+                                if (res.data?.success) {
+                                    toast.success("Please check your SupCoin balance after about few mins. It may be delayed about 30 mins at max.");
+                                }
+                            })
+                            .catch(err => {
+                                console.error(err);
+                            })
 
+                        setWorking(false);
 
+                        toast.success("You've paid BNB to buy SupCoin");
 
+                        setBnbTxHash(null);
+                        setPaidBnbAmount((0));
+                    } catch (err) {
+                        setWorking(false);
+                        setBnbTxHash(null);
+                        setPaidBnbAmount((0));
+                        console.log(err);
+                    }
+                }, 3000);
+            }
+            if (approvingTxHash) {
+                setTimeout(async () => {
+                    try {
+                        const receipt = await confirmTransactionReceipt(approvingTxHash);
+                        console.log(receipt);
+                        setApprovingTxHash(null);
+                        toast.success("You've approved your USDT to presale contract!");
+                    } catch (err) {
+                        setWorking(false);
+                        setApprovingTxHash(null);
+                        console.log(err);
+                    }
+                }, 3000);
+            }
+            if (presaleTxHash) {
+                setTimeout(async () => {
+                    try {
+                        const receipt = await confirmTransactionReceipt(presaleTxHash);
+                        console.log(receipt);
+                        setInputAmount(0);
+                        setOutputAmount(0);
+                        setWorking(false);
+                        setPresaleTxHash(null);
+                        toast.success("You've successfully bought SUP coins.");
+                    } catch (err) {
+                        setWorking(false);
+                        setPresaleTxHash(null);
+                        console.log(err);
+                    }
+                }, 3000);
+            }
+        })()
+    }, [approvingTxHash, presaleTxHash, bnbTxHash])
+
+    const onChangeInputAmount = (value) => {
+
+        console.log(parseFloat(value));
+        setInputAmount(parseFloat(value));
+    }
+
+    const switchToChain = (targetChainId) => {
+        if (isConnected !== true) {
+            toast.warn("Please connect your wallet and try again.");
+            return;
+        }
+        if (targetChainId !== chain?.id) {
+            switchNetwork(targetChainId);
+        }
+    }
 
     return (
         <>
@@ -149,92 +459,209 @@ function Home() {
                                     <img src={nbcLogo} alt="nbcLogo" className='mr-3 mt-2' />
                                 </div>
                             </div>
-
-
                             <div className="action-btns mt-4 justify-content-start">
                                 <Link onClick={() => Whitepaper()}><Button color={"light"} type={"block"}>WHITEPAPER</Button></Link>
                                 <Link to="/certik_audit"><Button color={"light"} type={"inline"}>CERTIK AUDIT</Button></Link>
                             </div>
                         </div>
-                        <div className="col-md-5 mt-4" id='sale'>
+                        <div className="col-md-5">
 
                             <div className="buy-section text-center text-light ml-md-auto">
                                 <h6 className="bold">SECURE YOUR PURCHASE BEFORE PRICE INCREASE!</h6>
-                                <h6 className="text-primary mt-3 bold">SALE STARTS IN</h6>
+                                <h6 className="text-primary mt-3 bold">SALE {
+                                    new Date().getTime() <= new Date(parseInt(startTime) * 1000).getTime() ?
+                                        "STARTS" :
+                                        new Date().getTime() <= new Date(parseInt(endTime) * 1000).getTime() ?
+                                            "ENDS" : ""
+                                } IN</h6>
 
                                 <div className="count-down d">
                                     <div className="time">
-                                        <h3 className='m-0 bold'>{days}</h3>
-                                        <p className='m-0'>Days</p>
+                                        <h3 className='m-0 bold'>{countdown.days}</h3>
+                                        <p className='m-0'>Days </p>
                                     </div>
                                     <div className="time bold">
-                                        <h3 className='m-0 bold'>{hours}</h3>
+                                        <h3 className='m-0 bold'>{countdown.hours}</h3>
                                         <p className='m-0'>Hours</p>
                                     </div>
                                     <div className="time">
-                                        <h3 className='m-0 bold'>{minutes}</h3>
+                                        <h3 className='m-0 bold'>{countdown.minutes}</h3>
                                         <p className='m-0'>Minutes</p>
                                     </div>
                                     <div className="time">
-                                        <h3 className='m-0 bold'>{seconds}</h3>
+                                        <h3 className='m-0 bold'>{countdown.seconds}</h3>
                                         <p className='m-0'>Seconds</p>
                                     </div>
                                 </div>
 
                                 <div className="CARD bg-success">
-                                    <div className="inner-card" style={{ width: `${percentage}%` }}></div>
-                                    <p className="m-0 CARD-text">Until Price Increase to 1 SUP = 0.0055 CARD</p>
+                                    <div className="inner-card "
+                                        style={{
+                                            width: (parseInt(endTime) - new Date().getTime() / 1000 > 0) && (parseInt(startTime) < new Date().getTime() / 1000) ? Number((new Date().getTime() / 1000 - parseInt(startTime)) * 100 /
+                                                (parseInt(endTime) - parseInt(startTime)))?.toFixed(2) + "%" : "0%"
+                                        }}></div>
+                                    <p className="m-0 CARD-text"
+                                    >Until Price Increase to 1 SUP = {definedPresalePrices[parseInt(currentPhaseIndex) + 1]} USD</p>
                                 </div>
 
-                                <h5 className="mt-3 bold">AMOUNT RAISED:  $0,000,00.00</h5>
-                                <p className="mt-2">1 SUP = 0.0045</p>
+                                <h5 className="mt-3 bold">AMOUNT RAISED:  ${Number(parseFloat(soldAmountOfPhase) * parseFloat(presalePriceOfPhase))?.toFixed(2)}</h5>
+                                <p className="mt-2">1 SUP = {parseFloat(presalePriceOfPhase)} USD</p>
+                                <p style={{ margin: 0, padding: 0 }} >1 ETH = {parseFloat(ethPrice)?.toFixed(4)} USD</p>
+                                <p style={{ margin: 0, padding: 0 }} >1 BNB = {parseFloat(bnbPrice)?.toFixed(4)} USD</p>
 
                                 <div className="gateway">
-                                    <div className="method position-relative">
-                                        <div className="position-absolute w-100 h-100 method-btn" onClick={handleMethod} id='ETH'></div>
-                                        <img src={eth} alt="" className="w-100 method-img" />
+                                    <div className="method"
+                                        style={{
+                                            outline: buyMode === buyModes[0] ? "1px white solid" : "none"
+                                        }}
+                                        onClick={() => {
+                                            setInputAmount(0);
+                                            setOutputAmount(0);
+                                            setBuyMode(buyModes[0]);
+                                            switchToChain(goerli.id);
+
+                                        }}
+                                    >
+                                        <img src={eth} alt="" className="w-100 method-img" style={{ width: "26px", height: "26px" }} />
                                         <p className="m-0 bold">ETH</p>
                                     </div>
-                                    <div className="method position-relative">
-                                        <div className="position-absolute w-100 h-100 method-btn" onClick={handleMethod} id='USDT'></div>
-                                        <img src={usdt} alt="" className="w-100 method-img" />
+                                    <div className="method"
+                                        style={{
+                                            outline: buyMode === buyModes[1] ? "1px white solid" : "none"
+                                        }}
+                                        onClick={() => {
+                                            setInputAmount(0);
+                                            setOutputAmount(0);
+                                            setBuyMode(buyModes[1])
+                                            switchToChain(goerli.id);
+
+                                        }
+                                        }
+
+                                    >
+                                        <img src={usdt} alt="" className="w-100 method-img" style={{ width: "24px", height: "24px" }} />
                                         <p className="m-0 bold">USDT</p>
                                     </div>
-                                    <div className="method position-relative">
-                                        <div className="position-absolute w-100 h-100 method-btn" onClick={handleMethod} id='MATIC'></div>
-                                        <img src={matic} alt="" className="w-100 method-img" />
-                                        <p className="m-0 bold">MATIC</p>
+                                    <div className="method"
+                                        style={{
+                                            outline: buyMode === buyModes[3] ? "1px white solid" : "none"
+                                        }}
+                                        onClick={() => {
+                                            setInputAmount(0);
+                                            setOutputAmount(0);
+                                            setBuyMode(buyModes[3]);
+                                            switchToChain(bscTestnet?.id);
+                                        }
+                                        }
+                                    >
+                                        <img src={bnb} alt="" className="w-100 method-img" style={{ width: "24px", height: "24px" }} />
+                                        <p className="m-0 bold">BNB</p>
                                     </div>
-                                    <div className="method position-relative">
-                                        <div className="position-absolute w-100 h-100 method-btn" onClick={handleMethod} id='CARD'></div>
-                                        <img src={card} alt="" className="w-100 method-img" />
+                                    {/* <div className="method"
+                                        style={{
+                                            outline: buyMode === buyModes[2] ? "1px white solid" : "none"
+                                        }}
+                                        onClick={() => {
+                                            setInputAmount(0);
+                                            setOutputAmount(0);
+                                            setBuyMode(buyModes[2])
+                                        }
+                                        }
+                                    >
+                                        <IoCardOutline className="w-100 method-img" style={{ width: "24px", height: "24px" }} />
                                         <p className="m-0 bold">CARD</p>
-                                    </div>
+                                    </div> */}
                                 </div>
 
-                                <div className="buy-form text-left">
+                                <div className="buy-form text-left"
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "space-between"
+                                    }}
+                                >
                                     <div className="form-group">
-                                        <span>Amount in {method} you pay</span>
+                                        <span>Amount in {
+                                            buyMode === "byETH" && "ETH"
+                                        }
+                                            {
+                                                buyMode === "byUSDT" && "USDT"}
+                                            {
+                                                buyMode === "byCard" && "Card"
+                                            }
+                                            {
+                                                buyMode === "byBNB" && "BNB"
+                                            }
+                                            &nbsp;you pay</span>
                                         <div className="input d-flex">
-                                            <input type="number" id='other' value={payment.other} onChange={handlePayment} />
-                                            <img src={greenDollar} className="method-img" alt="" />
+                                            <input type="number" id='other' value={inputAmount} onChange={(e) => onChangeInputAmount(e.target.value)} />
+                                            {
+                                                buyMode === "byETH" ?
+                                                    <img src={eth} alt="" style={{ width: "20px", height: "20px", marginRight: "4px" }} />
+                                                    :
+                                                    buyMode === "byUSDT" ?
+                                                        <img src={usdt} alt="" style={{ width: "18px", height: "18px", marginRight: "4px" }} />
+                                                        :
+                                                        buyMode === "byBNB" ?
+                                                            <img src={bnb} style={{ width: "18px", height: "18px", marginRight: "4px" }} alt="" />
+                                                            :
+                                                            <img src={greenDollar} style={{ width: "26px", height: "26px", marginRight: "4px" }} alt="" />
+                                            }
                                         </div>
                                     </div>
                                     <div className="form-group">
                                         <span>Amount in SUP you receive</span>
                                         <div className="input d-flex">
-                                            <input type="number" value={payment.sup} id='sup' onChange={handlePayment} />
+                                            <input type="number" value={Number(outputAmount).toFixed(2)} id='sup' disabled />
                                             <img src={iconBlue} className="method-img" alt="" />
                                         </div>
                                     </div>
                                 </div>
 
-                                <button className="btn btn-primary buy-btn btn-block mt-3 mb-2">CONNECT WALLET</button>
-                                <button className="btn btn-primary buy-btn btn-block">Buy with BNB</button>
+                                <button className="btn btn-primary buy-btn btn-block"
+                                    onClick={() => onClickBuy()}
+                                >Buy with&nbsp;
+                                    {
+                                        buyMode === "byETH" && "ETH"
+                                    }
+                                    {
+                                        buyMode === "byUSDT" && "USDT"}
+                                    {
+                                        buyMode === "byCard" && "Card"
+                                    }
+                                    {
+                                        buyMode === "byBNB" && "BNB"
+                                    }
+                                </button>
 
-                                <p className="my-1 mt-2">Presale Ends January 31st</p>
-                                <p className="my-1">SUP DEX Listing February 5th</p>
-                                <p className="my-1">Listing Price 1$SUP = 0.008USDT</p>
+                                <div style={{
+                                    display: "flex",
+                                    flexDirection: "row",
+                                    justifyContent: "space-between",
+                                    fontSize: "14px"
+                                }} >
+                                    <div className="my-1 mt-2">Presale Ends {formatTimestampToDateString(process.env.REACT_APP_SUPCOIN_PRESALE_END_DATE)}</div>
+                                    <div className="my-1 mt-2">You paid: {parseFloat(userPaidUSDT ? formatUnits(userPaidUSDT?.toString(), 6) : '0')?.toFixed(2)} USD</div>
+                                </div>
+
+                                <div style={{
+                                    display: "flex",
+                                    flexDirection: "row",
+                                    justifyContent: "space-between",
+                                    fontSize: "14px"
+                                }} >
+                                    <div className="my-1">SUP DEX Listing {formatTimestampToDateString(process.env.REACT_APP_SUPCOIN_DEX_LISTING_DATE)}</div>
+                                    <div className="my-1 mt-2">Max per wallet: {parseFloat(maxPerWalletOfPhase)} USD</div>
+                                </div>
+
+                                <div style={{
+                                    display: "flex",
+                                    flexDirection: "row",
+                                    justifyContent: "space-between",
+                                    fontSize: "14px"
+                                }} >
+                                    <div className="my-1">Listing Price 1$SUP = {process.env.REACT_APP_SUPCOIN_LISTING_PRICE}USDT</div>
+                                    <div className="my-1">Min per wallet: {parseFloat(minPerWalletOfPhase)} USD</div>
+                                </div>
 
                             </div>
 
@@ -244,19 +671,16 @@ function Home() {
 
             </div>
 
-
-
-
             {/* Welcome Section */}
             <Section name={"welcome"} mt={50} className="container" pd="20px 0 100px 0">
                 <div className="text-center col-sm-8 mx-auto" data-aos="zoom-in">
                     <h1 className="heading-m pri-color">Welcome to Supcoin</h1>
-                    <h5 className='pri-color'>SUPCON IS THE FUTURE OF GENERATONAL WEALTH</h5>
+                    <h5 className='pri-color'>SUPCON IS THE FUTURE OF GENE-RATONAL WEALTH</h5>
                     <h3 className='mt-5 heading-sm'>What is a Crypto Presale?</h3>
                     <p className=''>A crypto presale grants a unique opportunity to purchase ahead of others and unlock immense profits. Our presale serves as your exclusive gateway to discounted digital assets, paving the way for million-dollar returns!</p>
                     <div className="action-btns mx-auto mt-4">
-                        <Link to="/about" ><Button color={"pri"} type={"block"}>Explore Our Project</Button></Link>
-                        <Link to="/whitelist" ><Button color={"pri"} type={"block"}>Seed Sale Whitelist</Button></Link>
+                        <Button color={"pri"} type={"block"}>Explore Our Project</Button>
+                        <Link to="/whitelist" ><Button color={"pri"} type={"block"}>Sale Whitelist</Button></Link>
                     </div>
                 </div>
             </Section>
@@ -351,14 +775,7 @@ function Home() {
                 <div className="col-sm-7 text-center" data-aos="fade-up">
                     <h2 className='heading-md'>OUR NEWSLETTER</h2>
                     <p>Sign up to our newsletter and be first to hear about Supcoin news</p>
-
-                    <Email template="template_123zbf9" serviceID="service_9xd790e">
-                        <div className="d-flex justify-content-center align-items-center">
-                            <input type="hidden" name="message" value="You have a new subscriber!" />
-                            <input type="email" name='value' className="form-control w-75" />
-                            <button className="btn btn-primary" type='submit'>Subscribe</button>
-                        </div>
-                    </Email>
+                    <input type="email" className="form-control w-75 mx-auto" />
                     <p className='mt-3'>By clicking Sign Up you're confirming that you agree with our Terms & Conditions</p>
                 </div>
             </Section>
@@ -395,12 +812,20 @@ function Home() {
                     </div>
                     <div className="col-md-5 my-4">
                         <div className="video">
-                            <iframe className='w-100 h-100' src="https://www.youtube.com/embed/YLE6_GCC7zw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                            <iframe className='w-100 h-100' src="https://www.youtube.com/embed/wFIjt8Gn2B8?si=HqSgLtkYU-OOvSrT" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
                         </div>
                     </div>
                 </div>
             </Section>
+
+
+            <Backdrop
+                sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                open={working || isSwitchingLoading}
+            >
+                <CircularProgress color="inherit" />
+            </Backdrop>
         </>
     )
 }

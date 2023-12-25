@@ -1,0 +1,159 @@
+/* Home */
+#stake {
+    position: relative;
+    background-color: rgb(92, 123, 201);
+}
+#stake * {
+    color: #F8F9FA;
+}
+#stake input {
+    color: white;
+    background: transparent;
+}
+
+#stake .hero-bg1 {
+    background:url("../../images/home/hero_bg.png") center center/cover no-repeat;
+    background-position-x: left;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-bg2 {
+    background-color: #1b1b1b;
+}
+
+.animation-coin {
+    object-fit: cover;
+}
+
+.buy-section {
+    max-width: 500px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px 30px;
+}
+
+.count-down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.inner-card {
+    position: absolute;
+    left: 0;
+    width: 100%;   width: 30%;
+    background-color: rgba(0,0,0,0.7);
+    height: 100%;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.form-group .input {
+    width: 100%;
+    border: solid 1px #fff;
+}
+
+.input input {
+background-color: transparent;
+ border: none;
+ outline: none;
+ color: #fff;
+ padding-left: 10px;
+ width: 100%;
+}
+
+.buy-btn {
+    border-radius: 20px !important;
+}
+
+/* Welcome Section */
+
+
+.action-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+}
+
+.text {
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .hero-bg1 {
+        background-position-x: 30%;  
+    }
+
+    .swiper2{
+        display: block !important;
+    } 
+    .buying-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-head {
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .box-para {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .countdown {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 385px;
+    }
+    .days {
+        font-weight: bold;
+        font-size: 22px;
+    }
+    .para-2 {
+        width: 300px;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+    .box-amount {
+        width: 500px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .input-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 17px;
+    }
+    .bottom-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .text {
+        font-weight: 500;
+        font-size: 20px;
+    }
+}
+
+.pad {
+    background-color: rgba(0,0,0,0.5);
+}

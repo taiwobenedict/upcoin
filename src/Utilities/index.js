@@ -15,9 +15,9 @@ export function Hero({ children, centerContent = false, transparent = false, con
 }
 
 // Button
-export function Button({ children, type, color, className, method }) {
+export function Button({ children, type, color, className }) {
 	return (
-		<button className={`btn btn-${type}-${color} ${className}`} type={method}>
+		<button className={`btn btn-${type}-${color} ${className}`} >
 			{children}
 		</button>
 	);

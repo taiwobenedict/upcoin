@@ -13,7 +13,6 @@ body {
   font-family: 'Lato', sans-serif !important;
   line-height: 2 !important;
   overflow-x: hidden;
-  top: 0 !important;
 }
 
 .heading-xl {
@@ -141,6 +140,9 @@ a:hover {
   z-index: 1 !important;
 }
 
+div, span, li, ol, a {
+  user-select: none;
+}
 
 /* ==================== */
 
@@ -149,49 +151,39 @@ a:hover {
   .container, .container-fluid {
     max-width: 1440px !important;
   }
-
-
-  
+ 
 }
 
-
-[id=":0.targetLanguage"] ~ span {
-  display: none;
-  color: transparent;
-  visibility: hidden;
+.MuiTablePagination-displayedRows {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
 }
 
-[id=":1.container"] {
- display: none;
+.web3button{
+    background-color: transparent !important;
+    border: solid 1px #fff !important;
 }
 
-.VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc {
-  display: none;
-}
-
-
-.goog-te-gadget .goog-te-combo {
-  padding: 0.5rem 1rem !important;
-  border-radius: 0.25rem;
-  text-align: center;
-  width: fit-content;
-  background-color: transparent;
+.navbutton {
+  padding: 0px 15px 1px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px white solid;
   color: #fff;
-  line-height: 1.5;
-  border-color: #fff;
-  outline: none;
-}
-.goog-te-gadget .goog-te-combo option {
-  color: #333;
+  background-color: transparent !important;
+  font-weight: 600;
+  font-size: 16px;
 }
 
-.VIpgJd-ZVi9od-ORHb-OEVmcd,
-.jsx-437803386  {
-  display: none;
+/* For most browsers */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-div.eapps-widget {
-  position: fixed !important;
-  bottom: 0;
-  z-index: 2;
+/* For Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
 }

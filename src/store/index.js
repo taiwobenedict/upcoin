@@ -6,8 +6,6 @@ import Maksym from "../images/about/Maksym.jpg"
 import OlesPakliuk from "../images/about/OlesPakliuk.png"
 import TANYATREMEL from "../images/about/TANYATREMEL.jpg"
 import TylerGidseg from "../images/about/TylerGidseg.png"
-import board from "../images/about/board.jpg"
-import LamotheMildort from "../images/about/LamotheMildort.jpg"
 
 
 // Post Images
@@ -39,7 +37,7 @@ export const teamMembers = [
   {
     image: KristenBragoli,
     name: "KRISTEN BRAGOLI",
-    position: "CEO",
+    position: "President & CEO",
     about: `
         Brandishing undiscovered potential, Supelle lights the spark that ignites the future of finance and freelancing, revolutionizing how we work, transact, and succeed in a borderless digital era.
         
@@ -72,32 +70,12 @@ export const teamMembers = [
         `
   },
   {
-    image: board,
-    name: "Mr. Ramesses || Narmer",
-    position: "Founder",
-    about: `About the Founder.
-    Unveiling the Visionary: Delve into the Fascinating Journey of the Mastermind behind Our Crypto-Powered Freelance Ecosystem!
-    With over 18 years of executive experience in leading on-demand software vendors, -Mr.  Ramesses ll Narmer, the founder, and CEO of Supelle Global Tech, has brought a wealth of expertise to the table. His pivotal role in adopting technology within the global service exchange and B2B trading has been instrumental in shaping our company’s trajectory.
-    In the first of his companies, he held the position of Vice President and General Manager of the On-Demand Hosting Business Unit. In this capacity, he spearheaded the development and execution of all service-related activities for the company’s inaugural release of its groundbreaking website hosting solution. He was the driving force behind the creation and seamless performance of this solution, marking a pivotal milestone for the company.
-    Moving further in his exceptional career, he proceeded to become the founder and CEO of a Data and Business Solutions Consultancy. During his tenure, he gained direct experience with the expenses and intricacies of constructing on-premise analysis and reporting solutions.
-    In pursuit of greater heights, he ascended to the position of founder and CEO of a multinational company, where he led the creation of a scalable systems program for Real Estate. Through his visionary leadership, he pioneered the implementation of cutting-edge, highly parallel software technology in Real Estate investment and property flipping.
-    Finally, to crown all of his remarkable accomplishments over nearly 2 decades, he has embarked on building Supelle: a first-of-its-kind decentralized marketplace that will transform the future of global freelancing.
-    Supelle, unlike traditional platforms, operates as a Decentralized Autonomous Organization, free from government restrictions and payment limitations. This grants freelancers and clients unmatched flexibility and freedom to collaborate worldwide, using any currency they prefer. Consequently, disadvantaged nations can finally attain a fair opportunity, leveling the global playing field and promoting workplace equality. Most importantly, Supelle’s decentralized structure guarantees full transparency and fairness for all users.
-    
-    A Message from Our CEO & Founder.
-    Here, our mission is clear: to usher in a new era where the traditional world transforms into a thriving digital economy. We’ve begun achieving this by reshaping the freelancing and capital marketplaces to become inclusive to every person, anywhere and at any time.
-    At Supelle, our commitment is to deliver exceptional freelancing services, instilling hope and empathy in every interaction. We strive to be more than just a platform; we aim to empower individuals and provide them with new and boundless opportunities for growth and success.
-    Guided by our core values of Innovation, Collaboration, Accountability, Respect, and Excellence, our vision and purpose is to become a globally recognized freelancing marketplace that sets the standard for cutting-edge excellence. We are poised to revolutionize the freelancing landscape and foster the professional development of freelancers within the international communities we serve.
-    Together, we will create a future where talent is nurtured, connections are forged, and remarkable achievements are realized. Join us as we embark on this transformative journey!
-    -Mr.  Ramesses ll Narmer
-    
-        `
+    name: "demo2"
   },
-
   {
     image: TANYATREMEL,
     name: "TANYA TREMEL ",
-    position: "Chief Marketing Officer (CMO)",
+    position: "Chief Executive Officer",
     about: `Tanya Tremel is an exceptional marketing leader with a remarkable blend of intuitive business skills and artistic prowess. With her extensive experience in design, branding, and marketing, including a specialization in higher education in marketing, Tanya has consistently demonstrated her ability to drive creative strategies and enhance processes for optimal results.
  
         As a natural collaborator, Tanya thrives on working closely with others, leveraging her people skills to bring out the best in everyone involved. Whether leading a team or contributing to a creative project, she consistently brings a unique perspective and a keen eye for detail to the table. Tanya's dedication to producing high-quality work is unwavering, and she takes immense pride in curating and delivering exceptional outcomes that truly represent her identity as an individual.
@@ -113,27 +91,6 @@ export const teamMembers = [
     position: "Front End Developer and Graphic Designer",
     about: `Tyler Gidseg is an experienced front-end web developer and graphic designer. Driven by his passion for design, he takes pride in providing the best tailored, out-of-the-box designs to bring his own unique thumbprint to any project. Tyler got his start in creating websites using WordPress. Under Tyler’s umbrella of skills, he has learned how to best optimize websites based on best practices like SEO, Mobile responsiveness, and Domain setup. Tyler has also worked with the Walt Disney Company with Disney 2-D sketch artists, where he first discovered his innate artistic talent. It is Tyler’s hope and ambition to create the best work he can encapsulate the vision for his clients.
         `
-  },
-  {
-    image: LamotheMildort,
-    name: "Lamothe Mildort",
-    position: "Senior Manager of Operations and Organizational Development",
-    about: `Lamothe Mildort, a trailblazer in the ever-evolving landscape of technology, is a dynamic and results-oriented leader with a career spanning over a  decade. Mildort has established himself as a visionary leader, driving innovation and excellence in the dynamic field of technology. He consistently demonstrated his operational excellence, organizational development, and strategic leadership prowess.
-    Early Career and Rise to Leadership:
-    Lamothe's career commenced at a boutique consulting firm, where her analytical skills and natural leadership abilities quickly propelled him into management roles. Recognized for his ability to optimize processes and foster a positive workplace culture, he became a trusted advisor to both executives and team members.
-    In 2012, Lamothe transitioned to a multinational corporation, assuming the role of Operations Manager. His strategic mindset and innovative problem-solving approach led to significant efficiency improvements, earning his successive promotions within the organization.
-    Strategic Leadership at Wefreelancer Global Tech, Inc..:
-    As the Senior Manager of Operations and Organizational Development at Wefreelancer Global Tech, Inc.., Lamothe plays a pivotal role in driving the company's operational strategy and nurturing a culture of continuous improvement. He oversees day-to-day operations, implements organizational development initiatives, and ensures seamless collaboration across departments.
-    Under Lamothe's leadership, Wefreelancer Global Tech, Inc.. has experienced a notable increase in productivity, with a 20% reduction in operational costs due to streamlined processes and the implementation of cutting-edge technologies. His strategic vision has optimized internal functions and positioned the company as an industry leader in operational efficiency.
-    Team Building and Employee Engagement:
-    Mildort is passionate about fostering a positive and inclusive work environment. He has cultivated a culture where employees feel empowered to contribute their best work through targeted team-building initiatives and mentorship programs. His emphasis on professional development has resulted in high employee satisfaction and retention rates.
-    Industry Recognition and Awards:
-    Lamother's contributions to the field have been acknowledged with the Operational Excellence Award by the Association of Operations Professionals. This prestigious recognition reflects his commitment to setting and achieving high operational standards, thereby enhancing the overall success of Wefreelancr Global Tech, Inc.
-    Thought Leadership and Community Involvement:
-    Beyond his managerial responsibilities, Lamothe is an advocate for thought leadership in organizational development. 
-    He is a sought-after speaker at technology industry conferences, sharing insights on effective leadership, employee engagement, and the future of work. Committed to community service, he also volunteers with organizations focused on professional development and mentorship.
-    Lamothe Mildort's journey as the Senior Manager of Operations and Organizational Development is characterized by his unwavering dedication to excellence, strategic foresight, and a passion for cultivating environments where both individuals and organizations thrive in the Advanced Technologies Division is a testament to her unwavering commitment. His influence and impact extend beyond the boardroom, shaping the future of operational management and employee development in today's dynamic business landscape.
-    `
   },
 ]
 
@@ -195,10 +152,6 @@ export const videos = [
   {
     title: "Can Lighting Strike Twice | Supcoin | Supellecoin",
     src: "https://www.youtube.com/embed/YLE6_GCC7zw"
-  },
-  {
-    title: "The Insiders Uncovering the Dark Secrets of Why They Succeed While We Struggle Supcoin",
-    src: "https://www.youtube.com/embed/pl1yLZ00sN0"
   },
 ]
 
