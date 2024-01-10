@@ -25,6 +25,7 @@ function Marque() {
         const bnbPrice = coins.find(item => item["symbol"] === "BNB").price;
         setCoinPrices(coins);
         setLoading(false);
+        console.log(ethPrice, usdtPrice, bnbPrice);
         dispatch(setETHPrice(ethPrice));
         dispatch(setUSDTPrice(usdtPrice));
         dispatch(setBNBPrice(bnbPrice));

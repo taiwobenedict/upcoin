@@ -45,15 +45,18 @@ import { mainnet, goerli, bsc, bscTestnet } from 'wagmi/chains';
 // Import Swiper styles
 import 'swiper/css';
 import "./Home.css"
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { confirmTransactionReceipt, confirmTransactionReceiptBSC } from '../../chain_interaction/client';
 import { socket } from "../../App";
+import { setBNBPrice, setETHPrice, setUSDTPrice } from '../../redux-toolkit/reducers/Prices'
+import axios from "axios";
+import { MARKET_API_KEY } from '../../utils'
 
 const buyModes = ["byETH", "byUSDT", "byCard", "byBNB"];
 const definedPresalePrices = [0.45, 0.55, 0.6, 0.75, 0.8];
 
 function Home() {
-
+    const dispatch = useDispatch();
     const { isLoading: isSwitchingLoading, switchNetwork } =
         useSwitchNetwork()
 
@@ -82,6 +85,39 @@ function Home() {
     const [minPerWalletOfPhase, setMinPerWalletOfPhase] = useState(0);
     const [maxPerWalletOfPhase, setMaxPerWalletOfPhase] = useState(0);
     const [paidBnbAmount, setPaidBnbAmount] = useState(0);
+
+
+    const readPrices = () => {
+        axios.get('https://api.coinranking.com/v2/coins', {
+            headers: {
+                'x-access-token': MARKET_API_KEY,
+            },
+        })
+            .then(response => {
+                // Handle the API response data here
+                const { coins } = response.data.data;
+                const ethPrice = coins.find(item => item["symbol"] === "ETH").price;
+                const usdtPrice = coins.find(item => item["symbol"] === "USDT").price;
+                const bnbPrice = coins.find(item => item["symbol"] === "BNB").price;
+                console.log(ethPrice, usdtPrice, bnbPrice);
+                dispatch(setETHPrice(ethPrice));
+                dispatch(setUSDTPrice(usdtPrice));
+                dispatch(setBNBPrice(bnbPrice));
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Handle errors here
+            });
+    }
+
+    useEffect(() => {
+        let readInterval = setTimeout(() => {
+            readPrices();
+        }, 10000);
+        return () => {
+            if (readInterval) clearInterval(readInterval);
+        }
+    }, [])
 
     useEffect(() => {
 
